@@ -18,8 +18,9 @@ from PyQt5.QtGui import (
 )
 
 import sys, os, json
-sys.path.append(os.path.join(os.getcwd(), "tests/ulx3s_gui_test/common"))
-from test_common import fpga_mcu_interface
+# sys.path.append(os.path.join(os.getcwd(), "tests/ulx3s_gui_test/common"))
+# from test_common import fpga_mcu_interface
+from ....common.test_common import fpga_mcu_interface
 class register_table(QTableWidget):
 	""" 
 	to provide a table of registers, and provide a way to write to and read them

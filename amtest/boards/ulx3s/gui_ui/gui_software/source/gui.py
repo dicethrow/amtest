@@ -13,19 +13,21 @@ from PyQt5.QtWidgets import (
 	QApplication, QMainWindow)
 from PyQt5.QtGui import QPalette, QColor
 
-from function_tab import function_tab
-from register_tab import register_tab
+from .function_tab import function_tab
+from .register_tab import register_tab
 
 import asyncio, json
 from threading import Thread
 from termcolor import cprint
 
-sys.path.append(os.path.join(os.getcwd(), "tests/ulx3s_gui_test/common"))
-from test_common.fpga_mcu_interface import register_addresses
-from test_common.mcu_gui_interface import PORT, TIMEOUT
+# sys.path.append(os.path.join(os.getcwd(), "tests/ulx3s_gui_test/common"))
+# from test_common.fpga_mcu_interface import register_addresses
+# from test_common.mcu_gui_interface import PORT, TIMEOUT
+from ...common.test_common.fpga_mcu_interface import register_addresses
+from ...common.test_common.mcu_gui_interface import PORT, TIMEOUT
 
 # from iot import server
-import server
+from . import server
 
 class connectionManager(QWidget):
 	text_to_send = pyqtSignal(list)

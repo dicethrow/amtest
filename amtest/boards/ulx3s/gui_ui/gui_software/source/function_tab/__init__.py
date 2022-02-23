@@ -18,7 +18,8 @@ import sys, os, json
 from amlib.debug.ila import ILAFrontend
 from . import ila_to_gtkwave 
 
-from test_common import fpga_gui_interface
+# from test_common import fpga_gui_interface
+from ....common.test_common import fpga_gui_interface
 
 
 class labelled_number_entry(QWidget):

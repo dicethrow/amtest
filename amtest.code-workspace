@@ -7,11 +7,19 @@
 	"launch": {
 		"configurations": [
 			// ### gui #########################				
+			// {
+			// 	"name" : "start gui",
+			// 	"type": "python",
+			// 	"request": "launch",
+			// 	"program": "amtest/boards/ulx3s/gui_ui/gui_software/source/main.py",
+			// 	"console": "integratedTerminal"
+			// },
 			{
 				"name" : "start gui",
 				"type": "python",
 				"request": "launch",
-				"program": "tests/ulx3s_gui_test/gui_software/source/main.py",
+				"args": ["gui", "start-gui"],
+				"program": "./build.py",
 				"console": "integratedTerminal"
 			},
 

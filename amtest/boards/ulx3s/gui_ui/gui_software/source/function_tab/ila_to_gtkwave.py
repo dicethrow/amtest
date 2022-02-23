@@ -11,8 +11,10 @@ from amlib.debug.ila import ILAFrontend
 from amlib.utils.bits import bits
 
 import sys, os, json
-sys.path.append(os.path.join(os.getcwd(), "tests/ulx3s_gui_test/common"))
-from test_common import fpga_gui_interface
+# sys.path.append(os.path.join(os.getcwd(), "tests/ulx3s_gui_test/common"))
+# from test_common import fpga_gui_interface
+# from amtest.boards.ulx3s.gui_ui.common.test_common import fpga_gui_interface
+from ....common.test_common import fpga_gui_interface
 
 class myILAFrontend(ILAFrontend):
 	""" 

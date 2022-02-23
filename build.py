@@ -12,17 +12,9 @@ def main():
 
 	if args.topic == "gui":
 		if args.task == "start-gui":
-			assert 0, "Neither of these ways work. Use a different approach."
-			if False:
-				# hacky - import the file we want, which is in the same place as where the rshell source is
-				path = os.path.join(os.path.dirname(__file__), "gui_software/source/gui.py")
-				spec = importlib.util.spec_from_file_location("pyboard", path)
-				gui = importlib.util.module_from_spec(spec)
-				spec.loader.exec_module(gui)
-				# now it's as if we ran 'import main', which wouldn't be possible in a less hacky way
-				gui.start_gui()
-			if False:
-				lxdev.run_local_cmd("~/Documents/venv_ge/bin/python3.9 gui_software/source/main.py")
+			from amtest.boards.ulx3s.gui_ui.gui_software.source import gui
+			gui.start_gui()
+			
 		else:
 			cprint("Invalid task given, aborting", "red")
 			return
@@ -390,8 +382,8 @@ class mcu_interface(lxdev.RemoteClient):
 		elif task == "update-firmware":
 			self.select_serial_port()
 			self.rsync_to_container()
-			self.rsync_micropython_files_between(from_dir = "tests/ulx3s_gui_test/mcu_firmware/source/", to_dir = "/pyboard/")
-			self.rsync_micropython_files_between(from_dir = "tests/ulx3s_gui_test/common/test_common/", to_dir = "/pyboard/test_common/") # new!
+			self.rsync_micropython_files_between(from_dir = "amtest/boards/ulx3s/gui_ui/mcu_firmware/source/", to_dir = "/pyboard/")
+			self.rsync_micropython_files_between(from_dir = "amtest/boards/ulx3s/gui_ui/common/test_common/", to_dir = "/pyboard/test_common/") # new!
 			self.connect_over_rshell_repl()
 
 		elif task == "enter-repl":
