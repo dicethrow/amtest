@@ -1,6 +1,7 @@
 import argparse, os, importlib, glob, shutil
 from termcolor import cprint
 import lxdev
+import amtest # for convenience, this needs to be available on both the host and container
 	
 def main():
 	parser = argparse.ArgumentParser()
@@ -68,8 +69,10 @@ class fpga_interface(lxdev.RemoteClient):
 		if task == "upload-uart-passthrough-binary":
 			# self2.run_communication_test()
 			self.rsync_to_container()
-			self.upload_binary("./tests/ulx3s_gui_test/fpga_gateware/compiled_binaries/ulx3s_85f_passthru.bit")
-		
+			from amtest.boards.ulx3s.gui_ui.fpga_gateware import compiled_binaries
+			passthrough_binary_filedir = os.path.join(os.path.dirname(compiled_binaries.__file__), "ulx3s_85f_passthru.bit")
+			self.upload_binary(os.path.relpath(passthrough_binary_filedir))
+
 		elif task == "simulate-current-file":
 			sim_manager = fpga_interface.simulate_manager(
 				fpga_interface=self, local_filename = local_filename)
@@ -402,13 +405,16 @@ class mcu_interface(lxdev.RemoteClient):
 	def ensure_we_have_compiled_binary(self, desired_compiled_binary_filename):
 		self.desired_compiled_binary_filename = desired_compiled_binary_filename
 		# have we got a copy of the file, locally on the host?
-		if not os.path.isfile(f"./mcu_firmware/compiled_binaries/{self.desired_compiled_binary_filename}"):
+		# if not os.path.isfile(f"./mcu_firmware/compiled_binaries/{self.desired_compiled_binary_filename}"):
+		from amtest.boards.ulx3s.gui_ui.mcu_firmware import compiled_binaries
+		compiled_binary_folder = os.path.dirname(compiled_binaries.__file__)
+		if not os.path.isfile(os.path.join(compiled_binary_folder, self.desired_compiled_binary_filename)):
 			if self.desired_compiled_binary_filename == "esp32-20220117-v1.18.bin":
 				cprint("Downloading compiled binary file", "yellow")
-				lxdev.run_local_cmd("wget https://micropython.org/resources/firmware/esp32-20220117-v1.18.bin --directory-prefix ./mcu_firmware/compiled_binaries/")
+				lxdev.run_local_cmd(f"wget https://micropython.org/resources/firmware/esp32-20220117-v1.18.bin --directory-prefix {compiled_binary_folder}/")
 			else:
 				assert 0, "specified binary unavailable"
-			assert os.path.isfile(f"./mcu_firmware/compiled_binaries/{self.desired_compiled_binary_filename}")
+			assert os.path.isfile(os.path.join(compiled_binary_folder, self.desired_compiled_binary_filename))
 		# cprint("binary file available", "yellow")
 	
 	# what port shall we use?

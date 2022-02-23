@@ -23,8 +23,7 @@ import time
 import sys, os
 from termcolor import cprint
 
-sys.path.append(os.path.join(os.getcwd(), "tests/ulx3s_gui_test/common"))
-from test_common.fpga_mcu_interface import register_addresses, spi_register_interface, get_member
+from ..common.test_common.fpga_mcu_interface import register_addresses, spi_register_interface, get_member
 
 spi_freq = 1e6
 
