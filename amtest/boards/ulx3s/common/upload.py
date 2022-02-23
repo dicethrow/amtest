@@ -22,6 +22,8 @@ from amaranth.build import Platform
 from amaranth.build import Platform, Resource, Subsignal, Pins, PinsN, Attrs
 from amaranth_boards.ulx3s import ULX3S_85F_Platform
 
+from .clks import add_clock
+
 # ESP-32 connections
 esp32_spi = [
 	Resource("esp32_spi", 0,
@@ -68,7 +70,10 @@ class UploadBase(Elaboratable):
 
 		m = Module()
 
-		m.d.sync += [
+		add_clock(m, "sync", platform=platform)
+		add_clock(m, "sync_1e6", platform=platform)
+
+		m.d.sync_1e6 += [
 			i_unsync_buttons.pwr.eq(platform.request("button_pwr", 0)),
 			i_unsync_buttons.fireA.eq(platform.request("button_fire", 0)),
 			i_unsync_buttons.fireB.eq(platform.request("button_fire", 1)),

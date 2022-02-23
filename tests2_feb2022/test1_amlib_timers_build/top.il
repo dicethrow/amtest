@@ -2,30 +2,30 @@
 attribute \generator "Amaranth"
 attribute \amaranth.hierarchy "top.i_button_ffsync"
 module \i_button_ffsync
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59"
-  wire width 1 input 0 \i_unsync_buttons__pwr
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59"
-  wire width 1 input 1 \i_unsync_buttons__fireA
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59"
-  wire width 1 input 2 \i_unsync_buttons__fireB
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59"
-  wire width 1 input 3 \i_unsync_buttons__up
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59"
-  wire width 1 input 4 \i_unsync_buttons__down
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59"
-  wire width 1 input 5 \i_unsync_buttons__left
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59"
-  wire width 1 input 6 \i_unsync_buttons__right
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:80"
-  wire width 1 output 7 \i_buttons__pwr
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:80"
-  wire width 1 output 8 \i_buttons__left
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:80"
-  wire width 1 output 9 \i_buttons__right
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:105"
-  wire width 1 input 10 \rst
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:105"
-  wire width 1 input 11 \clk
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:38"
+  wire width 1 input 0 \clk
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:61"
+  wire width 1 input 1 \i_unsync_buttons__pwr
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:61"
+  wire width 1 input 2 \i_unsync_buttons__fireA
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:61"
+  wire width 1 input 3 \i_unsync_buttons__fireB
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:61"
+  wire width 1 input 4 \i_unsync_buttons__up
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:61"
+  wire width 1 input 5 \i_unsync_buttons__down
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:61"
+  wire width 1 input 6 \i_unsync_buttons__left
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:61"
+  wire width 1 input 7 \i_unsync_buttons__right
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:85"
+  wire width 1 output 8 \i_buttons__pwr
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:85"
+  wire width 1 output 9 \i_buttons__left
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:85"
+  wire width 1 output 10 \i_buttons__right
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:38"
+  wire width 1 input 11 \rst
   attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/lib/cdc.py:89"
   wire width 7 \stage0
   attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/lib/cdc.py:89"
@@ -50,13 +50,13 @@ module \i_button_ffsync
     sync posedge \clk
       update \stage1 \stage1$next
   end
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:80"
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:85"
   wire width 1 \i_buttons__fireA
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:80"
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:85"
   wire width 1 \i_buttons__fireB
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:80"
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:85"
   wire width 1 \i_buttons__up
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:80"
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:85"
   wire width 1 \i_buttons__down
   process $group_2
     assign \i_buttons__pwr 1'0
@@ -73,10 +73,10 @@ end
 attribute \generator "Amaranth"
 attribute \amaranth.hierarchy "top.tb.dut.delayer"
 module \delayer
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:114"
-  wire width 1 input 0 \sync_1e6_rst
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:114"
-  wire width 1 input 1 \sync_1e6_clk
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:26"
+  wire width 1 input 0 \sync_1e6_clk
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:26"
+  wire width 1 input 1 \sync_1e6_rst
   attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:12"
   wire width 1 input 2 \start
   attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:13"
@@ -346,23 +346,23 @@ end
 attribute \generator "Amaranth"
 attribute \amaranth.hierarchy "top.tb.dut"
 module \dut
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:114"
-  wire width 1 input 0 \sync_1e6_rst
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:114"
-  wire width 1 input 1 \sync_1e6_clk
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:40"
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:26"
+  wire width 1 input 0 \sync_1e6_clk
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:26"
+  wire width 1 input 1 \sync_1e6_rst
+  attribute \src "tests2_feb2022/test1_amlib_timers.py:43"
   wire width 1 input 2 \ui__start
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:40"
+  attribute \src "tests2_feb2022/test1_amlib_timers.py:43"
   wire width 1 output 3 \ui__done
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:40"
+  attribute \src "tests2_feb2022/test1_amlib_timers.py:43"
   wire width 1 \ui__done$next
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:40"
+  attribute \src "tests2_feb2022/test1_amlib_timers.py:43"
   wire width 1 output 4 \ui__active
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:40"
+  attribute \src "tests2_feb2022/test1_amlib_timers.py:43"
   wire width 1 \ui__active$next
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:41"
+  attribute \src "tests2_feb2022/test1_amlib_timers.py:44"
   wire width 32 output 5 \debug__count
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:41"
+  attribute \src "tests2_feb2022/test1_amlib_timers.py:44"
   wire width 32 \debug__count$next
   attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:12"
   wire width 1 \delayer_start
@@ -373,15 +373,15 @@ module \dut
   attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:11"
   wire width 32 \delayer_counter_out
   cell \delayer \delayer
-    connect \sync_1e6_rst \sync_1e6_rst
     connect \sync_1e6_clk \sync_1e6_clk
+    connect \sync_1e6_rst \sync_1e6_rst
     connect \start \delayer_start
     connect \done \delayer_done
     connect \counter_out \delayer_counter_out
   end
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:47"
+  attribute \src "tests2_feb2022/test1_amlib_timers.py:50"
   wire width 1 \ui__start$1
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:47"
+  attribute \src "tests2_feb2022/test1_amlib_timers.py:50"
   wire width 1 \ui__start$1$next
   process $group_0
     assign \ui__start$1$next \ui__start$1
@@ -396,9 +396,9 @@ module \dut
     sync posedge \sync_1e6_clk
       update \ui__start$1 \ui__start$1$next
   end
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:47"
+  attribute \src "tests2_feb2022/test1_amlib_timers.py:50"
   wire width 1 \ui__done$2
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:47"
+  attribute \src "tests2_feb2022/test1_amlib_timers.py:50"
   wire width 1 \ui__done$2$next
   process $group_1
     assign \ui__done$next \ui__done
@@ -413,9 +413,9 @@ module \dut
     sync posedge \sync_1e6_clk
       update \ui__done \ui__done$next
   end
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:47"
+  attribute \src "tests2_feb2022/test1_amlib_timers.py:50"
   wire width 1 \ui__active$3
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:47"
+  attribute \src "tests2_feb2022/test1_amlib_timers.py:50"
   wire width 1 \ui__active$3$next
   process $group_2
     assign \ui__active$next \ui__active
@@ -430,9 +430,9 @@ module \dut
     sync posedge \sync_1e6_clk
       update \ui__active \ui__active$next
   end
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:48"
+  attribute \src "tests2_feb2022/test1_amlib_timers.py:51"
   wire width 32 \debug__count$4
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:48"
+  attribute \src "tests2_feb2022/test1_amlib_timers.py:51"
   wire width 32 \debug__count$4$next
   process $group_3
     assign \debug__count$next \debug__count
@@ -486,9 +486,9 @@ module \dut
     sync posedge \sync_1e6_clk
       update \debug__count$4 \debug__count$4$next
   end
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:60"
+  attribute \src "tests2_feb2022/test1_amlib_timers.py:63"
   wire width 1 $5
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:60"
+  attribute \src "tests2_feb2022/test1_amlib_timers.py:63"
   cell $ne $6
     parameter \A_SIGNED 0
     parameter \A_WIDTH 32
@@ -516,59 +516,53 @@ end
 attribute \generator "Amaranth"
 attribute \amaranth.hierarchy "top.tb"
 module \tb
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:81"
-  wire width 1 input 0 \ui__reset
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:81"
-  wire width 1 input 1 \ui__start
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:81"
-  wire width 1 output 2 \ui__done
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:81"
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:26"
+  wire width 1 input 0 \sync_1e6_clk
+  attribute \src "tests2_feb2022/test1_amlib_timers.py:84"
+  wire width 1 input 1 \ui__reset
+  attribute \src "tests2_feb2022/test1_amlib_timers.py:84"
+  wire width 1 input 2 \ui__start
+  attribute \src "tests2_feb2022/test1_amlib_timers.py:84"
+  wire width 1 output 3 \ui__done
+  attribute \src "tests2_feb2022/test1_amlib_timers.py:84"
   wire width 1 \ui__done$next
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:81"
-  wire width 1 output 3 \ui__active
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:81"
+  attribute \src "tests2_feb2022/test1_amlib_timers.py:84"
+  wire width 1 output 4 \ui__active
+  attribute \src "tests2_feb2022/test1_amlib_timers.py:84"
   wire width 1 \ui__active$next
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:82"
-  wire width 8 output 4 \leds
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:82"
+  attribute \src "tests2_feb2022/test1_amlib_timers.py:85"
+  wire width 8 output 5 \leds
+  attribute \src "tests2_feb2022/test1_amlib_timers.py:85"
   wire width 8 \leds$next
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:114"
-  wire width 1 output 5 \sync_1e6_rst
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:114"
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:26"
+  wire width 1 output 6 \sync_1e6_rst
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:26"
   wire width 1 \sync_1e6_rst$next
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:105"
-  wire width 1 output 6 \rst
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:105"
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:38"
+  wire width 1 output 7 \rst
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:38"
   wire width 1 \rst$next
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:114"
-  wire width 1 output 7 \sync_1e6_clk
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:114"
-  wire width 1 \sync_1e6_clk$next
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:105"
-  wire width 1 output 8 \clk
-  attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143"
-  wire width 1 input 9 \clk25_0__i
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:40"
+  attribute \src "tests2_feb2022/test1_amlib_timers.py:43"
   wire width 1 \dut_ui__start
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:40"
+  attribute \src "tests2_feb2022/test1_amlib_timers.py:43"
   wire width 1 \dut_ui__start$next
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:40"
+  attribute \src "tests2_feb2022/test1_amlib_timers.py:43"
   wire width 1 \dut_ui__done
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:40"
+  attribute \src "tests2_feb2022/test1_amlib_timers.py:43"
   wire width 1 \dut_ui__active
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:41"
+  attribute \src "tests2_feb2022/test1_amlib_timers.py:44"
   wire width 32 \dut_debug__count
   cell \dut \dut
-    connect \sync_1e6_rst \sync_1e6_rst
     connect \sync_1e6_clk \sync_1e6_clk
+    connect \sync_1e6_rst \sync_1e6_rst
     connect \ui__start \dut_ui__start
     connect \ui__done \dut_ui__done
     connect \ui__active \dut_ui__active
     connect \debug__count \dut_debug__count
   end
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:89"
+  attribute \src "tests2_feb2022/test1_amlib_timers.py:92"
   wire width 1 \ui__reset$1
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:89"
+  attribute \src "tests2_feb2022/test1_amlib_timers.py:92"
   wire width 1 \ui__reset$1$next
   process $group_0
     assign \ui__reset$1$next \ui__reset$1
@@ -583,9 +577,9 @@ module \tb
     sync posedge \sync_1e6_clk
       update \ui__reset$1 \ui__reset$1$next
   end
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:89"
+  attribute \src "tests2_feb2022/test1_amlib_timers.py:92"
   wire width 1 \ui__start$2
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:89"
+  attribute \src "tests2_feb2022/test1_amlib_timers.py:92"
   wire width 1 \ui__start$2$next
   process $group_1
     assign \ui__start$2$next \ui__start$2
@@ -600,9 +594,9 @@ module \tb
     sync posedge \sync_1e6_clk
       update \ui__start$2 \ui__start$2$next
   end
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:89"
+  attribute \src "tests2_feb2022/test1_amlib_timers.py:92"
   wire width 1 \ui__done$3
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:89"
+  attribute \src "tests2_feb2022/test1_amlib_timers.py:92"
   wire width 1 \ui__done$3$next
   process $group_2
     assign \ui__done$next \ui__done
@@ -617,9 +611,9 @@ module \tb
     sync posedge \sync_1e6_clk
       update \ui__done \ui__done$next
   end
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:89"
+  attribute \src "tests2_feb2022/test1_amlib_timers.py:92"
   wire width 1 \ui__active$4
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:89"
+  attribute \src "tests2_feb2022/test1_amlib_timers.py:92"
   wire width 1 \ui__active$4$next
   process $group_3
     assign \ui__active$next \ui__active
@@ -673,9 +667,9 @@ module \tb
     sync posedge \sync_1e6_clk
       update \ui__active$4 \ui__active$4$next
   end
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:90"
+  attribute \src "tests2_feb2022/test1_amlib_timers.py:93"
   wire width 32 \debug__count
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:90"
+  attribute \src "tests2_feb2022/test1_amlib_timers.py:93"
   wire width 32 \debug__count$next
   process $group_7
     assign \debug__count$next \debug__count
@@ -702,134 +696,27 @@ module \tb
     assign \rst$next \rst
     assign \rst$next \ui__reset$1
     attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/xfrm.py:519"
-    switch \rst
+    switch \sync_1e6_rst
       case 1'1
         assign \rst$next 1'0
     end
     sync init
       update \rst 1'0
-    sync posedge \clk
+    sync posedge \sync_1e6_clk
       update \rst \rst$next
   end
   process $group_10
-    assign \clk 1'0
-    assign \clk { \clk25_0__i }
-    sync init
-  end
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:116"
-  wire width 4 \clk_counter
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:116"
-  wire width 4 \clk_counter$next
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:118"
-  wire width 5 $5
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:118"
-  wire width 5 $6
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:118"
-  cell $add $7
-    parameter \A_SIGNED 0
-    parameter \A_WIDTH 4
-    parameter \B_SIGNED 0
-    parameter \B_WIDTH 1
-    parameter \Y_WIDTH 5
-    connect \A \clk_counter
-    connect \B 1'1
-    connect \Y $6
-  end
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:118"
-  wire width 5 $8
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:118"
-  wire width 1 $9
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:118"
-  cell $eq $10
-    parameter \A_SIGNED 0
-    parameter \A_WIDTH 4
-    parameter \B_SIGNED 0
-    parameter \B_WIDTH 4
-    parameter \Y_WIDTH 1
-    connect \A \clk_counter
-    connect \B 4'1011
-    connect \Y $9
-  end
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:118"
-  cell $mux $11
-    parameter \WIDTH 5
-    connect \A $6
-    connect \B 5'00000
-    connect \S $9
-    connect \Y $8
-  end
-  connect $5 $8
-  process $group_11
-    assign \clk_counter$next \clk_counter
-    assign \clk_counter$next $5 [3:0]
-    attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/xfrm.py:519"
-    switch \rst
-      case 1'1
-        assign \clk_counter$next 4'0000
-    end
-    sync init
-      update \clk_counter 4'0000
-    sync posedge \clk
-      update \clk_counter \clk_counter$next
-  end
-  process $group_12
     assign \sync_1e6_rst$next \sync_1e6_rst
     assign \sync_1e6_rst$next \ui__reset$1
     attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/xfrm.py:519"
-    switch \rst
+    switch \sync_1e6_rst
       case 1'1
         assign \sync_1e6_rst$next 1'0
     end
     sync init
       update \sync_1e6_rst 1'0
-    sync posedge \clk
+    sync posedge \sync_1e6_clk
       update \sync_1e6_rst \sync_1e6_rst$next
-  end
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:120"
-  wire width 1 $12
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:120"
-  cell $not $13
-    parameter \A_SIGNED 0
-    parameter \A_WIDTH 1
-    parameter \Y_WIDTH 1
-    connect \A \sync_1e6_clk
-    connect \Y $12
-  end
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:120"
-  wire width 1 $14
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:120"
-  wire width 1 $15
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:120"
-  cell $eq $16
-    parameter \A_SIGNED 0
-    parameter \A_WIDTH 4
-    parameter \B_SIGNED 0
-    parameter \B_WIDTH 1
-    parameter \Y_WIDTH 1
-    connect \A \clk_counter
-    connect \B 1'0
-    connect \Y $15
-  end
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:120"
-  cell $mux $17
-    parameter \WIDTH 1
-    connect \A \sync_1e6_clk
-    connect \B $12
-    connect \S $15
-    connect \Y $14
-  end
-  process $group_13
-    assign \sync_1e6_clk$next \sync_1e6_clk
-    assign \sync_1e6_clk$next $14
-    attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/xfrm.py:519"
-    switch \rst
-      case 1'1
-        assign \sync_1e6_clk$next 1'0
-    end
-    sync init
-      update \sync_1e6_clk 1'0
-    sync posedge \clk
-      update \sync_1e6_clk \sync_1e6_clk$next
   end
 end
 attribute \generator "Amaranth"
@@ -1108,6 +995,18 @@ module \pin_uart_0__dtr
   end
 end
 attribute \generator "Amaranth"
+attribute \amaranth.hierarchy "top.pin_clk25_0"
+module \pin_clk25_0
+  attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143"
+  wire width 1 output 0 \clk25_0__i
+  attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:129"
+  wire width 1 input 1 \clk25_0__io
+  cell \IB \clk25_0_0
+    connect \I \clk25_0__io
+    connect \O \clk25_0__i
+  end
+end
+attribute \generator "Amaranth"
 attribute \amaranth.hierarchy "top.pin_button_pwr_0"
 module \pin_button_pwr_0
   attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143"
@@ -1209,18 +1108,6 @@ module \pin_button_right_0
   end
 end
 attribute \generator "Amaranth"
-attribute \amaranth.hierarchy "top.pin_clk25_0"
-module \pin_clk25_0
-  attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143"
-  wire width 1 output 0 \clk25_0__i
-  attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:129"
-  wire width 1 input 1 \clk25_0__io
-  cell \IB \clk25_0_0
-    connect \I \clk25_0__io
-    connect \O \clk25_0__i
-  end
-end
-attribute \generator "Amaranth"
 attribute \top 1
 attribute \amaranth.hierarchy "top"
 module \top
@@ -1265,64 +1152,67 @@ module \top
   attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:129"
   wire width 1 input 19 \uart_0__dtr__io
   attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:129"
-  wire width 1 input 20 \button_pwr_0__io
+  wire width 1 input 20 \clk25_0__io
   attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:129"
-  wire width 1 input 21 \button_fire_0__io
+  wire width 1 input 21 \button_pwr_0__io
   attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:129"
-  wire width 1 input 22 \button_fire_1__io
+  wire width 1 input 22 \button_fire_0__io
   attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:129"
-  wire width 1 input 23 \button_up_0__io
+  wire width 1 input 23 \button_fire_1__io
   attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:129"
-  wire width 1 input 24 \button_down_0__io
+  wire width 1 input 24 \button_up_0__io
   attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:129"
-  wire width 1 input 25 \button_left_0__io
+  wire width 1 input 25 \button_down_0__io
   attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:129"
-  wire width 1 input 26 \button_right_0__io
+  wire width 1 input 26 \button_left_0__io
   attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:129"
-  wire width 1 input 27 \clk25_0__io
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:114"
+  wire width 1 input 27 \button_right_0__io
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:26"
   wire width 1 \sync_1e6_clk
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:114"
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:26"
+  wire width 1 \sync_1e6_clk$next
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:26"
   wire width 1 \sync_1e6_rst
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:105"
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:38"
   wire width 1 \clk
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:105"
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:38"
   wire width 1 \rst
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59"
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:61"
   wire width 1 \i_button_ffsync_i_unsync_buttons__pwr
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59"
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:61"
   wire width 1 \i_button_ffsync_i_unsync_buttons__pwr$next
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59"
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:61"
   wire width 1 \i_button_ffsync_i_unsync_buttons__fireA
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59"
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:61"
   wire width 1 \i_button_ffsync_i_unsync_buttons__fireA$next
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59"
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:61"
   wire width 1 \i_button_ffsync_i_unsync_buttons__fireB
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59"
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:61"
   wire width 1 \i_button_ffsync_i_unsync_buttons__fireB$next
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59"
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:61"
   wire width 1 \i_button_ffsync_i_unsync_buttons__up
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59"
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:61"
   wire width 1 \i_button_ffsync_i_unsync_buttons__up$next
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59"
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:61"
   wire width 1 \i_button_ffsync_i_unsync_buttons__down
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59"
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:61"
   wire width 1 \i_button_ffsync_i_unsync_buttons__down$next
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59"
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:61"
   wire width 1 \i_button_ffsync_i_unsync_buttons__left
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59"
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:61"
   wire width 1 \i_button_ffsync_i_unsync_buttons__left$next
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59"
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:61"
   wire width 1 \i_button_ffsync_i_unsync_buttons__right
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59"
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:61"
   wire width 1 \i_button_ffsync_i_unsync_buttons__right$next
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:80"
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:85"
   wire width 1 \i_button_ffsync_i_buttons__pwr
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:80"
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:85"
   wire width 1 \i_button_ffsync_i_buttons__left
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:80"
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:85"
   wire width 1 \i_button_ffsync_i_buttons__right
   cell \i_button_ffsync \i_button_ffsync
+    connect \clk \clk
     connect \i_unsync_buttons__pwr \i_button_ffsync_i_unsync_buttons__pwr
     connect \i_unsync_buttons__fireA \i_button_ffsync_i_unsync_buttons__fireA
     connect \i_unsync_buttons__fireB \i_button_ffsync_i_unsync_buttons__fireB
@@ -1334,25 +1224,23 @@ module \top
     connect \i_buttons__left \i_button_ffsync_i_buttons__left
     connect \i_buttons__right \i_button_ffsync_i_buttons__right
     connect \rst \rst
-    connect \clk \clk
   end
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:81"
+  attribute \src "tests2_feb2022/test1_amlib_timers.py:84"
   wire width 1 \tb_ui__reset
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:81"
+  attribute \src "tests2_feb2022/test1_amlib_timers.py:84"
   wire width 1 \tb_ui__reset$next
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:81"
+  attribute \src "tests2_feb2022/test1_amlib_timers.py:84"
   wire width 1 \tb_ui__start
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:81"
+  attribute \src "tests2_feb2022/test1_amlib_timers.py:84"
   wire width 1 \tb_ui__start$next
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:81"
+  attribute \src "tests2_feb2022/test1_amlib_timers.py:84"
   wire width 1 \tb_ui__done
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:81"
+  attribute \src "tests2_feb2022/test1_amlib_timers.py:84"
   wire width 1 \tb_ui__active
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:82"
+  attribute \src "tests2_feb2022/test1_amlib_timers.py:85"
   wire width 8 \tb_leds
-  attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143"
-  wire width 1 \tb_clk25_0__i
   cell \tb \tb
+    connect \sync_1e6_clk \sync_1e6_clk
     connect \ui__reset \tb_ui__reset
     connect \ui__start \tb_ui__start
     connect \ui__done \tb_ui__done
@@ -1360,9 +1248,6 @@ module \top
     connect \leds \tb_leds
     connect \sync_1e6_rst \sync_1e6_rst
     connect \rst \rst
-    connect \sync_1e6_clk \sync_1e6_clk
-    connect \clk \clk
-    connect \clk25_0__i \tb_clk25_0__i
   end
   attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143"
   wire width 1 \pin_led_0_led_0__o
@@ -1497,6 +1382,12 @@ module \top
     connect \uart_0__dtr__io \uart_0__dtr__io
   end
   attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143"
+  wire width 1 \pin_clk25_0_clk25_0__i
+  cell \pin_clk25_0 \pin_clk25_0
+    connect \clk25_0__i \pin_clk25_0_clk25_0__i
+    connect \clk25_0__io \clk25_0__io
+  end
+  attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143"
   wire width 1 \pin_button_pwr_0_button_pwr_0__i
   cell \pin_button_pwr_0 \pin_button_pwr_0
     connect \button_pwr_0__i \pin_button_pwr_0_button_pwr_0__i
@@ -1538,102 +1429,205 @@ module \top
     connect \button_right_0__i \pin_button_right_0_button_right_0__i
     connect \button_right_0__io \button_right_0__io
   end
-  cell \pin_clk25_0 \pin_clk25_0
-    connect \clk25_0__i \tb_clk25_0__i
-    connect \clk25_0__io \clk25_0__io
-  end
   process $group_0
+    assign \clk 1'0
+    assign \clk { \pin_clk25_0_clk25_0__i }
+    sync init
+  end
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:28"
+  wire width 4 \clk_counter
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:28"
+  wire width 4 \clk_counter$next
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:30"
+  wire width 5 $1
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:30"
+  wire width 5 $2
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:30"
+  cell $add $3
+    parameter \A_SIGNED 0
+    parameter \A_WIDTH 4
+    parameter \B_SIGNED 0
+    parameter \B_WIDTH 1
+    parameter \Y_WIDTH 5
+    connect \A \clk_counter
+    connect \B 1'1
+    connect \Y $2
+  end
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:30"
+  wire width 5 $4
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:30"
+  wire width 1 $5
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:30"
+  cell $eq $6
+    parameter \A_SIGNED 0
+    parameter \A_WIDTH 4
+    parameter \B_SIGNED 0
+    parameter \B_WIDTH 4
+    parameter \Y_WIDTH 1
+    connect \A \clk_counter
+    connect \B 4'1011
+    connect \Y $5
+  end
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:30"
+  cell $mux $7
+    parameter \WIDTH 5
+    connect \A $2
+    connect \B 5'00000
+    connect \S $5
+    connect \Y $4
+  end
+  connect $1 $4
+  process $group_1
+    assign \clk_counter$next \clk_counter
+    assign \clk_counter$next $1 [3:0]
+    attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/xfrm.py:519"
+    switch \rst
+      case 1'1
+        assign \clk_counter$next 4'0000
+    end
+    sync init
+      update \clk_counter 4'0000
+    sync posedge \clk
+      update \clk_counter \clk_counter$next
+  end
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:31"
+  wire width 1 $8
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:31"
+  cell $not $9
+    parameter \A_SIGNED 0
+    parameter \A_WIDTH 1
+    parameter \Y_WIDTH 1
+    connect \A \sync_1e6_clk
+    connect \Y $8
+  end
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:31"
+  wire width 1 $10
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:31"
+  wire width 1 $11
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:31"
+  cell $eq $12
+    parameter \A_SIGNED 0
+    parameter \A_WIDTH 4
+    parameter \B_SIGNED 0
+    parameter \B_WIDTH 1
+    parameter \Y_WIDTH 1
+    connect \A \clk_counter
+    connect \B 1'0
+    connect \Y $11
+  end
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:31"
+  cell $mux $13
+    parameter \WIDTH 1
+    connect \A \sync_1e6_clk
+    connect \B $8
+    connect \S $11
+    connect \Y $10
+  end
+  process $group_2
+    assign \sync_1e6_clk$next \sync_1e6_clk
+    assign \sync_1e6_clk$next $10
+    attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/xfrm.py:519"
+    switch \rst
+      case 1'1
+        assign \sync_1e6_clk$next 1'0
+    end
+    sync init
+      update \sync_1e6_clk 1'0
+    sync posedge \clk
+      update \sync_1e6_clk \sync_1e6_clk$next
+  end
+  process $group_3
     assign \i_button_ffsync_i_unsync_buttons__pwr$next \i_button_ffsync_i_unsync_buttons__pwr
     assign \i_button_ffsync_i_unsync_buttons__pwr$next { \pin_button_pwr_0_button_pwr_0__i }
     attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/xfrm.py:519"
-    switch \rst
+    switch \sync_1e6_rst
       case 1'1
         assign \i_button_ffsync_i_unsync_buttons__pwr$next 1'0
     end
     sync init
       update \i_button_ffsync_i_unsync_buttons__pwr 1'0
-    sync posedge \clk
+    sync posedge \sync_1e6_clk
       update \i_button_ffsync_i_unsync_buttons__pwr \i_button_ffsync_i_unsync_buttons__pwr$next
   end
-  process $group_1
+  process $group_4
     assign \i_button_ffsync_i_unsync_buttons__fireA$next \i_button_ffsync_i_unsync_buttons__fireA
     assign \i_button_ffsync_i_unsync_buttons__fireA$next { \pin_button_fire_0_button_fire_0__i }
     attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/xfrm.py:519"
-    switch \rst
+    switch \sync_1e6_rst
       case 1'1
         assign \i_button_ffsync_i_unsync_buttons__fireA$next 1'0
     end
     sync init
       update \i_button_ffsync_i_unsync_buttons__fireA 1'0
-    sync posedge \clk
+    sync posedge \sync_1e6_clk
       update \i_button_ffsync_i_unsync_buttons__fireA \i_button_ffsync_i_unsync_buttons__fireA$next
   end
-  process $group_2
+  process $group_5
     assign \i_button_ffsync_i_unsync_buttons__fireB$next \i_button_ffsync_i_unsync_buttons__fireB
     assign \i_button_ffsync_i_unsync_buttons__fireB$next { \pin_button_fire_1_button_fire_1__i }
     attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/xfrm.py:519"
-    switch \rst
+    switch \sync_1e6_rst
       case 1'1
         assign \i_button_ffsync_i_unsync_buttons__fireB$next 1'0
     end
     sync init
       update \i_button_ffsync_i_unsync_buttons__fireB 1'0
-    sync posedge \clk
+    sync posedge \sync_1e6_clk
       update \i_button_ffsync_i_unsync_buttons__fireB \i_button_ffsync_i_unsync_buttons__fireB$next
   end
-  process $group_3
+  process $group_6
     assign \i_button_ffsync_i_unsync_buttons__up$next \i_button_ffsync_i_unsync_buttons__up
     assign \i_button_ffsync_i_unsync_buttons__up$next { \pin_button_up_0_button_up_0__i }
     attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/xfrm.py:519"
-    switch \rst
+    switch \sync_1e6_rst
       case 1'1
         assign \i_button_ffsync_i_unsync_buttons__up$next 1'0
     end
     sync init
       update \i_button_ffsync_i_unsync_buttons__up 1'0
-    sync posedge \clk
+    sync posedge \sync_1e6_clk
       update \i_button_ffsync_i_unsync_buttons__up \i_button_ffsync_i_unsync_buttons__up$next
   end
-  process $group_4
+  process $group_7
     assign \i_button_ffsync_i_unsync_buttons__down$next \i_button_ffsync_i_unsync_buttons__down
     assign \i_button_ffsync_i_unsync_buttons__down$next { \pin_button_down_0_button_down_0__i }
     attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/xfrm.py:519"
-    switch \rst
+    switch \sync_1e6_rst
       case 1'1
         assign \i_button_ffsync_i_unsync_buttons__down$next 1'0
     end
     sync init
       update \i_button_ffsync_i_unsync_buttons__down 1'0
-    sync posedge \clk
+    sync posedge \sync_1e6_clk
       update \i_button_ffsync_i_unsync_buttons__down \i_button_ffsync_i_unsync_buttons__down$next
   end
-  process $group_5
+  process $group_8
     assign \i_button_ffsync_i_unsync_buttons__left$next \i_button_ffsync_i_unsync_buttons__left
     assign \i_button_ffsync_i_unsync_buttons__left$next { \pin_button_left_0_button_left_0__i }
     attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/xfrm.py:519"
-    switch \rst
+    switch \sync_1e6_rst
       case 1'1
         assign \i_button_ffsync_i_unsync_buttons__left$next 1'0
     end
     sync init
       update \i_button_ffsync_i_unsync_buttons__left 1'0
-    sync posedge \clk
+    sync posedge \sync_1e6_clk
       update \i_button_ffsync_i_unsync_buttons__left \i_button_ffsync_i_unsync_buttons__left$next
   end
-  process $group_6
+  process $group_9
     assign \i_button_ffsync_i_unsync_buttons__right$next \i_button_ffsync_i_unsync_buttons__right
     assign \i_button_ffsync_i_unsync_buttons__right$next { \pin_button_right_0_button_right_0__i }
     attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/xfrm.py:519"
-    switch \rst
+    switch \sync_1e6_rst
       case 1'1
         assign \i_button_ffsync_i_unsync_buttons__right$next 1'0
     end
     sync init
       update \i_button_ffsync_i_unsync_buttons__right 1'0
-    sync posedge \clk
+    sync posedge \sync_1e6_clk
       update \i_button_ffsync_i_unsync_buttons__right \i_button_ffsync_i_unsync_buttons__right$next
   end
-  process $group_7
+  process $group_10
     assign \pin_esp32_spi_0__tx_esp32_spi_0__tx__o$next \pin_esp32_spi_0__tx_esp32_spi_0__tx__o
     assign { \pin_esp32_spi_0__tx_esp32_spi_0__tx__o$next } { \pin_uart_0__rx_uart_0__rx__i }
     attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/xfrm.py:519"
@@ -1646,7 +1640,7 @@ module \top
     sync posedge \clk
       update \pin_esp32_spi_0__tx_esp32_spi_0__tx__o \pin_esp32_spi_0__tx_esp32_spi_0__tx__o$next
   end
-  process $group_8
+  process $group_11
     assign \pin_uart_0__tx_uart_0__tx__o$next \pin_uart_0__tx_uart_0__tx__o
     assign { \pin_uart_0__tx_uart_0__tx__o$next } { \pin_esp32_spi_0__rx_esp32_spi_0__rx__i }
     attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/xfrm.py:519"
@@ -1659,10 +1653,10 @@ module \top
     sync posedge \clk
       update \pin_uart_0__tx_uart_0__tx__o \pin_uart_0__tx_uart_0__tx__o$next
   end
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:108"
-  wire width 1 $1
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:108"
-  cell $eq $2
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:113"
+  wire width 1 $14
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:113"
+  cell $eq $15
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
@@ -1670,12 +1664,12 @@ module \top
     parameter \Y_WIDTH 1
     connect \A \pin_uart_0__dtr_uart_0__dtr__i
     connect \B 1'1
-    connect \Y $1
+    connect \Y $14
   end
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:108"
-  wire width 1 $3
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:108"
-  cell $eq $4
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:113"
+  wire width 1 $16
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:113"
+  cell $eq $17
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
@@ -1683,25 +1677,25 @@ module \top
     parameter \Y_WIDTH 1
     connect \A \pin_uart_0__rts_uart_0__rts__i
     connect \B 1'1
-    connect \Y $3
+    connect \Y $16
   end
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:108"
-  wire width 1 $5
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:108"
-  cell $and $6
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:113"
+  wire width 1 $18
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:113"
+  cell $and $19
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
-    connect \A $1
-    connect \B $3
-    connect \Y $5
+    connect \A $14
+    connect \B $16
+    connect \Y $18
   end
   attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258"
-  wire width 1 $7
+  wire width 1 $20
   attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258"
-  cell $eq $8
+  cell $eq $21
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
@@ -1709,12 +1703,12 @@ module \top
     parameter \Y_WIDTH 1
     connect \A { \pin_uart_0__dtr_uart_0__dtr__i }
     connect \B 1'0
-    connect \Y $7
+    connect \Y $20
   end
   attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258"
-  wire width 1 $9
+  wire width 1 $22
   attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258"
-  cell $eq $10
+  cell $eq $23
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
@@ -1722,25 +1716,25 @@ module \top
     parameter \Y_WIDTH 1
     connect \A { \pin_uart_0__rts_uart_0__rts__i }
     connect \B 1'0
-    connect \Y $9
+    connect \Y $22
   end
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:111"
-  wire width 1 $11
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:111"
-  cell $and $12
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:116"
+  wire width 1 $24
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:116"
+  cell $and $25
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
-    connect \A $7
-    connect \B $9
-    connect \Y $11
+    connect \A $20
+    connect \B $22
+    connect \Y $24
   end
   attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258"
-  wire width 1 $13
+  wire width 1 $26
   attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258"
-  cell $eq $14
+  cell $eq $27
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
@@ -1748,12 +1742,12 @@ module \top
     parameter \Y_WIDTH 1
     connect \A { \pin_uart_0__dtr_uart_0__dtr__i }
     connect \B 1'1
-    connect \Y $13
+    connect \Y $26
   end
   attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258"
-  wire width 1 $15
+  wire width 1 $28
   attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258"
-  cell $eq $16
+  cell $eq $29
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
@@ -1761,25 +1755,25 @@ module \top
     parameter \Y_WIDTH 1
     connect \A { \pin_uart_0__rts_uart_0__rts__i }
     connect \B 1'0
-    connect \Y $15
+    connect \Y $28
   end
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:114"
-  wire width 1 $17
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:114"
-  cell $and $18
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:119"
+  wire width 1 $30
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:119"
+  cell $and $31
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
-    connect \A $13
-    connect \B $15
-    connect \Y $17
+    connect \A $26
+    connect \B $28
+    connect \Y $30
   end
   attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258"
-  wire width 1 $19
+  wire width 1 $32
   attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258"
-  cell $eq $20
+  cell $eq $33
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
@@ -1787,12 +1781,12 @@ module \top
     parameter \Y_WIDTH 1
     connect \A { \pin_uart_0__dtr_uart_0__dtr__i }
     connect \B 1'0
-    connect \Y $19
+    connect \Y $32
   end
   attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258"
-  wire width 1 $21
+  wire width 1 $34
   attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258"
-  cell $eq $22
+  cell $eq $35
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
@@ -1800,129 +1794,129 @@ module \top
     parameter \Y_WIDTH 1
     connect \A { \pin_uart_0__rts_uart_0__rts__i }
     connect \B 1'1
-    connect \Y $21
+    connect \Y $34
   end
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:117"
-  wire width 1 $23
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:117"
-  cell $and $24
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:122"
+  wire width 1 $36
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:122"
+  cell $and $37
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
-    connect \A $19
-    connect \B $21
-    connect \Y $23
+    connect \A $32
+    connect \B $34
+    connect \Y $36
   end
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:109"
-  wire width 1 $25
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:109"
-  cell $not $26
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:114"
+  wire width 1 $38
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:114"
+  cell $not $39
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \Y_WIDTH 1
     connect \A \i_button_ffsync_i_buttons__pwr
-    connect \Y $25
+    connect \Y $38
   end
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:109"
-  wire width 1 $27
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:109"
-  cell $and $28
-    parameter \A_SIGNED 0
-    parameter \A_WIDTH 1
-    parameter \B_SIGNED 0
-    parameter \B_WIDTH 1
-    parameter \Y_WIDTH 1
-    connect \A 1'1
-    connect \B $25
-    connect \Y $27
-  end
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:112"
-  wire width 1 $29
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:112"
-  cell $not $30
-    parameter \A_SIGNED 0
-    parameter \A_WIDTH 1
-    parameter \Y_WIDTH 1
-    connect \A \i_button_ffsync_i_buttons__pwr
-    connect \Y $29
-  end
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:112"
-  wire width 1 $31
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:112"
-  cell $and $32
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:114"
+  wire width 1 $40
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:114"
+  cell $and $41
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
     connect \A 1'1
-    connect \B $29
-    connect \Y $31
+    connect \B $38
+    connect \Y $40
   end
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:115"
-  wire width 1 $33
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:115"
-  cell $not $34
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:117"
+  wire width 1 $42
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:117"
+  cell $not $43
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \Y_WIDTH 1
     connect \A \i_button_ffsync_i_buttons__pwr
-    connect \Y $33
+    connect \Y $42
   end
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:115"
-  wire width 1 $35
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:115"
-  cell $and $36
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:117"
+  wire width 1 $44
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:117"
+  cell $and $45
+    parameter \A_SIGNED 0
+    parameter \A_WIDTH 1
+    parameter \B_SIGNED 0
+    parameter \B_WIDTH 1
+    parameter \Y_WIDTH 1
+    connect \A 1'1
+    connect \B $42
+    connect \Y $44
+  end
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:120"
+  wire width 1 $46
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:120"
+  cell $not $47
+    parameter \A_SIGNED 0
+    parameter \A_WIDTH 1
+    parameter \Y_WIDTH 1
+    connect \A \i_button_ffsync_i_buttons__pwr
+    connect \Y $46
+  end
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:120"
+  wire width 1 $48
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:120"
+  cell $and $49
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
     connect \A 1'0
-    connect \B $33
-    connect \Y $35
+    connect \B $46
+    connect \Y $48
   end
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:118"
-  wire width 1 $37
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:118"
-  cell $not $38
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:123"
+  wire width 1 $50
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:123"
+  cell $not $51
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \Y_WIDTH 1
     connect \A \i_button_ffsync_i_buttons__pwr
-    connect \Y $37
+    connect \Y $50
   end
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:118"
-  wire width 1 $39
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:118"
-  cell $and $40
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:123"
+  wire width 1 $52
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:123"
+  cell $and $53
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
     connect \A 1'1
-    connect \B $37
-    connect \Y $39
+    connect \B $50
+    connect \Y $52
   end
-  process $group_9
+  process $group_12
     assign \pin_esp32_spi_0__en_esp32_spi_0__en__o$next \pin_esp32_spi_0__en_esp32_spi_0__en__o
-    attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:108"
-    switch { $23 $17 $11 $5 }
-      attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:108"
+    attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:113"
+    switch { $36 $30 $24 $18 }
+      attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:113"
       case 4'---1
-        assign { \pin_esp32_spi_0__en_esp32_spi_0__en__o$next } $27
-      attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:111"
+        assign { \pin_esp32_spi_0__en_esp32_spi_0__en__o$next } $40
+      attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:116"
       case 4'--1-
-        assign { \pin_esp32_spi_0__en_esp32_spi_0__en__o$next } $31
-      attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:114"
+        assign { \pin_esp32_spi_0__en_esp32_spi_0__en__o$next } $44
+      attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:119"
       case 4'-1--
-        assign { \pin_esp32_spi_0__en_esp32_spi_0__en__o$next } $35
-      attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:117"
+        assign { \pin_esp32_spi_0__en_esp32_spi_0__en__o$next } $48
+      attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:122"
       case 4'1---
-        assign { \pin_esp32_spi_0__en_esp32_spi_0__en__o$next } $39
+        assign { \pin_esp32_spi_0__en_esp32_spi_0__en__o$next } $52
     end
     attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/xfrm.py:519"
     switch \rst
@@ -1934,10 +1928,10 @@ module \top
     sync posedge \clk
       update \pin_esp32_spi_0__en_esp32_spi_0__en__o \pin_esp32_spi_0__en_esp32_spi_0__en__o$next
   end
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:108"
-  wire width 1 $41
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:108"
-  cell $eq $42
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:113"
+  wire width 1 $54
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:113"
+  cell $eq $55
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
@@ -1945,12 +1939,12 @@ module \top
     parameter \Y_WIDTH 1
     connect \A \pin_uart_0__dtr_uart_0__dtr__i
     connect \B 1'1
-    connect \Y $41
+    connect \Y $54
   end
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:108"
-  wire width 1 $43
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:108"
-  cell $eq $44
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:113"
+  wire width 1 $56
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:113"
+  cell $eq $57
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
@@ -1958,25 +1952,25 @@ module \top
     parameter \Y_WIDTH 1
     connect \A \pin_uart_0__rts_uart_0__rts__i
     connect \B 1'1
-    connect \Y $43
+    connect \Y $56
   end
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:108"
-  wire width 1 $45
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:108"
-  cell $and $46
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:113"
+  wire width 1 $58
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:113"
+  cell $and $59
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
-    connect \A $41
-    connect \B $43
-    connect \Y $45
+    connect \A $54
+    connect \B $56
+    connect \Y $58
   end
   attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258"
-  wire width 1 $47
+  wire width 1 $60
   attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258"
-  cell $eq $48
+  cell $eq $61
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
@@ -1984,12 +1978,12 @@ module \top
     parameter \Y_WIDTH 1
     connect \A { \pin_uart_0__dtr_uart_0__dtr__i }
     connect \B 1'0
-    connect \Y $47
+    connect \Y $60
   end
   attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258"
-  wire width 1 $49
+  wire width 1 $62
   attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258"
-  cell $eq $50
+  cell $eq $63
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
@@ -1997,25 +1991,25 @@ module \top
     parameter \Y_WIDTH 1
     connect \A { \pin_uart_0__rts_uart_0__rts__i }
     connect \B 1'0
-    connect \Y $49
+    connect \Y $62
   end
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:111"
-  wire width 1 $51
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:111"
-  cell $and $52
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:116"
+  wire width 1 $64
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:116"
+  cell $and $65
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
-    connect \A $47
-    connect \B $49
-    connect \Y $51
+    connect \A $60
+    connect \B $62
+    connect \Y $64
   end
   attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258"
-  wire width 1 $53
+  wire width 1 $66
   attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258"
-  cell $eq $54
+  cell $eq $67
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
@@ -2023,12 +2017,12 @@ module \top
     parameter \Y_WIDTH 1
     connect \A { \pin_uart_0__dtr_uart_0__dtr__i }
     connect \B 1'1
-    connect \Y $53
+    connect \Y $66
   end
   attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258"
-  wire width 1 $55
+  wire width 1 $68
   attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258"
-  cell $eq $56
+  cell $eq $69
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
@@ -2036,25 +2030,25 @@ module \top
     parameter \Y_WIDTH 1
     connect \A { \pin_uart_0__rts_uart_0__rts__i }
     connect \B 1'0
-    connect \Y $55
+    connect \Y $68
   end
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:114"
-  wire width 1 $57
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:114"
-  cell $and $58
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:119"
+  wire width 1 $70
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:119"
+  cell $and $71
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
-    connect \A $53
-    connect \B $55
-    connect \Y $57
+    connect \A $66
+    connect \B $68
+    connect \Y $70
   end
   attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258"
-  wire width 1 $59
+  wire width 1 $72
   attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258"
-  cell $eq $60
+  cell $eq $73
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
@@ -2062,12 +2056,12 @@ module \top
     parameter \Y_WIDTH 1
     connect \A { \pin_uart_0__dtr_uart_0__dtr__i }
     connect \B 1'0
-    connect \Y $59
+    connect \Y $72
   end
   attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258"
-  wire width 1 $61
+  wire width 1 $74
   attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258"
-  cell $eq $62
+  cell $eq $75
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
@@ -2075,35 +2069,35 @@ module \top
     parameter \Y_WIDTH 1
     connect \A { \pin_uart_0__rts_uart_0__rts__i }
     connect \B 1'1
-    connect \Y $61
+    connect \Y $74
   end
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:117"
-  wire width 1 $63
-  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:117"
-  cell $and $64
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:122"
+  wire width 1 $76
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:122"
+  cell $and $77
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
-    connect \A $59
-    connect \B $61
-    connect \Y $63
+    connect \A $72
+    connect \B $74
+    connect \Y $76
   end
-  process $group_10
+  process $group_13
     assign \pin_esp32_spi_0__gpio0_esp32_spi_0__gpio0__o$next \pin_esp32_spi_0__gpio0_esp32_spi_0__gpio0__o
-    attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:108"
-    switch { $63 $57 $51 $45 }
-      attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:108"
+    attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:113"
+    switch { $76 $70 $64 $58 }
+      attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:113"
       case 4'---1
         assign \pin_esp32_spi_0__gpio0_esp32_spi_0__gpio0__o$next 1'1
-      attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:111"
+      attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:116"
       case 4'--1-
         assign \pin_esp32_spi_0__gpio0_esp32_spi_0__gpio0__o$next 1'1
-      attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:114"
+      attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:119"
       case 4'-1--
         assign \pin_esp32_spi_0__gpio0_esp32_spi_0__gpio0__o$next 1'1
-      attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:117"
+      attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:122"
       case 4'1---
         assign \pin_esp32_spi_0__gpio0_esp32_spi_0__gpio0__o$next 1'0
     end
@@ -2117,11 +2111,11 @@ module \top
     sync posedge \clk
       update \pin_esp32_spi_0__gpio0_esp32_spi_0__gpio0__o \pin_esp32_spi_0__gpio0_esp32_spi_0__gpio0__o$next
   end
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:221"
+  attribute \src "tests2_feb2022/test1_amlib_timers.py:212"
   wire width 1 \ui__reset
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:221"
+  attribute \src "tests2_feb2022/test1_amlib_timers.py:212"
   wire width 1 \ui__reset$next
-  process $group_11
+  process $group_14
     assign \tb_ui__reset$next \tb_ui__reset
     assign \tb_ui__reset$next \ui__reset
     attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/xfrm.py:519"
@@ -2134,11 +2128,11 @@ module \top
     sync posedge \sync_1e6_clk
       update \tb_ui__reset \tb_ui__reset$next
   end
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:221"
+  attribute \src "tests2_feb2022/test1_amlib_timers.py:212"
   wire width 1 \ui__start
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:221"
+  attribute \src "tests2_feb2022/test1_amlib_timers.py:212"
   wire width 1 \ui__start$next
-  process $group_12
+  process $group_15
     assign \tb_ui__start$next \tb_ui__start
     assign \tb_ui__start$next \ui__start
     attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/xfrm.py:519"
@@ -2151,11 +2145,11 @@ module \top
     sync posedge \sync_1e6_clk
       update \tb_ui__start \tb_ui__start$next
   end
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:221"
+  attribute \src "tests2_feb2022/test1_amlib_timers.py:212"
   wire width 1 \ui__done
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:221"
+  attribute \src "tests2_feb2022/test1_amlib_timers.py:212"
   wire width 1 \ui__done$next
-  process $group_13
+  process $group_16
     assign \ui__done$next \ui__done
     assign \ui__done$next \tb_ui__done
     attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/xfrm.py:519"
@@ -2168,11 +2162,11 @@ module \top
     sync posedge \sync_1e6_clk
       update \ui__done \ui__done$next
   end
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:221"
+  attribute \src "tests2_feb2022/test1_amlib_timers.py:212"
   wire width 1 \ui__active
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:221"
+  attribute \src "tests2_feb2022/test1_amlib_timers.py:212"
   wire width 1 \ui__active$next
-  process $group_14
+  process $group_17
     assign \ui__active$next \ui__active
     assign \ui__active$next \tb_ui__active
     attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/xfrm.py:519"
@@ -2185,11 +2179,11 @@ module \top
     sync posedge \sync_1e6_clk
       update \ui__active \ui__active$next
   end
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:228"
+  attribute \src "tests2_feb2022/test1_amlib_timers.py:219"
   wire width 1 \start
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:228"
+  attribute \src "tests2_feb2022/test1_amlib_timers.py:219"
   wire width 1 \start$next
-  process $group_15
+  process $group_18
     assign \start$next \start
     assign \start$next \i_button_ffsync_i_buttons__left
     attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/xfrm.py:519"
@@ -2203,36 +2197,36 @@ module \top
       update \start \start$next
   end
   attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/ast.py:1369"
-  wire width 1 $65
+  wire width 1 $78
   attribute \amaranth.sample_reg 1
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:228"
+  attribute \src "tests2_feb2022/test1_amlib_timers.py:219"
   wire width 1 $sample$s$start$sync_1e6$1
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:228"
+  attribute \src "tests2_feb2022/test1_amlib_timers.py:219"
   wire width 1 $sample$s$start$sync_1e6$1$next
   attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/ast.py:1369"
-  cell $not $66
+  cell $not $79
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \Y_WIDTH 1
     connect \A $sample$s$start$sync_1e6$1
-    connect \Y $65
+    connect \Y $78
   end
   attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/ast.py:1369"
-  wire width 1 $67
+  wire width 1 $80
   attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/ast.py:1369"
-  cell $and $68
+  cell $and $81
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
-    connect \A $65
+    connect \A $78
     connect \B \start
-    connect \Y $67
+    connect \Y $80
   end
-  process $group_16
+  process $group_19
     assign \ui__start$next \ui__start
-    assign \ui__start$next $67
+    assign \ui__start$next $80
     attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/xfrm.py:519"
     switch \sync_1e6_rst
       case 1'1
@@ -2243,11 +2237,11 @@ module \top
     sync posedge \sync_1e6_clk
       update \ui__start \ui__start$next
   end
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:231"
+  attribute \src "tests2_feb2022/test1_amlib_timers.py:222"
   wire width 1 \reset
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:231"
+  attribute \src "tests2_feb2022/test1_amlib_timers.py:222"
   wire width 1 \reset$next
-  process $group_17
+  process $group_20
     assign \reset$next \reset
     assign \reset$next \i_button_ffsync_i_buttons__right
     attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/xfrm.py:519"
@@ -2261,36 +2255,36 @@ module \top
       update \reset \reset$next
   end
   attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/ast.py:1369"
-  wire width 1 $69
+  wire width 1 $82
   attribute \amaranth.sample_reg 1
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:231"
+  attribute \src "tests2_feb2022/test1_amlib_timers.py:222"
   wire width 1 $sample$s$reset$sync_1e6$1
-  attribute \src "tests1_feb2022/test1_amlib_timers.py:231"
+  attribute \src "tests2_feb2022/test1_amlib_timers.py:222"
   wire width 1 $sample$s$reset$sync_1e6$1$next
   attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/ast.py:1369"
-  cell $not $70
+  cell $not $83
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \Y_WIDTH 1
     connect \A $sample$s$reset$sync_1e6$1
-    connect \Y $69
+    connect \Y $82
   end
   attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/ast.py:1369"
-  wire width 1 $71
+  wire width 1 $84
   attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/ast.py:1369"
-  cell $and $72
+  cell $and $85
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
-    connect \A $69
+    connect \A $82
     connect \B \reset
-    connect \Y $71
+    connect \Y $84
   end
-  process $group_18
+  process $group_21
     assign \ui__reset$next \ui__reset
-    assign \ui__reset$next $71
+    assign \ui__reset$next $84
     attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/xfrm.py:519"
     switch \sync_1e6_rst
       case 1'1
@@ -2301,7 +2295,7 @@ module \top
     sync posedge \sync_1e6_clk
       update \ui__reset \ui__reset$next
   end
-  process $group_19
+  process $group_22
     assign \pin_led_0_led_0__o$next \pin_led_0_led_0__o
     assign \pin_led_1_led_1__o$next \pin_led_1_led_1__o
     assign \pin_led_2_led_2__o$next \pin_led_2_led_2__o
@@ -2342,7 +2336,7 @@ module \top
       update \pin_led_6_led_6__o \pin_led_6_led_6__o$next
       update \pin_led_7_led_7__o \pin_led_7_led_7__o$next
   end
-  process $group_27
+  process $group_30
     assign $sample$s$start$sync_1e6$1$next $sample$s$start$sync_1e6$1
     assign $sample$s$start$sync_1e6$1$next \start
     sync init
@@ -2350,7 +2344,7 @@ module \top
     sync posedge \sync_1e6_clk
       update $sample$s$start$sync_1e6$1 $sample$s$start$sync_1e6$1$next
   end
-  process $group_28
+  process $group_31
     assign $sample$s$reset$sync_1e6$1$next $sample$s$reset$sync_1e6$1
     assign $sample$s$reset$sync_1e6$1$next \reset
     sync init

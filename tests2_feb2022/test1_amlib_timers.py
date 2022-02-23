@@ -19,6 +19,9 @@ from amlib.utils import Timer
 from amaranth.lib.cdc import FFSynchronizer
 from amaranth.build import Platform
 
+from amtest.boards.ulx3s.common.upload import platform, UploadBase
+from amtest.boards.ulx3s.common.clks import add_clock
+
 
 # sys.path.append(os.path.join(os.getcwd(), "tests/ulx3s_gui_test/common"))
 # from test_common import fpga_gui_interface, fpga_mcu_interface
@@ -100,25 +103,15 @@ if __name__ == "__main__":
 			# 		m.d.sync += self.leds[i].eq(~self.leds[i])
 			m.d.sync_1e6 += self.leds.eq(debug.count[15:])
 
-			def init_clocks():
-				### add default clock
-				m.domains.sync = cd_sync = ClockDomain("sync")
-				m.d.sync += cd_sync.rst.eq(ui.reset) # or should this be comb?
-				if platform != None:
-					m.d.comb += cd_sync.clk.eq(platform.request("clk25"))
-					platform.add_clock_constraint(cd_sync.clk,  platform.default_clk_frequency)
-				else:
-					... # note - the sim clock is added later
+			def init_clocks():	
+				# add slower clock for counters (i.e. so they don't limit speed)					
+				# m.d.sync += ClockDomain("sync").rst.eq(ui.reset)
+				# m.d.sync += ClockDomain("sync_1e6").rst.eq(ui.reset)
 
-				### add slower clock for counters (i.e. so they don't limit speed)
-				m.domains.sync_1e6 = cd_sync_1e6 = ClockDomain("sync_1e6")
-				divisor = 25
-				clk_counter = Signal(shape=range(int(divisor/2)+1)) # is this right?
-				m.d.sync += [
-					clk_counter.eq(Mux(clk_counter == (int(divisor/2)-1), 0, clk_counter+1)), # not quite accurate but close enough
-					cd_sync_1e6.rst.eq(ui.reset), # or should this be comb?
-					cd_sync_1e6.clk.eq(Mux(clk_counter==0,~cd_sync_1e6.clk,cd_sync_1e6.clk))
-				]
+				m.d.sync_1e6 += ResetSignal("sync").eq(ui.reset) # making this reset happen on a slower clock means sync works up to 392 MHz! nice
+				m.d.sync_1e6 += ResetSignal("sync_1e6").eq(ui.reset)
+
+			
 			init_clocks()
 
 			return m
@@ -163,6 +156,9 @@ if __name__ == "__main__":
 			def elaborate(self, platform = None):
 				m = Module()
 
+				add_clock(m, "sync_1e6")
+				add_clock(m, "sync")
+
 				m.submodules.tb = tb = Testbench()
 				ui = Record.like(self.ui)
 				m.d.sync_1e6 += [
@@ -204,11 +200,6 @@ if __name__ == "__main__":
 			sim.run()
 
 	else: # upload - is there a test we could upload and do on the ulx3s?
-		...
-
-		# from ulx3s_gui_test.fpga_gateware.ulx3s_upload_common import platform, UploadBase
-		from amtest.boards.ulx3s.common import platform, UploadBase
-
 		class Upload(UploadBase):
 			def __init__(self):
 				super().__init__()

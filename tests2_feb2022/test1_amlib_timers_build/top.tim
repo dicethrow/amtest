@@ -72,13 +72,13 @@ Info: Generating derived timing constraints...
 Info: Promoting globals...
 Info:     promoting clock net sync_1e6_clk to global network
 Info:     promoting clock net clk to global network
-Info: Checksum: 0x8d4c8038
+Info: Checksum: 0x3490ae6c
 
 Info: Annotating ports with timing budgets for target frequency 12.00 MHz
-Info: Checksum: 0x6968aaf8
+Info: Checksum: 0x037e188e
 
 Info: Device utilisation:
-Info: 	       TRELLIS_SLICE:   146/41820     0%
+Info: 	       TRELLIS_SLICE:   145/41820     0%
 Info: 	          TRELLIS_IO:    28/  365     7%
 Info: 	                DCCA:     2/   56     3%
 Info: 	              DP16KD:     0/  208     0%
@@ -106,66 +106,66 @@ Info: 	        ECLKBRIDGECS:     0/    2     0%
 Info: 	                DCSC:     0/    2     0%
 
 Info: Placed 28 cells based on constraints.
-Info: Creating initial analytic placement for 112 cells, random placement wirelen = 15804.
-Info:     at initial placer iter 0, wirelen = 680
-Info:     at initial placer iter 1, wirelen = 704
-Info:     at initial placer iter 2, wirelen = 704
-Info:     at initial placer iter 3, wirelen = 711
+Info: Creating initial analytic placement for 111 cells, random placement wirelen = 14844.
+Info:     at initial placer iter 0, wirelen = 647
+Info:     at initial placer iter 1, wirelen = 637
+Info:     at initial placer iter 2, wirelen = 630
+Info:     at initial placer iter 3, wirelen = 637
 Info: Running main analytical placer.
-Info:     at iteration #1, type TRELLIS_SLICE: wirelen solved = 710, spread = 1006, legal = 1113; time = 0.01s
-Info:     at iteration #2, type TRELLIS_SLICE: wirelen solved = 675, spread = 974, legal = 1259; time = 0.01s
-Info:     at iteration #3, type TRELLIS_SLICE: wirelen solved = 680, spread = 991, legal = 1015; time = 0.01s
-Info:     at iteration #4, type TRELLIS_SLICE: wirelen solved = 670, spread = 1024, legal = 1081; time = 0.01s
-Info:     at iteration #5, type TRELLIS_SLICE: wirelen solved = 697, spread = 1046, legal = 1048; time = 0.01s
-Info:     at iteration #6, type TRELLIS_SLICE: wirelen solved = 696, spread = 976, legal = 1014; time = 0.00s
-Info:     at iteration #7, type TRELLIS_SLICE: wirelen solved = 693, spread = 992, legal = 1034; time = 0.01s
-Info:     at iteration #8, type TRELLIS_SLICE: wirelen solved = 715, spread = 1046, legal = 1118; time = 0.00s
-Info:     at iteration #9, type TRELLIS_SLICE: wirelen solved = 752, spread = 1007, legal = 1056; time = 0.00s
-Info:     at iteration #10, type TRELLIS_SLICE: wirelen solved = 747, spread = 999, legal = 1079; time = 0.00s
-Info:     at iteration #11, type TRELLIS_SLICE: wirelen solved = 762, spread = 961, legal = 1040; time = 0.00s
-Info: HeAP Placer Time: 0.10s
+Info:     at iteration #1, type TRELLIS_SLICE: wirelen solved = 632, spread = 981, legal = 1071; time = 0.02s
+Info:     at iteration #2, type TRELLIS_SLICE: wirelen solved = 585, spread = 908, legal = 1107; time = 0.01s
+Info:     at iteration #3, type TRELLIS_SLICE: wirelen solved = 634, spread = 1010, legal = 1113; time = 0.01s
+Info:     at iteration #4, type TRELLIS_SLICE: wirelen solved = 645, spread = 909, legal = 996; time = 0.01s
+Info:     at iteration #5, type TRELLIS_SLICE: wirelen solved = 641, spread = 993, legal = 1056; time = 0.01s
+Info:     at iteration #6, type TRELLIS_SLICE: wirelen solved = 664, spread = 1010, legal = 1096; time = 0.01s
+Info:     at iteration #7, type TRELLIS_SLICE: wirelen solved = 698, spread = 978, legal = 1054; time = 0.01s
+Info:     at iteration #8, type TRELLIS_SLICE: wirelen solved = 711, spread = 948, legal = 1029; time = 0.01s
+Info:     at iteration #9, type TRELLIS_SLICE: wirelen solved = 727, spread = 942, legal = 1011; time = 0.01s
+Info: HeAP Placer Time: 0.14s
 Info:   of which solving equations: 0.05s
 Info:   of which spreading cells: 0.02s
 Info:   of which strict legalisation: 0.00s
 
 Info: Running simulated annealing placer for refinement.
-Info:   at iteration #1: temp = 0.000000, timing cost = 169, wirelen = 1014
-Info:   at iteration #3: temp = 0.000000, timing cost = 100, wirelen = 922 
-Info: SA placement time 0.02s
+Info:   at iteration #1: temp = 0.000000, timing cost = 485, wirelen = 996
+Info:   at iteration #5: temp = 0.000000, timing cost = 66, wirelen = 906
+Info:   at iteration #5: temp = 0.000000, timing cost = 56, wirelen = 887 
+Info: SA placement time 0.04s
 
-Info: Max frequency for clock '$glbnet$sync_1e6_clk': 121.12 MHz (PASS at 12.00 MHz)
-Info: Max frequency for clock          '$glbnet$clk': 173.94 MHz (PASS at 25.00 MHz)
+Info: Max frequency for clock '$glbnet$sync_1e6_clk': 98.15 MHz (PASS at 12.00 MHz)
+Info: Max frequency for clock          '$glbnet$clk': 358.42 MHz (PASS at 25.00 MHz)
 
-Info: Max delay <async>                      -> posedge $glbnet$clk         : 16.20 ns
-Info: Max delay posedge $glbnet$clk          -> <async>                     : 6.28 ns
-Info: Max delay posedge $glbnet$clk          -> posedge $glbnet$sync_1e6_clk: 3.95 ns
-Info: Max delay posedge $glbnet$sync_1e6_clk -> <async>                     : 2.92 ns
-Info: Max delay posedge $glbnet$sync_1e6_clk -> posedge $glbnet$clk         : 1.49 ns
+Info: Max delay <async>                      -> posedge $glbnet$clk         : 6.72 ns
+Info: Max delay <async>                      -> posedge $glbnet$sync_1e6_clk: 7.32 ns
+Info: Max delay posedge $glbnet$clk          -> <async>                     : 5.93 ns
+Info: Max delay posedge $glbnet$clk          -> posedge $glbnet$sync_1e6_clk: 1.49 ns
+Info: Max delay posedge $glbnet$sync_1e6_clk -> <async>                     : 8.20 ns
+Info: Max delay posedge $glbnet$sync_1e6_clk -> posedge $glbnet$clk         : 9.60 ns
 
 Info: Slack histogram:
-Info:  legend: * represents 2 endpoint(s)
-Info:          + represents [1,2) endpoint(s)
-Info: [ 23800,  26715) |+
-Info: [ 26715,  29630) | 
-Info: [ 29630,  32545) |+
-Info: [ 32545,  35460) |***+
-Info: [ 35460,  38375) |****+
-Info: [ 38375,  41290) |*+
-Info: [ 41290,  44205) | 
-Info: [ 44205,  47120) | 
-Info: [ 47120,  50035) | 
-Info: [ 50035,  52950) | 
-Info: [ 52950,  55865) | 
-Info: [ 55865,  58780) | 
-Info: [ 58780,  61695) | 
-Info: [ 61695,  64610) | 
-Info: [ 64610,  67525) | 
-Info: [ 67525,  70440) | 
-Info: [ 70440,  73355) | 
-Info: [ 73355,  76270) |*********+
-Info: [ 76270,  79185) |**+
-Info: [ 79185,  82100) |************************************************************ 
-Info: Checksum: 0x108ffbdd
+Info:  legend: * represents 1 endpoint(s)
+Info:          + represents [1,1) endpoint(s)
+Info: [ 30395,  32980) |***+
+Info: [ 32980,  35565) |**+
+Info: [ 35565,  38150) |*****+
+Info: [ 38150,  40735) |***+
+Info: [ 40735,  43320) | 
+Info: [ 43320,  45905) | 
+Info: [ 45905,  48490) | 
+Info: [ 48490,  51075) | 
+Info: [ 51075,  53660) | 
+Info: [ 53660,  56245) | 
+Info: [ 56245,  58830) | 
+Info: [ 58830,  61415) | 
+Info: [ 61415,  64000) | 
+Info: [ 64000,  66585) | 
+Info: [ 66585,  69170) | 
+Info: [ 69170,  71755) | 
+Info: [ 71755,  74340) |*+
+Info: [ 74340,  76925) |**************************************************+
+Info: [ 76925,  79510) |*********************+
+Info: [ 79510,  82095) |************************************************************ 
+Info: Checksum: 0x603adc81
 Info: Routing globals...
 Info:     routing clock net $glbnet$clk using global 0
 Info:     routing clock net $glbnet$sync_1e6_clk using global 1
@@ -175,211 +175,233 @@ Info: Setting up routing queue.
 Info: Routing 494 arcs.
 Info:            |   (re-)routed arcs  |   delta    | remaining|       time spent     |
 Info:    IterCnt |  w/ripup   wo/ripup |  w/r  wo/r |      arcs| batch(sec) total(sec)|
-Info:        564 |       67        497 |   67   497 |         0|       0.14       0.14|
+Info:        585 |       85        500 |   85   500 |         0|       0.16       0.16|
 Info: Routing complete.
-Info: Router1 time 0.14s
-Info: Checksum: 0xaae5fb37
+Info: Router1 time 0.16s
+Info: Checksum: 0x049b7f11
 
 Info: Critical path report for clock '$glbnet$sync_1e6_clk' (posedge -> posedge):
 Info: curr total
-Info:  0.5  0.5  Source tb.dut.delayer.counter_out_TRELLIS_FF_Q_5_DI_LUT4_Z_SLICE.Q0
-Info:  1.1  1.6    Net tb.dut.delayer_counter_out[2] budget 0.000000 ns (3,39) -> (3,38)
+Info:  0.5  0.5  Source tb.dut.delayer.counter_out_TRELLIS_FF_Q_29_DI_LUT4_Z_SLICE.Q0
+Info:  1.1  1.7    Net tb.dut.delayer_counter_out[2] budget 0.000000 ns (2,38) -> (2,37)
 Info:                Sink tb.dut.delayer_start_LUT4_D_C_CCU2C_COUT_S0_CCU2C_S0_3$CCU2_SLICE.B0
 Info:                Defined in:
 Info:                  /home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:11
 Info:  0.4  2.1  Source tb.dut.delayer_start_LUT4_D_C_CCU2C_COUT_S0_CCU2C_S0_3$CCU2_SLICE.FCO
-Info:  0.0  2.1    Net tb.dut.delayer_start_LUT4_D_C[3] budget 0.000000 ns (3,38) -> (3,38)
+Info:  0.0  2.1    Net tb.dut.delayer_start_LUT4_D_C[3] budget 0.000000 ns (2,37) -> (2,37)
 Info:                Sink tb.dut.delayer_start_LUT4_D_C_CCU2C_COUT_S0_CCU2C_S0_2$CCU2_SLICE.FCI
 Info:                Defined in:
 Info:                  /home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:30
 Info:                  /home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/arith_map.v:63.22-63.23
 Info:  0.1  2.2  Source tb.dut.delayer_start_LUT4_D_C_CCU2C_COUT_S0_CCU2C_S0_2$CCU2_SLICE.FCO
-Info:  0.0  2.2    Net tb.dut.delayer_start_LUT4_D_C[5] budget 0.000000 ns (3,38) -> (4,38)
+Info:  0.0  2.2    Net tb.dut.delayer_start_LUT4_D_C[5] budget 0.000000 ns (2,37) -> (3,37)
 Info:                Sink tb.dut.delayer_start_LUT4_D_C_CCU2C_COUT_S0_CCU2C_S0_1$CCU2_SLICE.FCI
 Info:                Defined in:
 Info:                  /home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:30
 Info:                  /home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/arith_map.v:63.22-63.23
-Info:  0.1  2.2  Source tb.dut.delayer_start_LUT4_D_C_CCU2C_COUT_S0_CCU2C_S0_1$CCU2_SLICE.FCO
-Info:  0.0  2.2    Net tb.dut.delayer_start_LUT4_D_C[7] budget 0.000000 ns (4,38) -> (4,38)
+Info:  0.1  2.3  Source tb.dut.delayer_start_LUT4_D_C_CCU2C_COUT_S0_CCU2C_S0_1$CCU2_SLICE.FCO
+Info:  0.0  2.3    Net tb.dut.delayer_start_LUT4_D_C[7] budget 0.000000 ns (3,37) -> (3,37)
 Info:                Sink tb.dut.delayer_start_LUT4_D_C_CCU2C_COUT_S0_CCU2C_S0$CCU2_SLICE.FCI
 Info:                Defined in:
 Info:                  /home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:30
 Info:                  /home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/arith_map.v:63.22-63.23
 Info:  0.1  2.3  Source tb.dut.delayer_start_LUT4_D_C_CCU2C_COUT_S0_CCU2C_S0$CCU2_SLICE.FCO
-Info:  0.0  2.3    Net tb.dut.delayer_start_LUT4_D_C[9] budget 0.000000 ns (4,38) -> (4,38)
+Info:  0.0  2.3    Net tb.dut.delayer_start_LUT4_D_C[9] budget 0.000000 ns (3,37) -> (3,37)
 Info:                Sink tb.dut.delayer_start_LUT4_D_C_CCU2C_COUT_S0_CCU2C_S0_13$CCU2_SLICE.FCI
 Info:                Defined in:
 Info:                  /home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:30
 Info:                  /home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/arith_map.v:63.22-63.23
 Info:  0.1  2.4  Source tb.dut.delayer_start_LUT4_D_C_CCU2C_COUT_S0_CCU2C_S0_13$CCU2_SLICE.FCO
-Info:  0.0  2.4    Net tb.dut.delayer_start_LUT4_D_C[11] budget 0.000000 ns (4,38) -> (4,38)
+Info:  0.0  2.4    Net tb.dut.delayer_start_LUT4_D_C[11] budget 0.000000 ns (3,37) -> (3,37)
 Info:                Sink tb.dut.delayer_start_LUT4_D_C_CCU2C_COUT_S0_CCU2C_S0_12$CCU2_SLICE.FCI
 Info:                Defined in:
 Info:                  /home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:30
 Info:                  /home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/arith_map.v:63.22-63.23
-Info:  0.1  2.4  Source tb.dut.delayer_start_LUT4_D_C_CCU2C_COUT_S0_CCU2C_S0_12$CCU2_SLICE.FCO
-Info:  0.0  2.4    Net tb.dut.delayer_start_LUT4_D_C[13] budget 0.000000 ns (4,38) -> (5,38)
+Info:  0.1  2.5  Source tb.dut.delayer_start_LUT4_D_C_CCU2C_COUT_S0_CCU2C_S0_12$CCU2_SLICE.FCO
+Info:  0.0  2.5    Net tb.dut.delayer_start_LUT4_D_C[13] budget 0.000000 ns (3,37) -> (4,37)
 Info:                Sink tb.dut.delayer_start_LUT4_D_C_CCU2C_COUT_S0_CCU2C_S0_11$CCU2_SLICE.FCI
 Info:                Defined in:
 Info:                  /home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:30
 Info:                  /home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/arith_map.v:63.22-63.23
 Info:  0.1  2.5  Source tb.dut.delayer_start_LUT4_D_C_CCU2C_COUT_S0_CCU2C_S0_11$CCU2_SLICE.FCO
-Info:  0.0  2.5    Net tb.dut.delayer_start_LUT4_D_C[15] budget 0.000000 ns (5,38) -> (5,38)
+Info:  0.0  2.5    Net tb.dut.delayer_start_LUT4_D_C[15] budget 0.000000 ns (4,37) -> (4,37)
 Info:                Sink tb.dut.delayer_start_LUT4_D_C_CCU2C_COUT_S0_CCU2C_S0_10$CCU2_SLICE.FCI
 Info:                Defined in:
 Info:                  /home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:30
 Info:                  /home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/arith_map.v:63.22-63.23
 Info:  0.1  2.6  Source tb.dut.delayer_start_LUT4_D_C_CCU2C_COUT_S0_CCU2C_S0_10$CCU2_SLICE.FCO
-Info:  0.0  2.6    Net tb.dut.delayer_start_LUT4_D_C[17] budget 0.000000 ns (5,38) -> (5,38)
+Info:  0.0  2.6    Net tb.dut.delayer_start_LUT4_D_C[17] budget 0.000000 ns (4,37) -> (4,37)
 Info:                Sink tb.dut.delayer_start_LUT4_D_C_CCU2C_COUT_S0_CCU2C_S0_9$CCU2_SLICE.FCI
 Info:                Defined in:
 Info:                  /home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:30
 Info:                  /home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/arith_map.v:63.22-63.23
 Info:  0.1  2.7  Source tb.dut.delayer_start_LUT4_D_C_CCU2C_COUT_S0_CCU2C_S0_9$CCU2_SLICE.FCO
-Info:  0.0  2.7    Net tb.dut.delayer_start_LUT4_D_C[19] budget 0.000000 ns (5,38) -> (5,38)
+Info:  0.0  2.7    Net tb.dut.delayer_start_LUT4_D_C[19] budget 0.000000 ns (4,37) -> (4,37)
 Info:                Sink tb.dut.delayer_start_LUT4_D_C_CCU2C_COUT_S0_CCU2C_S0_8$CCU2_SLICE.FCI
 Info:                Defined in:
 Info:                  /home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:30
 Info:                  /home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/arith_map.v:63.22-63.23
-Info:  0.1  2.7  Source tb.dut.delayer_start_LUT4_D_C_CCU2C_COUT_S0_CCU2C_S0_8$CCU2_SLICE.FCO
-Info:  0.0  2.7    Net tb.dut.delayer_start_LUT4_D_C[21] budget 0.000000 ns (5,38) -> (6,38)
+Info:  0.1  2.8  Source tb.dut.delayer_start_LUT4_D_C_CCU2C_COUT_S0_CCU2C_S0_8$CCU2_SLICE.FCO
+Info:  0.0  2.8    Net tb.dut.delayer_start_LUT4_D_C[21] budget 0.000000 ns (4,37) -> (5,37)
 Info:                Sink tb.dut.delayer_start_LUT4_D_C_CCU2C_COUT_S0_CCU2C_S0_7$CCU2_SLICE.FCI
 Info:                Defined in:
 Info:                  /home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:30
 Info:                  /home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/arith_map.v:63.22-63.23
 Info:  0.1  2.8  Source tb.dut.delayer_start_LUT4_D_C_CCU2C_COUT_S0_CCU2C_S0_7$CCU2_SLICE.FCO
-Info:  0.0  2.8    Net tb.dut.delayer_start_LUT4_D_C[23] budget 0.000000 ns (6,38) -> (6,38)
+Info:  0.0  2.8    Net tb.dut.delayer_start_LUT4_D_C[23] budget 0.000000 ns (5,37) -> (5,37)
 Info:                Sink tb.dut.delayer_start_LUT4_D_C_CCU2C_COUT_S0_CCU2C_S0_6$CCU2_SLICE.FCI
 Info:                Defined in:
 Info:                  /home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:30
 Info:                  /home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/arith_map.v:63.22-63.23
 Info:  0.1  2.9  Source tb.dut.delayer_start_LUT4_D_C_CCU2C_COUT_S0_CCU2C_S0_6$CCU2_SLICE.FCO
-Info:  0.0  2.9    Net tb.dut.delayer_start_LUT4_D_C[25] budget 0.000000 ns (6,38) -> (6,38)
+Info:  0.0  2.9    Net tb.dut.delayer_start_LUT4_D_C[25] budget 0.000000 ns (5,37) -> (5,37)
 Info:                Sink tb.dut.delayer_start_LUT4_D_C_CCU2C_COUT_S0_CCU2C_S0_5$CCU2_SLICE.FCI
 Info:                Defined in:
 Info:                  /home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:30
 Info:                  /home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/arith_map.v:63.22-63.23
-Info:  0.1  2.9  Source tb.dut.delayer_start_LUT4_D_C_CCU2C_COUT_S0_CCU2C_S0_5$CCU2_SLICE.FCO
-Info:  0.0  2.9    Net tb.dut.delayer_start_LUT4_D_C[27] budget 0.000000 ns (6,38) -> (6,38)
+Info:  0.1  3.0  Source tb.dut.delayer_start_LUT4_D_C_CCU2C_COUT_S0_CCU2C_S0_5$CCU2_SLICE.FCO
+Info:  0.0  3.0    Net tb.dut.delayer_start_LUT4_D_C[27] budget 0.000000 ns (5,37) -> (5,37)
 Info:                Sink tb.dut.delayer_start_LUT4_D_C_CCU2C_COUT_S0_CCU2C_S0_4$CCU2_SLICE.FCI
 Info:                Defined in:
 Info:                  /home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:30
 Info:                  /home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/arith_map.v:63.22-63.23
 Info:  0.1  3.0  Source tb.dut.delayer_start_LUT4_D_C_CCU2C_COUT_S0_CCU2C_S0_4$CCU2_SLICE.FCO
-Info:  0.0  3.0    Net tb.dut.delayer_start_LUT4_D_C[29] budget 0.000000 ns (6,38) -> (7,38)
+Info:  0.0  3.0    Net tb.dut.delayer_start_LUT4_D_C[29] budget 0.000000 ns (5,37) -> (6,37)
 Info:                Sink tb.dut.delayer_start_LUT4_D_C_CCU2C_COUT$CCU2_SLICE.FCI
 Info:                Defined in:
 Info:                  /home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:30
 Info:                  /home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/arith_map.v:63.22-63.23
 Info:  0.1  3.1  Source tb.dut.delayer_start_LUT4_D_C_CCU2C_COUT$CCU2_SLICE.FCO
-Info:  0.0  3.1    Net $nextpnr_CCU2C_1$CIN budget 0.000000 ns (7,38) -> (7,38)
+Info:  0.0  3.1    Net $nextpnr_CCU2C_1$CIN budget 0.000000 ns (6,37) -> (6,37)
 Info:                Sink $nextpnr_CCU2C_1$CCU2_SLICE.FCI
-Info:  0.4  3.5  Source $nextpnr_CCU2C_1$CCU2_SLICE.F0
-Info:  0.7  4.3    Net tb.dut.delayer_start_LUT4_D_C[31] budget 26.795000 ns (7,38) -> (5,39)
-Info:                Sink tb.dut.delayer.counter_out_TRELLIS_FF_Q_27_DI_LUT4_Z_SLICE.D1
+Info:  0.4  3.6  Source $nextpnr_CCU2C_1$CCU2_SLICE.F0
+Info:  0.7  4.3    Net tb.dut.delayer_start_LUT4_D_C[31] budget 26.795000 ns (6,37) -> (4,38)
+Info:                Sink tb.dut.delayer.counter_out_TRELLIS_FF_Q_2_DI_LUT4_Z_SLICE.D1
 Info:                Defined in:
 Info:                  /home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:30
 Info:                  /home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/arith_map.v:38.23-38.25
-Info:  0.2  4.5  Source tb.dut.delayer.counter_out_TRELLIS_FF_Q_27_DI_LUT4_Z_SLICE.F1
-Info:  1.0  5.5    Net tb.dut.delayer_start_LUT4_D_Z[0] budget 26.795000 ns (5,39) -> (8,38)
-Info:                Sink tb.dut.delayer.counter_out_TRELLIS_FF_Q_9_DI_LUT4_Z_SLICE.D1
+Info:  0.2  4.5  Source tb.dut.delayer.counter_out_TRELLIS_FF_Q_2_DI_LUT4_Z_SLICE.F1
+Info:  1.5  6.1    Net tb.dut.delayer_start_LUT4_D_Z[0] budget 26.795000 ns (4,38) -> (2,35)
+Info:                Sink tb.dut.delayer.counter_out_TRELLIS_FF_Q_26_DI_LUT4_Z_SLICE.D0
 Info:                Defined in:
 Info:                  /home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:108.23-108.24
-Info:  0.2  5.7  Source tb.dut.delayer.counter_out_TRELLIS_FF_Q_9_DI_LUT4_Z_SLICE.F1
-Info:  0.1  5.8    Net tb.dut.delayer.counter_out_TRELLIS_FF_Q_9_DI budget 26.794001 ns (8,38) -> (8,38)
-Info:                Sink tb.dut.delayer.counter_out_TRELLIS_FF_Q_9_DI_LUT4_Z_SLICE.DI1
-Info:  0.0  5.8  Setup tb.dut.delayer.counter_out_TRELLIS_FF_Q_9_DI_LUT4_Z_SLICE.DI1
-Info: 2.9 ns logic, 3.0 ns routing
+Info:  0.2  6.3  Source tb.dut.delayer.counter_out_TRELLIS_FF_Q_26_DI_LUT4_Z_SLICE.F0
+Info:  0.1  6.4    Net tb.dut.delayer.counter_out_TRELLIS_FF_Q_26_DI budget 26.794001 ns (2,35) -> (2,35)
+Info:                Sink tb.dut.delayer.counter_out_TRELLIS_FF_Q_26_DI_LUT4_Z_SLICE.DI0
+Info:  0.0  6.4  Setup tb.dut.delayer.counter_out_TRELLIS_FF_Q_26_DI_LUT4_Z_SLICE.DI0
+Info: 2.9 ns logic, 3.5 ns routing
 
 Info: Critical path report for clock '$glbnet$clk' (posedge -> posedge):
 Info: curr total
-Info:  0.5  0.5  Source tb.sync_1e6_rst_TRELLIS_FF_Q_SLICE.Q0
-Info:  2.2  2.8    Net rst budget 39.050999 ns (5,33) -> (2,56)
-Info:                Sink pin_uart_0__tx_uart_0__tx__o_TRELLIS_FF_Q_SLICE.LSR
+Info:  0.5  0.5  Source clk_counter_TRELLIS_FF_Q_DI_LUT4_Z_2_SLICE.Q0
+Info:  0.9  1.4    Net clk_counter[1] budget 19.325001 ns (66,20) -> (66,20)
+Info:                Sink clk_counter_TRELLIS_FF_Q_LSR_PFUMX_Z_SLICE.D0
 Info:                Defined in:
-Info:                  tests1_feb2022/test1_amlib_timers.py:114
-Info:  0.4  3.2  Setup pin_uart_0__tx_uart_0__tx__o_TRELLIS_FF_Q_SLICE.LSR
-Info: 0.9 ns logic, 2.2 ns routing
+Info:                  /home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:30
+Info:                  /home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/techmap.v:270.23-270.24
+Info:  0.4  1.8  Source clk_counter_TRELLIS_FF_Q_LSR_PFUMX_Z_SLICE.OFX0
+Info:  0.3  2.1    Net clk_counter_TRELLIS_FF_Q_LSR budget 19.325001 ns (66,20) -> (66,20)
+Info:                Sink clk_counter_TRELLIS_FF_Q_DI_LUT4_Z_1_SLICE.LSR
+Info:  0.4  2.5  Setup clk_counter_TRELLIS_FF_Q_DI_LUT4_Z_1_SLICE.LSR
+Info: 1.4 ns logic, 1.2 ns routing
 
 Info: Critical path report for cross-domain path '<async>' -> 'posedge $glbnet$clk':
 Info: curr total
+Info:  0.0  0.0  Source pin_uart_0__dtr.uart_0__dtr_0.O
+Info:  3.0  3.0    Net pin_uart_0__dtr_uart_0__dtr__i budget 19.882000 ns (0,89) -> (2,56)
+Info:                Sink pin_uart_0__dtr.uart_0__dtr__i_LUT4_C_SLICE.B1
+Info:                Defined in:
+Info:                  /home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143
+Info:  0.2  3.3  Source pin_uart_0__dtr.uart_0__dtr__i_LUT4_C_SLICE.F1
+Info:  0.1  3.4    Net pin_esp32_spi_0__en_esp32_spi_0__en__o_TRELLIS_FF_Q_DI budget 19.618999 ns (2,56) -> (2,56)
+Info:                Sink pin_uart_0__dtr.uart_0__dtr__i_LUT4_C_SLICE.DI1
+Info:  0.0  3.4  Setup pin_uart_0__dtr.uart_0__dtr__i_LUT4_C_SLICE.DI1
+Info: 0.2 ns logic, 3.2 ns routing
+
+Info: Critical path report for cross-domain path '<async>' -> 'posedge $glbnet$sync_1e6_clk':
+Info: curr total
 Info:  0.0  0.0  Source pin_button_right_0.button_right_0_0.O
-Info:  6.5  6.5    Net pin_button_right_0_button_right_0__i budget 40.000000 ns (126,17) -> (10,21)
+Info:  3.3  3.3    Net pin_button_right_0_button_right_0__i budget 83.333000 ns (126,17) -> (76,17)
 Info:                Sink i_button_ffsync_i_unsync_buttons__right_TRELLIS_FF_Q_SLICE.M0
 Info:                Defined in:
 Info:                  /home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143
-Info:  0.0  6.5  Setup i_button_ffsync_i_unsync_buttons__right_TRELLIS_FF_Q_SLICE.M0
-Info: 0.0 ns logic, 6.5 ns routing
+Info:  0.0  3.3  Setup i_button_ffsync_i_unsync_buttons__right_TRELLIS_FF_Q_SLICE.M0
+Info: 0.0 ns logic, 3.3 ns routing
 
 Info: Critical path report for cross-domain path 'posedge $glbnet$clk' -> '<async>':
 Info: curr total
 Info:  0.5  0.5  Source pin_uart_0__dtr.uart_0__dtr__i_LUT4_C_SLICE.Q0
-Info:  2.9  3.4    Net pin_esp32_spi_0__gpio0_esp32_spi_0__gpio0__o budget 82.807999 ns (2,53) -> (0,86)
+Info:  2.6  3.1    Net pin_esp32_spi_0__gpio0_esp32_spi_0__gpio0__o budget 82.807999 ns (2,56) -> (0,86)
 Info:                Sink pin_esp32_spi_0__gpio0.esp32_spi_0__gpio0_0.I
 Info:                Defined in:
 Info:                  /home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143
-Info: 0.5 ns logic, 2.9 ns routing
+Info: 0.5 ns logic, 2.6 ns routing
 
 Info: Critical path report for cross-domain path 'posedge $glbnet$clk' -> 'posedge $glbnet$sync_1e6_clk':
 Info: curr total
-Info:  0.5  0.5  Source tb.sync_1e6_rst_TRELLIS_FF_Q_SLICE.Q0
-Info:  1.5  2.0    Net rst budget 82.384003 ns (5,33) -> (8,39)
-Info:                Sink tb.dut.delayer.fsm_state_TRELLIS_FF_Q_SLICE.LSR
+Info:  0.5  0.5  Source i_button_ffsync.i_buttons__left_TRELLIS_FF_Q_SLICE.Q0
+Info:  0.7  1.2    Net i_button_ffsync_i_buttons__left budget 82.807999 ns (4,50) -> (4,49)
+Info:                Sink start_TRELLIS_FF_Q_SLICE.M0
 Info:                Defined in:
-Info:                  tests1_feb2022/test1_amlib_timers.py:114
-Info:  0.4  2.4  Setup tb.dut.delayer.fsm_state_TRELLIS_FF_Q_SLICE.LSR
-Info: 0.9 ns logic, 1.5 ns routing
+Info:                  /home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:85
+Info:  0.0  1.2  Setup start_TRELLIS_FF_Q_SLICE.M0
+Info: 0.5 ns logic, 0.7 ns routing
 
 Info: Critical path report for cross-domain path 'posedge $glbnet$sync_1e6_clk' -> '<async>':
 Info: curr total
-Info:  0.5  0.5  Source pin_led_3_led_3__o_TRELLIS_FF_Q_SLICE.Q0
-Info:  1.4  2.0    Net pin_led_3_led_3__o budget 82.807999 ns (4,35) -> (0,38)
-Info:                Sink pin_led_3.led_3_0.I
+Info:  0.5  0.5  Source tb.sync_1e6_rst_TRELLIS_FF_Q_SLICE.Q0
+Info:  3.1  3.6    Net rst budget 82.807999 ns (28,30) -> (66,20)
+Info:                Sink clk_counter_TRELLIS_FF_Q_LSR_PFUMX_Z_SLICE.M0
 Info:                Defined in:
-Info:                  /home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143
-Info: 0.5 ns logic, 1.4 ns routing
+Info:                  /home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:26
+Info:  0.0  3.6  Setup clk_counter_TRELLIS_FF_Q_LSR_PFUMX_Z_SLICE.M0
+Info: 0.5 ns logic, 3.1 ns routing
 
 Info: Critical path report for cross-domain path 'posedge $glbnet$sync_1e6_clk' -> 'posedge $glbnet$clk':
 Info: curr total
-Info:  0.5  0.5  Source tb.ui__reset$1_TRELLIS_FF_Q_SLICE.Q0
-Info:  0.5  1.0    Net tb.ui__reset$1 budget 39.474998 ns (6,33) -> (5,33)
-Info:                Sink tb.sync_1e6_rst_TRELLIS_FF_Q_SLICE.M0
+Info:  0.5  0.5  Source tb.sync_1e6_rst_TRELLIS_FF_Q_SLICE.Q0
+Info:  3.1  3.6    Net rst budget 82.807999 ns (28,30) -> (66,20)
+Info:                Sink clk_counter_TRELLIS_FF_Q_LSR_PFUMX_Z_SLICE.M0
 Info:                Defined in:
-Info:                  tests1_feb2022/test1_amlib_timers.py:89
-Info:  0.0  1.0  Setup tb.sync_1e6_rst_TRELLIS_FF_Q_SLICE.M0
-Info: 0.5 ns logic, 0.5 ns routing
+Info:                  /home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:26
+Info:  0.3  3.9  Source clk_counter_TRELLIS_FF_Q_LSR_PFUMX_Z_SLICE.OFX0
+Info:  0.3  4.1    Net clk_counter_TRELLIS_FF_Q_LSR budget 19.325001 ns (66,20) -> (66,20)
+Info:                Sink clk_counter_TRELLIS_FF_Q_DI_LUT4_Z_1_SLICE.LSR
+Info:  0.4  4.6  Setup clk_counter_TRELLIS_FF_Q_DI_LUT4_Z_1_SLICE.LSR
+Info: 1.2 ns logic, 3.4 ns routing
 
-Info: Max frequency for clock '$glbnet$sync_1e6_clk': 171.35 MHz (PASS at 12.00 MHz)
-Info: Max frequency for clock          '$glbnet$clk': 314.76 MHz (PASS at 25.00 MHz)
+Info: Max frequency for clock '$glbnet$sync_1e6_clk': 155.86 MHz (PASS at 12.00 MHz)
+Info: Max frequency for clock          '$glbnet$clk': 392.77 MHz (PASS at 25.00 MHz)
 
-Info: Max delay <async>                      -> posedge $glbnet$clk         : 6.45 ns
-Info: Max delay posedge $glbnet$clk          -> <async>                     : 3.41 ns
-Info: Max delay posedge $glbnet$clk          -> posedge $glbnet$sync_1e6_clk: 2.42 ns
-Info: Max delay posedge $glbnet$sync_1e6_clk -> <async>                     : 1.97 ns
-Info: Max delay posedge $glbnet$sync_1e6_clk -> posedge $glbnet$clk         : 1.00 ns
+Info: Max delay <async>                      -> posedge $glbnet$clk         : 3.40 ns
+Info: Max delay <async>                      -> posedge $glbnet$sync_1e6_clk: 3.32 ns
+Info: Max delay posedge $glbnet$clk          -> <async>                     : 3.09 ns
+Info: Max delay posedge $glbnet$clk          -> posedge $glbnet$sync_1e6_clk: 1.24 ns
+Info: Max delay posedge $glbnet$sync_1e6_clk -> <async>                     : 3.60 ns
+Info: Max delay posedge $glbnet$sync_1e6_clk -> posedge $glbnet$clk         : 4.57 ns
 
 Info: Slack histogram:
 Info:  legend: * represents 2 endpoint(s)
 Info:          + represents [1,2) endpoint(s)
-Info: [ 33549,  35991) |+
-Info: [ 35991,  38433) |******+
-Info: [ 38433,  40875) |****+
-Info: [ 40875,  43317) | 
-Info: [ 43317,  45759) | 
-Info: [ 45759,  48201) | 
-Info: [ 48201,  50643) | 
-Info: [ 50643,  53085) | 
-Info: [ 53085,  55527) | 
-Info: [ 55527,  57969) | 
-Info: [ 57969,  60411) | 
-Info: [ 60411,  62853) | 
-Info: [ 62853,  65295) | 
-Info: [ 65295,  67737) | 
-Info: [ 67737,  70179) | 
-Info: [ 70179,  72621) | 
-Info: [ 72621,  75063) | 
-Info: [ 75063,  77505) |+
-Info: [ 77505,  79947) |***********+
-Info: [ 79947,  82389) |************************************************************ 
+Info: [ 35433,  37781) |****+
+Info: [ 37781,  40129) |*****+
+Info: [ 40129,  42477) | 
+Info: [ 42477,  44825) | 
+Info: [ 44825,  47173) | 
+Info: [ 47173,  49521) | 
+Info: [ 49521,  51869) | 
+Info: [ 51869,  54217) | 
+Info: [ 54217,  56565) | 
+Info: [ 56565,  58913) | 
+Info: [ 58913,  61261) | 
+Info: [ 61261,  63609) | 
+Info: [ 63609,  65957) | 
+Info: [ 65957,  68305) | 
+Info: [ 68305,  70653) | 
+Info: [ 70653,  73001) | 
+Info: [ 73001,  75349) | 
+Info: [ 75349,  77697) |**********+
+Info: [ 77697,  80045) |***************+
+Info: [ 80045,  82393) |************************************************************ 
 
 Info: Program finished normally.

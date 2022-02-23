@@ -1,13 +1,13 @@
 Info: constraining clock net 'clk25_0__io' to 25.00 MHz
 
 Info: Logic utilisation before packing:
-Info:     Total LUT4s:       605/83640     0%
-Info:         logic LUTs:    419/83640     0%
+Info:     Total LUT4s:       595/83640     0%
+Info:         logic LUTs:    409/83640     0%
 Info:         carry LUTs:    138/83640     0%
 Info:           RAM LUTs:     32/41820     0%
 Info:          RAMW LUTs:     16/20910     0%
 
-Info:      Total DFFs:       938/83640     1%
+Info:      Total DFFs:       964/83640     1%
 
 Info: Packing IOs..
 Info: esp32_spi_0__gpio0__io feeds TRELLIS_IO pin_esp32_spi_0__gpio0.esp32_spi_0__gpio0_0, removing $nextpnr_iobuf esp32_spi_0__gpio0__io.
@@ -73,13 +73,13 @@ Info: Packing unpaired FFs into a SLICE...
 Info: Generating derived timing constraints...
 Info: Promoting globals...
 Info:     promoting clock net cd_sync_clk25_0__i to global network
-Info: Checksum: 0x4a99a1b7
+Info: Checksum: 0xbf88b625
 
 Info: Annotating ports with timing budgets for target frequency 12.00 MHz
-Info: Checksum: 0xcdd2162d
+Info: Checksum: 0x32be14ab
 
 Info: Device utilisation:
-Info: 	       TRELLIS_SLICE:   602/41820     1%
+Info: 	       TRELLIS_SLICE:   600/41820     1%
 Info: 	          TRELLIS_IO:    28/  365     7%
 Info: 	                DCCA:     1/   56     1%
 Info: 	              DP16KD:     1/  208     0%
@@ -107,256 +107,229 @@ Info: 	        ECLKBRIDGECS:     0/    2     0%
 Info: 	                DCSC:     0/    2     0%
 
 Info: Placed 29 cells based on constraints.
-Info: Creating initial analytic placement for 475 cells, random placement wirelen = 66029.
-Info:     at initial placer iter 0, wirelen = 575
-Info:     at initial placer iter 1, wirelen = 570
-Info:     at initial placer iter 2, wirelen = 550
-Info:     at initial placer iter 3, wirelen = 506
+Info: Creating initial analytic placement for 477 cells, random placement wirelen = 70059.
+Info:     at initial placer iter 0, wirelen = 570
+Info:     at initial placer iter 1, wirelen = 518
+Info:     at initial placer iter 2, wirelen = 504
+Info:     at initial placer iter 3, wirelen = 508
 Info: Running main analytical placer.
-Info:     at iteration #1, type ALL: wirelen solved = 490, spread = 4787, legal = 4915; time = 0.03s
-Info:     at iteration #2, type ALL: wirelen solved = 635, spread = 3228, legal = 3392; time = 0.02s
-Info:     at iteration #3, type ALL: wirelen solved = 695, spread = 3209, legal = 3331; time = 0.02s
-Info:     at iteration #4, type ALL: wirelen solved = 803, spread = 3027, legal = 3183; time = 0.02s
-Info:     at iteration #5, type ALL: wirelen solved = 853, spread = 2816, legal = 2966; time = 0.02s
-Info:     at iteration #6, type ALL: wirelen solved = 1044, spread = 2866, legal = 3138; time = 0.02s
-Info:     at iteration #7, type ALL: wirelen solved = 1100, spread = 2813, legal = 3117; time = 0.02s
-Info:     at iteration #8, type ALL: wirelen solved = 1172, spread = 2924, legal = 3126; time = 0.02s
-Info:     at iteration #9, type ALL: wirelen solved = 1373, spread = 3031, legal = 3133; time = 0.02s
-Info:     at iteration #10, type ALL: wirelen solved = 1454, spread = 2728, legal = 2967; time = 0.02s
-Info: HeAP Placer Time: 0.39s
-Info:   of which solving equations: 0.22s
-Info:   of which spreading cells: 0.04s
+Info:     at iteration #1, type ALL: wirelen solved = 554, spread = 4680, legal = 4823; time = 0.03s
+Info:     at iteration #2, type ALL: wirelen solved = 622, spread = 3237, legal = 3337; time = 0.03s
+Info:     at iteration #3, type ALL: wirelen solved = 706, spread = 3018, legal = 3205; time = 0.02s
+Info:     at iteration #4, type ALL: wirelen solved = 808, spread = 2834, legal = 3034; time = 0.02s
+Info:     at iteration #5, type ALL: wirelen solved = 953, spread = 2990, legal = 3182; time = 0.02s
+Info:     at iteration #6, type ALL: wirelen solved = 951, spread = 3008, legal = 3482; time = 0.02s
+Info:     at iteration #7, type ALL: wirelen solved = 1094, spread = 2918, legal = 3477; time = 0.02s
+Info:     at iteration #8, type ALL: wirelen solved = 1221, spread = 2699, legal = 2946; time = 0.02s
+Info:     at iteration #9, type ALL: wirelen solved = 1278, spread = 2731, legal = 3002; time = 0.02s
+Info:     at iteration #10, type ALL: wirelen solved = 1265, spread = 3203, legal = 3555; time = 0.02s
+Info:     at iteration #11, type ALL: wirelen solved = 1498, spread = 3100, legal = 3815; time = 0.03s
+Info:     at iteration #12, type ALL: wirelen solved = 1537, spread = 2923, legal = 4006; time = 0.03s
+Info:     at iteration #13, type ALL: wirelen solved = 1572, spread = 2726, legal = 3401; time = 0.02s
+Info: HeAP Placer Time: 0.55s
+Info:   of which solving equations: 0.32s
+Info:   of which spreading cells: 0.05s
 Info:   of which strict legalisation: 0.01s
 
 Info: Running simulated annealing placer for refinement.
-Info:   at iteration #1: temp = 0.000000, timing cost = 172, wirelen = 2966
-Info:   at iteration #5: temp = 0.000000, timing cost = 262, wirelen = 2605
-Info:   at iteration #10: temp = 0.000000, timing cost = 267, wirelen = 2488
-Info:   at iteration #15: temp = 0.000000, timing cost = 287, wirelen = 2437
-Info:   at iteration #18: temp = 0.000000, timing cost = 245, wirelen = 2428 
-Info: SA placement time 0.84s
+Info:   at iteration #1: temp = 0.000000, timing cost = 259, wirelen = 2946
+Info:   at iteration #5: temp = 0.000000, timing cost = 197, wirelen = 2514
+Info:   at iteration #10: temp = 0.000000, timing cost = 254, wirelen = 2361
+Info:   at iteration #14: temp = 0.000000, timing cost = 248, wirelen = 2328 
+Info: SA placement time 0.86s
 
-Info: Max frequency for clock '$glbnet$cd_sync_clk25_0__i': 78.78 MHz (PASS at 25.00 MHz)
+Info: Max frequency for clock '$glbnet$cd_sync_clk25_0__i': 78.54 MHz (PASS at 25.00 MHz)
 
-Info: Max delay <async>                            -> <async>                           : 19.32 ns
-Info: Max delay <async>                            -> posedge $glbnet$cd_sync_clk25_0__i: 7.76 ns
+Info: Max delay <async>                            -> <async>                           : 1.68 ns
+Info: Max delay <async>                            -> posedge $glbnet$cd_sync_clk25_0__i: 8.64 ns
 Info: Max delay posedge $glbnet$cd_sync_clk25_0__i -> <async>                           : 8.56 ns
 
 Info: Slack histogram:
-Info:  legend: * represents 4 endpoint(s)
-Info:          + represents [1,4) endpoint(s)
-Info: [ 27307,  30073) |********************+
-Info: [ 30073,  32839) |**********************************************+
-Info: [ 32839,  35605) |**************************+
-Info: [ 35605,  38371) |************************************************************ 
-Info: [ 38371,  41137) |*****************************+
-Info: [ 41137,  43903) | 
-Info: [ 43903,  46669) | 
-Info: [ 46669,  49435) | 
-Info: [ 49435,  52201) | 
-Info: [ 52201,  54967) | 
-Info: [ 54967,  57733) | 
-Info: [ 57733,  60499) | 
-Info: [ 60499,  63265) | 
-Info: [ 63265,  66031) |+
-Info: [ 66031,  68797) | 
-Info: [ 68797,  71563) | 
-Info: [ 71563,  74329) | 
-Info: [ 74329,  77095) |+
-Info: [ 77095,  79861) |*****+
-Info: [ 79861,  82627) |**************+
-Info: Checksum: 0x2c57a9fa
+Info:  legend: * represents 3 endpoint(s)
+Info:          + represents [1,3) endpoint(s)
+Info: [ 27267,  29997) |********************+
+Info: [ 29997,  32727) |********************************************+
+Info: [ 32727,  35457) |*******************************+
+Info: [ 35457,  38187) |************************************************************ 
+Info: [ 38187,  40917) |***************************************+
+Info: [ 40917,  43647) | 
+Info: [ 43647,  46377) | 
+Info: [ 46377,  49107) | 
+Info: [ 49107,  51837) | 
+Info: [ 51837,  54567) | 
+Info: [ 54567,  57297) | 
+Info: [ 57297,  60027) | 
+Info: [ 60027,  62757) | 
+Info: [ 62757,  65487) | 
+Info: [ 65487,  68217) | 
+Info: [ 68217,  70947) | 
+Info: [ 70947,  73677) | 
+Info: [ 73677,  76407) |+
+Info: [ 76407,  79137) |****+
+Info: [ 79137,  81867) |*************+
+Info: Checksum: 0xbffe8d5f
 Info: Routing globals...
 Info:     routing clock net $glbnet$cd_sync_clk25_0__i using global 0
 
 Info: Routing..
 Info: Setting up routing queue.
-Info: Routing 2451 arcs.
+Info: Routing 2448 arcs.
 Info:            |   (re-)routed arcs  |   delta    | remaining|       time spent     |
 Info:    IterCnt |  w/ripup   wo/ripup |  w/r  wo/r |      arcs| batch(sec) total(sec)|
-Info:       1000 |      190        809 |  190   809 |      1678|       0.20       0.20|
-Info:       2000 |      470       1529 |  280   720 |       988|       0.13       0.33|
-Info:       3000 |      581       2418 |  111   889 |       120|       0.17       0.50|
-Info:       3122 |      584       2538 |    3   120 |         0|       0.02       0.52|
+Info:       1000 |      233        766 |  233   766 |      1715|       0.19       0.19|
+Info:       2000 |      468       1531 |  235   765 |       967|       0.13       0.32|
+Info:       3000 |      597       2402 |  129   871 |       105|       0.16       0.48|
+Info:       3108 |      599       2509 |    2   107 |         0|       0.02       0.50|
 Info: Routing complete.
-Info: Router1 time 0.52s
-Info: Checksum: 0x7d6259bd
+Info: Router1 time 0.50s
+Info: Checksum: 0x1b347df7
 
 Info: Critical path report for clock '$glbnet$cd_sync_clk25_0__i' (posedge -> posedge):
 Info: curr total
-Info:  0.5  0.5  Source dut.U$$1.ila.fifo.consume_buffered_cdc.stage3_TRELLIS_FF_Q_SLICE.Q0
-Info:  1.1  1.6    Net dut.U$$1.ila.fifo.consume_buffered_cdc_w_consume_buffered budget 0.000000 ns (4,80) -> (4,78)
-Info:                Sink dut.U$$1.ila.fifo_w_level_CCU2C_S0_3$CCU2_SLICE.A0
+Info:  0.5  0.5  Source dut.U$$1.ila.fifo.unbuffered.w_level$next_CCU2C_S0_3$CCU2_SLICE.Q0
+Info:  1.3  1.9    Net dut.U$$1.ila.fifo.unbuffered_w_level[0] budget 0.000000 ns (3,76) -> (2,75)
+Info:                Sink dut.U$$1.ila.fifo_w_level_CCU2C_S0_3$CCU2_SLICE.B0
 Info:                Defined in:
-Info:                  /home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/lib/fifo.py:514
-Info:  0.4  2.1  Source dut.U$$1.ila.fifo_w_level_CCU2C_S0_3$CCU2_SLICE.FCO
-Info:  0.0  2.1    Net dut.U$$1.ila.fifo_w_level_CCU2C_S0_3_COUT[2] budget 0.000000 ns (4,78) -> (4,78)
+Info:                  /home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/lib/fifo.py:81
+Info:  0.4  2.3  Source dut.U$$1.ila.fifo_w_level_CCU2C_S0_3$CCU2_SLICE.FCO
+Info:  0.0  2.3    Net dut.U$$1.ila.fifo_w_level_CCU2C_S0_3_COUT[2] budget 0.000000 ns (2,75) -> (2,75)
 Info:                Sink dut.U$$1.ila.fifo_w_level_CCU2C_S0_2$CCU2_SLICE.FCI
 Info:                Defined in:
 Info:                  /home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/lib/fifo.py:516
 Info:                  /home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/arith_map.v:38.23-38.25
-Info:  0.1  2.2  Source dut.U$$1.ila.fifo_w_level_CCU2C_S0_2$CCU2_SLICE.FCO
-Info:  0.0  2.2    Net dut.U$$1.ila.fifo_w_level_CCU2C_S0_3_COUT[4] budget 0.000000 ns (4,78) -> (4,78)
+Info:  0.1  2.4  Source dut.U$$1.ila.fifo_w_level_CCU2C_S0_2$CCU2_SLICE.FCO
+Info:  0.0  2.4    Net dut.U$$1.ila.fifo_w_level_CCU2C_S0_3_COUT[4] budget 0.000000 ns (2,75) -> (2,75)
 Info:                Sink dut.U$$1.ila.fifo_w_level_CCU2C_S0_1$CCU2_SLICE.FCI
 Info:                Defined in:
 Info:                  /home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/lib/fifo.py:516
 Info:                  /home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/arith_map.v:38.23-38.25
-Info:  0.4  2.6  Source dut.U$$1.ila.fifo_w_level_CCU2C_S0_1$CCU2_SLICE.F0
-Info:  1.1  3.7    Net dut.U$$1.ila.fifo_w_level[4] budget 0.000000 ns (4,78) -> (5,77)
+Info:  0.4  2.8  Source dut.U$$1.ila.fifo_w_level_CCU2C_S0_1$CCU2_SLICE.F0
+Info:  1.1  3.9    Net dut.U$$1.ila.fifo_w_level[4] budget 0.000000 ns (2,75) -> (2,74)
 Info:                Sink dut.U$$1.ila.fifo.w_level_CCU2C_B0_2$CCU2_SLICE.B1
 Info:                Defined in:
 Info:                  /home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/lib/fifo.py:81
-Info:  0.4  4.2  Source dut.U$$1.ila.fifo.w_level_CCU2C_B0_2$CCU2_SLICE.FCO
-Info:  0.0  4.2    Net dut.U$$1.ila.fifo.w_level_CCU2C_B0_3_COUT[4] budget 0.000000 ns (5,77) -> (5,77)
+Info:  0.4  4.4  Source dut.U$$1.ila.fifo.w_level_CCU2C_B0_2$CCU2_SLICE.FCO
+Info:  0.0  4.4    Net dut.U$$1.ila.fifo.w_level_CCU2C_B0_3_COUT[4] budget 0.000000 ns (2,74) -> (2,74)
 Info:                Sink dut.U$$1.ila.fifo.w_level_CCU2C_B0_1$CCU2_SLICE.FCI
 Info:                Defined in:
-Info:                  tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:233
+Info:                  tests2_feb2022/test3_fast_fifo_ila_gui.py:233
 Info:                  /home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/arith_map.v:38.23-38.25
-Info:  0.4  4.6  Source dut.U$$1.ila.fifo.w_level_CCU2C_B0_1$CCU2_SLICE.F0
-Info:  1.2  5.8    Net dut.U$$1.ila.fifo.w_level_CCU2C_B0_S0[5] budget 0.000000 ns (5,77) -> (5,76)
+Info:  0.4  4.8  Source dut.U$$1.ila.fifo.w_level_CCU2C_B0_1$CCU2_SLICE.F0
+Info:  1.1  5.9    Net dut.U$$1.ila.fifo.w_level_CCU2C_B0_S0[5] budget 0.000000 ns (2,74) -> (2,73)
 Info:                Sink dut.U$$1.ila.fifo_w_level_CCU2C_B0_S0_CCU2C_S0_1$CCU2_SLICE.B1
 Info:                Defined in:
-Info:                  tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:233
+Info:                  tests2_feb2022/test3_fast_fifo_ila_gui.py:233
 Info:                  /home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/arith_map.v:32.22-32.23
-Info:  0.4  6.2  Source dut.U$$1.ila.fifo_w_level_CCU2C_B0_S0_CCU2C_S0_1$CCU2_SLICE.FCO
-Info:  0.0  6.2    Net dut.U$$1.ila.fifo_w_level_CCU2C_B0_COUT[6] budget 0.000000 ns (5,76) -> (6,76)
+Info:  0.4  6.4  Source dut.U$$1.ila.fifo_w_level_CCU2C_B0_S0_CCU2C_S0_1$CCU2_SLICE.FCO
+Info:  0.0  6.4    Net dut.U$$1.ila.fifo_w_level_CCU2C_B0_COUT[6] budget 0.000000 ns (2,73) -> (3,73)
 Info:                Sink dut.U$$1.ila.fifo_w_level_CCU2C_B0_S0_CCU2C_S0$CCU2_SLICE.FCI
 Info:                Defined in:
-Info:                  tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:233
+Info:                  tests2_feb2022/test3_fast_fifo_ila_gui.py:233
 Info:                  /home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/arith_map.v:63.22-63.23
-Info:  0.1  6.3  Source dut.U$$1.ila.fifo_w_level_CCU2C_B0_S0_CCU2C_S0$CCU2_SLICE.FCO
-Info:  0.0  6.3    Net $nextpnr_CCU2C_27$CIN budget 0.000000 ns (6,76) -> (6,76)
-Info:                Sink $nextpnr_CCU2C_27$CCU2_SLICE.FCI
-Info:  0.4  6.7  Source $nextpnr_CCU2C_27$CCU2_SLICE.F0
-Info:  0.7  7.4    Net dut.U$$1.ila.fifo_w_level_CCU2C_B0_COUT[8] budget 14.220000 ns (6,76) -> (6,77)
-Info:                Sink dut.U$$1.ila.fifo_w_level_LUT4_A_Z_LUT4_A_SLICE.D0
+Info:  0.1  6.5  Source dut.U$$1.ila.fifo_w_level_CCU2C_B0_S0_CCU2C_S0$CCU2_SLICE.FCO
+Info:  0.0  6.5    Net $nextpnr_CCU2C_19$CIN budget 0.000000 ns (3,73) -> (3,73)
+Info:                Sink $nextpnr_CCU2C_19$CCU2_SLICE.FCI
+Info:  0.4  6.9  Source $nextpnr_CCU2C_19$CCU2_SLICE.F0
+Info:  0.9  7.8    Net dut.U$$1.ila.fifo_w_level_CCU2C_B0_COUT[8] budget 14.220000 ns (3,73) -> (3,74)
+Info:                Sink dut.U$$1.ila.fifo_w_level_LUT4_A_Z_LUT4_Z_SLICE.D1
 Info:                Defined in:
 Info:                  /home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:108.23-108.24
-Info:  0.2  7.7  Source dut.U$$1.ila.fifo_w_level_LUT4_A_Z_LUT4_A_SLICE.F0
-Info:  1.4  9.0    Net dut.U$$1.ila.complete_TRELLIS_FF_Q_CE_PFUMX_Z_C0[1] budget 3.578000 ns (6,77) -> (6,87)
-Info:                Sink dut.U$$1.ila.fifo_w_level_LUT4_A_Z_LUT4_A_Z_LUT4_C_1_Z_PFUMX_BLUT_SLICE.D0
+Info:  0.2  8.0  Source dut.U$$1.ila.fifo_w_level_LUT4_A_Z_LUT4_Z_SLICE.F1
+Info:  1.5  9.5    Net dut.U$$1.ila.complete_TRELLIS_FF_Q_CE_PFUMX_Z_C0[1] budget 6.032000 ns (3,74) -> (5,69)
+Info:                Sink dut.U$$1.ila.complete$next_LUT4_D_SLICE.D1
 Info:                Defined in:
 Info:                  /home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:108.23-108.24
-Info:  0.4  9.4  Source dut.U$$1.ila.fifo_w_level_LUT4_A_Z_LUT4_A_Z_LUT4_C_1_Z_PFUMX_BLUT_SLICE.OFX0
-Info:  0.0  9.4    Net dut.U$$1.ila.fifo_w_level_LUT4_A_Z_LUT4_A_Z_LUT4_C_1_Z_PFUMX_BLUT_Z budget 0.000000 ns (6,87) -> (6,87)
-Info:                Sink dut.U$$1.ila.fifo_w_level_LUT4_A_Z_LUT4_A_Z_LUT4_C_Z_PFUMX_BLUT_SLICE.FXA
-Info:                Defined in:
-Info:                  /home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:141.34-141.36
-Info:  0.2  9.7  Source dut.U$$1.ila.fifo_w_level_LUT4_A_Z_LUT4_A_Z_LUT4_C_Z_PFUMX_BLUT_SLICE.OFX1
-Info:  0.7 10.4    Net dut.U$$1.ila.fifo_w_level_LUT4_A_Z_LUT4_A_Z_LUT4_C_Z_PFUMX_BLUT_Z_L6MUX21_D1_Z budget 17.893000 ns (6,87) -> (6,86)
-Info:                Sink dut.U$$1.ila.captured_sample$next_LUT4_Z_20_SLICE.CE
-Info:  0.0 10.4  Setup dut.U$$1.ila.captured_sample$next_LUT4_Z_20_SLICE.CE
-Info: 4.2 ns logic, 6.2 ns routing
+Info:  0.2  9.8  Source dut.U$$1.ila.complete$next_LUT4_D_SLICE.F1
+Info:  1.0 10.7    Net dut.U$$1.ila.complete$next_LUT4_D_Z budget 6.031000 ns (5,69) -> (5,65)
+Info:                Sink dut.U$$1.ila.fifo_w_data_TRELLIS_FF_Q_9_SLICE.CE
+Info:  0.0 10.7  Setup dut.U$$1.ila.fifo_w_data_TRELLIS_FF_Q_9_SLICE.CE
+Info: 3.8 ns logic, 6.9 ns routing
 
 Info: Critical path report for cross-domain path '<async>' -> '<async>':
 Info: curr total
-Info:  0.0  0.0  Source pin_button_pwr_0.button_pwr_0_0.O
-Info:  6.1  6.1    Net pin_button_pwr_0.button_pwr_0__i_n budget 41.549000 ns (6,0) -> (2,86)
-Info:                Sink pin_esp32_spi_0__gpio0.esp32_spi_0__gpio0__o_LUT4_Z_SLICE.D1
-Info:                Defined in:
-Info:                  /home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/vendor/lattice_ecp5.py:464
-Info:  0.2  6.3  Source pin_esp32_spi_0__gpio0.esp32_spi_0__gpio0__o_LUT4_Z_SLICE.F1
-Info:  3.4  9.7    Net pin_esp32_spi_0__en_esp32_spi_0__en__o budget 41.548000 ns (2,86) -> (0,47)
-Info:                Sink pin_esp32_spi_0__en.esp32_spi_0__en_0.I
+Info:  0.0  0.0  Source pin_clk25_0.clk25_0_0.O
+Info:  0.2  0.2    Net cd_sync_clk25_0__i budget 41.667000 ns (0,47) -> (3,46)
+Info:                Sink $gbuf$cd_sync_clk25_0__i.CLKI
 Info:                Defined in:
 Info:                  /home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143
-Info: 0.2 ns logic, 9.5 ns routing
+Info:  0.0  0.2  Source $gbuf$cd_sync_clk25_0__i.CLKO
+Info:  0.0  0.2    Net $glbnet$cd_sync_clk25_0__i budget 41.666000 ns (3,46) -> (4,94)
+Info:                Sink cd_sync.U$$2.CLK
+Info: 0.0 ns logic, 0.2 ns routing
 
 Info: Critical path report for cross-domain path '<async>' -> 'posedge $glbnet$cd_sync_clk25_0__i':
 Info: curr total
-Info:  0.0  0.0  Source pin_button_fire_0.button_fire_0_0.O
-Info:  1.9  1.9    Net dut_button_fire_0__i budget 0.000000 ns (4,95) -> (8,87)
-Info:                Sink pin_button_fire_0.button_fire_0__i_LUT4_B_Z_PFUMX_BLUT_SLICE.B0
+Info:  0.0  0.0  Source pin_button_pwr_0.button_pwr_0_0.O
+Info:  3.7  3.7    Net pin_button_pwr_0.button_pwr_0__i_n budget 19.882000 ns (6,0) -> (3,47)
+Info:                Sink pin_button_pwr_0_button_pwr_0__i_LUT4_Z_SLICE.D1
+Info:                Defined in:
+Info:                  /home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/vendor/lattice_ecp5.py:464
+Info:  0.2  3.9  Source pin_button_pwr_0_button_pwr_0__i_LUT4_Z_SLICE.F1
+Info:  0.1  4.1    Net pin_button_pwr_0_button_pwr_0__i budget 19.882000 ns (3,47) -> (3,47)
+Info:                Sink pin_button_pwr_0_button_pwr_0__i_LUT4_Z_SLICE.DI1
 Info:                Defined in:
 Info:                  /home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143
-Info:  0.4  2.3  Source pin_button_fire_0.button_fire_0__i_LUT4_B_Z_PFUMX_BLUT_SLICE.OFX0
-Info:  0.0  2.3    Net pin_button_fire_0.button_fire_0__i_LUT4_B_Z_PFUMX_BLUT_Z budget 0.000000 ns (8,87) -> (8,87)
-Info:                Sink dut.U$$0.r_rdy_LUT4_B_Z_PFUMX_ALUT_SLICE.FXA
-Info:                Defined in:
-Info:                  /home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.58-157.60
-Info:  0.2  2.5  Source dut.U$$0.r_rdy_LUT4_B_Z_PFUMX_ALUT_SLICE.OFX1
-Info:  0.0  2.5    Net dut.U$$2.stage1_LUT4_D_Z_L6MUX21_Z_D1 budget 0.000000 ns (8,87) -> (8,87)
-Info:                Sink pin_button_fire_0.button_fire_0__i_LUT4_B_Z_PFUMX_BLUT_SLICE.FXB
-Info:                Defined in:
-Info:                  /home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.70-157.72
-Info:  0.2  2.8  Source pin_button_fire_0.button_fire_0__i_LUT4_B_Z_PFUMX_BLUT_SLICE.OFX1
-Info:  0.8  3.5    Net dut.U$$2.stage1_LUT4_D_Z[2] budget 0.000000 ns (8,87) -> (9,81)
-Info:                Sink dut.U$$0.interface.current_word$next_L6MUX21_Z_D0_PFUMX_Z_SLICE.D1
-Info:                Defined in:
-Info:                  /home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:108.23-108.24
-Info:  0.4  3.9  Source dut.U$$0.interface.current_word$next_L6MUX21_Z_D0_PFUMX_Z_SLICE.OFX0
-Info:  0.0  3.9    Net dut.U$$0.interface.current_word$next_L6MUX21_Z_D0 budget 0.000000 ns (9,81) -> (9,81)
-Info:                Sink dut.U$$0.interface.current_word$next_L6MUX21_Z_D1_PFUMX_Z_SLICE.FXA
-Info:                Defined in:
-Info:                  /home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:141.34-141.36
-Info:  0.2  4.2  Source dut.U$$0.interface.current_word$next_L6MUX21_Z_D1_PFUMX_Z_SLICE.OFX1
-Info:  0.1  4.3    Net dut.U$$0.interface.current_word$next[0] budget 9.428000 ns (9,81) -> (9,81)
-Info:                Sink dut.U$$0.interface.current_word$next_L6MUX21_Z_D1_PFUMX_Z_SLICE.DI1
-Info:                Defined in:
-Info:                  /home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/io/spi.py:507
-Info:  0.0  4.3  Setup dut.U$$0.interface.current_word$next_L6MUX21_Z_D1_PFUMX_Z_SLICE.DI1
-Info: 1.5 ns logic, 2.7 ns routing
+Info:  0.0  4.1  Setup pin_button_pwr_0_button_pwr_0__i_LUT4_Z_SLICE.DI1
+Info: 0.2 ns logic, 3.8 ns routing
 
 Info: Critical path report for cross-domain path 'posedge $glbnet$cd_sync_clk25_0__i' -> '<async>':
 Info: curr total
-Info:  0.5  0.5  Source dut.U$$1.ila.fifo_w_level_LUT4_A_Z_LUT4_A_Z_L6MUX21_Z_SD_CCU2C_S1_1_COUT_TRELLIS_FF_Q_SLICE.Q0
-Info:  1.4  1.9    Net dut.U$$1.ila.fifo_w_level_LUT4_A_Z_LUT4_A_Z_L6MUX21_Z_SD_CCU2C_S1_1_COUT[1] budget 4.474000 ns (2,87) -> (3,88)
-Info:                Sink dut.U$$1.ila.fifo_w_level_LUT4_A_Z_LUT4_A_Z_L6MUX21_Z_SD_CCU2C_S1_1_S0_CCU2C_S0$CCU2_SLICE.B0
+Info:  0.5  0.5  Source dut.U$$0.interface.command_TRELLIS_FF_Q_3_SLICE.Q0
+Info:  0.9  1.4    Net dut.U$$0._address[3] budget 3.075000 ns (9,67) -> (8,67)
+Info:                Sink dut.U$$0.r_rdy_LUT4_D_1_C_L6MUX21_Z_D1_L6MUX21_Z_D1_PFUMX_Z_SLICE.A0
 Info:                Defined in:
-Info:                  tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:258
-Info:                  /home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/arith_map.v:38.23-38.25
-Info:  0.4  2.3  Source dut.U$$1.ila.fifo_w_level_LUT4_A_Z_LUT4_A_Z_L6MUX21_Z_SD_CCU2C_S1_1_S0_CCU2C_S0$CCU2_SLICE.FCO
-Info:  0.0  2.3    Net dut.U$$1.ila.fifo_w_level_LUT4_A_Z_LUT4_A_Z_L6MUX21_Z_SD_CCU2C_S1_1_COUT[2] budget 0.000000 ns (3,88) -> (3,88)
-Info:                Sink dut.U$$1.ila.fifo_w_level_LUT4_A_Z_LUT4_A_Z_L6MUX21_Z_SD_CCU2C_S1_S0_CCU2C_S0$CCU2_SLICE.FCI
+Info:                  /home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/io/spi.py:474
+Info:  0.4  1.8  Source dut.U$$0.r_rdy_LUT4_D_1_C_L6MUX21_Z_D1_L6MUX21_Z_D1_PFUMX_Z_SLICE.OFX0
+Info:  0.0  1.8    Net dut.U$$0.r_rdy_LUT4_D_1_C_L6MUX21_Z_D1_L6MUX21_Z_D1 budget 0.000000 ns (8,67) -> (8,67)
+Info:                Sink dut.U$$0.r_rdy_LUT4_D_1_C_L6MUX21_Z_D1_L6MUX21_Z_D1_PFUMX_Z_SLICE.FXB
 Info:                Defined in:
-Info:                  tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:258
-Info:                  /home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/arith_map.v:38.23-38.25
-Info:  0.4  2.8  Source dut.U$$1.ila.fifo_w_level_LUT4_A_Z_LUT4_A_Z_L6MUX21_Z_SD_CCU2C_S1_S0_CCU2C_S0$CCU2_SLICE.F0
-Info:  0.9  3.7    Net dut.U$$1.ila.fifo_w_level_LUT4_A_Z_LUT4_A_Z_L6MUX21_Z_SD_CCU2C_S1_1_S0[2] budget 20.283001 ns (3,88) -> (4,87)
-Info:                Sink dut.U$$1.ila.fifo_w_level_LUT4_A_Z_LUT4_A_Z_L6MUX21_Z_SD_L6MUX21_Z_D1_PFUMX_Z_SLICE.D1
+Info:                  /home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.62-157.64
+Info:  0.2  2.1  Source dut.U$$0.r_rdy_LUT4_D_1_C_L6MUX21_Z_D1_L6MUX21_Z_D1_PFUMX_Z_SLICE.OFX1
+Info:  0.0  2.1    Net dut.U$$0.r_rdy_LUT4_D_1_C_L6MUX21_Z_D1 budget 0.000000 ns (8,67) -> (8,67)
+Info:                Sink dut.U$$0.r_rdy_LUT4_D_1_C_L6MUX21_Z_D1_L6MUX21_Z_D0_PFUMX_Z_SLICE.FXB
 Info:                Defined in:
-Info:                  /home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:108.23-108.24
-Info:  0.4  4.1  Source dut.U$$1.ila.fifo_w_level_LUT4_A_Z_LUT4_A_Z_L6MUX21_Z_SD_L6MUX21_Z_D1_PFUMX_Z_SLICE.OFX0
-Info:  0.0  4.1    Net dut.U$$1.ila.fifo_w_level_LUT4_A_Z_LUT4_A_Z_L6MUX21_Z_SD_L6MUX21_Z_D1 budget 0.000000 ns (4,87) -> (4,87)
-Info:                Sink dut.U$$1.ila.fifo_w_level_LUT4_A_Z_LUT4_A_Z_L6MUX21_Z_SD_L6MUX21_Z_D1_PFUMX_Z_SLICE.FXB
-Info:                Defined in:
-Info:                  /home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:141.38-141.40
-Info:  0.2  4.4  Source dut.U$$1.ila.fifo_w_level_LUT4_A_Z_LUT4_A_Z_L6MUX21_Z_SD_L6MUX21_Z_D1_PFUMX_Z_SLICE.OFX1
-Info:  0.7  5.0    Net dut.U$$1.ila.fifo_w_level_LUT4_A_Z_LUT4_A_Z_L6MUX21_Z_SD[5] budget 40.566002 ns (4,87) -> (4,85)
-Info:                Sink dut.U$$1.ila.fifo_w_level_LUT4_A_Z_LUT4_A_Z_L6MUX21_Z_D0_L6MUX21_Z_D1_PFUMX_Z_SLICE.M1
+Info:                  /home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.70-157.72
+Info:  0.2  2.3  Source dut.U$$0.r_rdy_LUT4_D_1_C_L6MUX21_Z_D1_L6MUX21_Z_D0_PFUMX_Z_SLICE.OFX1
+Info:  1.3  3.6    Net dut.U$$0.r_rdy_LUT4_D_1_C[1] budget 3.074000 ns (8,67) -> (8,73)
+Info:                Sink dut.U$$0.r_level$next_CCU2C_S0_B0_LUT4_Z_SLICE.D1
 Info:                Defined in:
 Info:                  /home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:108.23-108.24
-Info:  0.0  5.0  Setup dut.U$$1.ila.fifo_w_level_LUT4_A_Z_LUT4_A_Z_L6MUX21_Z_D0_L6MUX21_Z_D1_PFUMX_Z_SLICE.M1
-Info: 2.1 ns logic, 3.0 ns routing
+Info:  0.2  3.8  Source dut.U$$0.r_level$next_CCU2C_S0_B0_LUT4_Z_SLICE.F1
+Info:  0.7  4.5    Net dut.U$$0._is_write_LUT4_C_Z[4] budget 27.229000 ns (8,73) -> (7,73)
+Info:                Sink dut.U$$0.r_rdy_TRELLIS_FF_Q_CE_PFUMX_Z_SLICE.M0
+Info:                Defined in:
+Info:                  /home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:108.23-108.24
+Info:  0.0  4.5  Setup dut.U$$0.r_rdy_TRELLIS_FF_Q_CE_PFUMX_Z_SLICE.M0
+Info: 1.6 ns logic, 2.9 ns routing
 
-Info: Max frequency for clock '$glbnet$cd_sync_clk25_0__i': 96.27 MHz (PASS at 25.00 MHz)
+Info: Max frequency for clock '$glbnet$cd_sync_clk25_0__i': 93.21 MHz (PASS at 25.00 MHz)
 
-Info: Max delay <async>                            -> <async>                           : 9.71 ns
-Info: Max delay <async>                            -> posedge $glbnet$cd_sync_clk25_0__i: 4.25 ns
-Info: Max delay posedge $glbnet$cd_sync_clk25_0__i -> <async>                           : 5.04 ns
+Info: Max delay <async>                            -> <async>                           : 0.25 ns
+Info: Max delay <async>                            -> posedge $glbnet$cd_sync_clk25_0__i: 4.08 ns
+Info: Max delay posedge $glbnet$cd_sync_clk25_0__i -> <async>                           : 4.51 ns
 
 Info: Slack histogram:
-Info:  legend: * represents 4 endpoint(s)
-Info:          + represents [1,4) endpoint(s)
-Info: [ 29613,  32287) |****************+
-Info: [ 32287,  34961) |*******************************************+
-Info: [ 34961,  37635) |****************************************+
-Info: [ 37635,  40309) |************************************************************ 
-Info: [ 40309,  42983) | 
-Info: [ 42983,  45657) | 
-Info: [ 45657,  48331) | 
-Info: [ 48331,  51005) | 
-Info: [ 51005,  53679) | 
-Info: [ 53679,  56353) | 
-Info: [ 56353,  59027) | 
-Info: [ 59027,  61701) | 
-Info: [ 61701,  64375) | 
-Info: [ 64375,  67049) | 
-Info: [ 67049,  69723) | 
-Info: [ 69723,  72397) | 
-Info: [ 72397,  75071) |+
-Info: [ 75071,  77745) | 
-Info: [ 77745,  80419) |****+
-Info: [ 80419,  83093) |**************+
+Info:  legend: * represents 5 endpoint(s)
+Info:          + represents [1,5) endpoint(s)
+Info: [ 29272,  31963) |*************+
+Info: [ 31963,  34654) |****************************+
+Info: [ 34654,  37345) |**********************************+
+Info: [ 37345,  40036) |************************************************************ 
+Info: [ 40036,  42727) | 
+Info: [ 42727,  45418) | 
+Info: [ 45418,  48109) | 
+Info: [ 48109,  50800) | 
+Info: [ 50800,  53491) | 
+Info: [ 53491,  56182) | 
+Info: [ 56182,  58873) | 
+Info: [ 58873,  61564) | 
+Info: [ 61564,  64255) | 
+Info: [ 64255,  66946) | 
+Info: [ 66946,  69637) | 
+Info: [ 69637,  72328) | 
+Info: [ 72328,  75019) | 
+Info: [ 75019,  77710) | 
+Info: [ 77710,  80401) |***+
+Info: [ 80401,  83092) |*********+
 
 Info: Program finished normally.

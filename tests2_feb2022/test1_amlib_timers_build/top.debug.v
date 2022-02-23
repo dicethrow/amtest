@@ -3,7 +3,7 @@
 
 (* \amaranth.hierarchy  = "top.tb.dut.delayer" *)
 (* generator = "Amaranth" *)
-module delayer(sync_1e6_clk, start, done, counter_out, sync_1e6_rst);
+module delayer(sync_1e6_rst, start, done, counter_out, sync_1e6_clk);
   reg \$auto$verilog_backend.cc:2083:dump_module$55  = 0;
   (* src = "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:21" *)
   wire \$1 ;
@@ -48,9 +48,9 @@ module delayer(sync_1e6_clk, start, done, counter_out, sync_1e6_rst);
   wire [31:0] reload;
   (* src = "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:12" *)
   input start;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:114" *)
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:26" *)
   input sync_1e6_clk;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:114" *)
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:26" *)
   input sync_1e6_rst;
   assign \$11  = counter_out - (* src = "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:37" *) 1'h1;
   assign \$18  = counter_out > (* src = "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:30" *) 1'h0;
@@ -156,18 +156,18 @@ endmodule
 
 (* \amaranth.hierarchy  = "top.tb.dut" *)
 (* generator = "Amaranth" *)
-module dut(sync_1e6_clk, ui__start, ui__done, ui__active, debug__count, sync_1e6_rst);
+module dut(sync_1e6_rst, ui__start, ui__done, ui__active, debug__count, sync_1e6_clk);
   reg \$auto$verilog_backend.cc:2083:dump_module$56  = 0;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:60" *)
+  (* src = "tests2_feb2022/test1_amlib_timers.py:63" *)
   wire \$5 ;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:41" *)
+  (* src = "tests2_feb2022/test1_amlib_timers.py:44" *)
   output [31:0] debug__count;
   reg [31:0] debug__count = 32'd0;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:48" *)
+  (* src = "tests2_feb2022/test1_amlib_timers.py:51" *)
   reg [31:0] \debug__count$4  = 32'd0;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:48" *)
+  (* src = "tests2_feb2022/test1_amlib_timers.py:51" *)
   reg [31:0] \debug__count$4$next ;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:41" *)
+  (* src = "tests2_feb2022/test1_amlib_timers.py:44" *)
   reg [31:0] \debug__count$next ;
   (* src = "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:11" *)
   wire [31:0] delayer_counter_out;
@@ -177,35 +177,35 @@ module dut(sync_1e6_clk, ui__start, ui__done, ui__active, debug__count, sync_1e6
   reg delayer_start = 1'h0;
   (* src = "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:12" *)
   reg \delayer_start$next ;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:114" *)
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:26" *)
   input sync_1e6_clk;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:114" *)
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:26" *)
   input sync_1e6_rst;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:40" *)
+  (* src = "tests2_feb2022/test1_amlib_timers.py:43" *)
   output ui__active;
   reg ui__active = 1'h0;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:47" *)
+  (* src = "tests2_feb2022/test1_amlib_timers.py:50" *)
   reg \ui__active$3  = 1'h0;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:47" *)
+  (* src = "tests2_feb2022/test1_amlib_timers.py:50" *)
   reg \ui__active$3$next ;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:40" *)
+  (* src = "tests2_feb2022/test1_amlib_timers.py:43" *)
   reg \ui__active$next ;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:40" *)
+  (* src = "tests2_feb2022/test1_amlib_timers.py:43" *)
   output ui__done;
   reg ui__done = 1'h0;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:47" *)
+  (* src = "tests2_feb2022/test1_amlib_timers.py:50" *)
   reg \ui__done$2  = 1'h0;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:47" *)
+  (* src = "tests2_feb2022/test1_amlib_timers.py:50" *)
   reg \ui__done$2$next ;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:40" *)
+  (* src = "tests2_feb2022/test1_amlib_timers.py:43" *)
   reg \ui__done$next ;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:40" *)
+  (* src = "tests2_feb2022/test1_amlib_timers.py:43" *)
   input ui__start;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:47" *)
+  (* src = "tests2_feb2022/test1_amlib_timers.py:50" *)
   reg \ui__start$1  = 1'h0;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:47" *)
+  (* src = "tests2_feb2022/test1_amlib_timers.py:50" *)
   reg \ui__start$1$next ;
-  assign \$5  = delayer_counter_out != (* src = "tests1_feb2022/test1_amlib_timers.py:60" *) 20'hf4240;
+  assign \$5  = delayer_counter_out != (* src = "tests2_feb2022/test1_amlib_timers.py:63" *) 20'hf4240;
   always @(posedge sync_1e6_clk)
     \ui__active$3  <= \ui__active$3$next ;
   always @(posedge sync_1e6_clk)
@@ -305,38 +305,38 @@ endmodule
 
 (* \amaranth.hierarchy  = "top.i_button_ffsync" *)
 (* generator = "Amaranth" *)
-module i_button_ffsync(i_unsync_buttons__fireA, i_unsync_buttons__fireB, i_unsync_buttons__up, i_unsync_buttons__down, i_unsync_buttons__left, i_unsync_buttons__right, i_buttons__pwr, i_buttons__left, i_buttons__right, rst, clk, i_unsync_buttons__pwr);
-  (* src = "tests1_feb2022/test1_amlib_timers.py:105" *)
+module i_button_ffsync(i_unsync_buttons__pwr, i_unsync_buttons__fireA, i_unsync_buttons__fireB, i_unsync_buttons__up, i_unsync_buttons__down, i_unsync_buttons__left, i_unsync_buttons__right, i_buttons__pwr, i_buttons__left, i_buttons__right, rst, clk);
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:38" *)
   input clk;
-  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:80" *)
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:85" *)
   wire i_buttons__down;
-  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:80" *)
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:85" *)
   wire i_buttons__fireA;
-  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:80" *)
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:85" *)
   wire i_buttons__fireB;
-  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:80" *)
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:85" *)
   output i_buttons__left;
-  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:80" *)
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:85" *)
   output i_buttons__pwr;
-  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:80" *)
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:85" *)
   output i_buttons__right;
-  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:80" *)
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:85" *)
   wire i_buttons__up;
-  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59" *)
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:61" *)
   input i_unsync_buttons__down;
-  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59" *)
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:61" *)
   input i_unsync_buttons__fireA;
-  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59" *)
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:61" *)
   input i_unsync_buttons__fireB;
-  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59" *)
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:61" *)
   input i_unsync_buttons__left;
-  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59" *)
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:61" *)
   input i_unsync_buttons__pwr;
-  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59" *)
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:61" *)
   input i_unsync_buttons__right;
-  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59" *)
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:61" *)
   input i_unsync_buttons__up;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:105" *)
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:38" *)
   input rst;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/lib/cdc.py:89" *)
   reg [6:0] stage0 = 7'h00;
@@ -744,107 +744,72 @@ endmodule
 
 (* \amaranth.hierarchy  = "top.tb" *)
 (* generator = "Amaranth" *)
-module tb(ui__start, ui__done, ui__active, leds, sync_1e6_rst, rst, sync_1e6_clk, clk, clk25_0__i, ui__reset);
+module tb(ui__reset, ui__start, ui__done, ui__active, leds, sync_1e6_rst, rst, sync_1e6_clk);
   reg \$auto$verilog_backend.cc:2083:dump_module$57  = 0;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:120" *)
-  wire \$12 ;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:120" *)
-  wire \$14 ;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:120" *)
-  wire \$15 ;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:118" *)
-  wire [4:0] \$5 ;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:118" *)
-  wire [4:0] \$6 ;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:118" *)
-  wire [4:0] \$8 ;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:118" *)
-  wire \$9 ;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:105" *)
-  output clk;
-  (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143" *)
-  input clk25_0__i;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:116" *)
-  reg [3:0] clk_counter = 4'h0;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:116" *)
-  reg [3:0] \clk_counter$next ;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:90" *)
+  (* src = "tests2_feb2022/test1_amlib_timers.py:93" *)
   reg [31:0] debug__count = 32'd0;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:90" *)
+  (* src = "tests2_feb2022/test1_amlib_timers.py:93" *)
   reg [31:0] \debug__count$next ;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:41" *)
+  (* src = "tests2_feb2022/test1_amlib_timers.py:44" *)
   wire [31:0] dut_debug__count;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:40" *)
+  (* src = "tests2_feb2022/test1_amlib_timers.py:43" *)
   wire dut_ui__active;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:40" *)
+  (* src = "tests2_feb2022/test1_amlib_timers.py:43" *)
   wire dut_ui__done;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:40" *)
+  (* src = "tests2_feb2022/test1_amlib_timers.py:43" *)
   reg dut_ui__start = 1'h0;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:40" *)
+  (* src = "tests2_feb2022/test1_amlib_timers.py:43" *)
   reg \dut_ui__start$next ;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:82" *)
+  (* src = "tests2_feb2022/test1_amlib_timers.py:85" *)
   output [7:0] leds;
   reg [7:0] leds = 8'h00;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:82" *)
+  (* src = "tests2_feb2022/test1_amlib_timers.py:85" *)
   wire [7:0] \leds$next ;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:105" *)
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:38" *)
   output rst;
   reg rst = 1'h0;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:105" *)
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:38" *)
   reg \rst$next ;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:114" *)
-  output sync_1e6_clk;
-  reg sync_1e6_clk = 1'h0;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:114" *)
-  reg \sync_1e6_clk$next ;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:114" *)
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:26" *)
+  input sync_1e6_clk;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:26" *)
   output sync_1e6_rst;
   reg sync_1e6_rst = 1'h0;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:114" *)
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:26" *)
   reg \sync_1e6_rst$next ;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:81" *)
+  (* src = "tests2_feb2022/test1_amlib_timers.py:84" *)
   output ui__active;
   reg ui__active = 1'h0;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:89" *)
+  (* src = "tests2_feb2022/test1_amlib_timers.py:92" *)
   reg \ui__active$4  = 1'h0;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:89" *)
+  (* src = "tests2_feb2022/test1_amlib_timers.py:92" *)
   reg \ui__active$4$next ;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:81" *)
+  (* src = "tests2_feb2022/test1_amlib_timers.py:84" *)
   reg \ui__active$next ;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:81" *)
+  (* src = "tests2_feb2022/test1_amlib_timers.py:84" *)
   output ui__done;
   reg ui__done = 1'h0;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:89" *)
+  (* src = "tests2_feb2022/test1_amlib_timers.py:92" *)
   reg \ui__done$3  = 1'h0;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:89" *)
+  (* src = "tests2_feb2022/test1_amlib_timers.py:92" *)
   reg \ui__done$3$next ;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:81" *)
+  (* src = "tests2_feb2022/test1_amlib_timers.py:84" *)
   reg \ui__done$next ;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:81" *)
+  (* src = "tests2_feb2022/test1_amlib_timers.py:84" *)
   input ui__reset;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:89" *)
+  (* src = "tests2_feb2022/test1_amlib_timers.py:92" *)
   reg \ui__reset$1  = 1'h0;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:89" *)
+  (* src = "tests2_feb2022/test1_amlib_timers.py:92" *)
   reg \ui__reset$1$next ;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:81" *)
+  (* src = "tests2_feb2022/test1_amlib_timers.py:84" *)
   input ui__start;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:89" *)
+  (* src = "tests2_feb2022/test1_amlib_timers.py:92" *)
   reg \ui__start$2  = 1'h0;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:89" *)
+  (* src = "tests2_feb2022/test1_amlib_timers.py:92" *)
   reg \ui__start$2$next ;
-  assign \$9  = clk_counter == (* src = "tests1_feb2022/test1_amlib_timers.py:118" *) 4'hb;
-  assign \$8  = \$9  ? (* src = "tests1_feb2022/test1_amlib_timers.py:118" *) 5'h00 : \$6 ;
-  assign \$12  = ~ (* src = "tests1_feb2022/test1_amlib_timers.py:120" *) sync_1e6_clk;
-  assign \$15  = ! (* src = "tests1_feb2022/test1_amlib_timers.py:120" *) clk_counter;
-  assign \$14  = \$15  ? (* src = "tests1_feb2022/test1_amlib_timers.py:120" *) \$12  : sync_1e6_clk;
-  assign \$6  = clk_counter + (* src = "tests1_feb2022/test1_amlib_timers.py:118" *) 1'h1;
-  always @(posedge clk)
-    sync_1e6_clk <= \sync_1e6_clk$next ;
-  always @(posedge clk)
+  always @(posedge sync_1e6_clk)
     sync_1e6_rst <= \sync_1e6_rst$next ;
-  always @(posedge clk)
-    clk_counter <= \clk_counter$next ;
-  always @(posedge clk)
+  always @(posedge sync_1e6_clk)
     rst <= \rst$next ;
   always @(posedge sync_1e6_clk)
     leds <= debug__count[22:15];
@@ -892,29 +857,11 @@ module tb(ui__start, ui__done, ui__active, leds, sync_1e6_rst, rst, sync_1e6_clk
   end
   always @* begin
     if (\$auto$verilog_backend.cc:2083:dump_module$57 ) begin end
-    \clk_counter$next  = \$8 [3:0];
-    (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
-      1'h1:
-          \clk_counter$next  = 4'h0;
-    endcase
-  end
-  always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$57 ) begin end
     \sync_1e6_rst$next  = \ui__reset$1 ;
     (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (sync_1e6_rst)
       1'h1:
           \sync_1e6_rst$next  = 1'h0;
-    endcase
-  end
-  always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$57 ) begin end
-    \sync_1e6_clk$next  = \$14 ;
-    (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
-      1'h1:
-          \sync_1e6_clk$next  = 1'h0;
     endcase
   end
   always @* begin
@@ -975,103 +922,115 @@ module tb(ui__start, ui__done, ui__active, leds, sync_1e6_rst, rst, sync_1e6_clk
     if (\$auto$verilog_backend.cc:2083:dump_module$57 ) begin end
     \rst$next  = \ui__reset$1 ;
     (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (sync_1e6_rst)
       1'h1:
           \rst$next  = 1'h0;
     endcase
   end
-  assign \$5  = \$8 ;
-  assign clk = clk25_0__i;
   assign \leds$next  = debug__count[22:15];
 endmodule
 
 (* \amaranth.hierarchy  = "top" *)
 (* top =  1  *)
 (* generator = "Amaranth" *)
-module top(led_0__io, led_1__io, led_2__io, led_3__io, led_4__io, led_5__io, led_6__io, led_7__io, esp32_spi_0__en__io, esp32_spi_0__tx__io, esp32_spi_0__rx__io, esp32_spi_0__gpio4_copi__io, esp32_spi_0__gpio5_cs__io, esp32_spi_0__gpio12_cipo__io, esp32_spi_0__gpio16_sclk__io, uart_0__rx__io, uart_0__tx__io, uart_0__rts__io, uart_0__dtr__io, button_pwr_0__io, button_fire_0__io
-, button_fire_1__io, button_up_0__io, button_down_0__io, button_left_0__io, button_right_0__io, clk25_0__io, esp32_spi_0__gpio0__io);
+module top(led_0__io, led_1__io, led_2__io, led_3__io, led_4__io, led_5__io, led_6__io, led_7__io, esp32_spi_0__en__io, esp32_spi_0__tx__io, esp32_spi_0__rx__io, esp32_spi_0__gpio4_copi__io, esp32_spi_0__gpio5_cs__io, esp32_spi_0__gpio12_cipo__io, esp32_spi_0__gpio16_sclk__io, uart_0__rx__io, uart_0__tx__io, uart_0__rts__io, uart_0__dtr__io, clk25_0__io, button_pwr_0__io
+, button_fire_0__io, button_fire_1__io, button_up_0__io, button_down_0__io, button_left_0__io, button_right_0__io, esp32_spi_0__gpio0__io);
   reg \$auto$verilog_backend.cc:2083:dump_module$58  = 0;
-  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:108" *)
-  wire \$1 ;
-  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:111" *)
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:30" *)
+  wire [4:0] \$1 ;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:31" *)
+  wire \$10 ;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:31" *)
   wire \$11 ;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:113" *)
+  wire \$14 ;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:113" *)
+  wire \$16 ;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:113" *)
+  wire \$18 ;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:30" *)
+  wire [4:0] \$2 ;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258" *)
-  wire \$13 ;
+  wire \$20 ;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258" *)
-  wire \$15 ;
-  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:114" *)
-  wire \$17 ;
+  wire \$22 ;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:116" *)
+  wire \$24 ;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258" *)
-  wire \$19 ;
+  wire \$26 ;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258" *)
-  wire \$21 ;
-  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:117" *)
-  wire \$23 ;
-  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:109" *)
-  wire \$25 ;
-  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:109" *)
-  wire \$27 ;
-  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:112" *)
-  wire \$29 ;
-  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:108" *)
-  wire \$3 ;
-  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:112" *)
-  wire \$31 ;
-  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:115" *)
-  wire \$33 ;
-  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:115" *)
-  wire \$35 ;
-  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:118" *)
-  wire \$37 ;
-  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:118" *)
-  wire \$39 ;
-  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:108" *)
-  wire \$41 ;
-  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:108" *)
-  wire \$43 ;
-  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:108" *)
-  wire \$45 ;
+  wire \$28 ;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:119" *)
+  wire \$30 ;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258" *)
-  wire \$47 ;
+  wire \$32 ;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258" *)
-  wire \$49 ;
-  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:108" *)
+  wire \$34 ;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:122" *)
+  wire \$36 ;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:114" *)
+  wire \$38 ;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:30" *)
+  wire [4:0] \$4 ;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:114" *)
+  wire \$40 ;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:117" *)
+  wire \$42 ;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:117" *)
+  wire \$44 ;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:120" *)
+  wire \$46 ;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:120" *)
+  wire \$48 ;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:30" *)
   wire \$5 ;
-  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:111" *)
-  wire \$51 ;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:123" *)
+  wire \$50 ;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:123" *)
+  wire \$52 ;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:113" *)
+  wire \$54 ;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:113" *)
+  wire \$56 ;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:113" *)
+  wire \$58 ;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258" *)
-  wire \$53 ;
+  wire \$60 ;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258" *)
-  wire \$55 ;
-  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:114" *)
-  wire \$57 ;
+  wire \$62 ;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:116" *)
+  wire \$64 ;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258" *)
-  wire \$59 ;
+  wire \$66 ;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258" *)
-  wire \$61 ;
-  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:117" *)
-  wire \$63 ;
+  wire \$68 ;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:119" *)
+  wire \$70 ;
+  (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258" *)
+  wire \$72 ;
+  (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258" *)
+  wire \$74 ;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:122" *)
+  wire \$76 ;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/ast.py:1369" *)
-  wire \$65 ;
+  wire \$78 ;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:31" *)
+  wire \$8 ;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/ast.py:1369" *)
-  wire \$67 ;
+  wire \$80 ;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/ast.py:1369" *)
-  wire \$69 ;
-  (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258" *)
-  wire \$7 ;
+  wire \$82 ;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/ast.py:1369" *)
-  wire \$71 ;
-  (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258" *)
-  wire \$9 ;
+  wire \$84 ;
   (* \amaranth.sample_reg  = 32'd1 *)
-  (* src = "tests1_feb2022/test1_amlib_timers.py:231" *)
+  (* src = "tests2_feb2022/test1_amlib_timers.py:222" *)
   reg \$sample$s$reset$sync_1e6$1  = 1'h0;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:231" *)
+  (* src = "tests2_feb2022/test1_amlib_timers.py:222" *)
   wire \$sample$s$reset$sync_1e6$1$next ;
   (* \amaranth.sample_reg  = 32'd1 *)
-  (* src = "tests1_feb2022/test1_amlib_timers.py:228" *)
+  (* src = "tests2_feb2022/test1_amlib_timers.py:219" *)
   reg \$sample$s$start$sync_1e6$1  = 1'h0;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:228" *)
+  (* src = "tests2_feb2022/test1_amlib_timers.py:219" *)
   wire \$sample$s$start$sync_1e6$1$next ;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:129" *)
   input button_down_0__io;
@@ -1087,10 +1046,14 @@ module top(led_0__io, led_1__io, led_2__io, led_3__io, led_4__io, led_5__io, led
   input button_right_0__io;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:129" *)
   input button_up_0__io;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:105" *)
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:38" *)
   wire clk;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:129" *)
   input clk25_0__io;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:28" *)
+  reg [3:0] clk_counter = 4'h0;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:28" *)
+  reg [3:0] \clk_counter$next ;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:129" *)
   output esp32_spi_0__en__io;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:129" *)
@@ -1107,39 +1070,39 @@ module top(led_0__io, led_1__io, led_2__io, led_3__io, led_4__io, led_5__io, led
   input esp32_spi_0__rx__io;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:129" *)
   output esp32_spi_0__tx__io;
-  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:80" *)
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:85" *)
   wire i_button_ffsync_i_buttons__left;
-  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:80" *)
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:85" *)
   wire i_button_ffsync_i_buttons__pwr;
-  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:80" *)
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:85" *)
   wire i_button_ffsync_i_buttons__right;
-  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59" *)
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:61" *)
   reg i_button_ffsync_i_unsync_buttons__down = 1'h0;
-  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59" *)
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:61" *)
   reg \i_button_ffsync_i_unsync_buttons__down$next ;
-  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59" *)
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:61" *)
   reg i_button_ffsync_i_unsync_buttons__fireA = 1'h0;
-  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59" *)
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:61" *)
   reg \i_button_ffsync_i_unsync_buttons__fireA$next ;
-  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59" *)
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:61" *)
   reg i_button_ffsync_i_unsync_buttons__fireB = 1'h0;
-  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59" *)
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:61" *)
   reg \i_button_ffsync_i_unsync_buttons__fireB$next ;
-  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59" *)
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:61" *)
   reg i_button_ffsync_i_unsync_buttons__left = 1'h0;
-  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59" *)
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:61" *)
   reg \i_button_ffsync_i_unsync_buttons__left$next ;
-  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59" *)
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:61" *)
   reg i_button_ffsync_i_unsync_buttons__pwr = 1'h0;
-  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59" *)
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:61" *)
   reg \i_button_ffsync_i_unsync_buttons__pwr$next ;
-  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59" *)
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:61" *)
   reg i_button_ffsync_i_unsync_buttons__right = 1'h0;
-  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59" *)
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:61" *)
   reg \i_button_ffsync_i_unsync_buttons__right$next ;
-  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59" *)
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:61" *)
   reg i_button_ffsync_i_unsync_buttons__up = 1'h0;
-  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59" *)
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:61" *)
   reg \i_button_ffsync_i_unsync_buttons__up$next ;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:129" *)
   output led_0__io;
@@ -1171,6 +1134,8 @@ module top(led_0__io, led_1__io, led_2__io, led_3__io, led_4__io, led_5__io, led
   wire pin_button_right_0_button_right_0__i;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143" *)
   wire pin_button_up_0_button_up_0__i;
+  (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143" *)
+  wire pin_clk25_0_clk25_0__i;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143" *)
   reg pin_esp32_spi_0__en_esp32_spi_0__en__o = 1'h0;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143" *)
@@ -1227,35 +1192,35 @@ module top(led_0__io, led_1__io, led_2__io, led_3__io, led_4__io, led_5__io, led
   reg pin_uart_0__tx_uart_0__tx__o = 1'h0;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143" *)
   reg \pin_uart_0__tx_uart_0__tx__o$next ;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:231" *)
+  (* src = "tests2_feb2022/test1_amlib_timers.py:222" *)
   reg reset = 1'h0;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:231" *)
+  (* src = "tests2_feb2022/test1_amlib_timers.py:222" *)
   reg \reset$next ;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:105" *)
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:38" *)
   wire rst;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:228" *)
+  (* src = "tests2_feb2022/test1_amlib_timers.py:219" *)
   reg start = 1'h0;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:228" *)
+  (* src = "tests2_feb2022/test1_amlib_timers.py:219" *)
   reg \start$next ;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:114" *)
-  wire sync_1e6_clk;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:114" *)
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:26" *)
+  reg sync_1e6_clk = 1'h0;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:26" *)
+  reg \sync_1e6_clk$next ;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:26" *)
   wire sync_1e6_rst;
-  (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143" *)
-  wire tb_clk25_0__i;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:82" *)
+  (* src = "tests2_feb2022/test1_amlib_timers.py:85" *)
   wire [7:0] tb_leds;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:81" *)
+  (* src = "tests2_feb2022/test1_amlib_timers.py:84" *)
   wire tb_ui__active;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:81" *)
+  (* src = "tests2_feb2022/test1_amlib_timers.py:84" *)
   wire tb_ui__done;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:81" *)
+  (* src = "tests2_feb2022/test1_amlib_timers.py:84" *)
   reg tb_ui__reset = 1'h0;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:81" *)
+  (* src = "tests2_feb2022/test1_amlib_timers.py:84" *)
   reg \tb_ui__reset$next ;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:81" *)
+  (* src = "tests2_feb2022/test1_amlib_timers.py:84" *)
   reg tb_ui__start = 1'h0;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:81" *)
+  (* src = "tests2_feb2022/test1_amlib_timers.py:84" *)
   reg \tb_ui__start$next ;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:129" *)
   input uart_0__dtr__io;
@@ -1265,46 +1230,52 @@ module top(led_0__io, led_1__io, led_2__io, led_3__io, led_4__io, led_5__io, led
   input uart_0__rx__io;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:129" *)
   output uart_0__tx__io;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:221" *)
+  (* src = "tests2_feb2022/test1_amlib_timers.py:212" *)
   reg ui__active = 1'h0;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:221" *)
+  (* src = "tests2_feb2022/test1_amlib_timers.py:212" *)
   reg \ui__active$next ;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:221" *)
+  (* src = "tests2_feb2022/test1_amlib_timers.py:212" *)
   reg ui__done = 1'h0;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:221" *)
+  (* src = "tests2_feb2022/test1_amlib_timers.py:212" *)
   reg \ui__done$next ;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:221" *)
+  (* src = "tests2_feb2022/test1_amlib_timers.py:212" *)
   reg ui__reset = 1'h0;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:221" *)
+  (* src = "tests2_feb2022/test1_amlib_timers.py:212" *)
   reg \ui__reset$next ;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:221" *)
+  (* src = "tests2_feb2022/test1_amlib_timers.py:212" *)
   reg ui__start = 1'h0;
-  (* src = "tests1_feb2022/test1_amlib_timers.py:221" *)
+  (* src = "tests2_feb2022/test1_amlib_timers.py:212" *)
   reg \ui__start$next ;
-  assign \$9  = ~ (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258" *) pin_uart_0__rts_uart_0__rts__i;
-  assign \$11  = \$7  & (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:111" *) \$9 ;
-  assign \$15  = ~ (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258" *) pin_uart_0__rts_uart_0__rts__i;
-  assign \$17  = \$13  & (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:114" *) \$15 ;
-  assign \$19  = ~ (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258" *) pin_uart_0__dtr_uart_0__dtr__i;
-  assign \$23  = \$19  & (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:117" *) \$21 ;
-  assign \$25  = ~ (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:109" *) i_button_ffsync_i_buttons__pwr;
-  assign \$29  = ~ (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:112" *) i_button_ffsync_i_buttons__pwr;
-  assign \$33  = ~ (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:115" *) i_button_ffsync_i_buttons__pwr;
-  assign \$37  = ~ (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:118" *) i_button_ffsync_i_buttons__pwr;
-  assign \$45  = \$41  & (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:108" *) \$43 ;
-  assign \$47  = ~ (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258" *) pin_uart_0__dtr_uart_0__dtr__i;
-  assign \$49  = ~ (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258" *) pin_uart_0__rts_uart_0__rts__i;
-  assign \$51  = \$47  & (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:111" *) \$49 ;
-  assign \$55  = ~ (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258" *) pin_uart_0__rts_uart_0__rts__i;
-  assign \$57  = \$53  & (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:114" *) \$55 ;
-  assign \$5  = \$1  & (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:108" *) \$3 ;
-  assign \$59  = ~ (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258" *) pin_uart_0__dtr_uart_0__dtr__i;
-  assign \$63  = \$59  & (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:117" *) \$61 ;
-  assign \$65  = ~ (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/ast.py:1369" *) \$sample$s$start$sync_1e6$1 ;
-  assign \$67  = \$65  & (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/ast.py:1369" *) start;
-  assign \$69  = ~ (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/ast.py:1369" *) \$sample$s$reset$sync_1e6$1 ;
-  assign \$71  = \$69  & (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/ast.py:1369" *) reset;
-  assign \$7  = ~ (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258" *) pin_uart_0__dtr_uart_0__dtr__i;
+  assign \$11  = ! (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:31" *) clk_counter;
+  assign \$10  = \$11  ? (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:31" *) \$8  : sync_1e6_clk;
+  assign \$18  = \$14  & (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:113" *) \$16 ;
+  assign \$20  = ~ (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258" *) pin_uart_0__dtr_uart_0__dtr__i;
+  assign \$22  = ~ (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258" *) pin_uart_0__rts_uart_0__rts__i;
+  assign \$24  = \$20  & (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:116" *) \$22 ;
+  assign \$28  = ~ (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258" *) pin_uart_0__rts_uart_0__rts__i;
+  assign \$2  = clk_counter + (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:30" *) 1'h1;
+  assign \$30  = \$26  & (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:119" *) \$28 ;
+  assign \$32  = ~ (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258" *) pin_uart_0__dtr_uart_0__dtr__i;
+  assign \$36  = \$32  & (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:122" *) \$34 ;
+  assign \$38  = ~ (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:114" *) i_button_ffsync_i_buttons__pwr;
+  assign \$42  = ~ (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:117" *) i_button_ffsync_i_buttons__pwr;
+  assign \$46  = ~ (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:120" *) i_button_ffsync_i_buttons__pwr;
+  assign \$50  = ~ (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:123" *) i_button_ffsync_i_buttons__pwr;
+  assign \$58  = \$54  & (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:113" *) \$56 ;
+  assign \$5  = clk_counter == (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:30" *) 4'hb;
+  assign \$60  = ~ (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258" *) pin_uart_0__dtr_uart_0__dtr__i;
+  assign \$62  = ~ (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258" *) pin_uart_0__rts_uart_0__rts__i;
+  assign \$64  = \$60  & (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:116" *) \$62 ;
+  assign \$68  = ~ (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258" *) pin_uart_0__rts_uart_0__rts__i;
+  assign \$4  = \$5  ? (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:30" *) 5'h00 : \$2 ;
+  assign \$70  = \$66  & (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:119" *) \$68 ;
+  assign \$72  = ~ (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258" *) pin_uart_0__dtr_uart_0__dtr__i;
+  assign \$76  = \$72  & (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:122" *) \$74 ;
+  assign \$78  = ~ (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/ast.py:1369" *) \$sample$s$start$sync_1e6$1 ;
+  assign \$80  = \$78  & (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/ast.py:1369" *) start;
+  assign \$82  = ~ (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/ast.py:1369" *) \$sample$s$reset$sync_1e6$1 ;
+  assign \$84  = \$82  & (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/ast.py:1369" *) reset;
+  assign \$8  = ~ (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:31" *) sync_1e6_clk;
   always @(posedge sync_1e6_clk)
     \$sample$s$reset$sync_1e6$1  <= reset;
   always @(posedge sync_1e6_clk)
@@ -1335,22 +1306,26 @@ module top(led_0__io, led_1__io, led_2__io, led_3__io, led_4__io, led_5__io, led
     pin_uart_0__tx_uart_0__tx__o <= \pin_uart_0__tx_uart_0__tx__o$next ;
   always @(posedge clk)
     pin_esp32_spi_0__tx_esp32_spi_0__tx__o <= \pin_esp32_spi_0__tx_esp32_spi_0__tx__o$next ;
-  always @(posedge clk)
+  always @(posedge sync_1e6_clk)
     i_button_ffsync_i_unsync_buttons__right <= \i_button_ffsync_i_unsync_buttons__right$next ;
-  always @(posedge clk)
+  always @(posedge sync_1e6_clk)
     i_button_ffsync_i_unsync_buttons__left <= \i_button_ffsync_i_unsync_buttons__left$next ;
-  always @(posedge clk)
+  always @(posedge sync_1e6_clk)
     i_button_ffsync_i_unsync_buttons__down <= \i_button_ffsync_i_unsync_buttons__down$next ;
-  always @(posedge clk)
+  always @(posedge sync_1e6_clk)
     i_button_ffsync_i_unsync_buttons__up <= \i_button_ffsync_i_unsync_buttons__up$next ;
-  always @(posedge clk)
+  always @(posedge sync_1e6_clk)
     i_button_ffsync_i_unsync_buttons__fireB <= \i_button_ffsync_i_unsync_buttons__fireB$next ;
-  always @(posedge clk)
+  always @(posedge sync_1e6_clk)
     i_button_ffsync_i_unsync_buttons__fireA <= \i_button_ffsync_i_unsync_buttons__fireA$next ;
-  always @(posedge clk)
+  always @(posedge sync_1e6_clk)
     i_button_ffsync_i_unsync_buttons__pwr <= \i_button_ffsync_i_unsync_buttons__pwr$next ;
   always @(posedge sync_1e6_clk)
     pin_led_0_led_0__o <= \pin_led_0_led_0__o$next ;
+  always @(posedge clk)
+    sync_1e6_clk <= \sync_1e6_clk$next ;
+  always @(posedge clk)
+    clk_counter <= \clk_counter$next ;
   always @(posedge sync_1e6_clk)
     pin_led_1_led_1__o <= \pin_led_1_led_1__o$next ;
   always @(posedge sync_1e6_clk)
@@ -1406,7 +1381,7 @@ module top(led_0__io, led_1__io, led_2__io, led_3__io, led_4__io, led_5__io, led
     .button_up_0__io(button_up_0__io)
   );
   pin_clk25_0 pin_clk25_0 (
-    .clk25_0__i(tb_clk25_0__i),
+    .clk25_0__i(pin_clk25_0_clk25_0__i),
     .clk25_0__io(clk25_0__io)
   );
   pin_esp32_spi_0__en pin_esp32_spi_0__en (
@@ -1486,8 +1461,6 @@ module top(led_0__io, led_1__io, led_2__io, led_3__io, led_4__io, led_5__io, led
     .uart_0__tx__o(pin_uart_0__tx_uart_0__tx__o)
   );
   tb tb (
-    .clk(clk),
-    .clk25_0__i(tb_clk25_0__i),
     .leds(tb_leds),
     .rst(rst),
     .sync_1e6_clk(sync_1e6_clk),
@@ -1499,37 +1472,70 @@ module top(led_0__io, led_1__io, led_2__io, led_3__io, led_4__io, led_5__io, led
   );
   always @* begin
     if (\$auto$verilog_backend.cc:2083:dump_module$58 ) begin end
-    \i_button_ffsync_i_unsync_buttons__pwr$next  = pin_button_pwr_0_button_pwr_0__i;
+    \clk_counter$next  = \$4 [3:0];
     (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/xfrm.py:519" *)
     casez (rst)
       1'h1:
-          \i_button_ffsync_i_unsync_buttons__pwr$next  = 1'h0;
+          \clk_counter$next  = 4'h0;
     endcase
   end
   always @* begin
     if (\$auto$verilog_backend.cc:2083:dump_module$58 ) begin end
-    \i_button_ffsync_i_unsync_buttons__fireA$next  = pin_button_fire_0_button_fire_0__i;
+    \pin_esp32_spi_0__tx_esp32_spi_0__tx__o$next  = pin_uart_0__rx_uart_0__rx__i;
     (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/xfrm.py:519" *)
     casez (rst)
       1'h1:
-          \i_button_ffsync_i_unsync_buttons__fireA$next  = 1'h0;
+          \pin_esp32_spi_0__tx_esp32_spi_0__tx__o$next  = 1'h0;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2083:dump_module$58 ) begin end
+    \pin_uart_0__tx_uart_0__tx__o$next  = pin_esp32_spi_0__rx_esp32_spi_0__rx__i;
+    (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \pin_uart_0__tx_uart_0__tx__o$next  = 1'h0;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2083:dump_module$58 ) begin end
+    \pin_esp32_spi_0__en_esp32_spi_0__en__o$next  = pin_esp32_spi_0__en_esp32_spi_0__en__o;
+    (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:113" *)
+    casez ({ \$36 , \$30 , \$24 , \$18  })
+      /* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:113" */
+      4'b???1:
+          \pin_esp32_spi_0__en_esp32_spi_0__en__o$next  = \$40 ;
+      /* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:116" */
+      4'b??1?:
+          \pin_esp32_spi_0__en_esp32_spi_0__en__o$next  = \$44 ;
+      /* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:119" */
+      4'b?1??:
+          \pin_esp32_spi_0__en_esp32_spi_0__en__o$next  = \$48 ;
+      /* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:122" */
+      4'b1???:
+          \pin_esp32_spi_0__en_esp32_spi_0__en__o$next  = \$52 ;
+    endcase
+    (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \pin_esp32_spi_0__en_esp32_spi_0__en__o$next  = 1'h0;
     endcase
   end
   always @* begin
     if (\$auto$verilog_backend.cc:2083:dump_module$58 ) begin end
     \pin_esp32_spi_0__gpio0_esp32_spi_0__gpio0__o$next  = pin_esp32_spi_0__gpio0_esp32_spi_0__gpio0__o;
-    (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:108" *)
-    casez ({ \$63 , \$57 , \$51 , \$45  })
-      /* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:108" */
+    (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:113" *)
+    casez ({ \$76 , \$70 , \$64 , \$58  })
+      /* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:113" */
       4'b???1:
           \pin_esp32_spi_0__gpio0_esp32_spi_0__gpio0__o$next  = 1'h1;
-      /* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:111" */
+      /* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:116" */
       4'b??1?:
           \pin_esp32_spi_0__gpio0_esp32_spi_0__gpio0__o$next  = 1'h1;
-      /* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:114" */
+      /* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:119" */
       4'b?1??:
           \pin_esp32_spi_0__gpio0_esp32_spi_0__gpio0__o$next  = 1'h1;
-      /* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:117" */
+      /* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:122" */
       4'b1???:
           \pin_esp32_spi_0__gpio0_esp32_spi_0__gpio0__o$next  = 1'h0;
     endcase
@@ -1586,11 +1592,20 @@ module top(led_0__io, led_1__io, led_2__io, led_3__io, led_4__io, led_5__io, led
   end
   always @* begin
     if (\$auto$verilog_backend.cc:2083:dump_module$58 ) begin end
-    \ui__start$next  = \$67 ;
+    \ui__start$next  = \$80 ;
     (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/xfrm.py:519" *)
     casez (sync_1e6_rst)
       1'h1:
           \ui__start$next  = 1'h0;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2083:dump_module$58 ) begin end
+    \sync_1e6_clk$next  = \$10 ;
+    (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/xfrm.py:519" *)
+    casez (rst)
+      1'h1:
+          \sync_1e6_clk$next  = 1'h0;
     endcase
   end
   always @* begin
@@ -1604,7 +1619,7 @@ module top(led_0__io, led_1__io, led_2__io, led_3__io, led_4__io, led_5__io, led
   end
   always @* begin
     if (\$auto$verilog_backend.cc:2083:dump_module$58 ) begin end
-    \ui__reset$next  = \$71 ;
+    \ui__reset$next  = \$84 ;
     (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/xfrm.py:519" *)
     casez (sync_1e6_rst)
       1'h1:
@@ -1631,9 +1646,27 @@ module top(led_0__io, led_1__io, led_2__io, led_3__io, led_4__io, led_5__io, led
   end
   always @* begin
     if (\$auto$verilog_backend.cc:2083:dump_module$58 ) begin end
+    \i_button_ffsync_i_unsync_buttons__pwr$next  = pin_button_pwr_0_button_pwr_0__i;
+    (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/xfrm.py:519" *)
+    casez (sync_1e6_rst)
+      1'h1:
+          \i_button_ffsync_i_unsync_buttons__pwr$next  = 1'h0;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2083:dump_module$58 ) begin end
+    \i_button_ffsync_i_unsync_buttons__fireA$next  = pin_button_fire_0_button_fire_0__i;
+    (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/xfrm.py:519" *)
+    casez (sync_1e6_rst)
+      1'h1:
+          \i_button_ffsync_i_unsync_buttons__fireA$next  = 1'h0;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2083:dump_module$58 ) begin end
     \i_button_ffsync_i_unsync_buttons__fireB$next  = pin_button_fire_1_button_fire_1__i;
     (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (sync_1e6_rst)
       1'h1:
           \i_button_ffsync_i_unsync_buttons__fireB$next  = 1'h0;
     endcase
@@ -1642,7 +1675,7 @@ module top(led_0__io, led_1__io, led_2__io, led_3__io, led_4__io, led_5__io, led
     if (\$auto$verilog_backend.cc:2083:dump_module$58 ) begin end
     \i_button_ffsync_i_unsync_buttons__up$next  = pin_button_up_0_button_up_0__i;
     (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (sync_1e6_rst)
       1'h1:
           \i_button_ffsync_i_unsync_buttons__up$next  = 1'h0;
     endcase
@@ -1651,7 +1684,7 @@ module top(led_0__io, led_1__io, led_2__io, led_3__io, led_4__io, led_5__io, led
     if (\$auto$verilog_backend.cc:2083:dump_module$58 ) begin end
     \i_button_ffsync_i_unsync_buttons__down$next  = pin_button_down_0_button_down_0__i;
     (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (sync_1e6_rst)
       1'h1:
           \i_button_ffsync_i_unsync_buttons__down$next  = 1'h0;
     endcase
@@ -1660,7 +1693,7 @@ module top(led_0__io, led_1__io, led_2__io, led_3__io, led_4__io, led_5__io, led
     if (\$auto$verilog_backend.cc:2083:dump_module$58 ) begin end
     \i_button_ffsync_i_unsync_buttons__left$next  = pin_button_left_0_button_left_0__i;
     (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (sync_1e6_rst)
       1'h1:
           \i_button_ffsync_i_unsync_buttons__left$next  = 1'h0;
     endcase
@@ -1669,65 +1702,25 @@ module top(led_0__io, led_1__io, led_2__io, led_3__io, led_4__io, led_5__io, led
     if (\$auto$verilog_backend.cc:2083:dump_module$58 ) begin end
     \i_button_ffsync_i_unsync_buttons__right$next  = pin_button_right_0_button_right_0__i;
     (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
+    casez (sync_1e6_rst)
       1'h1:
           \i_button_ffsync_i_unsync_buttons__right$next  = 1'h0;
     endcase
   end
-  always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$58 ) begin end
-    \pin_esp32_spi_0__tx_esp32_spi_0__tx__o$next  = pin_uart_0__rx_uart_0__rx__i;
-    (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
-      1'h1:
-          \pin_esp32_spi_0__tx_esp32_spi_0__tx__o$next  = 1'h0;
-    endcase
-  end
-  always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$58 ) begin end
-    \pin_uart_0__tx_uart_0__tx__o$next  = pin_esp32_spi_0__rx_esp32_spi_0__rx__i;
-    (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
-      1'h1:
-          \pin_uart_0__tx_uart_0__tx__o$next  = 1'h0;
-    endcase
-  end
-  always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$58 ) begin end
-    \pin_esp32_spi_0__en_esp32_spi_0__en__o$next  = pin_esp32_spi_0__en_esp32_spi_0__en__o;
-    (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:108" *)
-    casez ({ \$23 , \$17 , \$11 , \$5  })
-      /* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:108" */
-      4'b???1:
-          \pin_esp32_spi_0__en_esp32_spi_0__en__o$next  = \$27 ;
-      /* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:111" */
-      4'b??1?:
-          \pin_esp32_spi_0__en_esp32_spi_0__en__o$next  = \$31 ;
-      /* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:114" */
-      4'b?1??:
-          \pin_esp32_spi_0__en_esp32_spi_0__en__o$next  = \$35 ;
-      /* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:117" */
-      4'b1???:
-          \pin_esp32_spi_0__en_esp32_spi_0__en__o$next  = \$39 ;
-    endcase
-    (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/xfrm.py:519" *)
-    casez (rst)
-      1'h1:
-          \pin_esp32_spi_0__en_esp32_spi_0__en__o$next  = 1'h0;
-    endcase
-  end
+  assign \$1  = \$4 ;
   assign \$sample$s$reset$sync_1e6$1$next  = reset;
   assign \$sample$s$start$sync_1e6$1$next  = start;
-  assign \$1  = pin_uart_0__dtr_uart_0__dtr__i;
-  assign \$3  = pin_uart_0__rts_uart_0__rts__i;
-  assign \$13  = pin_uart_0__dtr_uart_0__dtr__i;
-  assign \$21  = pin_uart_0__rts_uart_0__rts__i;
-  assign \$27  = \$25 ;
-  assign \$31  = \$29 ;
-  assign \$35  = 1'h0;
-  assign \$39  = \$37 ;
-  assign \$41  = pin_uart_0__dtr_uart_0__dtr__i;
-  assign \$43  = pin_uart_0__rts_uart_0__rts__i;
-  assign \$53  = pin_uart_0__dtr_uart_0__dtr__i;
-  assign \$61  = pin_uart_0__rts_uart_0__rts__i;
+  assign clk = pin_clk25_0_clk25_0__i;
+  assign \$16  = pin_uart_0__rts_uart_0__rts__i;
+  assign \$14  = pin_uart_0__dtr_uart_0__dtr__i;
+  assign \$26  = pin_uart_0__dtr_uart_0__dtr__i;
+  assign \$34  = pin_uart_0__rts_uart_0__rts__i;
+  assign \$40  = \$38 ;
+  assign \$44  = \$42 ;
+  assign \$48  = 1'h0;
+  assign \$52  = \$50 ;
+  assign \$54  = pin_uart_0__dtr_uart_0__dtr__i;
+  assign \$56  = pin_uart_0__rts_uart_0__rts__i;
+  assign \$66  = pin_uart_0__dtr_uart_0__dtr__i;
+  assign \$74  = pin_uart_0__rts_uart_0__rts__i;
 endmodule

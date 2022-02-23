@@ -21444,35 +21444,35 @@
           "direction": "input",
           "bits": [ 20 ]
         },
-        "button_pwr_0__io": {
+        "clk25_0__io": {
           "direction": "input",
           "bits": [ 21 ]
         },
-        "button_fire_0__io": {
+        "button_pwr_0__io": {
           "direction": "input",
           "bits": [ 22 ]
         },
-        "button_fire_1__io": {
+        "button_fire_0__io": {
           "direction": "input",
           "bits": [ 23 ]
         },
-        "button_up_0__io": {
+        "button_fire_1__io": {
           "direction": "input",
           "bits": [ 24 ]
         },
-        "button_down_0__io": {
+        "button_up_0__io": {
           "direction": "input",
           "bits": [ 25 ]
         },
-        "button_left_0__io": {
+        "button_down_0__io": {
           "direction": "input",
           "bits": [ 26 ]
         },
-        "button_right_0__io": {
+        "button_left_0__io": {
           "direction": "input",
           "bits": [ 27 ]
         },
-        "clk25_0__io": {
+        "button_right_0__io": {
           "direction": "input",
           "bits": [ 28 ]
         },
@@ -21482,6 +21482,290 @@
         }
       },
       "cells": {
+        "clk_counter_TRELLIS_FF_Q": {
+          "hide_name": 0,
+          "type": "TRELLIS_FF",
+          "parameters": {
+            "CEMUX": "1 ",
+            "CLKMUX": "CLK",
+            "GSR": "DISABLED",
+            "LSRMUX": "LSR",
+            "REGSET": "RESET",
+            "SRMODE": "LSR_OVER_CE"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:68.164-68.215"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "DI": "input",
+            "LSR": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 30 ],
+            "DI": [ 31 ],
+            "LSR": [ 32 ],
+            "Q": [ 33 ]
+          }
+        },
+        "clk_counter_TRELLIS_FF_Q_1": {
+          "hide_name": 0,
+          "type": "TRELLIS_FF",
+          "parameters": {
+            "CEMUX": "1 ",
+            "CLKMUX": "CLK",
+            "GSR": "DISABLED",
+            "LSRMUX": "LSR",
+            "REGSET": "RESET",
+            "SRMODE": "LSR_OVER_CE"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:68.164-68.215"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "DI": "input",
+            "LSR": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 30 ],
+            "DI": [ 34 ],
+            "LSR": [ 32 ],
+            "Q": [ 35 ]
+          }
+        },
+        "clk_counter_TRELLIS_FF_Q_2": {
+          "hide_name": 0,
+          "type": "TRELLIS_FF",
+          "parameters": {
+            "CEMUX": "1 ",
+            "CLKMUX": "CLK",
+            "GSR": "DISABLED",
+            "LSRMUX": "LSR",
+            "REGSET": "RESET",
+            "SRMODE": "LSR_OVER_CE"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:68.164-68.215"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "DI": "input",
+            "LSR": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 30 ],
+            "DI": [ 36 ],
+            "LSR": [ 32 ],
+            "Q": [ 37 ]
+          }
+        },
+        "clk_counter_TRELLIS_FF_Q_3": {
+          "hide_name": 0,
+          "type": "TRELLIS_FF",
+          "parameters": {
+            "CEMUX": "1 ",
+            "CLKMUX": "CLK",
+            "GSR": "DISABLED",
+            "LSRMUX": "LSR",
+            "REGSET": "RESET",
+            "SRMODE": "LSR_OVER_CE"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:68.164-68.215"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "DI": "input",
+            "LSR": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 30 ],
+            "DI": [ 38 ],
+            "LSR": [ 32 ],
+            "Q": [ 39 ]
+          }
+        },
+        "clk_counter_TRELLIS_FF_Q_3_DI_LUT4_Z": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "0000000011111111"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:114.33-115.56"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ "0" ],
+            "B": [ "0" ],
+            "C": [ "0" ],
+            "D": [ 39 ],
+            "Z": [ 38 ]
+          }
+        },
+        "clk_counter_TRELLIS_FF_Q_DI_LUT4_Z": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "0111111110000000"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:128.32-129.56"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 35 ],
+            "B": [ 39 ],
+            "C": [ 37 ],
+            "D": [ 33 ],
+            "Z": [ 31 ]
+          }
+        },
+        "clk_counter_TRELLIS_FF_Q_DI_LUT4_Z_1": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "0011111111000000"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:124.33-125.56"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ "0" ],
+            "B": [ 39 ],
+            "C": [ 37 ],
+            "D": [ 35 ],
+            "Z": [ 34 ]
+          }
+        },
+        "clk_counter_TRELLIS_FF_Q_DI_LUT4_Z_2": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "0000111111110000"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:119.33-120.56"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ "0" ],
+            "B": [ "0" ],
+            "C": [ 39 ],
+            "D": [ 37 ],
+            "Z": [ 36 ]
+          }
+        },
+        "clk_counter_TRELLIS_FF_Q_LSR_PFUMX_Z": {
+          "hide_name": 0,
+          "type": "PFUMX",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:138.19-138.63"
+          },
+          "port_directions": {
+            "ALUT": "input",
+            "BLUT": "input",
+            "C0": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "ALUT": [ 40 ],
+            "BLUT": [ 41 ],
+            "C0": [ 42 ],
+            "Z": [ 32 ]
+          }
+        },
+        "clk_counter_TRELLIS_FF_Q_LSR_PFUMX_Z_ALUT_LUT4_Z": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "1111111111111111"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:136.39-137.56"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ "0" ],
+            "B": [ "0" ],
+            "C": [ "0" ],
+            "D": [ "0" ],
+            "Z": [ 40 ]
+          }
+        },
+        "clk_counter_TRELLIS_FF_Q_LSR_PFUMX_Z_BLUT_LUT4_Z": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "0100000000000000"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:134.39-135.56"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 35 ],
+            "B": [ 39 ],
+            "C": [ 37 ],
+            "D": [ 33 ],
+            "Z": [ 41 ]
+          }
+        },
         "i_button_ffsync.i_buttons__left_TRELLIS_FF_Q": {
           "hide_name": 0,
           "type": "TRELLIS_FF",
@@ -21504,16 +21788,16 @@
           },
           "connections": {
             "CLK": [ 30 ],
-            "DI": [ 31 ],
+            "DI": [ 43 ],
             "LSR": [ "0" ],
-            "Q": [ 32 ]
+            "Q": [ 44 ]
           }
         },
         "i_button_ffsync.i_buttons__pwr_LUT4_D": {
           "hide_name": 0,
           "type": "LUT4",
           "parameters": {
-            "INIT": "0000000011001111"
+            "INIT": "0000000011110011"
           },
           "attributes": {
             "module_not_derived": "00000000000000000000000000000001",
@@ -21528,10 +21812,10 @@
           },
           "connections": {
             "A": [ "0" ],
-            "B": [ 33 ],
-            "C": [ 34 ],
-            "D": [ 35 ],
-            "Z": [ 36 ]
+            "B": [ 45 ],
+            "C": [ 46 ],
+            "D": [ 47 ],
+            "Z": [ 48 ]
           }
         },
         "i_button_ffsync.i_buttons__pwr_TRELLIS_FF_Q": {
@@ -21556,9 +21840,9 @@
           },
           "connections": {
             "CLK": [ 30 ],
-            "DI": [ 37 ],
+            "DI": [ 49 ],
             "LSR": [ "0" ],
-            "Q": [ 35 ]
+            "Q": [ 47 ]
           }
         },
         "i_button_ffsync.i_buttons__right_TRELLIS_FF_Q": {
@@ -21583,9 +21867,9 @@
           },
           "connections": {
             "CLK": [ 30 ],
-            "DI": [ 38 ],
+            "DI": [ 50 ],
             "LSR": [ "0" ],
-            "Q": [ 39 ]
+            "Q": [ 51 ]
           }
         },
         "i_button_ffsync.stage0_TRELLIS_FF_Q": {
@@ -21610,9 +21894,9 @@
           },
           "connections": {
             "CLK": [ 30 ],
-            "DI": [ 40 ],
+            "DI": [ 52 ],
             "LSR": [ "0" ],
-            "Q": [ 38 ]
+            "Q": [ 50 ]
           }
         },
         "i_button_ffsync.stage0_TRELLIS_FF_Q_1": {
@@ -21637,9 +21921,9 @@
           },
           "connections": {
             "CLK": [ 30 ],
-            "DI": [ 41 ],
+            "DI": [ 53 ],
             "LSR": [ "0" ],
-            "Q": [ 31 ]
+            "Q": [ 43 ]
           }
         },
         "i_button_ffsync.stage0_TRELLIS_FF_Q_2": {
@@ -21664,9 +21948,9 @@
           },
           "connections": {
             "CLK": [ 30 ],
-            "DI": [ 42 ],
+            "DI": [ 54 ],
             "LSR": [ "0" ],
-            "Q": [ 37 ]
+            "Q": [ 49 ]
           }
         },
         "i_button_ffsync_i_unsync_buttons__left_TRELLIS_FF_Q": {
@@ -21691,10 +21975,10 @@
             "Q": "output"
           },
           "connections": {
-            "CLK": [ 30 ],
-            "DI": [ 43 ],
-            "LSR": [ 44 ],
-            "Q": [ 41 ]
+            "CLK": [ 55 ],
+            "DI": [ 56 ],
+            "LSR": [ 42 ],
+            "Q": [ 53 ]
           }
         },
         "i_button_ffsync_i_unsync_buttons__pwr_TRELLIS_FF_Q": {
@@ -21719,10 +22003,10 @@
             "Q": "output"
           },
           "connections": {
-            "CLK": [ 30 ],
-            "DI": [ 45 ],
-            "LSR": [ 44 ],
-            "Q": [ 42 ]
+            "CLK": [ 55 ],
+            "DI": [ 57 ],
+            "LSR": [ 42 ],
+            "Q": [ 54 ]
           }
         },
         "i_button_ffsync_i_unsync_buttons__right_TRELLIS_FF_Q": {
@@ -21747,10 +22031,10 @@
             "Q": "output"
           },
           "connections": {
-            "CLK": [ 30 ],
-            "DI": [ 46 ],
-            "LSR": [ 44 ],
-            "Q": [ 40 ]
+            "CLK": [ 55 ],
+            "DI": [ 58 ],
+            "LSR": [ 42 ],
+            "Q": [ 52 ]
           }
         },
         "pin_button_left_0.button_left_0_0": {
@@ -21770,8 +22054,8 @@
             "O": "output"
           },
           "connections": {
-            "B": [ 26 ],
-            "O": [ 43 ]
+            "B": [ 27 ],
+            "O": [ 56 ]
           }
         },
         "pin_button_pwr_0.button_pwr_0_0": {
@@ -21791,8 +22075,8 @@
             "O": "output"
           },
           "connections": {
-            "B": [ 21 ],
-            "O": [ 47 ]
+            "B": [ 22 ],
+            "O": [ 59 ]
           }
         },
         "pin_button_pwr_0_button_pwr_0__i_LUT4_Z": {
@@ -21816,8 +22100,8 @@
             "A": [ "0" ],
             "B": [ "0" ],
             "C": [ "0" ],
-            "D": [ 47 ],
-            "Z": [ 45 ]
+            "D": [ 59 ],
+            "Z": [ 57 ]
           }
         },
         "pin_button_right_0.button_right_0_0": {
@@ -21837,8 +22121,8 @@
             "O": "output"
           },
           "connections": {
-            "B": [ 27 ],
-            "O": [ 46 ]
+            "B": [ 28 ],
+            "O": [ 58 ]
           }
         },
         "pin_clk25_0.clk25_0_0": {
@@ -21858,7 +22142,7 @@
             "O": "output"
           },
           "connections": {
-            "B": [ 28 ],
+            "B": [ 21 ],
             "O": [ 30 ]
           }
         },
@@ -21880,7 +22164,7 @@
           },
           "connections": {
             "B": [ 10 ],
-            "I": [ 48 ]
+            "I": [ 60 ]
           }
         },
         "pin_esp32_spi_0__en_esp32_spi_0__en__o_TRELLIS_FF_Q": {
@@ -21908,9 +22192,9 @@
           "connections": {
             "CE": [ "1" ],
             "CLK": [ 30 ],
-            "DI": [ 36 ],
-            "LSR": [ 44 ],
-            "Q": [ 48 ]
+            "DI": [ 48 ],
+            "LSR": [ 42 ],
+            "Q": [ 60 ]
           }
         },
         "pin_esp32_spi_0__gpio0.esp32_spi_0__gpio0_0": {
@@ -21933,8 +22217,8 @@
           },
           "connections": {
             "B": [ 29 ],
-            "I": [ 49 ],
-            "O": [ 50 ],
+            "I": [ 61 ],
+            "O": [ 62 ],
             "T": [ "1" ]
           }
         },
@@ -21963,9 +22247,9 @@
           "connections": {
             "CE": [ "1" ],
             "CLK": [ 30 ],
-            "DI": [ 51 ],
-            "LSR": [ 44 ],
-            "Q": [ 49 ]
+            "DI": [ 63 ],
+            "LSR": [ 42 ],
+            "Q": [ 61 ]
           }
         },
         "pin_esp32_spi_0__gpio12_cipo.esp32_spi_0__gpio12_cipo_0": {
@@ -22007,7 +22291,7 @@
           },
           "connections": {
             "B": [ 12 ],
-            "O": [ 52 ]
+            "O": [ 64 ]
           }
         },
         "pin_esp32_spi_0__tx.esp32_spi_0__tx_0": {
@@ -22028,7 +22312,7 @@
           },
           "connections": {
             "B": [ 11 ],
-            "I": [ 53 ]
+            "I": [ 65 ]
           }
         },
         "pin_esp32_spi_0__tx_esp32_spi_0__tx__o_TRELLIS_FF_Q": {
@@ -22054,9 +22338,9 @@
           },
           "connections": {
             "CLK": [ 30 ],
-            "DI": [ 54 ],
-            "LSR": [ 44 ],
-            "Q": [ 53 ]
+            "DI": [ 66 ],
+            "LSR": [ 42 ],
+            "Q": [ 65 ]
           }
         },
         "pin_led_0.led_0_0": {
@@ -22077,7 +22361,7 @@
           },
           "connections": {
             "B": [ 2 ],
-            "I": [ 55 ]
+            "I": [ 67 ]
           }
         },
         "pin_led_0_led_0__o_TRELLIS_FF_Q": {
@@ -22102,10 +22386,10 @@
             "Q": "output"
           },
           "connections": {
-            "CLK": [ 56 ],
-            "DI": [ 57 ],
-            "LSR": [ 44 ],
-            "Q": [ 55 ]
+            "CLK": [ 55 ],
+            "DI": [ 68 ],
+            "LSR": [ 42 ],
+            "Q": [ 67 ]
           }
         },
         "pin_led_1.led_1_0": {
@@ -22126,7 +22410,7 @@
           },
           "connections": {
             "B": [ 3 ],
-            "I": [ 58 ]
+            "I": [ 69 ]
           }
         },
         "pin_led_1_led_1__o_TRELLIS_FF_Q": {
@@ -22151,10 +22435,10 @@
             "Q": "output"
           },
           "connections": {
-            "CLK": [ 56 ],
-            "DI": [ 59 ],
-            "LSR": [ 44 ],
-            "Q": [ 58 ]
+            "CLK": [ 55 ],
+            "DI": [ 70 ],
+            "LSR": [ 42 ],
+            "Q": [ 69 ]
           }
         },
         "pin_led_2.led_2_0": {
@@ -22175,7 +22459,7 @@
           },
           "connections": {
             "B": [ 4 ],
-            "I": [ 60 ]
+            "I": [ 71 ]
           }
         },
         "pin_led_2_led_2__o_TRELLIS_FF_Q": {
@@ -22200,10 +22484,10 @@
             "Q": "output"
           },
           "connections": {
-            "CLK": [ 56 ],
-            "DI": [ 61 ],
-            "LSR": [ 44 ],
-            "Q": [ 60 ]
+            "CLK": [ 55 ],
+            "DI": [ 72 ],
+            "LSR": [ 42 ],
+            "Q": [ 71 ]
           }
         },
         "pin_led_3.led_3_0": {
@@ -22224,7 +22508,7 @@
           },
           "connections": {
             "B": [ 5 ],
-            "I": [ 62 ]
+            "I": [ 73 ]
           }
         },
         "pin_led_3_led_3__o_TRELLIS_FF_Q": {
@@ -22249,10 +22533,10 @@
             "Q": "output"
           },
           "connections": {
-            "CLK": [ 56 ],
-            "DI": [ 63 ],
-            "LSR": [ 44 ],
-            "Q": [ 62 ]
+            "CLK": [ 55 ],
+            "DI": [ 74 ],
+            "LSR": [ 42 ],
+            "Q": [ 73 ]
           }
         },
         "pin_led_4.led_4_0": {
@@ -22273,7 +22557,7 @@
           },
           "connections": {
             "B": [ 6 ],
-            "I": [ 64 ]
+            "I": [ 75 ]
           }
         },
         "pin_led_4_led_4__o_TRELLIS_FF_Q": {
@@ -22298,10 +22582,10 @@
             "Q": "output"
           },
           "connections": {
-            "CLK": [ 56 ],
-            "DI": [ 65 ],
-            "LSR": [ 44 ],
-            "Q": [ 64 ]
+            "CLK": [ 55 ],
+            "DI": [ 76 ],
+            "LSR": [ 42 ],
+            "Q": [ 75 ]
           }
         },
         "pin_led_5.led_5_0": {
@@ -22322,7 +22606,7 @@
           },
           "connections": {
             "B": [ 7 ],
-            "I": [ 66 ]
+            "I": [ 77 ]
           }
         },
         "pin_led_5_led_5__o_TRELLIS_FF_Q": {
@@ -22347,10 +22631,10 @@
             "Q": "output"
           },
           "connections": {
-            "CLK": [ 56 ],
-            "DI": [ 67 ],
-            "LSR": [ 44 ],
-            "Q": [ 66 ]
+            "CLK": [ 55 ],
+            "DI": [ 78 ],
+            "LSR": [ 42 ],
+            "Q": [ 77 ]
           }
         },
         "pin_led_6.led_6_0": {
@@ -22371,7 +22655,7 @@
           },
           "connections": {
             "B": [ 8 ],
-            "I": [ 68 ]
+            "I": [ 79 ]
           }
         },
         "pin_led_6_led_6__o_TRELLIS_FF_Q": {
@@ -22396,10 +22680,10 @@
             "Q": "output"
           },
           "connections": {
-            "CLK": [ 56 ],
-            "DI": [ 69 ],
-            "LSR": [ 44 ],
-            "Q": [ 68 ]
+            "CLK": [ 55 ],
+            "DI": [ 80 ],
+            "LSR": [ 42 ],
+            "Q": [ 79 ]
           }
         },
         "pin_led_7.led_7_0": {
@@ -22420,7 +22704,7 @@
           },
           "connections": {
             "B": [ 9 ],
-            "I": [ 70 ]
+            "I": [ 81 ]
           }
         },
         "pin_led_7_led_7__o_TRELLIS_FF_Q": {
@@ -22445,10 +22729,10 @@
             "Q": "output"
           },
           "connections": {
-            "CLK": [ 56 ],
-            "DI": [ 71 ],
-            "LSR": [ 44 ],
-            "Q": [ 70 ]
+            "CLK": [ 55 ],
+            "DI": [ 82 ],
+            "LSR": [ 42 ],
+            "Q": [ 81 ]
           }
         },
         "pin_uart_0__dtr.uart_0__dtr_0": {
@@ -22469,7 +22753,7 @@
           },
           "connections": {
             "B": [ 20 ],
-            "O": [ 34 ]
+            "O": [ 45 ]
           }
         },
         "pin_uart_0__dtr.uart_0__dtr__i_LUT4_C": {
@@ -22492,9 +22776,9 @@
           "connections": {
             "A": [ "0" ],
             "B": [ "0" ],
-            "C": [ 34 ],
-            "D": [ 33 ],
-            "Z": [ 51 ]
+            "C": [ 45 ],
+            "D": [ 46 ],
+            "Z": [ 63 ]
           }
         },
         "pin_uart_0__rts.uart_0__rts_0": {
@@ -22515,7 +22799,7 @@
           },
           "connections": {
             "B": [ 19 ],
-            "O": [ 33 ]
+            "O": [ 46 ]
           }
         },
         "pin_uart_0__rx.uart_0__rx_0": {
@@ -22536,7 +22820,7 @@
           },
           "connections": {
             "B": [ 17 ],
-            "O": [ 54 ]
+            "O": [ 66 ]
           }
         },
         "pin_uart_0__tx.uart_0__tx_0": {
@@ -22557,7 +22841,7 @@
           },
           "connections": {
             "B": [ 18 ],
-            "I": [ 72 ]
+            "I": [ 83 ]
           }
         },
         "pin_uart_0__tx_uart_0__tx__o_TRELLIS_FF_Q": {
@@ -22583,9 +22867,9 @@
           },
           "connections": {
             "CLK": [ 30 ],
-            "DI": [ 52 ],
-            "LSR": [ 44 ],
-            "Q": [ 72 ]
+            "DI": [ 64 ],
+            "LSR": [ 42 ],
+            "Q": [ 83 ]
           }
         },
         "reset_LUT4_D": {
@@ -22608,9 +22892,9 @@
           "connections": {
             "A": [ "0" ],
             "B": [ "0" ],
-            "C": [ 73 ],
-            "D": [ 74 ],
-            "Z": [ 75 ]
+            "C": [ 84 ],
+            "D": [ 85 ],
+            "Z": [ 86 ]
           }
         },
         "reset_TRELLIS_FF_DI": {
@@ -22634,10 +22918,10 @@
             "Q": "output"
           },
           "connections": {
-            "CLK": [ 56 ],
-            "DI": [ 74 ],
+            "CLK": [ 55 ],
+            "DI": [ 85 ],
             "LSR": [ "0" ],
-            "Q": [ 73 ]
+            "Q": [ 84 ]
           }
         },
         "reset_TRELLIS_FF_Q": {
@@ -22662,10 +22946,10 @@
             "Q": "output"
           },
           "connections": {
-            "CLK": [ 56 ],
-            "DI": [ 39 ],
-            "LSR": [ 44 ],
-            "Q": [ 74 ]
+            "CLK": [ 55 ],
+            "DI": [ 51 ],
+            "LSR": [ 42 ],
+            "Q": [ 85 ]
           }
         },
         "start_LUT4_D": {
@@ -22688,9 +22972,9 @@
           "connections": {
             "A": [ "0" ],
             "B": [ "0" ],
-            "C": [ 76 ],
-            "D": [ 77 ],
-            "Z": [ 78 ]
+            "C": [ 87 ],
+            "D": [ 88 ],
+            "Z": [ 89 ]
           }
         },
         "start_TRELLIS_FF_DI": {
@@ -22714,10 +22998,10 @@
             "Q": "output"
           },
           "connections": {
-            "CLK": [ 56 ],
-            "DI": [ 77 ],
+            "CLK": [ 55 ],
+            "DI": [ 88 ],
             "LSR": [ "0" ],
-            "Q": [ 76 ]
+            "Q": [ 87 ]
           }
         },
         "start_TRELLIS_FF_Q": {
@@ -22742,17 +23026,17 @@
             "Q": "output"
           },
           "connections": {
-            "CLK": [ 56 ],
-            "DI": [ 32 ],
-            "LSR": [ 44 ],
-            "Q": [ 77 ]
+            "CLK": [ 55 ],
+            "DI": [ 44 ],
+            "LSR": [ 42 ],
+            "Q": [ 88 ]
           }
         },
-        "tb.clk_counter_TRELLIS_FF_Q": {
+        "sync_1e6_clk_TRELLIS_FF_Q": {
           "hide_name": 0,
           "type": "TRELLIS_FF",
           "parameters": {
-            "CEMUX": "1 ",
+            "CEMUX": "INV",
             "CLKMUX": "CLK",
             "GSR": "DISABLED",
             "LSRMUX": "LSR",
@@ -22761,106 +23045,49 @@
           },
           "attributes": {
             "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:68.164-68.215"
+            "src": "/home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:88.171-88.230"
           },
           "port_directions": {
+            "CE": "input",
             "CLK": "input",
             "DI": "input",
             "LSR": "input",
             "Q": "output"
           },
           "connections": {
+            "CE": [ 90 ],
             "CLK": [ 30 ],
-            "DI": [ 79 ],
-            "LSR": [ 80 ],
-            "Q": [ 81 ]
+            "DI": [ 91 ],
+            "LSR": [ 42 ],
+            "Q": [ 55 ]
           }
         },
-        "tb.clk_counter_TRELLIS_FF_Q_1": {
+        "sync_1e6_clk_TRELLIS_FF_Q_CE_LUT4_Z": {
           "hide_name": 0,
-          "type": "TRELLIS_FF",
+          "type": "LUT4",
           "parameters": {
-            "CEMUX": "1 ",
-            "CLKMUX": "CLK",
-            "GSR": "DISABLED",
-            "LSRMUX": "LSR",
-            "REGSET": "RESET",
-            "SRMODE": "LSR_OVER_CE"
+            "INIT": "1111111111111110"
           },
           "attributes": {
             "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:68.164-68.215"
+            "src": "/home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:128.32-129.56"
           },
           "port_directions": {
-            "CLK": "input",
-            "DI": "input",
-            "LSR": "input",
-            "Q": "output"
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
           },
           "connections": {
-            "CLK": [ 30 ],
-            "DI": [ 82 ],
-            "LSR": [ 80 ],
-            "Q": [ 83 ]
+            "A": [ 33 ],
+            "B": [ 35 ],
+            "C": [ 39 ],
+            "D": [ 37 ],
+            "Z": [ 90 ]
           }
         },
-        "tb.clk_counter_TRELLIS_FF_Q_2": {
-          "hide_name": 0,
-          "type": "TRELLIS_FF",
-          "parameters": {
-            "CEMUX": "1 ",
-            "CLKMUX": "CLK",
-            "GSR": "DISABLED",
-            "LSRMUX": "LSR",
-            "REGSET": "RESET",
-            "SRMODE": "LSR_OVER_CE"
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:68.164-68.215"
-          },
-          "port_directions": {
-            "CLK": "input",
-            "DI": "input",
-            "LSR": "input",
-            "Q": "output"
-          },
-          "connections": {
-            "CLK": [ 30 ],
-            "DI": [ 84 ],
-            "LSR": [ 80 ],
-            "Q": [ 85 ]
-          }
-        },
-        "tb.clk_counter_TRELLIS_FF_Q_3": {
-          "hide_name": 0,
-          "type": "TRELLIS_FF",
-          "parameters": {
-            "CEMUX": "1 ",
-            "CLKMUX": "CLK",
-            "GSR": "DISABLED",
-            "LSRMUX": "LSR",
-            "REGSET": "RESET",
-            "SRMODE": "LSR_OVER_CE"
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:68.164-68.215"
-          },
-          "port_directions": {
-            "CLK": "input",
-            "DI": "input",
-            "LSR": "input",
-            "Q": "output"
-          },
-          "connections": {
-            "CLK": [ 30 ],
-            "DI": [ 86 ],
-            "LSR": [ 80 ],
-            "Q": [ 87 ]
-          }
-        },
-        "tb.clk_counter_TRELLIS_FF_Q_3_DI_LUT4_Z": {
+        "sync_1e6_clk_TRELLIS_FF_Q_DI_LUT4_Z": {
           "hide_name": 0,
           "type": "LUT4",
           "parameters": {
@@ -22881,155 +23108,8 @@
             "A": [ "0" ],
             "B": [ "0" ],
             "C": [ "0" ],
-            "D": [ 87 ],
-            "Z": [ 86 ]
-          }
-        },
-        "tb.clk_counter_TRELLIS_FF_Q_DI_LUT4_Z": {
-          "hide_name": 0,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": "0111111110000000"
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:128.32-129.56"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ 87 ],
-            "B": [ 85 ],
-            "C": [ 83 ],
-            "D": [ 81 ],
-            "Z": [ 79 ]
-          }
-        },
-        "tb.clk_counter_TRELLIS_FF_Q_DI_LUT4_Z_1": {
-          "hide_name": 0,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": "0011111111000000"
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:124.33-125.56"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ "0" ],
-            "B": [ 87 ],
-            "C": [ 85 ],
-            "D": [ 83 ],
-            "Z": [ 82 ]
-          }
-        },
-        "tb.clk_counter_TRELLIS_FF_Q_DI_LUT4_Z_2": {
-          "hide_name": 0,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": "0000111111110000"
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:119.33-120.56"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ "0" ],
-            "B": [ "0" ],
-            "C": [ 87 ],
-            "D": [ 85 ],
-            "Z": [ 84 ]
-          }
-        },
-        "tb.clk_counter_TRELLIS_FF_Q_LSR_PFUMX_Z": {
-          "hide_name": 0,
-          "type": "PFUMX",
-          "parameters": {
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:138.19-138.63"
-          },
-          "port_directions": {
-            "ALUT": "input",
-            "BLUT": "input",
-            "C0": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "ALUT": [ 88 ],
-            "BLUT": [ 89 ],
-            "C0": [ 44 ],
-            "Z": [ 80 ]
-          }
-        },
-        "tb.clk_counter_TRELLIS_FF_Q_LSR_PFUMX_Z_ALUT_LUT4_Z": {
-          "hide_name": 0,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": "1111111111111111"
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:136.39-137.56"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ "0" ],
-            "B": [ "0" ],
-            "C": [ "0" ],
-            "D": [ "0" ],
-            "Z": [ 88 ]
-          }
-        },
-        "tb.clk_counter_TRELLIS_FF_Q_LSR_PFUMX_Z_BLUT_LUT4_Z": {
-          "hide_name": 0,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": "0100000000000000"
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:134.39-135.56"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ 83 ],
-            "B": [ 85 ],
-            "C": [ 87 ],
-            "D": [ 81 ],
-            "Z": [ 89 ]
+            "D": [ 55 ],
+            "Z": [ 91 ]
           }
         },
         "tb.debug__count_TRELLIS_FF_Q": {
@@ -23054,10 +23134,10 @@
             "Q": "output"
           },
           "connections": {
-            "CLK": [ 56 ],
-            "DI": [ 90 ],
-            "LSR": [ 44 ],
-            "Q": [ 91 ]
+            "CLK": [ 55 ],
+            "DI": [ 92 ],
+            "LSR": [ 42 ],
+            "Q": [ 93 ]
           }
         },
         "tb.debug__count_TRELLIS_FF_Q_1": {
@@ -23082,10 +23162,10 @@
             "Q": "output"
           },
           "connections": {
-            "CLK": [ 56 ],
-            "DI": [ 92 ],
-            "LSR": [ 44 ],
-            "Q": [ 93 ]
+            "CLK": [ 55 ],
+            "DI": [ 94 ],
+            "LSR": [ 42 ],
+            "Q": [ 95 ]
           }
         },
         "tb.debug__count_TRELLIS_FF_Q_2": {
@@ -23110,10 +23190,10 @@
             "Q": "output"
           },
           "connections": {
-            "CLK": [ 56 ],
-            "DI": [ 94 ],
-            "LSR": [ 44 ],
-            "Q": [ 95 ]
+            "CLK": [ 55 ],
+            "DI": [ 96 ],
+            "LSR": [ 42 ],
+            "Q": [ 97 ]
           }
         },
         "tb.debug__count_TRELLIS_FF_Q_3": {
@@ -23138,10 +23218,10 @@
             "Q": "output"
           },
           "connections": {
-            "CLK": [ 56 ],
-            "DI": [ 96 ],
-            "LSR": [ 44 ],
-            "Q": [ 97 ]
+            "CLK": [ 55 ],
+            "DI": [ 98 ],
+            "LSR": [ 42 ],
+            "Q": [ 99 ]
           }
         },
         "tb.debug__count_TRELLIS_FF_Q_4": {
@@ -23166,10 +23246,10 @@
             "Q": "output"
           },
           "connections": {
-            "CLK": [ 56 ],
-            "DI": [ 98 ],
-            "LSR": [ 44 ],
-            "Q": [ 99 ]
+            "CLK": [ 55 ],
+            "DI": [ 100 ],
+            "LSR": [ 42 ],
+            "Q": [ 101 ]
           }
         },
         "tb.debug__count_TRELLIS_FF_Q_5": {
@@ -23194,10 +23274,10 @@
             "Q": "output"
           },
           "connections": {
-            "CLK": [ 56 ],
-            "DI": [ 100 ],
-            "LSR": [ 44 ],
-            "Q": [ 101 ]
+            "CLK": [ 55 ],
+            "DI": [ 102 ],
+            "LSR": [ 42 ],
+            "Q": [ 103 ]
           }
         },
         "tb.debug__count_TRELLIS_FF_Q_6": {
@@ -23222,10 +23302,10 @@
             "Q": "output"
           },
           "connections": {
-            "CLK": [ 56 ],
-            "DI": [ 102 ],
-            "LSR": [ 44 ],
-            "Q": [ 103 ]
+            "CLK": [ 55 ],
+            "DI": [ 104 ],
+            "LSR": [ 42 ],
+            "Q": [ 105 ]
           }
         },
         "tb.debug__count_TRELLIS_FF_Q_7": {
@@ -23250,10 +23330,10 @@
             "Q": "output"
           },
           "connections": {
-            "CLK": [ 56 ],
-            "DI": [ 104 ],
-            "LSR": [ 44 ],
-            "Q": [ 105 ]
+            "CLK": [ 55 ],
+            "DI": [ 106 ],
+            "LSR": [ 42 ],
+            "Q": [ 107 ]
           }
         },
         "tb.dut.debug__count$4_TRELLIS_FF_Q": {
@@ -23278,10 +23358,10 @@
             "Q": "output"
           },
           "connections": {
-            "CLK": [ 56 ],
-            "DI": [ 106 ],
-            "LSR": [ 44 ],
-            "Q": [ 107 ]
+            "CLK": [ 55 ],
+            "DI": [ 108 ],
+            "LSR": [ 42 ],
+            "Q": [ 109 ]
           }
         },
         "tb.dut.debug__count$4_TRELLIS_FF_Q_1": {
@@ -23306,10 +23386,10 @@
             "Q": "output"
           },
           "connections": {
-            "CLK": [ 56 ],
-            "DI": [ 108 ],
-            "LSR": [ 44 ],
-            "Q": [ 109 ]
+            "CLK": [ 55 ],
+            "DI": [ 110 ],
+            "LSR": [ 42 ],
+            "Q": [ 111 ]
           }
         },
         "tb.dut.debug__count$4_TRELLIS_FF_Q_2": {
@@ -23334,10 +23414,10 @@
             "Q": "output"
           },
           "connections": {
-            "CLK": [ 56 ],
-            "DI": [ 110 ],
-            "LSR": [ 44 ],
-            "Q": [ 111 ]
+            "CLK": [ 55 ],
+            "DI": [ 112 ],
+            "LSR": [ 42 ],
+            "Q": [ 113 ]
           }
         },
         "tb.dut.debug__count$4_TRELLIS_FF_Q_3": {
@@ -23362,10 +23442,10 @@
             "Q": "output"
           },
           "connections": {
-            "CLK": [ 56 ],
-            "DI": [ 112 ],
-            "LSR": [ 44 ],
-            "Q": [ 113 ]
+            "CLK": [ 55 ],
+            "DI": [ 114 ],
+            "LSR": [ 42 ],
+            "Q": [ 115 ]
           }
         },
         "tb.dut.debug__count$4_TRELLIS_FF_Q_4": {
@@ -23390,10 +23470,10 @@
             "Q": "output"
           },
           "connections": {
-            "CLK": [ 56 ],
-            "DI": [ 114 ],
-            "LSR": [ 44 ],
-            "Q": [ 115 ]
+            "CLK": [ 55 ],
+            "DI": [ 116 ],
+            "LSR": [ 42 ],
+            "Q": [ 117 ]
           }
         },
         "tb.dut.debug__count$4_TRELLIS_FF_Q_5": {
@@ -23418,10 +23498,10 @@
             "Q": "output"
           },
           "connections": {
-            "CLK": [ 56 ],
-            "DI": [ 116 ],
-            "LSR": [ 44 ],
-            "Q": [ 117 ]
+            "CLK": [ 55 ],
+            "DI": [ 118 ],
+            "LSR": [ 42 ],
+            "Q": [ 119 ]
           }
         },
         "tb.dut.debug__count$4_TRELLIS_FF_Q_6": {
@@ -23446,10 +23526,10 @@
             "Q": "output"
           },
           "connections": {
-            "CLK": [ 56 ],
-            "DI": [ 118 ],
-            "LSR": [ 44 ],
-            "Q": [ 119 ]
+            "CLK": [ 55 ],
+            "DI": [ 120 ],
+            "LSR": [ 42 ],
+            "Q": [ 121 ]
           }
         },
         "tb.dut.debug__count$4_TRELLIS_FF_Q_7": {
@@ -23474,10 +23554,10 @@
             "Q": "output"
           },
           "connections": {
-            "CLK": [ 56 ],
-            "DI": [ 120 ],
-            "LSR": [ 44 ],
-            "Q": [ 121 ]
+            "CLK": [ 55 ],
+            "DI": [ 122 ],
+            "LSR": [ 42 ],
+            "Q": [ 123 ]
           }
         },
         "tb.dut.debug__count_TRELLIS_FF_Q": {
@@ -23502,10 +23582,10 @@
             "Q": "output"
           },
           "connections": {
-            "CLK": [ 56 ],
-            "DI": [ 107 ],
-            "LSR": [ 44 ],
-            "Q": [ 90 ]
+            "CLK": [ 55 ],
+            "DI": [ 109 ],
+            "LSR": [ 42 ],
+            "Q": [ 92 ]
           }
         },
         "tb.dut.debug__count_TRELLIS_FF_Q_1": {
@@ -23530,10 +23610,10 @@
             "Q": "output"
           },
           "connections": {
-            "CLK": [ 56 ],
-            "DI": [ 109 ],
-            "LSR": [ 44 ],
-            "Q": [ 92 ]
+            "CLK": [ 55 ],
+            "DI": [ 111 ],
+            "LSR": [ 42 ],
+            "Q": [ 94 ]
           }
         },
         "tb.dut.debug__count_TRELLIS_FF_Q_2": {
@@ -23558,10 +23638,10 @@
             "Q": "output"
           },
           "connections": {
-            "CLK": [ 56 ],
-            "DI": [ 111 ],
-            "LSR": [ 44 ],
-            "Q": [ 94 ]
+            "CLK": [ 55 ],
+            "DI": [ 113 ],
+            "LSR": [ 42 ],
+            "Q": [ 96 ]
           }
         },
         "tb.dut.debug__count_TRELLIS_FF_Q_3": {
@@ -23586,10 +23666,10 @@
             "Q": "output"
           },
           "connections": {
-            "CLK": [ 56 ],
-            "DI": [ 113 ],
-            "LSR": [ 44 ],
-            "Q": [ 96 ]
+            "CLK": [ 55 ],
+            "DI": [ 115 ],
+            "LSR": [ 42 ],
+            "Q": [ 98 ]
           }
         },
         "tb.dut.debug__count_TRELLIS_FF_Q_4": {
@@ -23614,10 +23694,10 @@
             "Q": "output"
           },
           "connections": {
-            "CLK": [ 56 ],
-            "DI": [ 115 ],
-            "LSR": [ 44 ],
-            "Q": [ 98 ]
+            "CLK": [ 55 ],
+            "DI": [ 117 ],
+            "LSR": [ 42 ],
+            "Q": [ 100 ]
           }
         },
         "tb.dut.debug__count_TRELLIS_FF_Q_5": {
@@ -23642,10 +23722,10 @@
             "Q": "output"
           },
           "connections": {
-            "CLK": [ 56 ],
-            "DI": [ 117 ],
-            "LSR": [ 44 ],
-            "Q": [ 100 ]
+            "CLK": [ 55 ],
+            "DI": [ 119 ],
+            "LSR": [ 42 ],
+            "Q": [ 102 ]
           }
         },
         "tb.dut.debug__count_TRELLIS_FF_Q_6": {
@@ -23670,10 +23750,10 @@
             "Q": "output"
           },
           "connections": {
-            "CLK": [ 56 ],
-            "DI": [ 119 ],
-            "LSR": [ 44 ],
-            "Q": [ 102 ]
+            "CLK": [ 55 ],
+            "DI": [ 121 ],
+            "LSR": [ 42 ],
+            "Q": [ 104 ]
           }
         },
         "tb.dut.debug__count_TRELLIS_FF_Q_7": {
@@ -23698,10 +23778,10 @@
             "Q": "output"
           },
           "connections": {
-            "CLK": [ 56 ],
-            "DI": [ 121 ],
-            "LSR": [ 44 ],
-            "Q": [ 104 ]
+            "CLK": [ 55 ],
+            "DI": [ 123 ],
+            "LSR": [ 42 ],
+            "Q": [ 106 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q": {
@@ -23727,11 +23807,11 @@
             "Q": "output"
           },
           "connections": {
-            "CE": [ 122 ],
-            "CLK": [ 56 ],
-            "DI": [ 123 ],
-            "LSR": [ 44 ],
-            "Q": [ 124 ]
+            "CE": [ 124 ],
+            "CLK": [ 55 ],
+            "DI": [ 125 ],
+            "LSR": [ 42 ],
+            "Q": [ 126 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_1": {
@@ -23757,11 +23837,11 @@
             "Q": "output"
           },
           "connections": {
-            "CE": [ 122 ],
-            "CLK": [ 56 ],
-            "DI": [ 125 ],
-            "LSR": [ 44 ],
-            "Q": [ 126 ]
+            "CE": [ 124 ],
+            "CLK": [ 55 ],
+            "DI": [ 127 ],
+            "LSR": [ 42 ],
+            "Q": [ 128 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_10": {
@@ -23787,11 +23867,11 @@
             "Q": "output"
           },
           "connections": {
-            "CE": [ 122 ],
-            "CLK": [ 56 ],
-            "DI": [ 127 ],
-            "LSR": [ 44 ],
-            "Q": [ 128 ]
+            "CE": [ 124 ],
+            "CLK": [ 55 ],
+            "DI": [ 129 ],
+            "LSR": [ 42 ],
+            "Q": [ 110 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_10_DI_LUT4_Z": {
@@ -23814,9 +23894,9 @@
           "connections": {
             "A": [ "0" ],
             "B": [ "0" ],
-            "C": [ 129 ],
-            "D": [ 130 ],
-            "Z": [ 127 ]
+            "C": [ 130 ],
+            "D": [ 131 ],
+            "Z": [ 129 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_11": {
@@ -23842,11 +23922,11 @@
             "Q": "output"
           },
           "connections": {
-            "CE": [ 122 ],
-            "CLK": [ 56 ],
-            "DI": [ 131 ],
-            "LSR": [ 44 ],
-            "Q": [ 132 ]
+            "CE": [ 124 ],
+            "CLK": [ 55 ],
+            "DI": [ 132 ],
+            "LSR": [ 42 ],
+            "Q": [ 112 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_11_DI_LUT4_Z": {
@@ -23869,9 +23949,9 @@
           "connections": {
             "A": [ "0" ],
             "B": [ "0" ],
-            "C": [ 129 ],
+            "C": [ 130 ],
             "D": [ 133 ],
-            "Z": [ 131 ]
+            "Z": [ 132 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_12": {
@@ -23897,18 +23977,18 @@
             "Q": "output"
           },
           "connections": {
-            "CE": [ 122 ],
-            "CLK": [ 56 ],
+            "CE": [ 124 ],
+            "CLK": [ 55 ],
             "DI": [ 134 ],
-            "LSR": [ 44 ],
-            "Q": [ 135 ]
+            "LSR": [ 42 ],
+            "Q": [ 114 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_12_DI_LUT4_Z": {
           "hide_name": 0,
           "type": "LUT4",
           "parameters": {
-            "INIT": "0000111100000000"
+            "INIT": "1111111111110000"
           },
           "attributes": {
             "module_not_derived": "00000000000000000000000000000001",
@@ -23924,8 +24004,8 @@
           "connections": {
             "A": [ "0" ],
             "B": [ "0" ],
-            "C": [ 129 ],
-            "D": [ 136 ],
+            "C": [ 130 ],
+            "D": [ 135 ],
             "Z": [ 134 ]
           }
         },
@@ -23952,18 +24032,18 @@
             "Q": "output"
           },
           "connections": {
-            "CE": [ 122 ],
-            "CLK": [ 56 ],
-            "DI": [ 137 ],
-            "LSR": [ 44 ],
-            "Q": [ 138 ]
+            "CE": [ 124 ],
+            "CLK": [ 55 ],
+            "DI": [ 136 ],
+            "LSR": [ 42 ],
+            "Q": [ 116 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_13_DI_LUT4_Z": {
           "hide_name": 0,
           "type": "LUT4",
           "parameters": {
-            "INIT": "0000111100000000"
+            "INIT": "1111111111110000"
           },
           "attributes": {
             "module_not_derived": "00000000000000000000000000000001",
@@ -23979,9 +24059,9 @@
           "connections": {
             "A": [ "0" ],
             "B": [ "0" ],
-            "C": [ 129 ],
-            "D": [ 139 ],
-            "Z": [ 137 ]
+            "C": [ 130 ],
+            "D": [ 137 ],
+            "Z": [ 136 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_14": {
@@ -24007,18 +24087,18 @@
             "Q": "output"
           },
           "connections": {
-            "CE": [ 122 ],
-            "CLK": [ 56 ],
-            "DI": [ 140 ],
-            "LSR": [ 44 ],
-            "Q": [ 141 ]
+            "CE": [ 124 ],
+            "CLK": [ 55 ],
+            "DI": [ 138 ],
+            "LSR": [ 42 ],
+            "Q": [ 118 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_14_DI_LUT4_Z": {
           "hide_name": 0,
           "type": "LUT4",
           "parameters": {
-            "INIT": "0000111100000000"
+            "INIT": "1111111111110000"
           },
           "attributes": {
             "module_not_derived": "00000000000000000000000000000001",
@@ -24034,9 +24114,9 @@
           "connections": {
             "A": [ "0" ],
             "B": [ "0" ],
-            "C": [ 129 ],
-            "D": [ 142 ],
-            "Z": [ 140 ]
+            "C": [ 130 ],
+            "D": [ 139 ],
+            "Z": [ 138 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_15": {
@@ -24062,18 +24142,18 @@
             "Q": "output"
           },
           "connections": {
-            "CE": [ 122 ],
-            "CLK": [ 56 ],
-            "DI": [ 143 ],
-            "LSR": [ 44 ],
-            "Q": [ 144 ]
+            "CE": [ 124 ],
+            "CLK": [ 55 ],
+            "DI": [ 140 ],
+            "LSR": [ 42 ],
+            "Q": [ 120 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_15_DI_LUT4_Z": {
           "hide_name": 0,
           "type": "LUT4",
           "parameters": {
-            "INIT": "0000111100000000"
+            "INIT": "1111111111110000"
           },
           "attributes": {
             "module_not_derived": "00000000000000000000000000000001",
@@ -24089,9 +24169,9 @@
           "connections": {
             "A": [ "0" ],
             "B": [ "0" ],
-            "C": [ 129 ],
-            "D": [ 145 ],
-            "Z": [ 143 ]
+            "C": [ 130 ],
+            "D": [ 141 ],
+            "Z": [ 140 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_16": {
@@ -24117,11 +24197,11 @@
             "Q": "output"
           },
           "connections": {
-            "CE": [ 122 ],
-            "CLK": [ 56 ],
-            "DI": [ 146 ],
-            "LSR": [ 44 ],
-            "Q": [ 147 ]
+            "CE": [ 124 ],
+            "CLK": [ 55 ],
+            "DI": [ 142 ],
+            "LSR": [ 42 ],
+            "Q": [ 122 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_16_DI_LUT4_Z": {
@@ -24144,9 +24224,9 @@
           "connections": {
             "A": [ "0" ],
             "B": [ "0" ],
-            "C": [ 129 ],
-            "D": [ 148 ],
-            "Z": [ 146 ]
+            "C": [ 130 ],
+            "D": [ 143 ],
+            "Z": [ 142 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_17": {
@@ -24172,18 +24252,18 @@
             "Q": "output"
           },
           "connections": {
-            "CE": [ 122 ],
-            "CLK": [ 56 ],
-            "DI": [ 149 ],
-            "LSR": [ 44 ],
-            "Q": [ 106 ]
+            "CE": [ 124 ],
+            "CLK": [ 55 ],
+            "DI": [ 144 ],
+            "LSR": [ 42 ],
+            "Q": [ 145 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_17_DI_LUT4_Z": {
           "hide_name": 0,
           "type": "LUT4",
           "parameters": {
-            "INIT": "0000111100000000"
+            "INIT": "1111111111110000"
           },
           "attributes": {
             "module_not_derived": "00000000000000000000000000000001",
@@ -24199,9 +24279,9 @@
           "connections": {
             "A": [ "0" ],
             "B": [ "0" ],
-            "C": [ 129 ],
-            "D": [ 150 ],
-            "Z": [ 149 ]
+            "C": [ 130 ],
+            "D": [ 146 ],
+            "Z": [ 144 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_18": {
@@ -24227,11 +24307,11 @@
             "Q": "output"
           },
           "connections": {
-            "CE": [ 122 ],
-            "CLK": [ 56 ],
-            "DI": [ 151 ],
-            "LSR": [ 44 ],
-            "Q": [ 108 ]
+            "CE": [ 124 ],
+            "CLK": [ 55 ],
+            "DI": [ 147 ],
+            "LSR": [ 42 ],
+            "Q": [ 148 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_18_DI_LUT4_Z": {
@@ -24254,9 +24334,9 @@
           "connections": {
             "A": [ "0" ],
             "B": [ "0" ],
-            "C": [ 129 ],
-            "D": [ 152 ],
-            "Z": [ 151 ]
+            "C": [ 130 ],
+            "D": [ 149 ],
+            "Z": [ 147 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_19": {
@@ -24282,11 +24362,11 @@
             "Q": "output"
           },
           "connections": {
-            "CE": [ 122 ],
-            "CLK": [ 56 ],
-            "DI": [ 153 ],
-            "LSR": [ 44 ],
-            "Q": [ 110 ]
+            "CE": [ 124 ],
+            "CLK": [ 55 ],
+            "DI": [ 150 ],
+            "LSR": [ 42 ],
+            "Q": [ 151 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_19_DI_LUT4_Z": {
@@ -24309,16 +24389,16 @@
           "connections": {
             "A": [ "0" ],
             "B": [ "0" ],
-            "C": [ 129 ],
-            "D": [ 154 ],
-            "Z": [ 153 ]
+            "C": [ 130 ],
+            "D": [ 152 ],
+            "Z": [ 150 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_1_DI_LUT4_Z": {
           "hide_name": 0,
           "type": "LUT4",
           "parameters": {
-            "INIT": "1111111111110000"
+            "INIT": "0000111100000000"
           },
           "attributes": {
             "module_not_derived": "00000000000000000000000000000001",
@@ -24334,9 +24414,9 @@
           "connections": {
             "A": [ "0" ],
             "B": [ "0" ],
-            "C": [ 129 ],
-            "D": [ 155 ],
-            "Z": [ 125 ]
+            "C": [ 130 ],
+            "D": [ 153 ],
+            "Z": [ 127 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_2": {
@@ -24362,11 +24442,11 @@
             "Q": "output"
           },
           "connections": {
-            "CE": [ 122 ],
-            "CLK": [ 56 ],
-            "DI": [ 156 ],
-            "LSR": [ 44 ],
-            "Q": [ 157 ]
+            "CE": [ 124 ],
+            "CLK": [ 55 ],
+            "DI": [ 154 ],
+            "LSR": [ 42 ],
+            "Q": [ 155 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_20": {
@@ -24392,18 +24472,18 @@
             "Q": "output"
           },
           "connections": {
-            "CE": [ 122 ],
-            "CLK": [ 56 ],
-            "DI": [ 158 ],
-            "LSR": [ 44 ],
-            "Q": [ 112 ]
+            "CE": [ 124 ],
+            "CLK": [ 55 ],
+            "DI": [ 156 ],
+            "LSR": [ 42 ],
+            "Q": [ 157 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_20_DI_LUT4_Z": {
           "hide_name": 0,
           "type": "LUT4",
           "parameters": {
-            "INIT": "1111111111110000"
+            "INIT": "0000111100000000"
           },
           "attributes": {
             "module_not_derived": "00000000000000000000000000000001",
@@ -24419,9 +24499,9 @@
           "connections": {
             "A": [ "0" ],
             "B": [ "0" ],
-            "C": [ 129 ],
-            "D": [ 159 ],
-            "Z": [ 158 ]
+            "C": [ 130 ],
+            "D": [ 158 ],
+            "Z": [ 156 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_21": {
@@ -24447,18 +24527,18 @@
             "Q": "output"
           },
           "connections": {
-            "CE": [ 122 ],
-            "CLK": [ 56 ],
-            "DI": [ 160 ],
-            "LSR": [ 44 ],
-            "Q": [ 114 ]
+            "CE": [ 124 ],
+            "CLK": [ 55 ],
+            "DI": [ 159 ],
+            "LSR": [ 42 ],
+            "Q": [ 160 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_21_DI_LUT4_Z": {
           "hide_name": 0,
           "type": "LUT4",
           "parameters": {
-            "INIT": "1111111111110000"
+            "INIT": "0000111100000000"
           },
           "attributes": {
             "module_not_derived": "00000000000000000000000000000001",
@@ -24474,9 +24554,9 @@
           "connections": {
             "A": [ "0" ],
             "B": [ "0" ],
-            "C": [ 129 ],
+            "C": [ 130 ],
             "D": [ 161 ],
-            "Z": [ 160 ]
+            "Z": [ 159 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_22": {
@@ -24502,11 +24582,11 @@
             "Q": "output"
           },
           "connections": {
-            "CE": [ 122 ],
-            "CLK": [ 56 ],
+            "CE": [ 124 ],
+            "CLK": [ 55 ],
             "DI": [ 162 ],
-            "LSR": [ 44 ],
-            "Q": [ 116 ]
+            "LSR": [ 42 ],
+            "Q": [ 163 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_22_DI_LUT4_Z": {
@@ -24529,8 +24609,8 @@
           "connections": {
             "A": [ "0" ],
             "B": [ "0" ],
-            "C": [ 129 ],
-            "D": [ 163 ],
+            "C": [ 130 ],
+            "D": [ 164 ],
             "Z": [ 162 ]
           }
         },
@@ -24557,18 +24637,18 @@
             "Q": "output"
           },
           "connections": {
-            "CE": [ 122 ],
-            "CLK": [ 56 ],
-            "DI": [ 164 ],
-            "LSR": [ 44 ],
-            "Q": [ 118 ]
+            "CE": [ 124 ],
+            "CLK": [ 55 ],
+            "DI": [ 165 ],
+            "LSR": [ 42 ],
+            "Q": [ 166 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_23_DI_LUT4_Z": {
           "hide_name": 0,
           "type": "LUT4",
           "parameters": {
-            "INIT": "1111111111110000"
+            "INIT": "0000111100000000"
           },
           "attributes": {
             "module_not_derived": "00000000000000000000000000000001",
@@ -24584,9 +24664,9 @@
           "connections": {
             "A": [ "0" ],
             "B": [ "0" ],
-            "C": [ 129 ],
-            "D": [ 165 ],
-            "Z": [ 164 ]
+            "C": [ 130 ],
+            "D": [ 167 ],
+            "Z": [ 165 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_24": {
@@ -24612,11 +24692,11 @@
             "Q": "output"
           },
           "connections": {
-            "CE": [ 122 ],
-            "CLK": [ 56 ],
-            "DI": [ 166 ],
-            "LSR": [ 44 ],
-            "Q": [ 120 ]
+            "CE": [ 124 ],
+            "CLK": [ 55 ],
+            "DI": [ 168 ],
+            "LSR": [ 42 ],
+            "Q": [ 169 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_24_DI_LUT4_Z": {
@@ -24639,9 +24719,9 @@
           "connections": {
             "A": [ "0" ],
             "B": [ "0" ],
-            "C": [ 129 ],
-            "D": [ 167 ],
-            "Z": [ 166 ]
+            "C": [ 130 ],
+            "D": [ 170 ],
+            "Z": [ 168 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_25": {
@@ -24667,11 +24747,11 @@
             "Q": "output"
           },
           "connections": {
-            "CE": [ 122 ],
-            "CLK": [ 56 ],
-            "DI": [ 168 ],
-            "LSR": [ 44 ],
-            "Q": [ 169 ]
+            "CE": [ 124 ],
+            "CLK": [ 55 ],
+            "DI": [ 171 ],
+            "LSR": [ 42 ],
+            "Q": [ 172 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_25_DI_LUT4_Z": {
@@ -24694,9 +24774,9 @@
           "connections": {
             "A": [ "0" ],
             "B": [ "0" ],
-            "C": [ 129 ],
-            "D": [ 170 ],
-            "Z": [ 168 ]
+            "C": [ 130 ],
+            "D": [ 173 ],
+            "Z": [ 171 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_26": {
@@ -24722,11 +24802,11 @@
             "Q": "output"
           },
           "connections": {
-            "CE": [ 122 ],
-            "CLK": [ 56 ],
-            "DI": [ 171 ],
-            "LSR": [ 44 ],
-            "Q": [ 172 ]
+            "CE": [ 124 ],
+            "CLK": [ 55 ],
+            "DI": [ 174 ],
+            "LSR": [ 42 ],
+            "Q": [ 175 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_26_DI_LUT4_Z": {
@@ -24749,9 +24829,9 @@
           "connections": {
             "A": [ "0" ],
             "B": [ "0" ],
-            "C": [ 129 ],
-            "D": [ 173 ],
-            "Z": [ 171 ]
+            "C": [ 130 ],
+            "D": [ 176 ],
+            "Z": [ 174 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_27": {
@@ -24777,11 +24857,11 @@
             "Q": "output"
           },
           "connections": {
-            "CE": [ 122 ],
-            "CLK": [ 56 ],
-            "DI": [ 174 ],
-            "LSR": [ 44 ],
-            "Q": [ 175 ]
+            "CE": [ 124 ],
+            "CLK": [ 55 ],
+            "DI": [ 177 ],
+            "LSR": [ 42 ],
+            "Q": [ 178 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_27_DI_LUT4_Z": {
@@ -24804,9 +24884,9 @@
           "connections": {
             "A": [ "0" ],
             "B": [ "0" ],
-            "C": [ 129 ],
-            "D": [ 176 ],
-            "Z": [ 174 ]
+            "C": [ 130 ],
+            "D": [ 179 ],
+            "Z": [ 177 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_28": {
@@ -24832,11 +24912,11 @@
             "Q": "output"
           },
           "connections": {
-            "CE": [ 122 ],
-            "CLK": [ 56 ],
-            "DI": [ 177 ],
-            "LSR": [ 44 ],
-            "Q": [ 178 ]
+            "CE": [ 124 ],
+            "CLK": [ 55 ],
+            "DI": [ 180 ],
+            "LSR": [ 42 ],
+            "Q": [ 181 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_28_DI_LUT4_Z": {
@@ -24859,9 +24939,9 @@
           "connections": {
             "A": [ "0" ],
             "B": [ "0" ],
-            "C": [ 129 ],
-            "D": [ 179 ],
-            "Z": [ 177 ]
+            "C": [ 130 ],
+            "D": [ 182 ],
+            "Z": [ 180 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_29": {
@@ -24887,11 +24967,11 @@
             "Q": "output"
           },
           "connections": {
-            "CE": [ 122 ],
-            "CLK": [ 56 ],
-            "DI": [ 180 ],
-            "LSR": [ 44 ],
-            "Q": [ 181 ]
+            "CE": [ 124 ],
+            "CLK": [ 55 ],
+            "DI": [ 183 ],
+            "LSR": [ 42 ],
+            "Q": [ 184 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_29_DI_LUT4_Z": {
@@ -24914,9 +24994,9 @@
           "connections": {
             "A": [ "0" ],
             "B": [ "0" ],
-            "C": [ 129 ],
-            "D": [ 182 ],
-            "Z": [ 180 ]
+            "C": [ 130 ],
+            "D": [ 185 ],
+            "Z": [ 183 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_2_DI_LUT4_Z": {
@@ -24939,9 +25019,9 @@
           "connections": {
             "A": [ "0" ],
             "B": [ "0" ],
-            "C": [ 129 ],
-            "D": [ 183 ],
-            "Z": [ 156 ]
+            "C": [ 130 ],
+            "D": [ 186 ],
+            "Z": [ 154 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_3": {
@@ -24967,11 +25047,11 @@
             "Q": "output"
           },
           "connections": {
-            "CE": [ 122 ],
-            "CLK": [ 56 ],
-            "DI": [ 184 ],
-            "LSR": [ 44 ],
-            "Q": [ 185 ]
+            "CE": [ 124 ],
+            "CLK": [ 55 ],
+            "DI": [ 187 ],
+            "LSR": [ 42 ],
+            "Q": [ 188 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_30": {
@@ -24997,18 +25077,18 @@
             "Q": "output"
           },
           "connections": {
-            "CE": [ 122 ],
-            "CLK": [ 56 ],
-            "DI": [ 186 ],
-            "LSR": [ 44 ],
-            "Q": [ 187 ]
+            "CE": [ 124 ],
+            "CLK": [ 55 ],
+            "DI": [ 189 ],
+            "LSR": [ 42 ],
+            "Q": [ 190 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_30_DI_LUT4_Z": {
           "hide_name": 0,
           "type": "LUT4",
           "parameters": {
-            "INIT": "1111111111110000"
+            "INIT": "0000111100000000"
           },
           "attributes": {
             "module_not_derived": "00000000000000000000000000000001",
@@ -25024,9 +25104,9 @@
           "connections": {
             "A": [ "0" ],
             "B": [ "0" ],
-            "C": [ 129 ],
-            "D": [ 188 ],
-            "Z": [ 186 ]
+            "C": [ 130 ],
+            "D": [ 191 ],
+            "Z": [ 189 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_31": {
@@ -25052,11 +25132,11 @@
             "Q": "output"
           },
           "connections": {
-            "CE": [ 122 ],
-            "CLK": [ 56 ],
-            "DI": [ 189 ],
-            "LSR": [ 44 ],
-            "Q": [ 190 ]
+            "CE": [ 124 ],
+            "CLK": [ 55 ],
+            "DI": [ 192 ],
+            "LSR": [ 42 ],
+            "Q": [ 193 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_31_DI_LUT4_Z": {
@@ -25079,9 +25159,9 @@
           "connections": {
             "A": [ "0" ],
             "B": [ "0" ],
-            "C": [ 129 ],
-            "D": [ 191 ],
-            "Z": [ 189 ]
+            "C": [ 130 ],
+            "D": [ 194 ],
+            "Z": [ 192 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_3_DI_LUT4_Z": {
@@ -25104,9 +25184,9 @@
           "connections": {
             "A": [ "0" ],
             "B": [ "0" ],
-            "C": [ 129 ],
-            "D": [ 192 ],
-            "Z": [ 184 ]
+            "C": [ 130 ],
+            "D": [ 195 ],
+            "Z": [ 187 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_4": {
@@ -25132,11 +25212,11 @@
             "Q": "output"
           },
           "connections": {
-            "CE": [ 122 ],
-            "CLK": [ 56 ],
-            "DI": [ 193 ],
-            "LSR": [ 44 ],
-            "Q": [ 194 ]
+            "CE": [ 124 ],
+            "CLK": [ 55 ],
+            "DI": [ 196 ],
+            "LSR": [ 42 ],
+            "Q": [ 197 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_4_DI_LUT4_Z": {
@@ -25159,9 +25239,9 @@
           "connections": {
             "A": [ "0" ],
             "B": [ "0" ],
-            "C": [ 129 ],
-            "D": [ 195 ],
-            "Z": [ 193 ]
+            "C": [ 130 ],
+            "D": [ 198 ],
+            "Z": [ 196 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_5": {
@@ -25187,11 +25267,11 @@
             "Q": "output"
           },
           "connections": {
-            "CE": [ 122 ],
-            "CLK": [ 56 ],
-            "DI": [ 196 ],
-            "LSR": [ 44 ],
-            "Q": [ 197 ]
+            "CE": [ 124 ],
+            "CLK": [ 55 ],
+            "DI": [ 199 ],
+            "LSR": [ 42 ],
+            "Q": [ 200 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_5_DI_LUT4_Z": {
@@ -25214,9 +25294,9 @@
           "connections": {
             "A": [ "0" ],
             "B": [ "0" ],
-            "C": [ 129 ],
-            "D": [ 198 ],
-            "Z": [ 196 ]
+            "C": [ 130 ],
+            "D": [ 201 ],
+            "Z": [ 199 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_6": {
@@ -25242,11 +25322,11 @@
             "Q": "output"
           },
           "connections": {
-            "CE": [ 122 ],
-            "CLK": [ 56 ],
-            "DI": [ 199 ],
-            "LSR": [ 44 ],
-            "Q": [ 200 ]
+            "CE": [ 124 ],
+            "CLK": [ 55 ],
+            "DI": [ 202 ],
+            "LSR": [ 42 ],
+            "Q": [ 203 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_6_DI_LUT4_Z": {
@@ -25269,9 +25349,9 @@
           "connections": {
             "A": [ "0" ],
             "B": [ "0" ],
-            "C": [ 129 ],
-            "D": [ 201 ],
-            "Z": [ 199 ]
+            "C": [ 130 ],
+            "D": [ 204 ],
+            "Z": [ 202 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_7": {
@@ -25297,11 +25377,11 @@
             "Q": "output"
           },
           "connections": {
-            "CE": [ 122 ],
-            "CLK": [ 56 ],
-            "DI": [ 202 ],
-            "LSR": [ 44 ],
-            "Q": [ 203 ]
+            "CE": [ 124 ],
+            "CLK": [ 55 ],
+            "DI": [ 205 ],
+            "LSR": [ 42 ],
+            "Q": [ 206 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_7_DI_LUT4_Z": {
@@ -25324,9 +25404,9 @@
           "connections": {
             "A": [ "0" ],
             "B": [ "0" ],
-            "C": [ 129 ],
-            "D": [ 204 ],
-            "Z": [ 202 ]
+            "C": [ 130 ],
+            "D": [ 207 ],
+            "Z": [ 205 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_8": {
@@ -25352,11 +25432,11 @@
             "Q": "output"
           },
           "connections": {
-            "CE": [ 122 ],
-            "CLK": [ 56 ],
-            "DI": [ 205 ],
-            "LSR": [ 44 ],
-            "Q": [ 206 ]
+            "CE": [ 124 ],
+            "CLK": [ 55 ],
+            "DI": [ 208 ],
+            "LSR": [ 42 ],
+            "Q": [ 209 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_8_DI_LUT4_Z": {
@@ -25379,9 +25459,9 @@
           "connections": {
             "A": [ "0" ],
             "B": [ "0" ],
-            "C": [ 129 ],
-            "D": [ 207 ],
-            "Z": [ 205 ]
+            "C": [ 130 ],
+            "D": [ 210 ],
+            "Z": [ 208 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_9": {
@@ -25407,11 +25487,11 @@
             "Q": "output"
           },
           "connections": {
-            "CE": [ 122 ],
-            "CLK": [ 56 ],
-            "DI": [ 208 ],
-            "LSR": [ 44 ],
-            "Q": [ 209 ]
+            "CE": [ 124 ],
+            "CLK": [ 55 ],
+            "DI": [ 211 ],
+            "LSR": [ 42 ],
+            "Q": [ 108 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_9_DI_LUT4_Z": {
@@ -25434,9 +25514,9 @@
           "connections": {
             "A": [ "0" ],
             "B": [ "0" ],
-            "C": [ 129 ],
-            "D": [ 210 ],
-            "Z": [ 208 ]
+            "C": [ 130 ],
+            "D": [ 212 ],
+            "Z": [ 211 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_DI_LUT4_Z": {
@@ -25459,9 +25539,9 @@
           "connections": {
             "A": [ "0" ],
             "B": [ "0" ],
-            "C": [ 129 ],
-            "D": [ 211 ],
-            "Z": [ 123 ]
+            "C": [ 130 ],
+            "D": [ 213 ],
+            "Z": [ 125 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_DI_LUT4_Z_D_CCU2C_S0": {
@@ -25492,18 +25572,18 @@
             "S1": "output"
           },
           "connections": {
-            "A0": [ 190 ],
-            "A1": [ 187 ],
+            "A0": [ 166 ],
+            "A1": [ 163 ],
             "B0": [ "0" ],
             "B1": [ "0" ],
             "C0": [ "1" ],
             "C1": [ "1" ],
-            "CIN": [ 212 ],
-            "COUT": [ 213 ],
+            "CIN": [ 214 ],
+            "COUT": [ 215 ],
             "D0": [ "1" ],
             "D1": [ "1" ],
-            "S0": [ 191 ],
-            "S1": [ 188 ]
+            "S0": [ 167 ],
+            "S1": [ 164 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_DI_LUT4_Z_D_CCU2C_S0_1": {
@@ -25534,18 +25614,18 @@
             "S1": "output"
           },
           "connections": {
-            "A0": [ 126 ],
-            "A1": [ 124 ],
+            "A0": [ 172 ],
+            "A1": [ 169 ],
             "B0": [ "0" ],
             "B1": [ "0" ],
             "C0": [ "1" ],
             "C1": [ "1" ],
-            "CIN": [ 214 ],
-            "COUT": [ 212 ],
+            "CIN": [ 216 ],
+            "COUT": [ 214 ],
             "D0": [ "1" ],
             "D1": [ "1" ],
-            "S0": [ 155 ],
-            "S1": [ 211 ]
+            "S0": [ 173 ],
+            "S1": [ 170 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_DI_LUT4_Z_D_CCU2C_S0_10": {
@@ -25576,18 +25656,18 @@
             "S1": "output"
           },
           "connections": {
-            "A0": [ 114 ],
-            "A1": [ 112 ],
+            "A0": [ 116 ],
+            "A1": [ 114 ],
             "B0": [ "0" ],
             "B1": [ "0" ],
             "C0": [ "1" ],
             "C1": [ "1" ],
-            "CIN": [ 215 ],
-            "COUT": [ 216 ],
+            "CIN": [ 217 ],
+            "COUT": [ 218 ],
             "D0": [ "1" ],
             "D1": [ "1" ],
-            "S0": [ 161 ],
-            "S1": [ 159 ]
+            "S0": [ 137 ],
+            "S1": [ 135 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_DI_LUT4_Z_D_CCU2C_S0_11": {
@@ -25618,18 +25698,18 @@
             "S1": "output"
           },
           "connections": {
-            "A0": [ 118 ],
-            "A1": [ 116 ],
+            "A0": [ 120 ],
+            "A1": [ 118 ],
             "B0": [ "0" ],
             "B1": [ "0" ],
             "C0": [ "1" ],
             "C1": [ "1" ],
-            "CIN": [ 217 ],
-            "COUT": [ 215 ],
+            "CIN": [ 219 ],
+            "COUT": [ 217 ],
             "D0": [ "1" ],
             "D1": [ "1" ],
-            "S0": [ 165 ],
-            "S1": [ 163 ]
+            "S0": [ 141 ],
+            "S1": [ 139 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_DI_LUT4_Z_D_CCU2C_S0_12": {
@@ -25660,18 +25740,18 @@
             "S1": "output"
           },
           "connections": {
-            "A0": [ 169 ],
-            "A1": [ 120 ],
+            "A0": [ 145 ],
+            "A1": [ 122 ],
             "B0": [ "0" ],
             "B1": [ "0" ],
             "C0": [ "1" ],
             "C1": [ "1" ],
-            "CIN": [ 218 ],
-            "COUT": [ 217 ],
+            "CIN": [ 220 ],
+            "COUT": [ 219 ],
             "D0": [ "1" ],
             "D1": [ "1" ],
-            "S0": [ 170 ],
-            "S1": [ 167 ]
+            "S0": [ 146 ],
+            "S1": [ 143 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_DI_LUT4_Z_D_CCU2C_S0_13": {
@@ -25702,18 +25782,18 @@
             "S1": "output"
           },
           "connections": {
-            "A0": [ 175 ],
-            "A1": [ 172 ],
+            "A0": [ 151 ],
+            "A1": [ 148 ],
             "B0": [ "0" ],
             "B1": [ "0" ],
             "C0": [ "1" ],
             "C1": [ "1" ],
-            "CIN": [ 219 ],
-            "COUT": [ 218 ],
+            "CIN": [ 221 ],
+            "COUT": [ 220 ],
             "D0": [ "1" ],
             "D1": [ "1" ],
-            "S0": [ 176 ],
-            "S1": [ 173 ]
+            "S0": [ 152 ],
+            "S1": [ 149 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_DI_LUT4_Z_D_CCU2C_S0_14": {
@@ -25744,18 +25824,18 @@
             "S1": "output"
           },
           "connections": {
-            "A0": [ 181 ],
-            "A1": [ 178 ],
+            "A0": [ 160 ],
+            "A1": [ 157 ],
             "B0": [ "0" ],
             "B1": [ "0" ],
             "C0": [ "1" ],
             "C1": [ "1" ],
-            "CIN": [ 213 ],
-            "COUT": [ 219 ],
+            "CIN": [ 215 ],
+            "COUT": [ 221 ],
             "D0": [ "1" ],
             "D1": [ "1" ],
-            "S0": [ 182 ],
-            "S1": [ 179 ]
+            "S0": [ 161 ],
+            "S1": [ 158 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_DI_LUT4_Z_D_CCU2C_S0_15": {
@@ -25786,18 +25866,18 @@
             "S1": "output"
           },
           "connections": {
-            "A0": [ 203 ],
-            "A1": [ 200 ],
+            "A0": [ 193 ],
+            "A1": [ 190 ],
             "B0": [ "1" ],
             "B1": [ "0" ],
             "C0": [ "1" ],
             "C1": [ "1" ],
             "CIN": [ "1" ],
-            "COUT": [ 220 ],
+            "COUT": [ 222 ],
             "D0": [ "1" ],
             "D1": [ "1" ],
-            "S0": [ 204 ],
-            "S1": [ 201 ]
+            "S0": [ 194 ],
+            "S1": [ 191 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_DI_LUT4_Z_D_CCU2C_S0_2": {
@@ -25828,18 +25908,18 @@
             "S1": "output"
           },
           "connections": {
-            "A0": [ 185 ],
-            "A1": [ 157 ],
+            "A0": [ 178 ],
+            "A1": [ 175 ],
             "B0": [ "0" ],
             "B1": [ "0" ],
             "C0": [ "1" ],
             "C1": [ "1" ],
-            "CIN": [ 221 ],
-            "COUT": [ 214 ],
+            "CIN": [ 223 ],
+            "COUT": [ 216 ],
             "D0": [ "1" ],
             "D1": [ "1" ],
-            "S0": [ 192 ],
-            "S1": [ 183 ]
+            "S0": [ 179 ],
+            "S1": [ 176 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_DI_LUT4_Z_D_CCU2C_S0_3": {
@@ -25870,18 +25950,18 @@
             "S1": "output"
           },
           "connections": {
-            "A0": [ 209 ],
-            "A1": [ 206 ],
+            "A0": [ 128 ],
+            "A1": [ 126 ],
             "B0": [ "0" ],
             "B1": [ "0" ],
             "C0": [ "1" ],
             "C1": [ "1" ],
-            "CIN": [ 222 ],
-            "COUT": [ 223 ],
+            "CIN": [ 224 ],
+            "COUT": [ 225 ],
             "D0": [ "1" ],
             "D1": [ "1" ],
-            "S0": [ 210 ],
-            "S1": [ 207 ]
+            "S0": [ 153 ],
+            "S1": [ 213 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_DI_LUT4_Z_D_CCU2C_S0_4": {
@@ -25912,18 +25992,18 @@
             "S1": "output"
           },
           "connections": {
-            "A0": [ 197 ],
-            "A1": [ 194 ],
+            "A0": [ 184 ],
+            "A1": [ 181 ],
             "B0": [ "0" ],
             "B1": [ "0" ],
             "C0": [ "1" ],
             "C1": [ "1" ],
-            "CIN": [ 220 ],
-            "COUT": [ 221 ],
+            "CIN": [ 222 ],
+            "COUT": [ 223 ],
             "D0": [ "1" ],
             "D1": [ "1" ],
-            "S0": [ 198 ],
-            "S1": [ 195 ]
+            "S0": [ 185 ],
+            "S1": [ 182 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_DI_LUT4_Z_D_CCU2C_S0_5": {
@@ -25954,18 +26034,18 @@
             "S1": "output"
           },
           "connections": {
-            "A0": [ 132 ],
-            "A1": [ 128 ],
+            "A0": [ 188 ],
+            "A1": [ 155 ],
             "B0": [ "0" ],
             "B1": [ "0" ],
             "C0": [ "1" ],
             "C1": [ "1" ],
-            "CIN": [ 224 ],
-            "COUT": [ 222 ],
+            "CIN": [ 226 ],
+            "COUT": [ 224 ],
             "D0": [ "1" ],
             "D1": [ "1" ],
-            "S0": [ 133 ],
-            "S1": [ 130 ]
+            "S0": [ 195 ],
+            "S1": [ 186 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_DI_LUT4_Z_D_CCU2C_S0_6": {
@@ -25996,18 +26076,18 @@
             "S1": "output"
           },
           "connections": {
-            "A0": [ 138 ],
-            "A1": [ 135 ],
+            "A0": [ 200 ],
+            "A1": [ 197 ],
             "B0": [ "0" ],
             "B1": [ "0" ],
             "C0": [ "1" ],
             "C1": [ "1" ],
-            "CIN": [ 225 ],
-            "COUT": [ 224 ],
+            "CIN": [ 227 ],
+            "COUT": [ 226 ],
             "D0": [ "1" ],
             "D1": [ "1" ],
-            "S0": [ 139 ],
-            "S1": [ 136 ]
+            "S0": [ 201 ],
+            "S1": [ 198 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_DI_LUT4_Z_D_CCU2C_S0_7": {
@@ -26038,18 +26118,18 @@
             "S1": "output"
           },
           "connections": {
-            "A0": [ 144 ],
-            "A1": [ 141 ],
+            "A0": [ 206 ],
+            "A1": [ 203 ],
             "B0": [ "0" ],
             "B1": [ "0" ],
             "C0": [ "1" ],
             "C1": [ "1" ],
-            "CIN": [ 226 ],
-            "COUT": [ 225 ],
+            "CIN": [ 228 ],
+            "COUT": [ 227 ],
             "D0": [ "1" ],
             "D1": [ "1" ],
-            "S0": [ 145 ],
-            "S1": [ 142 ]
+            "S0": [ 207 ],
+            "S1": [ 204 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_DI_LUT4_Z_D_CCU2C_S0_8": {
@@ -26080,18 +26160,18 @@
             "S1": "output"
           },
           "connections": {
-            "A0": [ 106 ],
-            "A1": [ 147 ],
+            "A0": [ 108 ],
+            "A1": [ 209 ],
             "B0": [ "0" ],
             "B1": [ "0" ],
             "C0": [ "1" ],
             "C1": [ "1" ],
-            "CIN": [ 227 ],
-            "COUT": [ 226 ],
+            "CIN": [ 229 ],
+            "COUT": [ 228 ],
             "D0": [ "1" ],
             "D1": [ "1" ],
-            "S0": [ 150 ],
-            "S1": [ 148 ]
+            "S0": [ 212 ],
+            "S1": [ 210 ]
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_DI_LUT4_Z_D_CCU2C_S0_9": {
@@ -26122,18 +26202,18 @@
             "S1": "output"
           },
           "connections": {
-            "A0": [ 110 ],
-            "A1": [ 108 ],
+            "A0": [ 112 ],
+            "A1": [ 110 ],
             "B0": [ "0" ],
             "B1": [ "0" ],
             "C0": [ "1" ],
             "C1": [ "1" ],
-            "CIN": [ 216 ],
-            "COUT": [ 227 ],
+            "CIN": [ 218 ],
+            "COUT": [ 229 ],
             "D0": [ "1" ],
             "D1": [ "1" ],
-            "S0": [ 154 ],
-            "S1": [ 152 ]
+            "S0": [ 133 ],
+            "S1": [ 131 ]
           }
         },
         "tb.dut.delayer.fsm_state_LUT4_C": {
@@ -26156,9 +26236,9 @@
           "connections": {
             "A": [ "0" ],
             "B": [ "0" ],
-            "C": [ 228 ],
-            "D": [ 229 ],
-            "Z": [ 122 ]
+            "C": [ 230 ],
+            "D": [ 231 ],
+            "Z": [ 124 ]
           }
         },
         "tb.dut.delayer.fsm_state_TRELLIS_FF_Q": {
@@ -26184,11 +26264,11 @@
             "Q": "output"
           },
           "connections": {
-            "CE": [ 230 ],
-            "CLK": [ 56 ],
-            "DI": [ 228 ],
-            "LSR": [ 44 ],
-            "Q": [ 229 ]
+            "CE": [ 232 ],
+            "CLK": [ 55 ],
+            "DI": [ 230 ],
+            "LSR": [ 42 ],
+            "Q": [ 231 ]
           }
         },
         "tb.dut.delayer.fsm_state_TRELLIS_FF_Q_1": {
@@ -26214,11 +26294,11 @@
             "Q": "output"
           },
           "connections": {
-            "CE": [ 230 ],
-            "CLK": [ 56 ],
-            "DI": [ 231 ],
-            "LSR": [ 44 ],
-            "Q": [ 228 ]
+            "CE": [ 232 ],
+            "CLK": [ 55 ],
+            "DI": [ 233 ],
+            "LSR": [ 42 ],
+            "Q": [ 230 ]
           }
         },
         "tb.dut.delayer.fsm_state_TRELLIS_FF_Q_1_DI_LUT4_Z": {
@@ -26241,9 +26321,9 @@
           "connections": {
             "A": [ "0" ],
             "B": [ "0" ],
-            "C": [ 228 ],
-            "D": [ 229 ],
-            "Z": [ 231 ]
+            "C": [ 230 ],
+            "D": [ 231 ],
+            "Z": [ 233 ]
           }
         },
         "tb.dut.delayer.fsm_state_TRELLIS_FF_Q_CE_LUT4_Z": {
@@ -26264,11 +26344,11 @@
             "Z": "output"
           },
           "connections": {
-            "A": [ 232 ],
-            "B": [ 233 ],
-            "C": [ 234 ],
-            "D": [ 235 ],
-            "Z": [ 230 ]
+            "A": [ 234 ],
+            "B": [ 235 ],
+            "C": [ 236 ],
+            "D": [ 237 ],
+            "Z": [ 232 ]
           }
         },
         "tb.dut.delayer_start_LUT4_B": {
@@ -26289,11 +26369,11 @@
             "Z": "output"
           },
           "connections": {
-            "A": [ 236 ],
-            "B": [ 237 ],
-            "C": [ 228 ],
-            "D": [ 229 ],
-            "Z": [ 235 ]
+            "A": [ 238 ],
+            "B": [ 239 ],
+            "C": [ 230 ],
+            "D": [ 231 ],
+            "Z": [ 237 ]
           }
         },
         "tb.dut.delayer_start_LUT4_B_Z_LUT4_Z": {
@@ -26314,18 +26394,18 @@
             "Z": "output"
           },
           "connections": {
-            "A": [ 238 ],
-            "B": [ 239 ],
-            "C": [ 240 ],
-            "D": [ 241 ],
-            "Z": [ 232 ]
+            "A": [ 240 ],
+            "B": [ 241 ],
+            "C": [ 242 ],
+            "D": [ 243 ],
+            "Z": [ 234 ]
           }
         },
         "tb.dut.delayer_start_LUT4_B_Z_LUT4_Z_1": {
           "hide_name": 0,
           "type": "LUT4",
           "parameters": {
-            "INIT": "0000001100000000"
+            "INIT": "0011000000000000"
           },
           "attributes": {
             "module_not_derived": "00000000000000000000000000000001",
@@ -26340,13 +26420,13 @@
           },
           "connections": {
             "A": [ "0" ],
-            "B": [ 228 ],
-            "C": [ 200 ],
-            "D": [ 242 ],
-            "Z": [ 234 ]
+            "B": [ 230 ],
+            "C": [ 244 ],
+            "D": [ 193 ],
+            "Z": [ 236 ]
           }
         },
-        "tb.dut.delayer_start_LUT4_B_Z_LUT4_Z_1_D_LUT4_Z": {
+        "tb.dut.delayer_start_LUT4_B_Z_LUT4_Z_1_C_LUT4_Z": {
           "hide_name": 0,
           "type": "LUT4",
           "parameters": {
@@ -26364,11 +26444,11 @@
             "Z": "output"
           },
           "connections": {
-            "A": [ 197 ],
-            "B": [ 194 ],
-            "C": [ 185 ],
-            "D": [ 157 ],
-            "Z": [ 242 ]
+            "A": [ 190 ],
+            "B": [ 184 ],
+            "C": [ 181 ],
+            "D": [ 178 ],
+            "Z": [ 244 ]
           }
         },
         "tb.dut.delayer_start_LUT4_B_Z_LUT4_Z_A_LUT4_Z": {
@@ -26389,11 +26469,11 @@
             "Z": "output"
           },
           "connections": {
-            "A": [ 169 ],
-            "B": [ 120 ],
-            "C": [ 118 ],
-            "D": [ 116 ],
-            "Z": [ 241 ]
+            "A": [ 148 ],
+            "B": [ 145 ],
+            "C": [ 122 ],
+            "D": [ 120 ],
+            "Z": [ 243 ]
           }
         },
         "tb.dut.delayer_start_LUT4_B_Z_LUT4_Z_A_LUT4_Z_1": {
@@ -26414,11 +26494,11 @@
             "Z": "output"
           },
           "connections": {
-            "A": [ 114 ],
-            "B": [ 112 ],
-            "C": [ 110 ],
-            "D": [ 108 ],
-            "Z": [ 240 ]
+            "A": [ 118 ],
+            "B": [ 116 ],
+            "C": [ 114 ],
+            "D": [ 112 ],
+            "Z": [ 242 ]
           }
         },
         "tb.dut.delayer_start_LUT4_B_Z_LUT4_Z_A_LUT4_Z_2": {
@@ -26439,11 +26519,11 @@
             "Z": "output"
           },
           "connections": {
-            "A": [ 126 ],
-            "B": [ 124 ],
-            "C": [ 190 ],
-            "D": [ 187 ],
-            "Z": [ 239 ]
+            "A": [ 175 ],
+            "B": [ 172 ],
+            "C": [ 169 ],
+            "D": [ 166 ],
+            "Z": [ 241 ]
           }
         },
         "tb.dut.delayer_start_LUT4_B_Z_LUT4_Z_A_LUT4_Z_3": {
@@ -26464,11 +26544,11 @@
             "Z": "output"
           },
           "connections": {
-            "A": [ 181 ],
-            "B": [ 178 ],
-            "C": [ 175 ],
-            "D": [ 172 ],
-            "Z": [ 238 ]
+            "A": [ 163 ],
+            "B": [ 160 ],
+            "C": [ 157 ],
+            "D": [ 151 ],
+            "Z": [ 240 ]
           }
         },
         "tb.dut.delayer_start_LUT4_B_Z_PFUMX_Z": {
@@ -26487,17 +26567,17 @@
             "Z": "output"
           },
           "connections": {
-            "ALUT": [ 243 ],
-            "BLUT": [ 244 ],
-            "C0": [ 203 ],
-            "Z": [ 233 ]
+            "ALUT": [ 245 ],
+            "BLUT": [ 246 ],
+            "C0": [ 247 ],
+            "Z": [ 235 ]
           }
         },
         "tb.dut.delayer_start_LUT4_B_Z_PFUMX_Z_ALUT_LUT4_Z": {
           "hide_name": 0,
           "type": "LUT4",
           "parameters": {
-            "INIT": "0001000000000000"
+            "INIT": "0000000100000000"
           },
           "attributes": {
             "module_not_derived": "00000000000000000000000000000001",
@@ -26511,60 +26591,10 @@
             "Z": "output"
           },
           "connections": {
-            "A": [ 209 ],
-            "B": [ 206 ],
-            "C": [ 245 ],
-            "D": [ 246 ],
-            "Z": [ 243 ]
-          }
-        },
-        "tb.dut.delayer_start_LUT4_B_Z_PFUMX_Z_ALUT_LUT4_Z_C_LUT4_Z": {
-          "hide_name": 0,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": "0000000000000001"
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:128.32-129.56"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ 106 ],
-            "B": [ 147 ],
-            "C": [ 144 ],
-            "D": [ 141 ],
-            "Z": [ 246 ]
-          }
-        },
-        "tb.dut.delayer_start_LUT4_B_Z_PFUMX_Z_ALUT_LUT4_Z_C_LUT4_Z_1": {
-          "hide_name": 0,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": "0000000000000001"
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:128.32-129.56"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ 138 ],
-            "B": [ 135 ],
-            "C": [ 132 ],
-            "D": [ 128 ],
+            "A": [ 155 ],
+            "B": [ 128 ],
+            "C": [ 126 ],
+            "D": [ 248 ],
             "Z": [ 245 ]
           }
         },
@@ -26590,7 +26620,57 @@
             "B": [ "0" ],
             "C": [ "0" ],
             "D": [ "0" ],
-            "Z": [ 244 ]
+            "Z": [ 246 ]
+          }
+        },
+        "tb.dut.delayer_start_LUT4_B_Z_PFUMX_Z_C0_LUT4_Z": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "0000000000000001"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:128.32-129.56"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 110 ],
+            "B": [ 108 ],
+            "C": [ 209 ],
+            "D": [ 206 ],
+            "Z": [ 248 ]
+          }
+        },
+        "tb.dut.delayer_start_LUT4_B_Z_PFUMX_Z_C0_LUT4_Z_1": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "0000000000000001"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:128.32-129.56"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 203 ],
+            "B": [ 200 ],
+            "C": [ 197 ],
+            "D": [ 188 ],
+            "Z": [ 247 ]
           }
         },
         "tb.dut.delayer_start_LUT4_D": {
@@ -26611,11 +26691,11 @@
             "Z": "output"
           },
           "connections": {
-            "A": [ 228 ],
-            "B": [ 229 ],
-            "C": [ 236 ],
-            "D": [ 237 ],
-            "Z": [ 129 ]
+            "A": [ 230 ],
+            "B": [ 231 ],
+            "C": [ 238 ],
+            "D": [ 239 ],
+            "Z": [ 130 ]
           }
         },
         "tb.dut.delayer_start_LUT4_D_C_CCU2C_COUT": {
@@ -26648,16 +26728,16 @@
           "connections": {
             "A0": [ "0" ],
             "A1": [ "0" ],
-            "B0": [ 209 ],
-            "B1": [ 206 ],
+            "B0": [ 128 ],
+            "B1": [ 126 ],
             "C0": [ "1" ],
             "C1": [ "1" ],
-            "CIN": [ 247 ],
-            "COUT": [ 236 ],
+            "CIN": [ 249 ],
+            "COUT": [ 238 ],
             "D0": [ "1" ],
             "D1": [ "1" ],
-            "S0": [ 248 ],
-            "S1": [ 249 ]
+            "S0": [ 250 ],
+            "S1": [ 251 ]
           }
         },
         "tb.dut.delayer_start_LUT4_D_C_CCU2C_COUT_S0_CCU2C_S0": {
@@ -26690,16 +26770,16 @@
           "connections": {
             "A0": [ "0" ],
             "A1": [ "0" ],
-            "B0": [ 190 ],
-            "B1": [ 187 ],
+            "B0": [ 166 ],
+            "B1": [ 163 ],
             "C0": [ "1" ],
             "C1": [ "1" ],
-            "CIN": [ 250 ],
-            "COUT": [ 251 ],
+            "CIN": [ 252 ],
+            "COUT": [ 253 ],
             "D0": [ "1" ],
             "D1": [ "1" ],
-            "S0": [ 252 ],
-            "S1": [ 253 ]
+            "S0": [ 254 ],
+            "S1": [ 255 ]
           }
         },
         "tb.dut.delayer_start_LUT4_D_C_CCU2C_COUT_S0_CCU2C_S0_1": {
@@ -26732,16 +26812,16 @@
           "connections": {
             "A0": [ "0" ],
             "A1": [ "0" ],
-            "B0": [ 126 ],
-            "B1": [ 124 ],
+            "B0": [ 172 ],
+            "B1": [ 169 ],
             "C0": [ "1" ],
             "C1": [ "1" ],
-            "CIN": [ 254 ],
-            "COUT": [ 250 ],
+            "CIN": [ 256 ],
+            "COUT": [ 252 ],
             "D0": [ "1" ],
             "D1": [ "1" ],
-            "S0": [ 255 ],
-            "S1": [ 256 ]
+            "S0": [ 257 ],
+            "S1": [ 258 ]
           }
         },
         "tb.dut.delayer_start_LUT4_D_C_CCU2C_COUT_S0_CCU2C_S0_10": {
@@ -26774,16 +26854,16 @@
           "connections": {
             "A0": [ "0" ],
             "A1": [ "0" ],
-            "B0": [ 118 ],
-            "B1": [ 116 ],
+            "B0": [ 120 ],
+            "B1": [ 118 ],
             "C0": [ "1" ],
             "C1": [ "1" ],
-            "CIN": [ 257 ],
-            "COUT": [ 258 ],
+            "CIN": [ 259 ],
+            "COUT": [ 260 ],
             "D0": [ "1" ],
             "D1": [ "1" ],
-            "S0": [ 259 ],
-            "S1": [ 260 ]
+            "S0": [ 261 ],
+            "S1": [ 262 ]
           }
         },
         "tb.dut.delayer_start_LUT4_D_C_CCU2C_COUT_S0_CCU2C_S0_11": {
@@ -26816,16 +26896,16 @@
           "connections": {
             "A0": [ "0" ],
             "A1": [ "0" ],
-            "B0": [ 169 ],
-            "B1": [ 120 ],
+            "B0": [ 145 ],
+            "B1": [ 122 ],
             "C0": [ "1" ],
             "C1": [ "1" ],
-            "CIN": [ 261 ],
-            "COUT": [ 257 ],
+            "CIN": [ 263 ],
+            "COUT": [ 259 ],
             "D0": [ "1" ],
             "D1": [ "1" ],
-            "S0": [ 262 ],
-            "S1": [ 263 ]
+            "S0": [ 264 ],
+            "S1": [ 265 ]
           }
         },
         "tb.dut.delayer_start_LUT4_D_C_CCU2C_COUT_S0_CCU2C_S0_12": {
@@ -26858,16 +26938,16 @@
           "connections": {
             "A0": [ "0" ],
             "A1": [ "0" ],
-            "B0": [ 175 ],
-            "B1": [ 172 ],
+            "B0": [ 151 ],
+            "B1": [ 148 ],
             "C0": [ "1" ],
             "C1": [ "1" ],
-            "CIN": [ 264 ],
-            "COUT": [ 261 ],
+            "CIN": [ 266 ],
+            "COUT": [ 263 ],
             "D0": [ "1" ],
             "D1": [ "1" ],
-            "S0": [ 265 ],
-            "S1": [ 266 ]
+            "S0": [ 267 ],
+            "S1": [ 268 ]
           }
         },
         "tb.dut.delayer_start_LUT4_D_C_CCU2C_COUT_S0_CCU2C_S0_13": {
@@ -26900,16 +26980,16 @@
           "connections": {
             "A0": [ "0" ],
             "A1": [ "0" ],
-            "B0": [ 181 ],
-            "B1": [ 178 ],
+            "B0": [ 160 ],
+            "B1": [ 157 ],
             "C0": [ "1" ],
             "C1": [ "1" ],
-            "CIN": [ 251 ],
-            "COUT": [ 264 ],
+            "CIN": [ 253 ],
+            "COUT": [ 266 ],
             "D0": [ "1" ],
             "D1": [ "1" ],
-            "S0": [ 267 ],
-            "S1": [ 268 ]
+            "S0": [ 269 ],
+            "S1": [ 270 ]
           }
         },
         "tb.dut.delayer_start_LUT4_D_C_CCU2C_COUT_S0_CCU2C_S0_14": {
@@ -26942,16 +27022,16 @@
           "connections": {
             "A0": [ "0" ],
             "A1": [ "0" ],
-            "B0": [ 203 ],
-            "B1": [ 200 ],
+            "B0": [ 193 ],
+            "B1": [ 190 ],
             "C0": [ "1" ],
             "C1": [ "1" ],
             "CIN": [ "1" ],
-            "COUT": [ 269 ],
+            "COUT": [ 271 ],
             "D0": [ "1" ],
             "D1": [ "1" ],
-            "S0": [ 270 ],
-            "S1": [ 271 ]
+            "S0": [ 272 ],
+            "S1": [ 273 ]
           }
         },
         "tb.dut.delayer_start_LUT4_D_C_CCU2C_COUT_S0_CCU2C_S0_2": {
@@ -26984,16 +27064,16 @@
           "connections": {
             "A0": [ "0" ],
             "A1": [ "0" ],
-            "B0": [ 185 ],
-            "B1": [ 157 ],
+            "B0": [ 178 ],
+            "B1": [ 175 ],
             "C0": [ "1" ],
             "C1": [ "1" ],
-            "CIN": [ 272 ],
-            "COUT": [ 254 ],
+            "CIN": [ 274 ],
+            "COUT": [ 256 ],
             "D0": [ "1" ],
             "D1": [ "1" ],
-            "S0": [ 273 ],
-            "S1": [ 274 ]
+            "S0": [ 275 ],
+            "S1": [ 276 ]
           }
         },
         "tb.dut.delayer_start_LUT4_D_C_CCU2C_COUT_S0_CCU2C_S0_3": {
@@ -27026,16 +27106,16 @@
           "connections": {
             "A0": [ "0" ],
             "A1": [ "0" ],
-            "B0": [ 197 ],
-            "B1": [ 194 ],
+            "B0": [ 184 ],
+            "B1": [ 181 ],
             "C0": [ "1" ],
             "C1": [ "1" ],
-            "CIN": [ 269 ],
-            "COUT": [ 272 ],
+            "CIN": [ 271 ],
+            "COUT": [ 274 ],
             "D0": [ "1" ],
             "D1": [ "1" ],
-            "S0": [ 275 ],
-            "S1": [ 276 ]
+            "S0": [ 277 ],
+            "S1": [ 278 ]
           }
         },
         "tb.dut.delayer_start_LUT4_D_C_CCU2C_COUT_S0_CCU2C_S0_4": {
@@ -27068,16 +27148,16 @@
           "connections": {
             "A0": [ "0" ],
             "A1": [ "0" ],
-            "B0": [ 132 ],
-            "B1": [ 128 ],
+            "B0": [ 188 ],
+            "B1": [ 155 ],
             "C0": [ "1" ],
             "C1": [ "1" ],
-            "CIN": [ 277 ],
-            "COUT": [ 247 ],
+            "CIN": [ 279 ],
+            "COUT": [ 249 ],
             "D0": [ "1" ],
             "D1": [ "1" ],
-            "S0": [ 278 ],
-            "S1": [ 279 ]
+            "S0": [ 280 ],
+            "S1": [ 281 ]
           }
         },
         "tb.dut.delayer_start_LUT4_D_C_CCU2C_COUT_S0_CCU2C_S0_5": {
@@ -27110,16 +27190,16 @@
           "connections": {
             "A0": [ "0" ],
             "A1": [ "0" ],
-            "B0": [ 138 ],
-            "B1": [ 135 ],
+            "B0": [ 200 ],
+            "B1": [ 197 ],
             "C0": [ "1" ],
             "C1": [ "1" ],
-            "CIN": [ 280 ],
-            "COUT": [ 277 ],
+            "CIN": [ 282 ],
+            "COUT": [ 279 ],
             "D0": [ "1" ],
             "D1": [ "1" ],
-            "S0": [ 281 ],
-            "S1": [ 282 ]
+            "S0": [ 283 ],
+            "S1": [ 284 ]
           }
         },
         "tb.dut.delayer_start_LUT4_D_C_CCU2C_COUT_S0_CCU2C_S0_6": {
@@ -27152,16 +27232,16 @@
           "connections": {
             "A0": [ "0" ],
             "A1": [ "0" ],
-            "B0": [ 144 ],
-            "B1": [ 141 ],
+            "B0": [ 206 ],
+            "B1": [ 203 ],
             "C0": [ "1" ],
             "C1": [ "1" ],
-            "CIN": [ 283 ],
-            "COUT": [ 280 ],
+            "CIN": [ 285 ],
+            "COUT": [ 282 ],
             "D0": [ "1" ],
             "D1": [ "1" ],
-            "S0": [ 284 ],
-            "S1": [ 285 ]
+            "S0": [ 286 ],
+            "S1": [ 287 ]
           }
         },
         "tb.dut.delayer_start_LUT4_D_C_CCU2C_COUT_S0_CCU2C_S0_7": {
@@ -27194,16 +27274,16 @@
           "connections": {
             "A0": [ "0" ],
             "A1": [ "0" ],
-            "B0": [ 106 ],
-            "B1": [ 147 ],
+            "B0": [ 108 ],
+            "B1": [ 209 ],
             "C0": [ "1" ],
             "C1": [ "1" ],
-            "CIN": [ 286 ],
-            "COUT": [ 283 ],
+            "CIN": [ 288 ],
+            "COUT": [ 285 ],
             "D0": [ "1" ],
             "D1": [ "1" ],
-            "S0": [ 287 ],
-            "S1": [ 288 ]
+            "S0": [ 289 ],
+            "S1": [ 290 ]
           }
         },
         "tb.dut.delayer_start_LUT4_D_C_CCU2C_COUT_S0_CCU2C_S0_8": {
@@ -27236,16 +27316,16 @@
           "connections": {
             "A0": [ "0" ],
             "A1": [ "0" ],
-            "B0": [ 110 ],
-            "B1": [ 108 ],
+            "B0": [ 112 ],
+            "B1": [ 110 ],
             "C0": [ "1" ],
             "C1": [ "1" ],
-            "CIN": [ 289 ],
-            "COUT": [ 286 ],
+            "CIN": [ 291 ],
+            "COUT": [ 288 ],
             "D0": [ "1" ],
             "D1": [ "1" ],
-            "S0": [ 290 ],
-            "S1": [ 291 ]
+            "S0": [ 292 ],
+            "S1": [ 293 ]
           }
         },
         "tb.dut.delayer_start_LUT4_D_C_CCU2C_COUT_S0_CCU2C_S0_9": {
@@ -27278,16 +27358,16 @@
           "connections": {
             "A0": [ "0" ],
             "A1": [ "0" ],
-            "B0": [ 114 ],
-            "B1": [ 112 ],
+            "B0": [ 116 ],
+            "B1": [ 114 ],
             "C0": [ "1" ],
             "C1": [ "1" ],
-            "CIN": [ 258 ],
-            "COUT": [ 289 ],
+            "CIN": [ 260 ],
+            "COUT": [ 291 ],
             "D0": [ "1" ],
             "D1": [ "1" ],
-            "S0": [ 292 ],
-            "S1": [ 293 ]
+            "S0": [ 294 ],
+            "S1": [ 295 ]
           }
         },
         "tb.dut.delayer_start_TRELLIS_FF_Q": {
@@ -27312,10 +27392,10 @@
             "Q": "output"
           },
           "connections": {
-            "CLK": [ 56 ],
-            "DI": [ 294 ],
-            "LSR": [ 44 ],
-            "Q": [ 237 ]
+            "CLK": [ 55 ],
+            "DI": [ 296 ],
+            "LSR": [ 42 ],
+            "Q": [ 239 ]
           }
         },
         "tb.dut.ui__start$1_TRELLIS_FF_Q": {
@@ -27340,10 +27420,10 @@
             "Q": "output"
           },
           "connections": {
-            "CLK": [ 56 ],
-            "DI": [ 295 ],
-            "LSR": [ 44 ],
-            "Q": [ 294 ]
+            "CLK": [ 55 ],
+            "DI": [ 297 ],
+            "LSR": [ 42 ],
+            "Q": [ 296 ]
           }
         },
         "tb.dut_ui__start_TRELLIS_FF_Q": {
@@ -27368,10 +27448,10 @@
             "Q": "output"
           },
           "connections": {
-            "CLK": [ 56 ],
-            "DI": [ 296 ],
-            "LSR": [ 44 ],
-            "Q": [ 295 ]
+            "CLK": [ 55 ],
+            "DI": [ 298 ],
+            "LSR": [ 42 ],
+            "Q": [ 297 ]
           }
         },
         "tb.leds_TRELLIS_FF_Q": {
@@ -27395,10 +27475,10 @@
             "Q": "output"
           },
           "connections": {
-            "CLK": [ 56 ],
-            "DI": [ 91 ],
+            "CLK": [ 55 ],
+            "DI": [ 93 ],
             "LSR": [ "0" ],
-            "Q": [ 71 ]
+            "Q": [ 82 ]
           }
         },
         "tb.leds_TRELLIS_FF_Q_1": {
@@ -27422,10 +27502,10 @@
             "Q": "output"
           },
           "connections": {
-            "CLK": [ 56 ],
-            "DI": [ 93 ],
+            "CLK": [ 55 ],
+            "DI": [ 95 ],
             "LSR": [ "0" ],
-            "Q": [ 69 ]
+            "Q": [ 80 ]
           }
         },
         "tb.leds_TRELLIS_FF_Q_2": {
@@ -27449,10 +27529,10 @@
             "Q": "output"
           },
           "connections": {
-            "CLK": [ 56 ],
-            "DI": [ 95 ],
+            "CLK": [ 55 ],
+            "DI": [ 97 ],
             "LSR": [ "0" ],
-            "Q": [ 67 ]
+            "Q": [ 78 ]
           }
         },
         "tb.leds_TRELLIS_FF_Q_3": {
@@ -27476,10 +27556,10 @@
             "Q": "output"
           },
           "connections": {
-            "CLK": [ 56 ],
-            "DI": [ 97 ],
+            "CLK": [ 55 ],
+            "DI": [ 99 ],
             "LSR": [ "0" ],
-            "Q": [ 65 ]
+            "Q": [ 76 ]
           }
         },
         "tb.leds_TRELLIS_FF_Q_4": {
@@ -27503,10 +27583,10 @@
             "Q": "output"
           },
           "connections": {
-            "CLK": [ 56 ],
-            "DI": [ 99 ],
+            "CLK": [ 55 ],
+            "DI": [ 101 ],
             "LSR": [ "0" ],
-            "Q": [ 63 ]
+            "Q": [ 74 ]
           }
         },
         "tb.leds_TRELLIS_FF_Q_5": {
@@ -27530,10 +27610,10 @@
             "Q": "output"
           },
           "connections": {
-            "CLK": [ 56 ],
-            "DI": [ 101 ],
+            "CLK": [ 55 ],
+            "DI": [ 103 ],
             "LSR": [ "0" ],
-            "Q": [ 61 ]
+            "Q": [ 72 ]
           }
         },
         "tb.leds_TRELLIS_FF_Q_6": {
@@ -27557,10 +27637,10 @@
             "Q": "output"
           },
           "connections": {
-            "CLK": [ 56 ],
-            "DI": [ 103 ],
+            "CLK": [ 55 ],
+            "DI": [ 105 ],
             "LSR": [ "0" ],
-            "Q": [ 59 ]
+            "Q": [ 70 ]
           }
         },
         "tb.leds_TRELLIS_FF_Q_7": {
@@ -27584,90 +27664,10 @@
             "Q": "output"
           },
           "connections": {
-            "CLK": [ 56 ],
-            "DI": [ 105 ],
+            "CLK": [ 55 ],
+            "DI": [ 107 ],
             "LSR": [ "0" ],
-            "Q": [ 57 ]
-          }
-        },
-        "tb.sync_1e6_clk_TRELLIS_FF_Q": {
-          "hide_name": 0,
-          "type": "TRELLIS_FF",
-          "parameters": {
-            "CEMUX": "INV",
-            "CLKMUX": "CLK",
-            "GSR": "DISABLED",
-            "LSRMUX": "LSR",
-            "REGSET": "RESET",
-            "SRMODE": "LSR_OVER_CE"
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:88.171-88.230"
-          },
-          "port_directions": {
-            "CE": "input",
-            "CLK": "input",
-            "DI": "input",
-            "LSR": "input",
-            "Q": "output"
-          },
-          "connections": {
-            "CE": [ 297 ],
-            "CLK": [ 30 ],
-            "DI": [ 298 ],
-            "LSR": [ 44 ],
-            "Q": [ 56 ]
-          }
-        },
-        "tb.sync_1e6_clk_TRELLIS_FF_Q_CE_LUT4_Z": {
-          "hide_name": 0,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": "1111111111111110"
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:128.32-129.56"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ 87 ],
-            "B": [ 85 ],
-            "C": [ 81 ],
-            "D": [ 83 ],
-            "Z": [ 297 ]
-          }
-        },
-        "tb.sync_1e6_clk_TRELLIS_FF_Q_DI_LUT4_Z": {
-          "hide_name": 0,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": "0000000011111111"
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:114.33-115.56"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ "0" ],
-            "B": [ "0" ],
-            "C": [ "0" ],
-            "D": [ 56 ],
-            "Z": [ 298 ]
+            "Q": [ 68 ]
           }
         },
         "tb.sync_1e6_rst_TRELLIS_FF_Q": {
@@ -27692,10 +27692,10 @@
             "Q": "output"
           },
           "connections": {
-            "CLK": [ 30 ],
+            "CLK": [ 55 ],
             "DI": [ 299 ],
-            "LSR": [ 44 ],
-            "Q": [ 44 ]
+            "LSR": [ 42 ],
+            "Q": [ 42 ]
           }
         },
         "tb.ui__reset$1_TRELLIS_FF_Q": {
@@ -27720,9 +27720,9 @@
             "Q": "output"
           },
           "connections": {
-            "CLK": [ 56 ],
+            "CLK": [ 55 ],
             "DI": [ 300 ],
-            "LSR": [ 44 ],
+            "LSR": [ 42 ],
             "Q": [ 299 ]
           }
         },
@@ -27748,10 +27748,10 @@
             "Q": "output"
           },
           "connections": {
-            "CLK": [ 56 ],
+            "CLK": [ 55 ],
             "DI": [ 301 ],
-            "LSR": [ 44 ],
-            "Q": [ 296 ]
+            "LSR": [ 42 ],
+            "Q": [ 298 ]
           }
         },
         "tb_ui__reset_TRELLIS_FF_Q": {
@@ -27776,9 +27776,9 @@
             "Q": "output"
           },
           "connections": {
-            "CLK": [ 56 ],
+            "CLK": [ 55 ],
             "DI": [ 302 ],
-            "LSR": [ 44 ],
+            "LSR": [ 42 ],
             "Q": [ 300 ]
           }
         },
@@ -27804,9 +27804,9 @@
             "Q": "output"
           },
           "connections": {
-            "CLK": [ 56 ],
+            "CLK": [ 55 ],
             "DI": [ 303 ],
-            "LSR": [ 44 ],
+            "LSR": [ 42 ],
             "Q": [ 301 ]
           }
         },
@@ -27832,9 +27832,9 @@
             "Q": "output"
           },
           "connections": {
-            "CLK": [ 56 ],
-            "DI": [ 75 ],
-            "LSR": [ 44 ],
+            "CLK": [ 55 ],
+            "DI": [ 86 ],
+            "LSR": [ 42 ],
             "Q": [ 302 ]
           }
         },
@@ -27860,9 +27860,9 @@
             "Q": "output"
           },
           "connections": {
-            "CLK": [ 56 ],
-            "DI": [ 78 ],
-            "LSR": [ 44 ],
+            "CLK": [ 55 ],
+            "DI": [ 89 ],
+            "LSR": [ 42 ],
             "Q": [ 303 ]
           }
         }
@@ -27870,49 +27870,49 @@
       "netnames": {
         "button_down_0__io": {
           "hide_name": 0,
-          "bits": [ 25 ],
+          "bits": [ 26 ],
           "attributes": {
             "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:129"
           }
         },
         "button_fire_0__io": {
           "hide_name": 0,
-          "bits": [ 22 ],
+          "bits": [ 23 ],
           "attributes": {
             "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:129"
           }
         },
         "button_fire_1__io": {
           "hide_name": 0,
-          "bits": [ 23 ],
+          "bits": [ 24 ],
           "attributes": {
             "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:129"
           }
         },
         "button_left_0__io": {
           "hide_name": 0,
-          "bits": [ 26 ],
+          "bits": [ 27 ],
           "attributes": {
             "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:129"
           }
         },
         "button_pwr_0__io": {
           "hide_name": 0,
-          "bits": [ 21 ],
+          "bits": [ 22 ],
           "attributes": {
             "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:129"
           }
         },
         "button_right_0__io": {
           "hide_name": 0,
-          "bits": [ 27 ],
+          "bits": [ 28 ],
           "attributes": {
             "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:129"
           }
         },
         "button_up_0__io": {
           "hide_name": 0,
-          "bits": [ 24 ],
+          "bits": [ 25 ],
           "attributes": {
             "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:129"
           }
@@ -27921,14 +27921,57 @@
           "hide_name": 0,
           "bits": [ 30 ],
           "attributes": {
-            "src": "tests1_feb2022/test1_amlib_timers.py:105"
+            "src": "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:38"
           }
         },
         "clk25_0__io": {
           "hide_name": 0,
-          "bits": [ 28 ],
+          "bits": [ 21 ],
           "attributes": {
             "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:129"
+          }
+        },
+        "clk_counter": {
+          "hide_name": 0,
+          "bits": [ 39, 37, 35, 33 ],
+          "attributes": {
+            "src": "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:28"
+          }
+        },
+        "clk_counter_TRELLIS_FF_Q_3_DI": {
+          "hide_name": 0,
+          "bits": [ 38, 37, 35, 33 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:30|/home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/techmap.v:270.23-270.24"
+          }
+        },
+        "clk_counter_TRELLIS_FF_Q_DI": {
+          "hide_name": 0,
+          "bits": [ 38, 36, 34, 31 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:30|/home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/techmap.v:270.26-270.27"
+          }
+        },
+        "clk_counter_TRELLIS_FF_Q_LSR": {
+          "hide_name": 0,
+          "bits": [ 32 ],
+          "attributes": {
+          }
+        },
+        "clk_counter_TRELLIS_FF_Q_LSR_PFUMX_Z_ALUT": {
+          "hide_name": 0,
+          "bits": [ 40 ],
+          "attributes": {
+            "src": "/home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:133.22-133.24"
+          }
+        },
+        "clk_counter_TRELLIS_FF_Q_LSR_PFUMX_Z_BLUT": {
+          "hide_name": 0,
+          "bits": [ 41 ],
+          "attributes": {
+            "src": "/home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:133.18-133.20"
           }
         },
         "esp32_spi_0__en__io": {
@@ -27992,7 +28035,7 @@
           "bits": [ 30 ],
           "attributes": {
             "hdlname": "i_button_ffsync clk",
-            "src": "tests1_feb2022/test1_amlib_timers.py:105"
+            "src": "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:38"
           }
         },
         "i_button_ffsync.i_buttons__down": {
@@ -28000,7 +28043,7 @@
           "bits": [ "x" ],
           "attributes": {
             "hdlname": "i_button_ffsync i_buttons__down",
-            "src": "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:80"
+            "src": "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:85"
           }
         },
         "i_button_ffsync.i_buttons__fireA": {
@@ -28008,7 +28051,7 @@
           "bits": [ "x" ],
           "attributes": {
             "hdlname": "i_button_ffsync i_buttons__fireA",
-            "src": "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:80"
+            "src": "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:85"
           }
         },
         "i_button_ffsync.i_buttons__fireB": {
@@ -28016,31 +28059,31 @@
           "bits": [ "x" ],
           "attributes": {
             "hdlname": "i_button_ffsync i_buttons__fireB",
-            "src": "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:80"
+            "src": "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:85"
           }
         },
         "i_button_ffsync.i_buttons__left": {
           "hide_name": 0,
-          "bits": [ 32 ],
+          "bits": [ 44 ],
           "attributes": {
             "hdlname": "i_button_ffsync i_buttons__left",
-            "src": "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:80"
+            "src": "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:85"
           }
         },
         "i_button_ffsync.i_buttons__pwr": {
           "hide_name": 0,
-          "bits": [ 35 ],
+          "bits": [ 47 ],
           "attributes": {
             "hdlname": "i_button_ffsync i_buttons__pwr",
-            "src": "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:80"
+            "src": "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:85"
           }
         },
         "i_button_ffsync.i_buttons__right": {
           "hide_name": 0,
-          "bits": [ 39 ],
+          "bits": [ 51 ],
           "attributes": {
             "hdlname": "i_button_ffsync i_buttons__right",
-            "src": "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:80"
+            "src": "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:85"
           }
         },
         "i_button_ffsync.i_buttons__up": {
@@ -28048,44 +28091,44 @@
           "bits": [ "x" ],
           "attributes": {
             "hdlname": "i_button_ffsync i_buttons__up",
-            "src": "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:80"
+            "src": "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:85"
           }
         },
         "i_button_ffsync.i_unsync_buttons__left": {
           "hide_name": 0,
-          "bits": [ 41 ],
+          "bits": [ 53 ],
           "attributes": {
             "hdlname": "i_button_ffsync i_unsync_buttons__left",
-            "src": "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59"
+            "src": "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:61"
           }
         },
         "i_button_ffsync.i_unsync_buttons__pwr": {
           "hide_name": 0,
-          "bits": [ 42 ],
+          "bits": [ 54 ],
           "attributes": {
             "hdlname": "i_button_ffsync i_unsync_buttons__pwr",
-            "src": "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59"
+            "src": "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:61"
           }
         },
         "i_button_ffsync.i_unsync_buttons__right": {
           "hide_name": 0,
-          "bits": [ 40 ],
+          "bits": [ 52 ],
           "attributes": {
             "hdlname": "i_button_ffsync i_unsync_buttons__right",
-            "src": "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59"
+            "src": "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:61"
           }
         },
         "i_button_ffsync.rst": {
           "hide_name": 0,
-          "bits": [ 44 ],
+          "bits": [ 42 ],
           "attributes": {
             "hdlname": "i_button_ffsync rst",
-            "src": "tests1_feb2022/test1_amlib_timers.py:105"
+            "src": "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:38"
           }
         },
         "i_button_ffsync.stage0": {
           "hide_name": 0,
-          "bits": [ 37, "x", "x", "x", "x", 31, 38 ],
+          "bits": [ 49, "x", "x", "x", "x", 43, 50 ],
           "attributes": {
             "hdlname": "i_button_ffsync stage0",
             "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/lib/cdc.py:89"
@@ -28093,7 +28136,7 @@
         },
         "i_button_ffsync.stage0$next": {
           "hide_name": 0,
-          "bits": [ 42, "x", "x", "x", "x", 41, 40 ],
+          "bits": [ 54, "x", "x", "x", "x", 53, 52 ],
           "attributes": {
             "hdlname": "i_button_ffsync stage0$next",
             "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/lib/cdc.py:89"
@@ -28101,7 +28144,7 @@
         },
         "i_button_ffsync.stage1": {
           "hide_name": 0,
-          "bits": [ 35, "x", "x", "x", "x", 32, 39 ],
+          "bits": [ 47, "x", "x", "x", "x", 44, 51 ],
           "attributes": {
             "hdlname": "i_button_ffsync stage1",
             "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/lib/cdc.py:89"
@@ -28109,7 +28152,7 @@
         },
         "i_button_ffsync.stage1$next": {
           "hide_name": 0,
-          "bits": [ 37, "x", "x", "x", "x", 31, 38 ],
+          "bits": [ 49, "x", "x", "x", "x", 43, 50 ],
           "attributes": {
             "hdlname": "i_button_ffsync stage1$next",
             "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/lib/cdc.py:89"
@@ -28117,44 +28160,44 @@
         },
         "i_button_ffsync_i_buttons__left": {
           "hide_name": 0,
-          "bits": [ 32 ],
+          "bits": [ 44 ],
           "attributes": {
-            "src": "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:80"
+            "src": "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:85"
           }
         },
         "i_button_ffsync_i_buttons__pwr": {
           "hide_name": 0,
-          "bits": [ 35 ],
+          "bits": [ 47 ],
           "attributes": {
-            "src": "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:80"
+            "src": "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:85"
           }
         },
         "i_button_ffsync_i_buttons__right": {
           "hide_name": 0,
-          "bits": [ 39 ],
+          "bits": [ 51 ],
           "attributes": {
-            "src": "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:80"
+            "src": "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:85"
           }
         },
         "i_button_ffsync_i_unsync_buttons__left": {
           "hide_name": 0,
-          "bits": [ 41 ],
+          "bits": [ 53 ],
           "attributes": {
-            "src": "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59"
+            "src": "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:61"
           }
         },
         "i_button_ffsync_i_unsync_buttons__pwr": {
           "hide_name": 0,
-          "bits": [ 42 ],
+          "bits": [ 54 ],
           "attributes": {
-            "src": "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59"
+            "src": "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:61"
           }
         },
         "i_button_ffsync_i_unsync_buttons__right": {
           "hide_name": 0,
-          "bits": [ 40 ],
+          "bits": [ 52 ],
           "attributes": {
-            "src": "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59"
+            "src": "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:61"
           }
         },
         "led_0__io": {
@@ -28215,7 +28258,7 @@
         },
         "pin_button_down_0.button_down_0__io": {
           "hide_name": 0,
-          "bits": [ 25 ],
+          "bits": [ 26 ],
           "attributes": {
             "hdlname": "pin_button_down_0 button_down_0__io",
             "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:129",
@@ -28224,7 +28267,7 @@
         },
         "pin_button_fire_0.button_fire_0__io": {
           "hide_name": 0,
-          "bits": [ 22 ],
+          "bits": [ 23 ],
           "attributes": {
             "hdlname": "pin_button_fire_0 button_fire_0__io",
             "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:129",
@@ -28233,7 +28276,7 @@
         },
         "pin_button_fire_1.button_fire_1__io": {
           "hide_name": 0,
-          "bits": [ 23 ],
+          "bits": [ 24 ],
           "attributes": {
             "hdlname": "pin_button_fire_1 button_fire_1__io",
             "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:129",
@@ -28242,7 +28285,7 @@
         },
         "pin_button_left_0.button_left_0__i": {
           "hide_name": 0,
-          "bits": [ 43 ],
+          "bits": [ 56 ],
           "attributes": {
             "hdlname": "pin_button_left_0 button_left_0__i",
             "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143"
@@ -28250,7 +28293,7 @@
         },
         "pin_button_left_0.button_left_0__io": {
           "hide_name": 0,
-          "bits": [ 26 ],
+          "bits": [ 27 ],
           "attributes": {
             "hdlname": "pin_button_left_0 button_left_0__io",
             "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:129",
@@ -28259,14 +28302,14 @@
         },
         "pin_button_left_0_button_left_0__i": {
           "hide_name": 0,
-          "bits": [ 43 ],
+          "bits": [ 56 ],
           "attributes": {
             "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143"
           }
         },
         "pin_button_pwr_0.button_pwr_0__i": {
           "hide_name": 0,
-          "bits": [ 45 ],
+          "bits": [ 57 ],
           "attributes": {
             "hdlname": "pin_button_pwr_0 button_pwr_0__i",
             "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143"
@@ -28274,7 +28317,7 @@
         },
         "pin_button_pwr_0.button_pwr_0__i_n": {
           "hide_name": 0,
-          "bits": [ 47 ],
+          "bits": [ 59 ],
           "attributes": {
             "hdlname": "pin_button_pwr_0 button_pwr_0__i_n",
             "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/vendor/lattice_ecp5.py:464"
@@ -28282,7 +28325,7 @@
         },
         "pin_button_pwr_0.button_pwr_0__io": {
           "hide_name": 0,
-          "bits": [ 21 ],
+          "bits": [ 22 ],
           "attributes": {
             "hdlname": "pin_button_pwr_0 button_pwr_0__io",
             "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:129",
@@ -28291,14 +28334,14 @@
         },
         "pin_button_pwr_0_button_pwr_0__i": {
           "hide_name": 0,
-          "bits": [ 45 ],
+          "bits": [ 57 ],
           "attributes": {
             "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143"
           }
         },
         "pin_button_right_0.button_right_0__i": {
           "hide_name": 0,
-          "bits": [ 46 ],
+          "bits": [ 58 ],
           "attributes": {
             "hdlname": "pin_button_right_0 button_right_0__i",
             "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143"
@@ -28306,7 +28349,7 @@
         },
         "pin_button_right_0.button_right_0__io": {
           "hide_name": 0,
-          "bits": [ 27 ],
+          "bits": [ 28 ],
           "attributes": {
             "hdlname": "pin_button_right_0 button_right_0__io",
             "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:129",
@@ -28315,14 +28358,14 @@
         },
         "pin_button_right_0_button_right_0__i": {
           "hide_name": 0,
-          "bits": [ 46 ],
+          "bits": [ 58 ],
           "attributes": {
             "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143"
           }
         },
         "pin_button_up_0.button_up_0__io": {
           "hide_name": 0,
-          "bits": [ 24 ],
+          "bits": [ 25 ],
           "attributes": {
             "hdlname": "pin_button_up_0 button_up_0__io",
             "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:129",
@@ -28339,11 +28382,18 @@
         },
         "pin_clk25_0.clk25_0__io": {
           "hide_name": 0,
-          "bits": [ 28 ],
+          "bits": [ 21 ],
           "attributes": {
             "hdlname": "pin_clk25_0 clk25_0__io",
             "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:129",
             "unused_bits": "0 "
+          }
+        },
+        "pin_clk25_0_clk25_0__i": {
+          "hide_name": 0,
+          "bits": [ 30 ],
+          "attributes": {
+            "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143"
           }
         },
         "pin_esp32_spi_0__en.esp32_spi_0__en__io": {
@@ -28356,7 +28406,7 @@
         },
         "pin_esp32_spi_0__en.esp32_spi_0__en__o": {
           "hide_name": 0,
-          "bits": [ 48 ],
+          "bits": [ 60 ],
           "attributes": {
             "hdlname": "pin_esp32_spi_0__en esp32_spi_0__en__o",
             "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143"
@@ -28364,20 +28414,20 @@
         },
         "pin_esp32_spi_0__en_esp32_spi_0__en__o": {
           "hide_name": 0,
-          "bits": [ 48 ],
+          "bits": [ 60 ],
           "attributes": {
             "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143"
           }
         },
         "pin_esp32_spi_0__en_esp32_spi_0__en__o_TRELLIS_FF_Q_DI": {
           "hide_name": 0,
-          "bits": [ 36 ],
+          "bits": [ 48 ],
           "attributes": {
           }
         },
         "pin_esp32_spi_0__gpio0.esp32_spi_0__gpio0__i": {
           "hide_name": 0,
-          "bits": [ 50 ],
+          "bits": [ 62 ],
           "attributes": {
             "hdlname": "pin_esp32_spi_0__gpio0 esp32_spi_0__gpio0__i",
             "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143",
@@ -28395,7 +28445,7 @@
         },
         "pin_esp32_spi_0__gpio0.esp32_spi_0__gpio0__o": {
           "hide_name": 0,
-          "bits": [ 49 ],
+          "bits": [ 61 ],
           "attributes": {
             "hdlname": "pin_esp32_spi_0__gpio0 esp32_spi_0__gpio0__o",
             "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143"
@@ -28411,14 +28461,14 @@
         },
         "pin_esp32_spi_0__gpio0_esp32_spi_0__gpio0__o": {
           "hide_name": 0,
-          "bits": [ 49 ],
+          "bits": [ 61 ],
           "attributes": {
             "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143"
           }
         },
         "pin_esp32_spi_0__gpio0_esp32_spi_0__gpio0__o_TRELLIS_FF_Q_DI": {
           "hide_name": 0,
-          "bits": [ 51 ],
+          "bits": [ 63 ],
           "attributes": {
           }
         },
@@ -28467,7 +28517,7 @@
         },
         "pin_esp32_spi_0__rx.esp32_spi_0__rx__i": {
           "hide_name": 0,
-          "bits": [ 52 ],
+          "bits": [ 64 ],
           "attributes": {
             "hdlname": "pin_esp32_spi_0__rx esp32_spi_0__rx__i",
             "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143"
@@ -28484,7 +28534,7 @@
         },
         "pin_esp32_spi_0__rx_esp32_spi_0__rx__i": {
           "hide_name": 0,
-          "bits": [ 52 ],
+          "bits": [ 64 ],
           "attributes": {
             "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143"
           }
@@ -28499,7 +28549,7 @@
         },
         "pin_esp32_spi_0__tx.esp32_spi_0__tx__o": {
           "hide_name": 0,
-          "bits": [ 53 ],
+          "bits": [ 65 ],
           "attributes": {
             "hdlname": "pin_esp32_spi_0__tx esp32_spi_0__tx__o",
             "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143"
@@ -28507,7 +28557,7 @@
         },
         "pin_esp32_spi_0__tx_esp32_spi_0__tx__o": {
           "hide_name": 0,
-          "bits": [ 53 ],
+          "bits": [ 65 ],
           "attributes": {
             "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143"
           }
@@ -28522,7 +28572,7 @@
         },
         "pin_led_0.led_0__o": {
           "hide_name": 0,
-          "bits": [ 55 ],
+          "bits": [ 67 ],
           "attributes": {
             "hdlname": "pin_led_0 led_0__o",
             "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143"
@@ -28530,7 +28580,7 @@
         },
         "pin_led_0_led_0__o": {
           "hide_name": 0,
-          "bits": [ 55 ],
+          "bits": [ 67 ],
           "attributes": {
             "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143"
           }
@@ -28545,7 +28595,7 @@
         },
         "pin_led_1.led_1__o": {
           "hide_name": 0,
-          "bits": [ 58 ],
+          "bits": [ 69 ],
           "attributes": {
             "hdlname": "pin_led_1 led_1__o",
             "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143"
@@ -28553,7 +28603,7 @@
         },
         "pin_led_1_led_1__o": {
           "hide_name": 0,
-          "bits": [ 58 ],
+          "bits": [ 69 ],
           "attributes": {
             "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143"
           }
@@ -28568,7 +28618,7 @@
         },
         "pin_led_2.led_2__o": {
           "hide_name": 0,
-          "bits": [ 60 ],
+          "bits": [ 71 ],
           "attributes": {
             "hdlname": "pin_led_2 led_2__o",
             "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143"
@@ -28576,7 +28626,7 @@
         },
         "pin_led_2_led_2__o": {
           "hide_name": 0,
-          "bits": [ 60 ],
+          "bits": [ 71 ],
           "attributes": {
             "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143"
           }
@@ -28591,7 +28641,7 @@
         },
         "pin_led_3.led_3__o": {
           "hide_name": 0,
-          "bits": [ 62 ],
+          "bits": [ 73 ],
           "attributes": {
             "hdlname": "pin_led_3 led_3__o",
             "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143"
@@ -28599,7 +28649,7 @@
         },
         "pin_led_3_led_3__o": {
           "hide_name": 0,
-          "bits": [ 62 ],
+          "bits": [ 73 ],
           "attributes": {
             "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143"
           }
@@ -28614,7 +28664,7 @@
         },
         "pin_led_4.led_4__o": {
           "hide_name": 0,
-          "bits": [ 64 ],
+          "bits": [ 75 ],
           "attributes": {
             "hdlname": "pin_led_4 led_4__o",
             "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143"
@@ -28622,7 +28672,7 @@
         },
         "pin_led_4_led_4__o": {
           "hide_name": 0,
-          "bits": [ 64 ],
+          "bits": [ 75 ],
           "attributes": {
             "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143"
           }
@@ -28637,7 +28687,7 @@
         },
         "pin_led_5.led_5__o": {
           "hide_name": 0,
-          "bits": [ 66 ],
+          "bits": [ 77 ],
           "attributes": {
             "hdlname": "pin_led_5 led_5__o",
             "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143"
@@ -28645,7 +28695,7 @@
         },
         "pin_led_5_led_5__o": {
           "hide_name": 0,
-          "bits": [ 66 ],
+          "bits": [ 77 ],
           "attributes": {
             "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143"
           }
@@ -28660,7 +28710,7 @@
         },
         "pin_led_6.led_6__o": {
           "hide_name": 0,
-          "bits": [ 68 ],
+          "bits": [ 79 ],
           "attributes": {
             "hdlname": "pin_led_6 led_6__o",
             "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143"
@@ -28668,7 +28718,7 @@
         },
         "pin_led_6_led_6__o": {
           "hide_name": 0,
-          "bits": [ 68 ],
+          "bits": [ 79 ],
           "attributes": {
             "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143"
           }
@@ -28683,7 +28733,7 @@
         },
         "pin_led_7.led_7__o": {
           "hide_name": 0,
-          "bits": [ 70 ],
+          "bits": [ 81 ],
           "attributes": {
             "hdlname": "pin_led_7 led_7__o",
             "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143"
@@ -28691,14 +28741,14 @@
         },
         "pin_led_7_led_7__o": {
           "hide_name": 0,
-          "bits": [ 70 ],
+          "bits": [ 81 ],
           "attributes": {
             "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143"
           }
         },
         "pin_uart_0__dtr.uart_0__dtr__i": {
           "hide_name": 0,
-          "bits": [ 34 ],
+          "bits": [ 45 ],
           "attributes": {
             "hdlname": "pin_uart_0__dtr uart_0__dtr__i",
             "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143"
@@ -28715,14 +28765,14 @@
         },
         "pin_uart_0__dtr_uart_0__dtr__i": {
           "hide_name": 0,
-          "bits": [ 34 ],
+          "bits": [ 45 ],
           "attributes": {
             "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143"
           }
         },
         "pin_uart_0__rts.uart_0__rts__i": {
           "hide_name": 0,
-          "bits": [ 33 ],
+          "bits": [ 46 ],
           "attributes": {
             "hdlname": "pin_uart_0__rts uart_0__rts__i",
             "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143"
@@ -28739,14 +28789,14 @@
         },
         "pin_uart_0__rts_uart_0__rts__i": {
           "hide_name": 0,
-          "bits": [ 33 ],
+          "bits": [ 46 ],
           "attributes": {
             "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143"
           }
         },
         "pin_uart_0__rx.uart_0__rx__i": {
           "hide_name": 0,
-          "bits": [ 54 ],
+          "bits": [ 66 ],
           "attributes": {
             "hdlname": "pin_uart_0__rx uart_0__rx__i",
             "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143"
@@ -28763,7 +28813,7 @@
         },
         "pin_uart_0__rx_uart_0__rx__i": {
           "hide_name": 0,
-          "bits": [ 54 ],
+          "bits": [ 66 ],
           "attributes": {
             "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143"
           }
@@ -28778,7 +28828,7 @@
         },
         "pin_uart_0__tx.uart_0__tx__o": {
           "hide_name": 0,
-          "bits": [ 72 ],
+          "bits": [ 83 ],
           "attributes": {
             "hdlname": "pin_uart_0__tx uart_0__tx__o",
             "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143"
@@ -28786,149 +28836,102 @@
         },
         "pin_uart_0__tx_uart_0__tx__o": {
           "hide_name": 0,
-          "bits": [ 72 ],
+          "bits": [ 83 ],
           "attributes": {
             "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143"
           }
         },
         "reset": {
           "hide_name": 0,
-          "bits": [ 74 ],
+          "bits": [ 85 ],
           "attributes": {
-            "src": "tests1_feb2022/test1_amlib_timers.py:231"
+            "src": "tests2_feb2022/test1_amlib_timers.py:222"
           }
         },
         "reset_TRELLIS_FF_DI_Q": {
           "hide_name": 0,
-          "bits": [ 73 ],
+          "bits": [ 84 ],
           "attributes": {
             "amaranth.sample_reg": "00000000000000000000000000000001",
-            "src": "tests1_feb2022/test1_amlib_timers.py:231"
+            "src": "tests2_feb2022/test1_amlib_timers.py:222"
           }
         },
         "rst": {
           "hide_name": 0,
-          "bits": [ 44 ],
+          "bits": [ 42 ],
           "attributes": {
-            "src": "tests1_feb2022/test1_amlib_timers.py:105"
+            "src": "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:38"
           }
         },
         "start": {
           "hide_name": 0,
-          "bits": [ 77 ],
+          "bits": [ 88 ],
           "attributes": {
-            "src": "tests1_feb2022/test1_amlib_timers.py:228"
+            "src": "tests2_feb2022/test1_amlib_timers.py:219"
           }
         },
         "start_TRELLIS_FF_DI_Q": {
           "hide_name": 0,
-          "bits": [ 76 ],
+          "bits": [ 87 ],
           "attributes": {
             "amaranth.sample_reg": "00000000000000000000000000000001",
-            "src": "tests1_feb2022/test1_amlib_timers.py:228"
+            "src": "tests2_feb2022/test1_amlib_timers.py:219"
           }
         },
         "sync_1e6_clk": {
           "hide_name": 0,
-          "bits": [ 56 ],
+          "bits": [ 55 ],
           "attributes": {
-            "src": "tests1_feb2022/test1_amlib_timers.py:114"
+            "src": "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:26"
+          }
+        },
+        "sync_1e6_clk_TRELLIS_FF_Q_CE": {
+          "hide_name": 0,
+          "bits": [ 90 ],
+          "attributes": {
+          }
+        },
+        "sync_1e6_clk_TRELLIS_FF_Q_DI": {
+          "hide_name": 0,
+          "bits": [ 91 ],
+          "attributes": {
+            "src": "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:31"
           }
         },
         "sync_1e6_rst": {
           "hide_name": 0,
-          "bits": [ 44 ],
+          "bits": [ 42 ],
           "attributes": {
-            "src": "tests1_feb2022/test1_amlib_timers.py:114"
-          }
-        },
-        "tb.clk": {
-          "hide_name": 0,
-          "bits": [ 30 ],
-          "attributes": {
-            "hdlname": "tb clk",
-            "src": "tests1_feb2022/test1_amlib_timers.py:105"
-          }
-        },
-        "tb.clk25_0__i": {
-          "hide_name": 0,
-          "bits": [ 30 ],
-          "attributes": {
-            "hdlname": "tb clk25_0__i",
-            "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143"
-          }
-        },
-        "tb.clk_counter": {
-          "hide_name": 0,
-          "bits": [ 87, 85, 83, 81 ],
-          "attributes": {
-            "hdlname": "tb clk_counter",
-            "src": "tests1_feb2022/test1_amlib_timers.py:116"
-          }
-        },
-        "tb.clk_counter_TRELLIS_FF_Q_3_DI": {
-          "hide_name": 0,
-          "bits": [ 86, 85, 83, 81 ],
-          "attributes": {
-            "force_downto": "00000000000000000000000000000001",
-            "src": "tests1_feb2022/test1_amlib_timers.py:118|/home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/techmap.v:270.23-270.24"
-          }
-        },
-        "tb.clk_counter_TRELLIS_FF_Q_DI": {
-          "hide_name": 0,
-          "bits": [ 86, 84, 82, 79 ],
-          "attributes": {
-            "force_downto": "00000000000000000000000000000001",
-            "src": "tests1_feb2022/test1_amlib_timers.py:118|/home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/techmap.v:270.26-270.27"
-          }
-        },
-        "tb.clk_counter_TRELLIS_FF_Q_LSR": {
-          "hide_name": 0,
-          "bits": [ 80 ],
-          "attributes": {
-          }
-        },
-        "tb.clk_counter_TRELLIS_FF_Q_LSR_PFUMX_Z_ALUT": {
-          "hide_name": 0,
-          "bits": [ 88 ],
-          "attributes": {
-            "src": "/home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:133.22-133.24"
-          }
-        },
-        "tb.clk_counter_TRELLIS_FF_Q_LSR_PFUMX_Z_BLUT": {
-          "hide_name": 0,
-          "bits": [ 89 ],
-          "attributes": {
-            "src": "/home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:133.18-133.20"
+            "src": "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:26"
           }
         },
         "tb.debug__count": {
           "hide_name": 0,
-          "bits": [ "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", 105, 103, 101, 99, 97, 95, 93, 91, "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
+          "bits": [ "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", 107, 105, 103, 101, 99, 97, 95, 93, "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
           "attributes": {
             "hdlname": "tb debug__count",
-            "src": "tests1_feb2022/test1_amlib_timers.py:90"
+            "src": "tests2_feb2022/test1_amlib_timers.py:93"
           }
         },
         "tb.dut.debug__count": {
           "hide_name": 0,
-          "bits": [ "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", 104, 102, 100, 98, 96, 94, 92, 90, "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
+          "bits": [ "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", 106, 104, 102, 100, 98, 96, 94, 92, "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
           "attributes": {
             "hdlname": "tb dut debug__count",
-            "src": "tests1_feb2022/test1_amlib_timers.py:41"
+            "src": "tests2_feb2022/test1_amlib_timers.py:44"
           }
         },
         "tb.dut.debug__count$4": {
           "hide_name": 0,
-          "bits": [ "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", 121, 119, 117, 115, 113, 111, 109, 107, "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
+          "bits": [ "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", 123, 121, 119, 117, 115, 113, 111, 109, "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
           "attributes": {
             "hdlname": "tb dut debug__count$4",
-            "src": "tests1_feb2022/test1_amlib_timers.py:48"
+            "src": "tests2_feb2022/test1_amlib_timers.py:51"
           }
         },
         "tb.dut.delayer.counter_out": {
           "hide_name": 0,
-          "bits": [ 203, 200, 197, 194, 185, 157, 126, 124, 190, 187, 181, 178, 175, 172, 169, 120, 118, 116, 114, 112, 110, 108, 106, 147, 144, 141, 138, 135, 132, 128, 209, 206 ],
+          "bits": [ 193, 190, 184, 181, 178, 175, 172, 169, 166, 163, 160, 157, 151, 148, 145, 122, 120, 118, 116, 114, 112, 110, 108, 209, 206, 203, 200, 197, 188, 155, 128, 126 ],
           "attributes": {
             "hdlname": "tb dut delayer counter_out",
             "src": "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:11"
@@ -28936,13 +28939,13 @@
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_10_DI": {
           "hide_name": 0,
-          "bits": [ 127 ],
+          "bits": [ 129 ],
           "attributes": {
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_11_DI": {
           "hide_name": 0,
-          "bits": [ 131 ],
+          "bits": [ 132 ],
           "attributes": {
           }
         },
@@ -28954,61 +28957,61 @@
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_13_DI": {
           "hide_name": 0,
-          "bits": [ 137 ],
+          "bits": [ 136 ],
           "attributes": {
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_14_DI": {
           "hide_name": 0,
-          "bits": [ 140 ],
+          "bits": [ 138 ],
           "attributes": {
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_15_DI": {
           "hide_name": 0,
-          "bits": [ 143 ],
+          "bits": [ 140 ],
           "attributes": {
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_16_DI": {
           "hide_name": 0,
-          "bits": [ 146 ],
+          "bits": [ 142 ],
           "attributes": {
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_17_DI": {
           "hide_name": 0,
-          "bits": [ 149 ],
+          "bits": [ 144 ],
           "attributes": {
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_18_DI": {
           "hide_name": 0,
-          "bits": [ 151 ],
+          "bits": [ 147 ],
           "attributes": {
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_19_DI": {
           "hide_name": 0,
-          "bits": [ 153 ],
+          "bits": [ 150 ],
           "attributes": {
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_1_DI": {
           "hide_name": 0,
-          "bits": [ 125 ],
+          "bits": [ 127 ],
           "attributes": {
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_20_DI": {
           "hide_name": 0,
-          "bits": [ 158 ],
+          "bits": [ 156 ],
           "attributes": {
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_21_DI": {
           "hide_name": 0,
-          "bits": [ 160 ],
+          "bits": [ 159 ],
           "attributes": {
           }
         },
@@ -29020,115 +29023,115 @@
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_23_DI": {
           "hide_name": 0,
-          "bits": [ 164 ],
+          "bits": [ 165 ],
           "attributes": {
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_24_DI": {
           "hide_name": 0,
-          "bits": [ 166 ],
+          "bits": [ 168 ],
           "attributes": {
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_25_DI": {
           "hide_name": 0,
-          "bits": [ 168 ],
+          "bits": [ 171 ],
           "attributes": {
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_26_DI": {
           "hide_name": 0,
-          "bits": [ 171 ],
+          "bits": [ 174 ],
           "attributes": {
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_27_DI": {
           "hide_name": 0,
-          "bits": [ 174 ],
+          "bits": [ 177 ],
           "attributes": {
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_28_DI": {
           "hide_name": 0,
-          "bits": [ 177 ],
+          "bits": [ 180 ],
           "attributes": {
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_29_DI": {
           "hide_name": 0,
-          "bits": [ 180 ],
+          "bits": [ 183 ],
           "attributes": {
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_2_DI": {
           "hide_name": 0,
-          "bits": [ 156 ],
+          "bits": [ 154 ],
           "attributes": {
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_30_DI": {
           "hide_name": 0,
-          "bits": [ 186 ],
+          "bits": [ 189 ],
           "attributes": {
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_31_DI": {
           "hide_name": 0,
-          "bits": [ 189 ],
+          "bits": [ 192 ],
           "attributes": {
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_3_DI": {
           "hide_name": 0,
-          "bits": [ 184 ],
+          "bits": [ 187 ],
           "attributes": {
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_4_DI": {
           "hide_name": 0,
-          "bits": [ 193 ],
+          "bits": [ 196 ],
           "attributes": {
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_5_DI": {
           "hide_name": 0,
-          "bits": [ 196 ],
+          "bits": [ 199 ],
           "attributes": {
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_6_DI": {
           "hide_name": 0,
-          "bits": [ 199 ],
+          "bits": [ 202 ],
           "attributes": {
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_7_DI": {
           "hide_name": 0,
-          "bits": [ 202 ],
+          "bits": [ 205 ],
           "attributes": {
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_8_DI": {
           "hide_name": 0,
-          "bits": [ 205 ],
+          "bits": [ 208 ],
           "attributes": {
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_9_DI": {
           "hide_name": 0,
-          "bits": [ 208 ],
+          "bits": [ 211 ],
           "attributes": {
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_DI": {
           "hide_name": 0,
-          "bits": [ 123 ],
+          "bits": [ 125 ],
           "attributes": {
           }
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_DI_LUT4_Z_D": {
           "hide_name": 0,
-          "bits": [ 204, 201, 198, 195, 192, 183, 155, 211, 191, 188, 182, 179, 176, 173, 170, 167, 165, 163, 161, 159, 154, 152, 150, 148, 145, 142, 139, 136, 133, 130, 210, 207 ],
+          "bits": [ 194, 191, 185, 182, 179, 176, 173, 170, 167, 164, 161, 158, 152, 149, 146, 143, 141, 139, 137, 135, 133, 131, 212, 210, 207, 204, 201, 198, 195, 186, 153, 213 ],
           "attributes": {
             "force_downto": "00000000000000000000000000000001",
             "src": "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:37|/home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/arith_map.v:34.26-34.27"
@@ -29136,7 +29139,7 @@
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_DI_LUT4_Z_D_CCU2C_S0_3_COUT": {
           "hide_name": 0,
-          "bits": [ 203, 220, 304, 221, 305, 214, 306, 212, 307, 213, 308, 219, 309, 218, 310, 217, 311, 215, 312, 216, 313, 227, 314, 226, 315, 225, 316, 224, 317, 222, 318, 223 ],
+          "bits": [ 193, 222, 304, 223, 305, 216, 306, 214, 307, 215, 308, 221, 309, 220, 310, 219, 311, 217, 312, 218, 313, 229, 314, 228, 315, 227, 316, 226, 317, 224, 318, 225 ],
           "attributes": {
             "force_downto": "00000000000000000000000000000001",
             "src": "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:37|/home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/arith_map.v:38.23-38.25",
@@ -29145,7 +29148,7 @@
         },
         "tb.dut.delayer.counter_out_TRELLIS_FF_Q_DI_LUT4_Z_D_CCU2C_S0_COUT": {
           "hide_name": 0,
-          "bits": [ "1", 203, 220, 304, 221, 305, 214, 306, 212, 307, 213, 308, 219, 309, 218, 310, 217, 311, 215, 312, 216, 313, 227, 314, 226, 315, 225, 316, 224, 317, 222, 318 ],
+          "bits": [ "1", 193, 222, 304, 223, 305, 216, 306, 214, 307, 215, 308, 221, 309, 220, 310, 219, 311, 217, 312, 218, 313, 229, 314, 228, 315, 227, 316, 226, 317, 224, 318 ],
           "attributes": {
             "force_downto": "00000000000000000000000000000001",
             "src": "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:37|/home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/arith_map.v:63.22-63.23",
@@ -29154,7 +29157,7 @@
         },
         "tb.dut.delayer.fsm_state": {
           "hide_name": 0,
-          "bits": [ 228, 229 ],
+          "bits": [ 230, 231 ],
           "attributes": {
             "hdlname": "tb dut delayer fsm_state",
             "src": "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:20"
@@ -29162,13 +29165,13 @@
         },
         "tb.dut.delayer.fsm_state_LUT4_C_Z": {
           "hide_name": 0,
-          "bits": [ 122 ],
+          "bits": [ 124 ],
           "attributes": {
           }
         },
         "tb.dut.delayer.fsm_state_TRELLIS_FF_Q_1_DI": {
           "hide_name": 0,
-          "bits": [ 231, 228 ],
+          "bits": [ 233, 230 ],
           "attributes": {
             "force_downto": "00000000000000000000000000000001",
             "src": "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:20|/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:41|/home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/techmap.v:575.21-575.22"
@@ -29176,7 +29179,7 @@
         },
         "tb.dut.delayer.fsm_state_TRELLIS_FF_Q_CE": {
           "hide_name": 0,
-          "bits": [ 230 ],
+          "bits": [ 232 ],
           "attributes": {
           }
         },
@@ -29190,7 +29193,7 @@
         },
         "tb.dut.delayer.start": {
           "hide_name": 0,
-          "bits": [ 237 ],
+          "bits": [ 239 ],
           "attributes": {
             "hdlname": "tb dut delayer start",
             "src": "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:12"
@@ -29198,23 +29201,23 @@
         },
         "tb.dut.delayer.sync_1e6_clk": {
           "hide_name": 0,
-          "bits": [ 56 ],
+          "bits": [ 55 ],
           "attributes": {
             "hdlname": "tb dut delayer sync_1e6_clk",
-            "src": "tests1_feb2022/test1_amlib_timers.py:114"
+            "src": "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:26"
           }
         },
         "tb.dut.delayer.sync_1e6_rst": {
           "hide_name": 0,
-          "bits": [ 44 ],
+          "bits": [ 42 ],
           "attributes": {
             "hdlname": "tb dut delayer sync_1e6_rst",
-            "src": "tests1_feb2022/test1_amlib_timers.py:114"
+            "src": "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:26"
           }
         },
         "tb.dut.delayer_counter_out": {
           "hide_name": 0,
-          "bits": [ 203, 200, 197, 194, 185, 157, 126, 124, 190, 187, 181, 178, 175, 172, 169, 120, 118, 116, 114, 112, 110, 108, 106, 147, 144, 141, 138, 135, 132, 128, 209, 206 ],
+          "bits": [ 193, 190, 184, 181, 178, 175, 172, 169, 166, 163, 160, 157, 151, 148, 145, 122, 120, 118, 116, 114, 112, 110, 108, 209, 206, 203, 200, 197, 188, 155, 128, 126 ],
           "attributes": {
             "hdlname": "tb dut delayer_counter_out",
             "src": "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:11"
@@ -29222,7 +29225,7 @@
         },
         "tb.dut.delayer_start": {
           "hide_name": 0,
-          "bits": [ 237 ],
+          "bits": [ 239 ],
           "attributes": {
             "hdlname": "tb dut delayer_start",
             "src": "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:12"
@@ -29230,15 +29233,15 @@
         },
         "tb.dut.delayer_start_LUT4_B_Z": {
           "hide_name": 0,
-          "bits": [ 232, 233, 234, 235 ],
+          "bits": [ 234, 235, 236, 237 ],
           "attributes": {
             "force_downto": "00000000000000000000000000000001",
             "src": "/home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:108.23-108.24"
           }
         },
-        "tb.dut.delayer_start_LUT4_B_Z_LUT4_Z_1_D": {
+        "tb.dut.delayer_start_LUT4_B_Z_LUT4_Z_1_C": {
           "hide_name": 0,
-          "bits": [ 228, 200, 242 ],
+          "bits": [ 230, 244, 193 ],
           "attributes": {
             "force_downto": "00000000000000000000000000000001",
             "src": "/home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:108.23-108.24"
@@ -29246,7 +29249,7 @@
         },
         "tb.dut.delayer_start_LUT4_B_Z_LUT4_Z_A": {
           "hide_name": 0,
-          "bits": [ 238, 239, 240, 241 ],
+          "bits": [ 240, 241, 242, 243 ],
           "attributes": {
             "force_downto": "00000000000000000000000000000001",
             "src": "/home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:108.23-108.24"
@@ -29254,29 +29257,29 @@
         },
         "tb.dut.delayer_start_LUT4_B_Z_PFUMX_Z_ALUT": {
           "hide_name": 0,
-          "bits": [ 243 ],
+          "bits": [ 245 ],
           "attributes": {
             "src": "/home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:133.22-133.24"
           }
         },
-        "tb.dut.delayer_start_LUT4_B_Z_PFUMX_Z_ALUT_LUT4_Z_C": {
+        "tb.dut.delayer_start_LUT4_B_Z_PFUMX_Z_BLUT": {
           "hide_name": 0,
-          "bits": [ 209, 206, 245, 246, 203 ],
+          "bits": [ 246 ],
+          "attributes": {
+            "src": "/home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:133.18-133.20"
+          }
+        },
+        "tb.dut.delayer_start_LUT4_B_Z_PFUMX_Z_C0": {
+          "hide_name": 0,
+          "bits": [ 155, 128, 126, 248, 247 ],
           "attributes": {
             "force_downto": "00000000000000000000000000000001",
             "src": "/home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:108.23-108.24"
           }
         },
-        "tb.dut.delayer_start_LUT4_B_Z_PFUMX_Z_BLUT": {
-          "hide_name": 0,
-          "bits": [ 244 ],
-          "attributes": {
-            "src": "/home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:133.18-133.20"
-          }
-        },
         "tb.dut.delayer_start_LUT4_D_C": {
           "hide_name": 0,
-          "bits": [ 319, 269, 320, 272, 321, 254, 322, 250, 323, 251, 324, 264, 325, 261, 326, 257, 327, 258, 328, 289, 329, 286, 330, 283, 331, 280, 332, 277, 333, 247, 334, 236 ],
+          "bits": [ 319, 271, 320, 274, 321, 256, 322, 252, 323, 253, 324, 266, 325, 263, 326, 259, 327, 260, 328, 291, 329, 288, 330, 285, 331, 282, 332, 279, 333, 249, 334, 238 ],
           "attributes": {
             "force_downto": "00000000000000000000000000000001",
             "src": "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:30|/home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/arith_map.v:38.23-38.25",
@@ -29285,7 +29288,7 @@
         },
         "tb.dut.delayer_start_LUT4_D_C_CCU2C_COUT_S0": {
           "hide_name": 0,
-          "bits": [ 270, 271, 275, 276, 273, 274, 255, 256, 252, 253, 267, 268, 265, 266, 262, 263, 259, 260, 292, 293, 290, 291, 287, 288, 284, 285, 281, 282, 278, 279, 248, 249 ],
+          "bits": [ 272, 273, 277, 278, 275, 276, 257, 258, 254, 255, 269, 270, 267, 268, 264, 265, 261, 262, 294, 295, 292, 293, 289, 290, 286, 287, 283, 284, 280, 281, 250, 251 ],
           "attributes": {
             "force_downto": "00000000000000000000000000000001",
             "src": "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:30|/home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/arith_map.v:34.26-34.27",
@@ -29294,7 +29297,7 @@
         },
         "tb.dut.delayer_start_LUT4_D_C_CCU2C_COUT_S0_CCU2C_S0_COUT": {
           "hide_name": 0,
-          "bits": [ "1", 335, 269, 320, 272, 321, 254, 322, 250, 323, 251, 324, 264, 325, 261, 326, 257, 327, 258, 328, 289, 329, 286, 330, 283, 331, 280, 332, 277, 333, 247, 334 ],
+          "bits": [ "1", 335, 271, 320, 274, 321, 256, 322, 252, 323, 253, 324, 266, 325, 263, 326, 259, 327, 260, 328, 291, 329, 288, 330, 285, 331, 282, 332, 279, 333, 249, 334 ],
           "attributes": {
             "force_downto": "00000000000000000000000000000001",
             "src": "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:30|/home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/arith_map.v:63.22-63.23",
@@ -29303,7 +29306,7 @@
         },
         "tb.dut.delayer_start_LUT4_D_Z": {
           "hide_name": 0,
-          "bits": [ 129, 210 ],
+          "bits": [ 130, 186 ],
           "attributes": {
             "force_downto": "00000000000000000000000000000001",
             "src": "/home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:108.23-108.24"
@@ -29311,103 +29314,90 @@
         },
         "tb.dut.sync_1e6_clk": {
           "hide_name": 0,
-          "bits": [ 56 ],
+          "bits": [ 55 ],
           "attributes": {
             "hdlname": "tb dut sync_1e6_clk",
-            "src": "tests1_feb2022/test1_amlib_timers.py:114"
+            "src": "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:26"
           }
         },
         "tb.dut.sync_1e6_rst": {
           "hide_name": 0,
-          "bits": [ 44 ],
+          "bits": [ 42 ],
           "attributes": {
             "hdlname": "tb dut sync_1e6_rst",
-            "src": "tests1_feb2022/test1_amlib_timers.py:114"
+            "src": "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:26"
           }
         },
         "tb.dut.ui__start": {
           "hide_name": 0,
-          "bits": [ 295 ],
+          "bits": [ 297 ],
           "attributes": {
             "hdlname": "tb dut ui__start",
-            "src": "tests1_feb2022/test1_amlib_timers.py:40"
+            "src": "tests2_feb2022/test1_amlib_timers.py:43"
           }
         },
         "tb.dut.ui__start$1": {
           "hide_name": 0,
-          "bits": [ 294 ],
+          "bits": [ 296 ],
           "attributes": {
             "hdlname": "tb dut ui__start$1",
-            "src": "tests1_feb2022/test1_amlib_timers.py:47"
+            "src": "tests2_feb2022/test1_amlib_timers.py:50"
           }
         },
         "tb.dut_debug__count": {
           "hide_name": 0,
-          "bits": [ "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", 104, 102, 100, 98, 96, 94, 92, 90, "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
+          "bits": [ "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", 106, 104, 102, 100, 98, 96, 94, 92, "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
           "attributes": {
             "hdlname": "tb dut_debug__count",
-            "src": "tests1_feb2022/test1_amlib_timers.py:41"
+            "src": "tests2_feb2022/test1_amlib_timers.py:44"
           }
         },
         "tb.dut_ui__start": {
           "hide_name": 0,
-          "bits": [ 295 ],
+          "bits": [ 297 ],
           "attributes": {
             "hdlname": "tb dut_ui__start",
-            "src": "tests1_feb2022/test1_amlib_timers.py:40"
+            "src": "tests2_feb2022/test1_amlib_timers.py:43"
           }
         },
         "tb.leds": {
           "hide_name": 0,
-          "bits": [ 57, 59, 61, 63, 65, 67, 69, 71 ],
+          "bits": [ 68, 70, 72, 74, 76, 78, 80, 82 ],
           "attributes": {
             "hdlname": "tb leds",
-            "src": "tests1_feb2022/test1_amlib_timers.py:82"
+            "src": "tests2_feb2022/test1_amlib_timers.py:85"
           }
         },
         "tb.leds$next": {
           "hide_name": 0,
-          "bits": [ 105, 103, 101, 99, 97, 95, 93, 91 ],
+          "bits": [ 107, 105, 103, 101, 99, 97, 95, 93 ],
           "attributes": {
             "hdlname": "tb leds$next",
-            "src": "tests1_feb2022/test1_amlib_timers.py:82"
+            "src": "tests2_feb2022/test1_amlib_timers.py:85"
           }
         },
         "tb.rst": {
           "hide_name": 0,
-          "bits": [ 44 ],
+          "bits": [ 42 ],
           "attributes": {
             "hdlname": "tb rst",
-            "src": "tests1_feb2022/test1_amlib_timers.py:105"
+            "src": "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:38"
           }
         },
         "tb.sync_1e6_clk": {
           "hide_name": 0,
-          "bits": [ 56 ],
+          "bits": [ 55 ],
           "attributes": {
             "hdlname": "tb sync_1e6_clk",
-            "src": "tests1_feb2022/test1_amlib_timers.py:114"
-          }
-        },
-        "tb.sync_1e6_clk_TRELLIS_FF_Q_CE": {
-          "hide_name": 0,
-          "bits": [ 297 ],
-          "attributes": {
-          }
-        },
-        "tb.sync_1e6_clk_TRELLIS_FF_Q_DI": {
-          "hide_name": 0,
-          "bits": [ 298 ],
-          "attributes": {
-            "src": "tests1_feb2022/test1_amlib_timers.py:120"
+            "src": "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:26"
           }
         },
         "tb.sync_1e6_rst": {
           "hide_name": 0,
-          "bits": [ 44 ],
+          "bits": [ 42 ],
           "attributes": {
             "hdlname": "tb sync_1e6_rst",
-            "src": "tests1_feb2022/test1_amlib_timers.py:114"
+            "src": "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:26"
           }
         },
         "tb.ui__reset": {
@@ -29415,7 +29405,7 @@
           "bits": [ 300 ],
           "attributes": {
             "hdlname": "tb ui__reset",
-            "src": "tests1_feb2022/test1_amlib_timers.py:81"
+            "src": "tests2_feb2022/test1_amlib_timers.py:84"
           }
         },
         "tb.ui__reset$1": {
@@ -29423,7 +29413,7 @@
           "bits": [ 299 ],
           "attributes": {
             "hdlname": "tb ui__reset$1",
-            "src": "tests1_feb2022/test1_amlib_timers.py:89"
+            "src": "tests2_feb2022/test1_amlib_timers.py:92"
           }
         },
         "tb.ui__start": {
@@ -29431,43 +29421,36 @@
           "bits": [ 301 ],
           "attributes": {
             "hdlname": "tb ui__start",
-            "src": "tests1_feb2022/test1_amlib_timers.py:81"
+            "src": "tests2_feb2022/test1_amlib_timers.py:84"
           }
         },
         "tb.ui__start$2": {
           "hide_name": 0,
-          "bits": [ 296 ],
+          "bits": [ 298 ],
           "attributes": {
             "hdlname": "tb ui__start$2",
-            "src": "tests1_feb2022/test1_amlib_timers.py:89"
-          }
-        },
-        "tb_clk25_0__i": {
-          "hide_name": 0,
-          "bits": [ 30 ],
-          "attributes": {
-            "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143"
+            "src": "tests2_feb2022/test1_amlib_timers.py:92"
           }
         },
         "tb_leds": {
           "hide_name": 0,
-          "bits": [ 57, 59, 61, 63, 65, 67, 69, 71 ],
+          "bits": [ 68, 70, 72, 74, 76, 78, 80, 82 ],
           "attributes": {
-            "src": "tests1_feb2022/test1_amlib_timers.py:82"
+            "src": "tests2_feb2022/test1_amlib_timers.py:85"
           }
         },
         "tb_ui__reset": {
           "hide_name": 0,
           "bits": [ 300 ],
           "attributes": {
-            "src": "tests1_feb2022/test1_amlib_timers.py:81"
+            "src": "tests2_feb2022/test1_amlib_timers.py:84"
           }
         },
         "tb_ui__start": {
           "hide_name": 0,
           "bits": [ 301 ],
           "attributes": {
-            "src": "tests1_feb2022/test1_amlib_timers.py:81"
+            "src": "tests2_feb2022/test1_amlib_timers.py:84"
           }
         },
         "uart_0__dtr__io": {
@@ -29502,12 +29485,12 @@
           "hide_name": 0,
           "bits": [ 302 ],
           "attributes": {
-            "src": "tests1_feb2022/test1_amlib_timers.py:221"
+            "src": "tests2_feb2022/test1_amlib_timers.py:212"
           }
         },
         "ui__reset_TRELLIS_FF_Q_DI": {
           "hide_name": 0,
-          "bits": [ 75 ],
+          "bits": [ 86 ],
           "attributes": {
             "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/ast.py:1369"
           }
@@ -29516,12 +29499,12 @@
           "hide_name": 0,
           "bits": [ 303 ],
           "attributes": {
-            "src": "tests1_feb2022/test1_amlib_timers.py:221"
+            "src": "tests2_feb2022/test1_amlib_timers.py:212"
           }
         },
         "ui__start_TRELLIS_FF_Q_DI": {
           "hide_name": 0,
-          "bits": [ 78 ],
+          "bits": [ 89 ],
           "attributes": {
             "src": "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/ast.py:1369"
           }

@@ -3,8 +3,8 @@
 
 (* \amaranth.hierarchy  = "top.dut.U$$0" *)
 (* generator = "Amaranth" *)
-module \U$$0 (spi_device__sck, spi_device__cs, spi_device__sdi, spi_device__sdo, clk, trigger, button_fire_0__i, button_fire_1__i, complete);
-  reg \$auto$verilog_backend.cc:2083:dump_module$97  = 0;
+module \U$$0 (i_buttons__fireA, i_buttons__fireB, complete, spi_device__sck, spi_device__cs, spi_device__sdi, spi_device__sdo, trigger, clk);
+  reg \$auto$verilog_backend.cc:2083:dump_module$110  = 0;
   (* src = "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/io/spi.py:803" *)
   wire \$1 ;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/lib/fifo.py:511" *)
@@ -99,7 +99,7 @@ module \U$$0 (spi_device__sck, spi_device__cs, spi_device__sdi, spi_device__sdo,
   wire \$81 ;
   (* src = "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/io/spi.py:876" *)
   wire \$83 ;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:425" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:425" *)
   wire [15:0] \$85 ;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/lib/fifo.py:84" *)
   wire [15:0] \$87 ;
@@ -111,7 +111,7 @@ module \U$$0 (spi_device__sck, spi_device__cs, spi_device__sdi, spi_device__sdo,
   wire [15:0] \$91 ;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/lib/fifo.py:81" *)
   wire [15:0] \$93 ;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:449" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:449" *)
   wire [15:0] \$95 ;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/lib/fifo.py:511" *)
   wire [1:0] \$97 ;
@@ -121,18 +121,18 @@ module \U$$0 (spi_device__sck, spi_device__cs, spi_device__sdi, spi_device__sdo,
   wire [6:0] _address;
   (* src = "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/io/spi.py:671" *)
   wire _is_write;
-  (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143" *)
-  input button_fire_0__i;
-  (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143" *)
-  input button_fire_1__i;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/vendor/lattice_ecp5.py:349" *)
   input clk;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:449" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:449" *)
   input complete;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/lib/fifo.py:510" *)
   wire consume_buffered_cdc_r_consume_buffered;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/lib/fifo.py:514" *)
   wire consume_buffered_cdc_w_consume_buffered;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:80" *)
+  input i_buttons__fireA;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:80" *)
+  input i_buttons__fireB;
   (* src = "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/io/spi.py:654" *)
   wire idle;
   (* src = "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/io/spi.py:474" *)
@@ -223,7 +223,7 @@ module \U$$0 (spi_device__sck, spi_device__cs, spi_device__sdi, spi_device__sdo,
   output spi_device__sdo;
   (* src = "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/io/spi.py:655" *)
   wire stalled;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:97" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:97" *)
   output trigger;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/lib/fifo.py:83" *)
   wire [15:0] unbuffered_r_data;
@@ -303,12 +303,12 @@ module \U$$0 (spi_device__sck, spi_device__cs, spi_device__sdi, spi_device__sdo,
   assign \$79  = _address == (* src = "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/io/spi.py:876" *) 4'ha;
   assign \$81  = _address == (* src = "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/io/spi.py:876" *) 4'hb;
   assign \$83  = _address == (* src = "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/io/spi.py:876" *) 3'h5;
-  assign \$85  = + (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:425" *) { button_fire_1__i, button_fire_0__i };
+  assign \$85  = + (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:425" *) { i_buttons__fireB, i_buttons__fireA };
   assign \$87  = + (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/lib/fifo.py:84" *) r_rdy;
   assign \$89  = + (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/lib/fifo.py:86" *) r_level;
   assign \$91  = + (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/lib/fifo.py:79" *) w_rdy;
   assign \$93  = + (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/lib/fifo.py:81" *) w_level;
-  assign \$95  = + (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:449" *) complete;
+  assign \$95  = + (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:449" *) complete;
   assign \$98  = r_rdy - (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/lib/fifo.py:511" *) r_en;
   always @(posedge clk)
     r_rst <= \r_rst$next ;
@@ -355,7 +355,7 @@ module \U$$0 (spi_device__sck, spi_device__cs, spi_device__sdi, spi_device__sdo,
     .w_rdy(unbuffered_w_rdy)
   );
   always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$97 ) begin end
+    if (\$auto$verilog_backend.cc:2083:dump_module$110 ) begin end
     \r_data$next  = r_data;
     (* src = "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/io/spi.py:779" *)
     casez (register_6_write_strobe)
@@ -371,7 +371,7 @@ module \U$$0 (spi_device__sck, spi_device__cs, spi_device__sdi, spi_device__sdo,
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$97 ) begin end
+    if (\$auto$verilog_backend.cc:2083:dump_module$110 ) begin end
     \r_rdy$next  = r_rdy;
     (* src = "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/io/spi.py:779" *)
     casez (register_7_write_strobe)
@@ -387,11 +387,11 @@ module \U$$0 (spi_device__sck, spi_device__cs, spi_device__sdi, spi_device__sdo,
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$97 ) begin end
+    if (\$auto$verilog_backend.cc:2083:dump_module$110 ) begin end
     \r_level$next  = \$38 [5:0];
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$97 ) begin end
+    if (\$auto$verilog_backend.cc:2083:dump_module$110 ) begin end
     \w_data$next  = w_data;
     (* src = "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/io/spi.py:779" *)
     casez (w_en)
@@ -401,15 +401,15 @@ module \U$$0 (spi_device__sck, spi_device__cs, spi_device__sdi, spi_device__sdo,
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$97 ) begin end
+    if (\$auto$verilog_backend.cc:2083:dump_module$110 ) begin end
     \w_rdy$next  = unbuffered_w_rdy;
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$97 ) begin end
+    if (\$auto$verilog_backend.cc:2083:dump_module$110 ) begin end
     \w_level$next  = \$59 [5:0];
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$97 ) begin end
+    if (\$auto$verilog_backend.cc:2083:dump_module$110 ) begin end
     (* full_case = 32'd1 *)
     (* src = "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/io/spi.py:876" *)
     casez ({ \$83 , \$81 , \$79 , \$77 , \$75 , \$73 , \$71 , \$69 , \$67  })
@@ -446,7 +446,7 @@ module \U$$0 (spi_device__sck, spi_device__cs, spi_device__sdi, spi_device__sdo,
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$97 ) begin end
+    if (\$auto$verilog_backend.cc:2083:dump_module$110 ) begin end
     \r_rst$next  = r_rst;
     (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/lib/fifo.py:518" *)
     casez (\$104 )
@@ -456,7 +456,7 @@ module \U$$0 (spi_device__sck, spi_device__cs, spi_device__sdi, spi_device__sdo,
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$97 ) begin end
+    if (\$auto$verilog_backend.cc:2083:dump_module$110 ) begin end
     unbuffered_r_en = 1'h0;
     (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/lib/fifo.py:518" *)
     casez (\$108 )
@@ -506,9 +506,9 @@ endmodule
 
 (* \amaranth.hierarchy  = "top.dut.U$$1" *)
 (* generator = "Amaranth" *)
-module \U$$1 (spi_device__sck, spi_device__sdi, spi_device__sdo, spi_device__cs, counter, clk, trigger, complete);
-  reg \$auto$verilog_backend.cc:2083:dump_module$98  = 0;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:103" *)
+module \U$$1 (complete, spi_device__sck, spi_device__sdi, spi_device__sdo, spi_device__cs, counter, trigger, clk);
+  reg \$auto$verilog_backend.cc:2083:dump_module$111  = 0;
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:103" *)
   wire [31:0] \$1 ;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/ast.py:1369" *)
   wire \$3 ;
@@ -525,7 +525,7 @@ module \U$$1 (spi_device__sck, spi_device__sdi, spi_device__sdo, spi_device__cs,
   wire \$sample$s$spi_device__cs$sync$1$next ;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/vendor/lattice_ecp5.py:349" *)
   input clk;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:449" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:449" *)
   output complete;
   (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/gui_ui/common/test_common/fpga_gui_interface.py:8" *)
   input [15:0] counter;
@@ -533,11 +533,11 @@ module \U$$1 (spi_device__sck, spi_device__sdi, spi_device__sdo, spi_device__cs,
   reg [6:0] current_sample_number = 7'h00;
   (* src = "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/debug/ila.py:565" *)
   reg [6:0] \current_sample_number$next ;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:103" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:103" *)
   wire [23:0] ila_captured_sample;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:102" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:102" *)
   reg [6:0] ila_captured_sample_number = 7'h00;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:102" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:102" *)
   wire [6:0] \ila_captured_sample_number$next ;
   (* src = "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/debug/ila.py:548" *)
   input spi_device__cs;
@@ -559,9 +559,9 @@ module \U$$1 (spi_device__sck, spi_device__sdi, spi_device__sdo, spi_device__cs,
   wire spi_word_accepted;
   (* src = "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/io/spi.py:209" *)
   wire [31:0] spi_word_out;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:97" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:97" *)
   input trigger;
-  assign \$1  = + (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:103" *) ila_captured_sample;
+  assign \$1  = + (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:103" *) ila_captured_sample;
   assign \$3  = ~ (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/ast.py:1369" *) \$sample$s$spi_device__cs$sync$1 ;
   assign \$5  = \$3  & (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/ast.py:1369" *) spi_device__cs;
   assign \$8  = current_sample_number + (* src = "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/debug/ila.py:576" *) 1'h1;
@@ -589,7 +589,7 @@ module \U$$1 (spi_device__sck, spi_device__sdi, spi_device__sdo, spi_device__cs,
     .word_out(spi_word_out)
   );
   always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$98 ) begin end
+    if (\$auto$verilog_backend.cc:2083:dump_module$111 ) begin end
     \current_sample_number$next  = current_sample_number;
     (* full_case = 32'd1 *)
     (* src = "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/debug/ila.py:569" *)
@@ -622,7 +622,7 @@ endmodule
 
 (* \amaranth.hierarchy  = "top.dut.U$$2" *)
 (* generator = "Amaranth" *)
-module \U$$2 (clk, esp32_spi_0__gpio4_copi__i, spi_device__sdi);
+module \U$$2 (spi_device__sdi, esp32_spi_0__gpio4_copi__i, clk);
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/vendor/lattice_ecp5.py:349" *)
   input clk;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143" *)
@@ -648,7 +648,7 @@ endmodule
 
 (* \amaranth.hierarchy  = "top.dut.U$$3" *)
 (* generator = "Amaranth" *)
-module \U$$3 (clk, esp32_spi_0__gpio16_sclk__i, spi_device__sck);
+module \U$$3 (spi_device__sck, esp32_spi_0__gpio16_sclk__i, clk);
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/vendor/lattice_ecp5.py:349" *)
   input clk;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143" *)
@@ -674,7 +674,7 @@ endmodule
 
 (* \amaranth.hierarchy  = "top.dut.U$$4" *)
 (* generator = "Amaranth" *)
-module \U$$4 (clk, esp32_spi_0__gpio5_cs__i, spi_device__cs);
+module \U$$4 (spi_device__cs, esp32_spi_0__gpio5_cs__i, clk);
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/vendor/lattice_ecp5.py:349" *)
   input clk;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143" *)
@@ -961,15 +961,15 @@ endmodule
 
 (* \amaranth.hierarchy  = "top.dut" *)
 (* generator = "Amaranth" *)
-module dut(led_1__o, led_2__o, led_3__o, led_4__o, led_5__o, led_6__o, led_7__o, esp32_spi_0__gpio12_cipo__o, clk, button_fire_0__i, button_fire_1__i, esp32_spi_0__gpio4_copi__i, esp32_spi_0__gpio16_sclk__i, esp32_spi_0__gpio5_cs__i, led_0__o);
-  reg \$auto$verilog_backend.cc:2083:dump_module$99  = 0;
+module dut(i_buttons__fireA, i_buttons__fireB, led_0__o, led_1__o, led_2__o, led_3__o, led_4__o, led_5__o, led_6__o, led_7__o, esp32_spi_0__gpio12_cipo__o, esp32_spi_0__gpio4_copi__i, esp32_spi_0__gpio16_sclk__i, esp32_spi_0__gpio5_cs__i, clk);
+  reg \$auto$verilog_backend.cc:2083:dump_module$112  = 0;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/ast.py:1369" *)
   wire \$10 ;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:450" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:450" *)
   wire [8:0] \$12 ;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:450" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:450" *)
   wire [8:0] \$13 ;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:483" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:483" *)
   wire \$15 ;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/ast.py:1369" *)
   wire \$17 ;
@@ -987,23 +987,23 @@ module dut(led_1__o, led_2__o, led_3__o, led_4__o, led_5__o, led_6__o, led_7__o,
   wire \$29 ;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/ast.py:1373" *)
   wire \$31 ;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:509" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:509" *)
   wire [16:0] \$33 ;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:509" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:509" *)
   wire [16:0] \$34 ;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/ast.py:1369" *)
   wire \$8 ;
   (* \amaranth.sample_reg  = 32'd1 *)
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:449" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:449" *)
   reg \$sample$s$complete$sync$1  = 1'h0;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:449" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:449" *)
   wire \$sample$s$complete$sync$1$next ;
   (* \amaranth.sample_reg  = 32'd1 *)
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:500" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:500" *)
   reg \$sample$s$spi_device__sck$sync$1  = 1'h0;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:500" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:500" *)
   wire \$sample$s$spi_device__sck$sync$1$next ;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:449" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:449" *)
   wire \U$$0_complete ;
   (* src = "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/io/spi.py:23" *)
   wire \U$$0_spi_device__cs ;
@@ -1013,7 +1013,7 @@ module dut(led_1__o, led_2__o, led_3__o, led_4__o, led_5__o, led_6__o, led_7__o,
   wire \U$$0_spi_device__sdi ;
   (* src = "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/io/spi.py:23" *)
   wire \U$$0_spi_device__sdo ;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:97" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:97" *)
   wire \U$$0_trigger ;
   (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/gui_ui/common/test_common/fpga_gui_interface.py:8" *)
   reg [15:0] \U$$1_counter  = 16'h0000;
@@ -1033,10 +1033,6 @@ module dut(led_1__o, led_2__o, led_3__o, led_4__o, led_5__o, led_6__o, led_7__o,
   wire \U$$3_spi_device__sck ;
   (* src = "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/io/spi.py:23" *)
   wire \U$$4_spi_device__cs ;
-  (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143" *)
-  input button_fire_0__i;
-  (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143" *)
-  input button_fire_1__i;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/vendor/lattice_ecp5.py:349" *)
   input clk;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143" *)
@@ -1047,9 +1043,13 @@ module dut(led_1__o, led_2__o, led_3__o, led_4__o, led_5__o, led_6__o, led_7__o,
   input esp32_spi_0__gpio4_copi__i;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143" *)
   input esp32_spi_0__gpio5_cs__i;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:497" *)
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:80" *)
+  input i_buttons__fireA;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:80" *)
+  input i_buttons__fireB;
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:497" *)
   reg last_sdo = 1'h0;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:497" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:497" *)
   reg \last_sdo$next ;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143" *)
   output led_0__o;
@@ -1099,7 +1099,7 @@ module dut(led_1__o, led_2__o, led_3__o, led_4__o, led_5__o, led_6__o, led_7__o,
   wire mux_spi_device__sck;
   (* src = "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/io/spi.py:23" *)
   wire \mux_spi_device__sck$1 ;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:500" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:500" *)
   wire \mux_spi_device__sck$4 ;
   (* src = "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/io/spi.py:23" *)
   wire mux_spi_device__sdi;
@@ -1120,8 +1120,8 @@ module dut(led_1__o, led_2__o, led_3__o, led_4__o, led_5__o, led_6__o, led_7__o,
   (* src = "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/io/spi.py:23" *)
   wire spi_device__sdo;
   assign \$10  = \$8  & (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/ast.py:1369" *) \U$$0_complete ;
-  assign \$13  = { led_7__o, led_6__o, led_5__o, led_4__o, led_3__o, led_2__o, led_1__o, led_0__o } + (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:450" *) 1'h1;
-  assign \$15  = ~ (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:483" *) \U$$4_spi_device__cs ;
+  assign \$13  = { led_7__o, led_6__o, led_5__o, led_4__o, led_3__o, led_2__o, led_1__o, led_0__o } + (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:450" *) 1'h1;
+  assign \$15  = ~ (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:483" *) \U$$4_spi_device__cs ;
   assign \$17  = ~ (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/ast.py:1369" *) \$sample$s$spi_device__sck$sync$1 ;
   assign \$19  = \$17  & (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/ast.py:1369" *) \mux_spi_device__sck$4 ;
   assign \$21  = ~ (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/ast.py:1373" *) \mux_spi_device__sck$4 ;
@@ -1130,18 +1130,10 @@ module dut(led_1__o, led_2__o, led_3__o, led_4__o, led_5__o, led_6__o, led_7__o,
   assign \$27  = \$25  & (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/ast.py:1369" *) \mux_spi_device__sck$4 ;
   assign \$29  = ~ (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/ast.py:1373" *) \mux_spi_device__sck$4 ;
   assign \$31  = \$sample$s$spi_device__sck$sync$1  & (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/ast.py:1373" *) \$29 ;
-  assign \$34  = \U$$1_counter  + (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:509" *) 1'h1;
+  assign \$34  = \U$$1_counter  + (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:509" *) 1'h1;
   assign \$8  = ~ (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/ast.py:1369" *) \$sample$s$complete$sync$1 ;
   always @(posedge clk)
     \$sample$s$spi_device__sck$sync$1  <= \mux_spi_device__sck$4 ;
-  always @(posedge clk)
-    led_4__o <= \led_4__o$next ;
-  always @(posedge clk)
-    led_5__o <= \led_5__o$next ;
-  always @(posedge clk)
-    led_6__o <= \led_6__o$next ;
-  always @(posedge clk)
-    led_7__o <= \led_7__o$next ;
   always @(posedge clk)
     \$sample$s$complete$sync$1  <= \U$$0_complete ;
   always @(posedge clk)
@@ -1158,11 +1150,19 @@ module dut(led_1__o, led_2__o, led_3__o, led_4__o, led_5__o, led_6__o, led_7__o,
     led_2__o <= \led_2__o$next ;
   always @(posedge clk)
     led_3__o <= \led_3__o$next ;
+  always @(posedge clk)
+    led_4__o <= \led_4__o$next ;
+  always @(posedge clk)
+    led_5__o <= \led_5__o$next ;
+  always @(posedge clk)
+    led_6__o <= \led_6__o$next ;
+  always @(posedge clk)
+    led_7__o <= \led_7__o$next ;
   \U$$0  \U$$0  (
-    .button_fire_0__i(button_fire_0__i),
-    .button_fire_1__i(button_fire_1__i),
     .clk(clk),
     .complete(\U$$0_complete ),
+    .i_buttons__fireA(i_buttons__fireA),
+    .i_buttons__fireB(i_buttons__fireB),
     .spi_device__cs(\U$$0_spi_device__cs ),
     .spi_device__sck(\U$$0_spi_device__sck ),
     .spi_device__sdi(\U$$0_spi_device__sdi ),
@@ -1208,7 +1208,7 @@ module dut(led_1__o, led_2__o, led_3__o, led_4__o, led_5__o, led_6__o, led_7__o,
     .\spi_device__sdo$7 (\mux_spi_device__sdo$7 )
   );
   always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$99 ) begin end
+    if (\$auto$verilog_backend.cc:2083:dump_module$112 ) begin end
     \led_0__o$next  = led_0__o;
     \led_1__o$next  = led_1__o;
     \led_2__o$next  = led_2__o;
@@ -1217,38 +1217,38 @@ module dut(led_1__o, led_2__o, led_3__o, led_4__o, led_5__o, led_6__o, led_7__o,
     \led_5__o$next  = led_5__o;
     \led_6__o$next  = led_6__o;
     \led_7__o$next  = led_7__o;
-    (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:449" *)
+    (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:449" *)
     casez (\$10 )
-      /* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:449" */
+      /* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:449" */
       1'h1:
           { \led_7__o$next , \led_6__o$next , \led_5__o$next , \led_4__o$next , \led_3__o$next , \led_2__o$next , \led_1__o$next , \led_0__o$next  } = \$13 [7:0];
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$99 ) begin end
+    if (\$auto$verilog_backend.cc:2083:dump_module$112 ) begin end
     \last_sdo$next  = last_sdo;
-    (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:498" *)
+    (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:498" *)
     casez ({ \$23 , \$19  })
-      /* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:498" */
+      /* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:498" */
       2'b?1:
           \last_sdo$next  = \U$$0_spi_device__sdo ;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$99 ) begin end
+    if (\$auto$verilog_backend.cc:2083:dump_module$112 ) begin end
     \mux_spi_device__sdo$7$next  = \mux_spi_device__sdo$7 ;
-    (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:498" *)
+    (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:498" *)
     casez ({ \$31 , \$27  })
-      /* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:498" */
+      /* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:498" */
       2'b?1:
           /* empty */;
-      /* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:500" */
+      /* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:500" */
       2'b1?:
           \mux_spi_device__sdo$7$next  = last_sdo;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$99 ) begin end
+    if (\$auto$verilog_backend.cc:2083:dump_module$112 ) begin end
     \U$$1_counter$next  = \$34 [15:0];
   end
   assign \$12  = \$13 ;
@@ -1274,7 +1274,7 @@ endmodule
 (* \amaranth.hierarchy  = "top.dut.U$$1.ila.fifo" *)
 (* generator = "Amaranth" *)
 module fifo(r_rdy, r_en, w_rdy, w_level, w_en, w_data, r_data, clk);
-  reg \$auto$verilog_backend.cc:2083:dump_module$100  = 0;
+  reg \$auto$verilog_backend.cc:2083:dump_module$113  = 0;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/lib/fifo.py:511" *)
   wire [1:0] \$1 ;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/lib/fifo.py:516" *)
@@ -1395,7 +1395,7 @@ module fifo(r_rdy, r_en, w_rdy, w_level, w_en, w_data, r_data, clk);
     .w_rdy(unbuffered_w_rdy)
   );
   always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$100 ) begin end
+    if (\$auto$verilog_backend.cc:2083:dump_module$113 ) begin end
     \r_data$next  = r_data;
     (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/lib/fifo.py:518" *)
     casez (\$14 )
@@ -1405,7 +1405,7 @@ module fifo(r_rdy, r_en, w_rdy, w_level, w_en, w_data, r_data, clk);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$100 ) begin end
+    if (\$auto$verilog_backend.cc:2083:dump_module$113 ) begin end
     \r_rdy$next  = r_rdy;
     (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/lib/fifo.py:518" *)
     casez (\$18 )
@@ -1415,7 +1415,7 @@ module fifo(r_rdy, r_en, w_rdy, w_level, w_en, w_data, r_data, clk);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$100 ) begin end
+    if (\$auto$verilog_backend.cc:2083:dump_module$113 ) begin end
     \r_rst$next  = r_rst;
     (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/lib/fifo.py:518" *)
     casez (\$22 )
@@ -1425,7 +1425,7 @@ module fifo(r_rdy, r_en, w_rdy, w_level, w_en, w_data, r_data, clk);
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$100 ) begin end
+    if (\$auto$verilog_backend.cc:2083:dump_module$113 ) begin end
     unbuffered_r_en = 1'h0;
     (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/lib/fifo.py:518" *)
     casez (\$26 )
@@ -1445,74 +1445,124 @@ module fifo(r_rdy, r_en, w_rdy, w_level, w_en, w_data, r_data, clk);
   assign unbuffered_w_data = w_data;
 endmodule
 
+(* \amaranth.hierarchy  = "top.i_button_ffsync" *)
+(* generator = "Amaranth" *)
+module i_button_ffsync(i_unsync_buttons__fireA, i_unsync_buttons__fireB, i_unsync_buttons__up, i_unsync_buttons__down, i_unsync_buttons__left, i_unsync_buttons__right, i_buttons__pwr, clk, i_buttons__fireA, i_buttons__fireB, i_unsync_buttons__pwr);
+  (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/vendor/lattice_ecp5.py:349" *)
+  input clk;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:80" *)
+  wire i_buttons__down;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:80" *)
+  output i_buttons__fireA;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:80" *)
+  output i_buttons__fireB;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:80" *)
+  wire i_buttons__left;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:80" *)
+  output i_buttons__pwr;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:80" *)
+  wire i_buttons__right;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:80" *)
+  wire i_buttons__up;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59" *)
+  input i_unsync_buttons__down;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59" *)
+  input i_unsync_buttons__fireA;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59" *)
+  input i_unsync_buttons__fireB;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59" *)
+  input i_unsync_buttons__left;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59" *)
+  input i_unsync_buttons__pwr;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59" *)
+  input i_unsync_buttons__right;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59" *)
+  input i_unsync_buttons__up;
+  (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/lib/cdc.py:89" *)
+  reg [6:0] stage0 = 7'h00;
+  (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/lib/cdc.py:89" *)
+  wire [6:0] \stage0$next ;
+  (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/lib/cdc.py:89" *)
+  reg [6:0] stage1 = 7'h00;
+  (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/lib/cdc.py:89" *)
+  wire [6:0] \stage1$next ;
+  always @(posedge clk)
+    stage1 <= stage0;
+  always @(posedge clk)
+    stage0 <= { i_unsync_buttons__right, i_unsync_buttons__left, i_unsync_buttons__down, i_unsync_buttons__up, i_unsync_buttons__fireB, i_unsync_buttons__fireA, i_unsync_buttons__pwr };
+  assign { i_buttons__right, i_buttons__left, i_buttons__down, i_buttons__up, i_buttons__fireB, i_buttons__fireA, i_buttons__pwr } = stage1;
+  assign \stage1$next  = stage0;
+  assign \stage0$next  = { i_unsync_buttons__right, i_unsync_buttons__left, i_unsync_buttons__down, i_unsync_buttons__up, i_unsync_buttons__fireB, i_unsync_buttons__fireA, i_unsync_buttons__pwr };
+endmodule
+
 (* \amaranth.hierarchy  = "top.dut.U$$1.ila" *)
 (* generator = "Amaranth" *)
-module ila(counter, clk, trigger, captured_sample, captured_sample_number, complete);
-  reg \$auto$verilog_backend.cc:2083:dump_module$101  = 0;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:233" *)
+module ila(complete, counter, trigger, captured_sample, captured_sample_number, clk);
+  reg \$auto$verilog_backend.cc:2083:dump_module$114  = 0;
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:233" *)
   wire \$11 ;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:233" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:233" *)
   wire \$13 ;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:233" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:233" *)
   wire [8:0] \$15 ;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:233" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:233" *)
   wire \$17 ;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:233" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:233" *)
   wire \$19 ;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:233" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:233" *)
   wire [8:0] \$21 ;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:233" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:233" *)
   wire \$23 ;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:233" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:233" *)
   wire \$25 ;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:233" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:233" *)
   wire [8:0] \$27 ;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:233" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:233" *)
   wire \$29 ;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:202" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:202" *)
   wire \$3 ;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:233" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:233" *)
   wire \$31 ;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:233" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:233" *)
   wire [8:0] \$33 ;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:233" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:233" *)
   wire \$35 ;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:233" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:233" *)
   wire \$37 ;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:258" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:258" *)
   wire [7:0] \$39 ;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:258" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:258" *)
   wire \$41 ;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:258" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:258" *)
   wire [7:0] \$5 ;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:258" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:258" *)
   wire \$7 ;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:233" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:233" *)
   wire [8:0] \$9 ;
   (* \amaranth.sample_reg  = 32'd1 *)
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:258" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:258" *)
   reg [6:0] \$sample$s$captured_sample_number$sync$1  = 7'h00;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:258" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:258" *)
   wire [6:0] \$sample$s$captured_sample_number$sync$1$next ;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:103" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:103" *)
   output [23:0] captured_sample;
   reg [23:0] captured_sample = 24'h000000;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:103" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:103" *)
   reg [23:0] \captured_sample$next ;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:102" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:102" *)
   input [6:0] captured_sample_number;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:98" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:98" *)
   wire capturing;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/vendor/lattice_ecp5.py:349" *)
   input clk;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:449" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:449" *)
   output complete;
   reg complete = 1'h0;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:449" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:449" *)
   reg \complete$next ;
   (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/gui_ui/common/test_common/fpga_gui_interface.py:8" *)
   input [15:0] counter;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:118" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:118" *)
   wire [23:0] delayed_inputs;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/lib/fifo.py:83" *)
   wire [23:0] fifo_r_data;
@@ -1534,31 +1584,31 @@ module ila(counter, clk, trigger, captured_sample, captured_sample_number, compl
   wire [7:0] fifo_w_level;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/lib/fifo.py:79" *)
   wire fifo_w_rdy;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:112" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:112" *)
   wire [6:0] ila_buffer_r_addr;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:112" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:112" *)
   wire [23:0] ila_buffer_r_data;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:111" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:111" *)
   wire [6:0] ila_buffer_w_addr;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:111" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:111" *)
   wire [23:0] ila_buffer_w_data;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:111" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:111" *)
   wire ila_buffer_w_en;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:201" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:201" *)
   reg [1:0] ila_fifo_fsm_state = 2'h1;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:201" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:201" *)
   reg [1:0] \ila_fifo_fsm_state$next ;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:117" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:117" *)
   wire [23:0] pretrigger_samples_synced_inputs;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:195" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:195" *)
   reg sampling;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:99" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:99" *)
   wire \sampling$2 ;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:97" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:97" *)
   input trigger;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:181" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:181" *)
   reg [6:0] write_position = 7'h00;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:181" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:181" *)
   reg [6:0] \write_position$next ;
   reg [23:0] ila_buffer [99:0];
   initial begin
@@ -1668,26 +1718,26 @@ module ila(counter, clk, trigger, captured_sample, captured_sample_number, compl
       ila_buffer[7'h00] <= 24'h000000;
   end
   assign ila_buffer_r_data = ila_buffer[7'h00];
-  assign \$9  = fifo_w_level + (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:233" *) 2'h2;
-  assign \$11  = \$9  <= (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:233" *) 7'h64;
-  assign \$13  = fifo_w_rdy & (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:233" *) \$11 ;
-  assign \$15  = fifo_w_level + (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:233" *) 2'h2;
-  assign \$17  = \$15  <= (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:233" *) 7'h64;
-  assign \$19  = fifo_w_rdy & (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:233" *) \$17 ;
-  assign \$21  = fifo_w_level + (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:233" *) 2'h2;
-  assign \$23  = \$21  <= (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:233" *) 7'h64;
-  assign \$25  = fifo_w_rdy & (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:233" *) \$23 ;
-  assign \$27  = fifo_w_level + (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:233" *) 2'h2;
-  assign \$29  = \$27  <= (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:233" *) 7'h64;
-  assign \$31  = fifo_w_rdy & (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:233" *) \$29 ;
-  assign \$33  = fifo_w_level + (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:233" *) 2'h2;
-  assign \$35  = \$33  <= (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:233" *) 7'h64;
-  assign \$37  = fifo_w_rdy & (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:233" *) \$35 ;
-  assign \$3  = ! (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:202" *) ila_fifo_fsm_state;
-  assign \$39  = \$sample$s$captured_sample_number$sync$1  + (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:258" *) 1'h1;
-  assign \$41  = \$39  == (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:258" *) captured_sample_number;
-  assign \$5  = \$sample$s$captured_sample_number$sync$1  + (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:258" *) 1'h1;
-  assign \$7  = \$5  == (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:258" *) captured_sample_number;
+  assign \$9  = fifo_w_level + (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:233" *) 2'h2;
+  assign \$11  = \$9  <= (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:233" *) 7'h64;
+  assign \$13  = fifo_w_rdy & (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:233" *) \$11 ;
+  assign \$15  = fifo_w_level + (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:233" *) 2'h2;
+  assign \$17  = \$15  <= (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:233" *) 7'h64;
+  assign \$19  = fifo_w_rdy & (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:233" *) \$17 ;
+  assign \$21  = fifo_w_level + (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:233" *) 2'h2;
+  assign \$23  = \$21  <= (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:233" *) 7'h64;
+  assign \$25  = fifo_w_rdy & (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:233" *) \$23 ;
+  assign \$27  = fifo_w_level + (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:233" *) 2'h2;
+  assign \$29  = \$27  <= (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:233" *) 7'h64;
+  assign \$31  = fifo_w_rdy & (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:233" *) \$29 ;
+  assign \$33  = fifo_w_level + (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:233" *) 2'h2;
+  assign \$35  = \$33  <= (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:233" *) 7'h64;
+  assign \$37  = fifo_w_rdy & (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:233" *) \$35 ;
+  assign \$3  = ! (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:202" *) ila_fifo_fsm_state;
+  assign \$39  = \$sample$s$captured_sample_number$sync$1  + (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:258" *) 1'h1;
+  assign \$41  = \$39  == (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:258" *) captured_sample_number;
+  assign \$5  = \$sample$s$captured_sample_number$sync$1  + (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:258" *) 1'h1;
+  assign \$7  = \$5  == (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:258" *) captured_sample_number;
   always @(posedge clk)
     \$sample$s$captured_sample_number$sync$1  <= captured_sample_number;
   always @(posedge clk)
@@ -1720,24 +1770,24 @@ module ila(counter, clk, trigger, captured_sample, captured_sample_number, compl
     .synced_inputs(pretrigger_samples_synced_inputs)
   );
   always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$101 ) begin end
+    if (\$auto$verilog_backend.cc:2083:dump_module$114 ) begin end
     \fifo_w_data$next  = fifo_w_data;
-    (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:201" *)
+    (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:201" *)
     casez (ila_fifo_fsm_state)
       /* \amaranth.decoding  = "IDLE/1" */
-      /* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:205" */
+      /* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:205" */
       2'h1:
           /* empty */;
       /* \amaranth.decoding  = "CAPTURE/0" */
-      /* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:222" */
+      /* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:222" */
       2'h0:
-          (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:226" *)
+          (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:226" *)
           casez (sampling)
-            /* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:226" */
+            /* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:226" */
             1'h1:
-                (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:233" *)
+                (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:233" *)
                 casez ({ fifo_r_rdy, \$31  })
-                  /* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:233" */
+                  /* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:233" */
                   2'b?1:
                       \fifo_w_data$next  = delayed_inputs;
                 endcase
@@ -1745,102 +1795,102 @@ module ila(counter, clk, trigger, captured_sample, captured_sample_number, compl
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$101 ) begin end
+    if (\$auto$verilog_backend.cc:2083:dump_module$114 ) begin end
     \captured_sample$next  = captured_sample;
-    (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:201" *)
+    (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:201" *)
     casez (ila_fifo_fsm_state)
       /* \amaranth.decoding  = "IDLE/1" */
-      /* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:205" */
+      /* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:205" */
       2'h1:
           /* empty */;
       /* \amaranth.decoding  = "CAPTURE/0" */
-      /* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:222" */
+      /* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:222" */
       2'h0:
-          (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:226" *)
+          (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:226" *)
           casez (sampling)
-            /* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:226" */
+            /* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:226" */
             1'h1:
                 (* full_case = 32'd1 *)
-                (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:233" *)
+                (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:233" *)
                 casez ({ fifo_r_rdy, \$37  })
-                  /* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:233" */
+                  /* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:233" */
                   2'b?1:
                       /* empty */;
-                  /* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:239" */
+                  /* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:239" */
                   2'b1?:
                       \captured_sample$next  = fifo_r_data;
-                  /* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:247" */
+                  /* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:247" */
                   default:
                       \captured_sample$next  = 24'heebeee;
                 endcase
           endcase
       /* \amaranth.decoding  = "READABLE/2" */
-      /* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:254" */
+      /* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:254" */
       2'h2:
           (* full_case = 32'd1 *)
-          (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:256" *)
+          (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:256" *)
           casez (fifo_r_rdy)
-            /* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:256" */
+            /* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:256" */
             1'h1:
-                (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:258" *)
+                (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:258" *)
                 casez (\$41 )
-                  /* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:258" */
+                  /* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:258" */
                   1'h1:
                       \captured_sample$next  = fifo_r_data;
                 endcase
-            /* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:268" */
+            /* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:268" */
             default:
                 \captured_sample$next  = 24'hadbeef;
           endcase
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$101 ) begin end
+    if (\$auto$verilog_backend.cc:2083:dump_module$114 ) begin end
     sampling = 1'h0;
-    (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:201" *)
+    (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:201" *)
     casez (ila_fifo_fsm_state)
       /* \amaranth.decoding  = "IDLE/1" */
-      /* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:205" */
+      /* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:205" */
       2'h1:
           sampling = 1'h0;
       /* \amaranth.decoding  = "CAPTURE/0" */
-      /* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:222" */
+      /* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:222" */
       2'h0:
           sampling = 1'h1;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$101 ) begin end
+    if (\$auto$verilog_backend.cc:2083:dump_module$114 ) begin end
     \fifo_r_en$next  = fifo_r_en;
-    (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:201" *)
+    (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:201" *)
     casez (ila_fifo_fsm_state)
       /* \amaranth.decoding  = "IDLE/1" */
-      /* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:205" */
+      /* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:205" */
       2'h1:
-          (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:209" *)
+          (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:209" *)
           casez (fifo_r_rdy)
-            /* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:209" */
+            /* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:209" */
             1'h1:
                 \fifo_r_en$next  = 1'h1;
           endcase
       /* \amaranth.decoding  = "CAPTURE/0" */
-      /* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:222" */
+      /* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:222" */
       2'h0:
           /* empty */;
       /* \amaranth.decoding  = "READABLE/2" */
-      /* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:254" */
+      /* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:254" */
       2'h2:
-          (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:256" *)
+          (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:256" *)
           casez (fifo_r_rdy)
-            /* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:256" */
+            /* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:256" */
             1'h1:
                 (* full_case = 32'd1 *)
-                (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:258" *)
+                (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:258" *)
                 casez (\$7 )
-                  /* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:258" */
+                  /* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:258" */
                   1'h1:
                       \fifo_r_en$next  = 1'h1;
-                  /* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:263" */
+                  /* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:263" */
                   default:
                       \fifo_r_en$next  = 1'h0;
                 endcase
@@ -1848,103 +1898,103 @@ module ila(counter, clk, trigger, captured_sample, captured_sample_number, compl
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$101 ) begin end
+    if (\$auto$verilog_backend.cc:2083:dump_module$114 ) begin end
     \ila_fifo_fsm_state$next  = ila_fifo_fsm_state;
-    (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:201" *)
+    (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:201" *)
     casez (ila_fifo_fsm_state)
       /* \amaranth.decoding  = "IDLE/1" */
-      /* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:205" */
+      /* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:205" */
       2'h1:
-          (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:212" *)
+          (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:212" *)
           casez (trigger)
-            /* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:212" */
+            /* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:212" */
             1'h1:
-                (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:213" *)
+                (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:213" *)
                 casez (fifo_w_rdy)
-                  /* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:213" */
+                  /* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:213" */
                   1'h1:
                       \ila_fifo_fsm_state$next  = 2'h0;
                 endcase
           endcase
       /* \amaranth.decoding  = "CAPTURE/0" */
-      /* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:222" */
+      /* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:222" */
       2'h0:
-          (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:226" *)
+          (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:226" *)
           casez (sampling)
-            /* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:226" */
+            /* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:226" */
             1'h1:
                 (* full_case = 32'd1 *)
-                (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:233" *)
+                (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:233" *)
                 casez ({ fifo_r_rdy, \$13  })
-                  /* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:233" */
+                  /* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:233" */
                   2'b?1:
                       /* empty */;
-                  /* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:239" */
+                  /* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:239" */
                   2'b1?:
                       \ila_fifo_fsm_state$next  = 2'h2;
-                  /* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:247" */
+                  /* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:247" */
                   default:
                       \ila_fifo_fsm_state$next  = 2'h1;
                 endcase
           endcase
       /* \amaranth.decoding  = "READABLE/2" */
-      /* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:254" */
+      /* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:254" */
       2'h2:
           (* full_case = 32'd1 *)
-          (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:256" *)
+          (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:256" *)
           casez (fifo_r_rdy)
-            /* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:256" */
+            /* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:256" */
             1'h1:
                 /* empty */;
-            /* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:268" */
+            /* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:268" */
             default:
                 \ila_fifo_fsm_state$next  = 2'h1;
           endcase
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$101 ) begin end
+    if (\$auto$verilog_backend.cc:2083:dump_module$114 ) begin end
     \write_position$next  = write_position;
-    (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:201" *)
+    (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:201" *)
     casez (ila_fifo_fsm_state)
       /* \amaranth.decoding  = "IDLE/1" */
-      /* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:205" */
+      /* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:205" */
       2'h1:
-          (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:212" *)
+          (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:212" *)
           casez (trigger)
-            /* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:212" */
+            /* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:212" */
             1'h1:
                 \write_position$next  = 7'h00;
           endcase
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$101 ) begin end
+    if (\$auto$verilog_backend.cc:2083:dump_module$114 ) begin end
     \complete$next  = complete;
-    (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:201" *)
+    (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:201" *)
     casez (ila_fifo_fsm_state)
       /* \amaranth.decoding  = "IDLE/1" */
-      /* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:205" */
+      /* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:205" */
       2'h1:
-          (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:212" *)
+          (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:212" *)
           casez (trigger)
-            /* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:212" */
+            /* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:212" */
             1'h1:
                 \complete$next  = 1'h0;
           endcase
       /* \amaranth.decoding  = "CAPTURE/0" */
-      /* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:222" */
+      /* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:222" */
       2'h0:
-          (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:226" *)
+          (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:226" *)
           casez (sampling)
-            /* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:226" */
+            /* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:226" */
             1'h1:
-                (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:233" *)
+                (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:233" *)
                 casez ({ fifo_r_rdy, \$19  })
-                  /* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:233" */
+                  /* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:233" */
                   2'b?1:
                       /* empty */;
-                  /* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:239" */
+                  /* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:239" */
                   2'b1?:
                       \complete$next  = 1'h1;
                 endcase
@@ -1952,27 +2002,27 @@ module ila(counter, clk, trigger, captured_sample, captured_sample_number, compl
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$101 ) begin end
+    if (\$auto$verilog_backend.cc:2083:dump_module$114 ) begin end
     \fifo_w_en$next  = fifo_w_en;
-    (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:201" *)
+    (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:201" *)
     casez (ila_fifo_fsm_state)
       /* \amaranth.decoding  = "IDLE/1" */
-      /* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:205" */
+      /* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:205" */
       2'h1:
           /* empty */;
       /* \amaranth.decoding  = "CAPTURE/0" */
-      /* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:222" */
+      /* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:222" */
       2'h0:
-          (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:226" *)
+          (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:226" *)
           casez (sampling)
-            /* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:226" */
+            /* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:226" */
             1'h1:
-                (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:233" *)
+                (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:233" *)
                 casez ({ fifo_r_rdy, \$25  })
-                  /* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:233" */
+                  /* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:233" */
                   2'b?1:
                       \fifo_w_en$next  = 1'h1;
-                  /* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:239" */
+                  /* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:239" */
                   2'b1?:
                       \fifo_w_en$next  = 1'h0;
                 endcase
@@ -1992,7 +2042,7 @@ endmodule
 (* \amaranth.hierarchy  = "top.dut.U$$0.interface" *)
 (* generator = "Amaranth" *)
 module \interface (spi_device__sck, spi_device__sdi, spi_device__sdo, spi_device__cs, idle, stalled, command, word_received, word_complete, word_to_send, clk);
-  reg \$auto$verilog_backend.cc:2083:dump_module$102  = 0;
+  reg \$auto$verilog_backend.cc:2083:dump_module$115  = 0;
   (* src = "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/io/spi.py:548" *)
   wire \$1 ;
   (* src = "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/io/spi.py:544" *)
@@ -2132,10 +2182,6 @@ module \interface (spi_device__sck, spi_device__sdi, spi_device__sdo, spi_device
   assign \$5  = ! (* src = "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/io/spi.py:518" *) fsm_state;
   assign \$7  = fsm_state == (* src = "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/io/spi.py:519" *) 1'h1;
   always @(posedge clk)
-    \$sample$s$spi_device__sck$sync$1  <= spi_device__sck;
-  always @(posedge clk)
-    word_received <= \word_received$next ;
-  always @(posedge clk)
     spi_device__sdo <= \spi_device__sdo$next ;
   always @(posedge clk)
     current_word <= \current_word$next ;
@@ -2151,8 +2197,12 @@ module \interface (spi_device__sck, spi_device__sdi, spi_device__sdo, spi_device
     word_complete <= \word_complete$next ;
   always @(posedge clk)
     command_ready <= \command_ready$next ;
+  always @(posedge clk)
+    \$sample$s$spi_device__sck$sync$1  <= spi_device__sck;
+  always @(posedge clk)
+    word_received <= \word_received$next ;
   always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$102 ) begin end
+    if (\$auto$verilog_backend.cc:2083:dump_module$115 ) begin end
     \command_ready$next  = 1'h0;
     (* src = "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/io/spi.py:516" *)
     casez (fsm_state)
@@ -2180,7 +2230,7 @@ module \interface (spi_device__sck, spi_device__sdi, spi_device__sdo, spi_device
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$102 ) begin end
+    if (\$auto$verilog_backend.cc:2083:dump_module$115 ) begin end
     \word_complete$next  = 1'h0;
     (* src = "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/io/spi.py:516" *)
     casez (fsm_state)
@@ -2220,7 +2270,7 @@ module \interface (spi_device__sck, spi_device__sdi, spi_device__sdo, spi_device
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$102 ) begin end
+    if (\$auto$verilog_backend.cc:2083:dump_module$115 ) begin end
     \word_received$next  = word_received;
     (* src = "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/io/spi.py:516" *)
     casez (fsm_state)
@@ -2260,7 +2310,7 @@ module \interface (spi_device__sck, spi_device__sdi, spi_device__sdo, spi_device
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$102 ) begin end
+    if (\$auto$verilog_backend.cc:2083:dump_module$115 ) begin end
     \fsm_state$next  = fsm_state;
     (* src = "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/io/spi.py:516" *)
     casez (fsm_state)
@@ -2335,7 +2385,7 @@ module \interface (spi_device__sck, spi_device__sdi, spi_device__sdo, spi_device
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$102 ) begin end
+    if (\$auto$verilog_backend.cc:2083:dump_module$115 ) begin end
     \bit_count$next  = bit_count;
     (* src = "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/io/spi.py:516" *)
     casez (fsm_state)
@@ -2394,7 +2444,7 @@ module \interface (spi_device__sck, spi_device__sdi, spi_device__sdo, spi_device
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$102 ) begin end
+    if (\$auto$verilog_backend.cc:2083:dump_module$115 ) begin end
     \current_command$next  = current_command;
     (* src = "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/io/spi.py:516" *)
     casez (fsm_state)
@@ -2423,7 +2473,7 @@ module \interface (spi_device__sck, spi_device__sdi, spi_device__sdo, spi_device
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$102 ) begin end
+    if (\$auto$verilog_backend.cc:2083:dump_module$115 ) begin end
     \command$next  = command;
     (* src = "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/io/spi.py:516" *)
     casez (fsm_state)
@@ -2451,7 +2501,7 @@ module \interface (spi_device__sck, spi_device__sdi, spi_device__sdo, spi_device
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$102 ) begin end
+    if (\$auto$verilog_backend.cc:2083:dump_module$115 ) begin end
     \current_word$next  = current_word;
     (* src = "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/io/spi.py:516" *)
     casez (fsm_state)
@@ -2492,7 +2542,7 @@ module \interface (spi_device__sck, spi_device__sdi, spi_device__sdo, spi_device
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$102 ) begin end
+    if (\$auto$verilog_backend.cc:2083:dump_module$115 ) begin end
     \spi_device__sdo$next  = spi_device__sdo;
     (* src = "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/io/spi.py:516" *)
     casez (fsm_state)
@@ -2532,7 +2582,7 @@ endmodule
 (* \amaranth.hierarchy  = "top.dut.mux" *)
 (* generator = "Amaranth" *)
 module mux(spi_device__sdi, spi_device__sdo, \spi_device__sck$1 , \spi_device__sdi$2 , \spi_device__sdo$3 , spi_device__cs, \spi_device__sck$4 , \spi_device__cs$5 , \spi_device__sdi$6 , \spi_device__sdo$7 , spi_device__sck);
-  reg \$auto$verilog_backend.cc:2083:dump_module$103  = 0;
+  reg \$auto$verilog_backend.cc:2083:dump_module$116  = 0;
   (* src = "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/io/spi.py:23" *)
   input spi_device__cs;
   (* src = "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/io/spi.py:23" *)
@@ -2541,7 +2591,7 @@ module mux(spi_device__sdi, spi_device__sdo, \spi_device__sck$1 , \spi_device__s
   input spi_device__sck;
   (* src = "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/io/spi.py:23" *)
   output \spi_device__sck$1 ;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:500" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:500" *)
   output \spi_device__sck$4 ;
   (* src = "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/io/spi.py:23" *)
   input spi_device__sdi;
@@ -2557,7 +2607,7 @@ module mux(spi_device__sdi, spi_device__sdo, \spi_device__sck$1 , \spi_device__s
   (* src = "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/io/spi.py:23" *)
   input \spi_device__sdo$7 ;
   always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$103 ) begin end
+    if (\$auto$verilog_backend.cc:2083:dump_module$116 ) begin end
     spi_device__sdo = 1'h0;
     (* src = "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/io/spi.py:979" *)
     casez ({ \spi_device__cs$5 , spi_device__cs })
@@ -2577,9 +2627,9 @@ endmodule
 
 (* \amaranth.hierarchy  = "top.pin_button_down_0" *)
 (* generator = "Amaranth" *)
-module pin_button_down_0(button_down_0__io);
+module pin_button_down_0(button_down_0__io, button_down_0__i);
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143" *)
-  wire button_down_0__i;
+  output button_down_0__i;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:129" *)
   input button_down_0__io;
   IB button_down_0_0 (
@@ -2616,9 +2666,9 @@ endmodule
 
 (* \amaranth.hierarchy  = "top.pin_button_left_0" *)
 (* generator = "Amaranth" *)
-module pin_button_left_0(button_left_0__io);
+module pin_button_left_0(button_left_0__io, button_left_0__i);
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143" *)
-  wire button_left_0__i;
+  output button_left_0__i;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:129" *)
   input button_left_0__io;
   IB button_left_0_0 (
@@ -2648,9 +2698,9 @@ endmodule
 
 (* \amaranth.hierarchy  = "top.pin_button_right_0" *)
 (* generator = "Amaranth" *)
-module pin_button_right_0(button_right_0__io);
+module pin_button_right_0(button_right_0__io, button_right_0__i);
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143" *)
-  wire button_right_0__i;
+  output button_right_0__i;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:129" *)
   input button_right_0__io;
   IB button_right_0_0 (
@@ -2661,9 +2711,9 @@ endmodule
 
 (* \amaranth.hierarchy  = "top.pin_button_up_0" *)
 (* generator = "Amaranth" *)
-module pin_button_up_0(button_up_0__io);
+module pin_button_up_0(button_up_0__io, button_up_0__i);
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143" *)
-  wire button_up_0__i;
+  output button_up_0__i;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:129" *)
   input button_up_0__io;
   IB button_up_0_0 (
@@ -2963,7 +3013,7 @@ endmodule
 
 (* \amaranth.hierarchy  = "top.dut.U$$1.ila.pretrigger_samples" *)
 (* generator = "Amaranth" *)
-module pretrigger_samples(clk, synced_inputs, counter);
+module pretrigger_samples(counter, synced_inputs, clk);
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/vendor/lattice_ecp5.py:349" *)
   input clk;
   (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/gui_ui/common/test_common/fpga_gui_interface.py:10" *)
@@ -2978,7 +3028,7 @@ module pretrigger_samples(clk, synced_inputs, counter);
   reg [23:0] stage1 = 24'h000000;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/lib/cdc.py:89" *)
   wire [23:0] \stage1$next ;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:117" *)
+  (* src = "tests2_feb2022/test3_fast_fifo_ila_gui.py:117" *)
   output [23:0] synced_inputs;
   always @(posedge clk)
     stage1 <= stage0;
@@ -3139,7 +3189,7 @@ endmodule
 (* \amaranth.hierarchy  = "top.dut.U$$0.unbuffered.rst_cdc" *)
 (* generator = "Amaranth" *)
 module rst_cdc(r_rst, clk);
-  reg \$auto$verilog_backend.cc:2083:dump_module$104  = 0;
+  reg \$auto$verilog_backend.cc:2083:dump_module$117  = 0;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/lib/cdc.py:163" *)
   wire async_ff_clk;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/lib/cdc.py:163" *)
@@ -3165,11 +3215,11 @@ module rst_cdc(r_rst, clk);
     if (_1_) stage0 <= 1'h1;
     else stage0 <= \stage0$next ;
   always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$104 ) begin end
+    if (\$auto$verilog_backend.cc:2083:dump_module$117 ) begin end
     \stage0$next  = 1'h0;
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$104 ) begin end
+    if (\$auto$verilog_backend.cc:2083:dump_module$117 ) begin end
     \stage1$next  = stage0;
   end
   assign r_rst = stage1;
@@ -3180,7 +3230,7 @@ endmodule
 (* \amaranth.hierarchy  = "top.dut.U$$1.ila.fifo.unbuffered.rst_cdc" *)
 (* generator = "Amaranth" *)
 module \rst_cdc$8 (r_rst, clk);
-  reg \$auto$verilog_backend.cc:2083:dump_module$105  = 0;
+  reg \$auto$verilog_backend.cc:2083:dump_module$118  = 0;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/lib/cdc.py:163" *)
   wire async_ff_clk;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/lib/cdc.py:163" *)
@@ -3206,11 +3256,11 @@ module \rst_cdc$8 (r_rst, clk);
     if (_1_) stage0 <= 1'h1;
     else stage0 <= \stage0$next ;
   always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$105 ) begin end
+    if (\$auto$verilog_backend.cc:2083:dump_module$118 ) begin end
     \stage0$next  = 1'h0;
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$105 ) begin end
+    if (\$auto$verilog_backend.cc:2083:dump_module$118 ) begin end
     \stage1$next  = stage0;
   end
   assign r_rst = stage1;
@@ -3289,7 +3339,7 @@ endmodule
 (* \amaranth.hierarchy  = "top.dut.U$$1.spi" *)
 (* generator = "Amaranth" *)
 module spi(spi_device__sck, spi_device__sdi, spi_device__sdo, spi_device__cs, word_out, word_accepted, clk);
-  reg \$auto$verilog_backend.cc:2083:dump_module$106  = 0;
+  reg \$auto$verilog_backend.cc:2083:dump_module$119  = 0;
   (* src = "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/io/spi.py:232" *)
   wire \$1 ;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/ast.py:1373" *)
@@ -3411,7 +3461,7 @@ module spi(spi_device__sck, spi_device__sdi, spi_device__sdo, spi_device__cs, wo
   always @(posedge clk)
     word_in <= \word_in$next ;
   always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$106 ) begin end
+    if (\$auto$verilog_backend.cc:2083:dump_module$119 ) begin end
     \word_in$next  = word_in;
     (* src = "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/io/spi.py:266" *)
     casez (word_accepted)
@@ -3421,7 +3471,7 @@ module spi(spi_device__sck, spi_device__sdi, spi_device__sdo, spi_device__cs, wo
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$106 ) begin end
+    if (\$auto$verilog_backend.cc:2083:dump_module$119 ) begin end
     (* full_case = 32'd1 *)
     (* src = "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/io/spi.py:266" *)
     casez (word_accepted)
@@ -3434,7 +3484,7 @@ module spi(spi_device__sck, spi_device__sdi, spi_device__sdo, spi_device__cs, wo
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$106 ) begin end
+    if (\$auto$verilog_backend.cc:2083:dump_module$119 ) begin end
     \word_accepted$next  = 1'h0;
     (* src = "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/io/spi.py:282" *)
     casez (spi_device__cs)
@@ -3454,7 +3504,7 @@ module spi(spi_device__sck, spi_device__sdi, spi_device__sdo, spi_device__cs, wo
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$106 ) begin end
+    if (\$auto$verilog_backend.cc:2083:dump_module$119 ) begin end
     \bit_count$next  = bit_count;
     (* full_case = 32'd1 *)
     (* src = "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/io/spi.py:282" *)
@@ -3473,7 +3523,7 @@ module spi(spi_device__sck, spi_device__sdi, spi_device__sdo, spi_device__cs, wo
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$106 ) begin end
+    if (\$auto$verilog_backend.cc:2083:dump_module$119 ) begin end
     \is_first_bit$next  = is_first_bit;
     (* full_case = 32'd1 *)
     (* src = "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/io/spi.py:282" *)
@@ -3492,7 +3542,7 @@ module spi(spi_device__sck, spi_device__sdi, spi_device__sdo, spi_device__cs, wo
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$106 ) begin end
+    if (\$auto$verilog_backend.cc:2083:dump_module$119 ) begin end
     \current_rx$next  = current_rx;
     (* src = "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/io/spi.py:282" *)
     casez (spi_device__cs)
@@ -3507,7 +3557,7 @@ module spi(spi_device__sck, spi_device__sdi, spi_device__sdo, spi_device__cs, wo
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$106 ) begin end
+    if (\$auto$verilog_backend.cc:2083:dump_module$119 ) begin end
     \current_tx$next  = current_tx;
     \spi_device__sdo$next  = spi_device__sdo;
     (* full_case = 32'd1 *)
@@ -3554,66 +3604,66 @@ endmodule
 (* generator = "Amaranth" *)
 module top(led_0__io, led_1__io, led_2__io, led_3__io, led_4__io, led_5__io, led_6__io, led_7__io, esp32_spi_0__en__io, esp32_spi_0__tx__io, esp32_spi_0__rx__io, esp32_spi_0__gpio4_copi__io, esp32_spi_0__gpio5_cs__io, esp32_spi_0__gpio12_cipo__io, esp32_spi_0__gpio16_sclk__io, uart_0__rx__io, uart_0__tx__io, uart_0__rts__io, uart_0__dtr__io, button_pwr_0__io, button_fire_0__io
 , button_fire_1__io, button_up_0__io, button_down_0__io, button_left_0__io, button_right_0__io, clk25_0__io, esp32_spi_0__gpio0__io);
-  reg \$auto$verilog_backend.cc:2083:dump_module$107  = 0;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:676" *)
+  reg \$auto$verilog_backend.cc:2083:dump_module$120  = 0;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:108" *)
   wire \$1 ;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:679" *)
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:111" *)
   wire \$11 ;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258" *)
   wire \$13 ;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258" *)
   wire \$15 ;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:682" *)
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:114" *)
   wire \$17 ;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258" *)
   wire \$19 ;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258" *)
   wire \$21 ;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:685" *)
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:117" *)
   wire \$23 ;
-  (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258" *)
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:109" *)
   wire \$25 ;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:677" *)
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:109" *)
   wire \$27 ;
-  (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258" *)
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:112" *)
   wire \$29 ;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:676" *)
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:108" *)
   wire \$3 ;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:680" *)
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:112" *)
   wire \$31 ;
-  (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258" *)
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:115" *)
   wire \$33 ;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:683" *)
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:115" *)
   wire \$35 ;
-  (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258" *)
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:118" *)
   wire \$37 ;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:686" *)
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:118" *)
   wire \$39 ;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:676" *)
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:108" *)
   wire \$41 ;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:676" *)
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:108" *)
   wire \$43 ;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:676" *)
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:108" *)
   wire \$45 ;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258" *)
   wire \$47 ;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258" *)
   wire \$49 ;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:676" *)
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:108" *)
   wire \$5 ;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:679" *)
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:111" *)
   wire \$51 ;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258" *)
   wire \$53 ;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258" *)
   wire \$55 ;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:682" *)
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:114" *)
   wire \$57 ;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258" *)
   wire \$59 ;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258" *)
   wire \$61 ;
-  (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:685" *)
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:117" *)
   wire \$63 ;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258" *)
   wire \$7 ;
@@ -3635,14 +3685,10 @@ module top(led_0__io, led_1__io, led_2__io, led_3__io, led_4__io, led_5__io, led
   input button_up_0__io;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143" *)
   wire cd_sync_clk25_0__i;
+  (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/vendor/lattice_ecp5.py:349" *)
+  wire clk;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:129" *)
   input clk25_0__io;
-  (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143" *)
-  wire dut_button_fire_0__i;
-  (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143" *)
-  wire dut_button_fire_1__i;
-  (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/vendor/lattice_ecp5.py:349" *)
-  wire dut_clk;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143" *)
   wire dut_esp32_spi_0__gpio12_cipo__o;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143" *)
@@ -3683,6 +3729,40 @@ module top(led_0__io, led_1__io, led_2__io, led_3__io, led_4__io, led_5__io, led
   input esp32_spi_0__rx__io;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:129" *)
   output esp32_spi_0__tx__io;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:80" *)
+  wire i_button_ffsync_i_buttons__fireA;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:80" *)
+  wire i_button_ffsync_i_buttons__fireB;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:80" *)
+  wire i_button_ffsync_i_buttons__pwr;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59" *)
+  reg i_button_ffsync_i_unsync_buttons__down = 1'h0;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59" *)
+  wire \i_button_ffsync_i_unsync_buttons__down$next ;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59" *)
+  reg i_button_ffsync_i_unsync_buttons__fireA = 1'h0;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59" *)
+  wire \i_button_ffsync_i_unsync_buttons__fireA$next ;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59" *)
+  reg i_button_ffsync_i_unsync_buttons__fireB = 1'h0;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59" *)
+  wire \i_button_ffsync_i_unsync_buttons__fireB$next ;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59" *)
+  reg i_button_ffsync_i_unsync_buttons__left = 1'h0;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59" *)
+  wire \i_button_ffsync_i_unsync_buttons__left$next ;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59" *)
+  reg i_button_ffsync_i_unsync_buttons__pwr = 1'h0;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59" *)
+  wire \i_button_ffsync_i_unsync_buttons__pwr$next ;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59" *)
+  reg i_button_ffsync_i_unsync_buttons__right = 1'h0;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59" *)
+  wire \i_button_ffsync_i_unsync_buttons__right$next ;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59" *)
+  reg i_button_ffsync_i_unsync_buttons__up = 1'h0;
+  (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:59" *)
+  wire \i_button_ffsync_i_unsync_buttons__up$next ;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:129" *)
   output led_0__io;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:129" *)
@@ -3700,15 +3780,33 @@ module top(led_0__io, led_1__io, led_2__io, led_3__io, led_4__io, led_5__io, led
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:129" *)
   output led_7__io;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143" *)
+  wire pin_button_down_0_button_down_0__i;
+  (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143" *)
+  wire pin_button_fire_0_button_fire_0__i;
+  (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143" *)
+  wire pin_button_fire_1_button_fire_1__i;
+  (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143" *)
+  wire pin_button_left_0_button_left_0__i;
+  (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143" *)
   wire pin_button_pwr_0_button_pwr_0__i;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143" *)
-  reg pin_esp32_spi_0__en_esp32_spi_0__en__o;
+  wire pin_button_right_0_button_right_0__i;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143" *)
-  reg pin_esp32_spi_0__gpio0_esp32_spi_0__gpio0__o;
+  wire pin_button_up_0_button_up_0__i;
+  (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143" *)
+  reg pin_esp32_spi_0__en_esp32_spi_0__en__o = 1'h0;
+  (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143" *)
+  reg \pin_esp32_spi_0__en_esp32_spi_0__en__o$next ;
+  (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143" *)
+  reg pin_esp32_spi_0__gpio0_esp32_spi_0__gpio0__o = 1'h0;
+  (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143" *)
+  reg \pin_esp32_spi_0__gpio0_esp32_spi_0__gpio0__o$next ;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143" *)
   wire pin_esp32_spi_0__rx_esp32_spi_0__rx__i;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143" *)
-  wire pin_esp32_spi_0__tx_esp32_spi_0__tx__o;
+  reg pin_esp32_spi_0__tx_esp32_spi_0__tx__o = 1'h0;
+  (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143" *)
+  wire \pin_esp32_spi_0__tx_esp32_spi_0__tx__o$next ;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143" *)
   wire pin_uart_0__dtr_uart_0__dtr__i;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143" *)
@@ -3716,7 +3814,9 @@ module top(led_0__io, led_1__io, led_2__io, led_3__io, led_4__io, led_5__io, led
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143" *)
   wire pin_uart_0__rx_uart_0__rx__i;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143" *)
-  wire pin_uart_0__tx_uart_0__tx__o;
+  reg pin_uart_0__tx_uart_0__tx__o = 1'h0;
+  (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:143" *)
+  wire \pin_uart_0__tx_uart_0__tx__o$next ;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:129" *)
   input uart_0__dtr__io;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:129" *)
@@ -3726,37 +3826,59 @@ module top(led_0__io, led_1__io, led_2__io, led_3__io, led_4__io, led_5__io, led
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:129" *)
   output uart_0__tx__io;
   assign \$9  = ~ (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258" *) pin_uart_0__rts_uart_0__rts__i;
-  assign \$11  = \$7  & (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:679" *) \$9 ;
+  assign \$11  = \$7  & (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:111" *) \$9 ;
   assign \$15  = ~ (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258" *) pin_uart_0__rts_uart_0__rts__i;
-  assign \$17  = \$13  & (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:682" *) \$15 ;
+  assign \$17  = \$13  & (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:114" *) \$15 ;
   assign \$19  = ~ (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258" *) pin_uart_0__dtr_uart_0__dtr__i;
-  assign \$23  = \$19  & (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:685" *) \$21 ;
-  assign \$25  = ~ (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258" *) pin_button_pwr_0_button_pwr_0__i;
-  assign \$29  = ~ (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258" *) pin_button_pwr_0_button_pwr_0__i;
-  assign \$33  = ~ (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258" *) pin_button_pwr_0_button_pwr_0__i;
-  assign \$37  = ~ (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258" *) pin_button_pwr_0_button_pwr_0__i;
-  assign \$45  = \$41  & (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:676" *) \$43 ;
+  assign \$23  = \$19  & (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:117" *) \$21 ;
+  assign \$25  = ~ (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:109" *) i_button_ffsync_i_buttons__pwr;
+  assign \$29  = ~ (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:112" *) i_button_ffsync_i_buttons__pwr;
+  assign \$33  = ~ (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:115" *) i_button_ffsync_i_buttons__pwr;
+  assign \$37  = ~ (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:118" *) i_button_ffsync_i_buttons__pwr;
+  assign \$45  = \$41  & (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:108" *) \$43 ;
   assign \$47  = ~ (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258" *) pin_uart_0__dtr_uart_0__dtr__i;
   assign \$49  = ~ (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258" *) pin_uart_0__rts_uart_0__rts__i;
-  assign \$51  = \$47  & (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:679" *) \$49 ;
+  assign \$51  = \$47  & (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:111" *) \$49 ;
   assign \$55  = ~ (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258" *) pin_uart_0__rts_uart_0__rts__i;
-  assign \$57  = \$53  & (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:682" *) \$55 ;
-  assign \$5  = \$1  & (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:676" *) \$3 ;
+  assign \$57  = \$53  & (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:114" *) \$55 ;
+  assign \$5  = \$1  & (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:108" *) \$3 ;
   assign \$59  = ~ (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258" *) pin_uart_0__dtr_uart_0__dtr__i;
-  assign \$63  = \$59  & (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:685" *) \$61 ;
+  assign \$63  = \$59  & (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:117" *) \$61 ;
   assign \$7  = ~ (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/rec.py:258" *) pin_uart_0__dtr_uart_0__dtr__i;
+  always @(posedge clk)
+    pin_esp32_spi_0__gpio0_esp32_spi_0__gpio0__o <= \pin_esp32_spi_0__gpio0_esp32_spi_0__gpio0__o$next ;
+  always @(posedge clk)
+    i_button_ffsync_i_unsync_buttons__fireA <= pin_button_fire_0_button_fire_0__i;
+  always @(posedge clk)
+    i_button_ffsync_i_unsync_buttons__pwr <= pin_button_pwr_0_button_pwr_0__i;
+  always @(posedge clk)
+    pin_esp32_spi_0__en_esp32_spi_0__en__o <= \pin_esp32_spi_0__en_esp32_spi_0__en__o$next ;
+  always @(posedge clk)
+    pin_uart_0__tx_uart_0__tx__o <= pin_esp32_spi_0__rx_esp32_spi_0__rx__i;
+  always @(posedge clk)
+    pin_esp32_spi_0__tx_esp32_spi_0__tx__o <= pin_uart_0__rx_uart_0__rx__i;
+  always @(posedge clk)
+    i_button_ffsync_i_unsync_buttons__right <= pin_button_right_0_button_right_0__i;
+  always @(posedge clk)
+    i_button_ffsync_i_unsync_buttons__left <= pin_button_left_0_button_left_0__i;
+  always @(posedge clk)
+    i_button_ffsync_i_unsync_buttons__down <= pin_button_down_0_button_down_0__i;
+  always @(posedge clk)
+    i_button_ffsync_i_unsync_buttons__up <= pin_button_up_0_button_up_0__i;
+  always @(posedge clk)
+    i_button_ffsync_i_unsync_buttons__fireB <= pin_button_fire_1_button_fire_1__i;
   cd_sync cd_sync (
-    .clk(dut_clk),
+    .clk(clk),
     .clk25_0__i(cd_sync_clk25_0__i)
   );
   dut dut (
-    .button_fire_0__i(dut_button_fire_0__i),
-    .button_fire_1__i(dut_button_fire_1__i),
-    .clk(dut_clk),
+    .clk(clk),
     .esp32_spi_0__gpio12_cipo__o(dut_esp32_spi_0__gpio12_cipo__o),
     .esp32_spi_0__gpio16_sclk__i(dut_esp32_spi_0__gpio16_sclk__i),
     .esp32_spi_0__gpio4_copi__i(dut_esp32_spi_0__gpio4_copi__i),
     .esp32_spi_0__gpio5_cs__i(dut_esp32_spi_0__gpio5_cs__i),
+    .i_buttons__fireA(i_button_ffsync_i_buttons__fireA),
+    .i_buttons__fireB(i_button_ffsync_i_buttons__fireB),
     .led_0__o(dut_led_0__o),
     .led_1__o(dut_led_1__o),
     .led_2__o(dut_led_2__o),
@@ -3766,18 +3888,33 @@ module top(led_0__io, led_1__io, led_2__io, led_3__io, led_4__io, led_5__io, led
     .led_6__o(dut_led_6__o),
     .led_7__o(dut_led_7__o)
   );
+  i_button_ffsync i_button_ffsync (
+    .clk(clk),
+    .i_buttons__fireA(i_button_ffsync_i_buttons__fireA),
+    .i_buttons__fireB(i_button_ffsync_i_buttons__fireB),
+    .i_buttons__pwr(i_button_ffsync_i_buttons__pwr),
+    .i_unsync_buttons__down(i_button_ffsync_i_unsync_buttons__down),
+    .i_unsync_buttons__fireA(i_button_ffsync_i_unsync_buttons__fireA),
+    .i_unsync_buttons__fireB(i_button_ffsync_i_unsync_buttons__fireB),
+    .i_unsync_buttons__left(i_button_ffsync_i_unsync_buttons__left),
+    .i_unsync_buttons__pwr(i_button_ffsync_i_unsync_buttons__pwr),
+    .i_unsync_buttons__right(i_button_ffsync_i_unsync_buttons__right),
+    .i_unsync_buttons__up(i_button_ffsync_i_unsync_buttons__up)
+  );
   pin_button_down_0 pin_button_down_0 (
+    .button_down_0__i(pin_button_down_0_button_down_0__i),
     .button_down_0__io(button_down_0__io)
   );
   pin_button_fire_0 pin_button_fire_0 (
-    .button_fire_0__i(dut_button_fire_0__i),
+    .button_fire_0__i(pin_button_fire_0_button_fire_0__i),
     .button_fire_0__io(button_fire_0__io)
   );
   pin_button_fire_1 pin_button_fire_1 (
-    .button_fire_1__i(dut_button_fire_1__i),
+    .button_fire_1__i(pin_button_fire_1_button_fire_1__i),
     .button_fire_1__io(button_fire_1__io)
   );
   pin_button_left_0 pin_button_left_0 (
+    .button_left_0__i(pin_button_left_0_button_left_0__i),
     .button_left_0__io(button_left_0__io)
   );
   pin_button_pwr_0 pin_button_pwr_0 (
@@ -3785,9 +3922,11 @@ module top(led_0__io, led_1__io, led_2__io, led_3__io, led_4__io, led_5__io, led
     .button_pwr_0__io(button_pwr_0__io)
   );
   pin_button_right_0 pin_button_right_0 (
+    .button_right_0__i(pin_button_right_0_button_right_0__i),
     .button_right_0__io(button_right_0__io)
   );
   pin_button_up_0 pin_button_up_0 (
+    .button_up_0__i(pin_button_up_0_button_up_0__i),
     .button_up_0__io(button_up_0__io)
   );
   pin_clk25_0 pin_clk25_0 (
@@ -3875,45 +4014,52 @@ module top(led_0__io, led_1__io, led_2__io, led_3__io, led_4__io, led_5__io, led
     .uart_0__tx__o(pin_uart_0__tx_uart_0__tx__o)
   );
   always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$107 ) begin end
-    pin_esp32_spi_0__en_esp32_spi_0__en__o = 1'h0;
-    (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:676" *)
-    casez ({ \$23 , \$17 , \$11 , \$5  })
-      /* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:676" */
+    if (\$auto$verilog_backend.cc:2083:dump_module$120 ) begin end
+    \pin_esp32_spi_0__gpio0_esp32_spi_0__gpio0__o$next  = pin_esp32_spi_0__gpio0_esp32_spi_0__gpio0__o;
+    (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:108" *)
+    casez ({ \$63 , \$57 , \$51 , \$45  })
+      /* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:108" */
       4'b???1:
-          pin_esp32_spi_0__en_esp32_spi_0__en__o = \$27 ;
-      /* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:679" */
+          \pin_esp32_spi_0__gpio0_esp32_spi_0__gpio0__o$next  = 1'h1;
+      /* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:111" */
       4'b??1?:
-          pin_esp32_spi_0__en_esp32_spi_0__en__o = \$31 ;
-      /* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:682" */
+          \pin_esp32_spi_0__gpio0_esp32_spi_0__gpio0__o$next  = 1'h1;
+      /* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:114" */
       4'b?1??:
-          pin_esp32_spi_0__en_esp32_spi_0__en__o = \$35 ;
-      /* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:685" */
+          \pin_esp32_spi_0__gpio0_esp32_spi_0__gpio0__o$next  = 1'h1;
+      /* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:117" */
       4'b1???:
-          pin_esp32_spi_0__en_esp32_spi_0__en__o = \$39 ;
+          \pin_esp32_spi_0__gpio0_esp32_spi_0__gpio0__o$next  = 1'h0;
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$107 ) begin end
-    pin_esp32_spi_0__gpio0_esp32_spi_0__gpio0__o = 1'h0;
-    (* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:676" *)
-    casez ({ \$63 , \$57 , \$51 , \$45  })
-      /* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:676" */
+    if (\$auto$verilog_backend.cc:2083:dump_module$120 ) begin end
+    \pin_esp32_spi_0__en_esp32_spi_0__en__o$next  = pin_esp32_spi_0__en_esp32_spi_0__en__o;
+    (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:108" *)
+    casez ({ \$23 , \$17 , \$11 , \$5  })
+      /* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:108" */
       4'b???1:
-          pin_esp32_spi_0__gpio0_esp32_spi_0__gpio0__o = 1'h1;
-      /* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:679" */
+          \pin_esp32_spi_0__en_esp32_spi_0__en__o$next  = \$27 ;
+      /* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:111" */
       4'b??1?:
-          pin_esp32_spi_0__gpio0_esp32_spi_0__gpio0__o = 1'h1;
-      /* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:682" */
+          \pin_esp32_spi_0__en_esp32_spi_0__en__o$next  = \$31 ;
+      /* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:114" */
       4'b?1??:
-          pin_esp32_spi_0__gpio0_esp32_spi_0__gpio0__o = 1'h1;
-      /* src = "tests2_feb2022/feb24_high_speed/test1_fast_fifo_ila_gui.py:685" */
+          \pin_esp32_spi_0__en_esp32_spi_0__en__o$next  = \$35 ;
+      /* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/ulx3s_upload_common.py:117" */
       4'b1???:
-          pin_esp32_spi_0__gpio0_esp32_spi_0__gpio0__o = 1'h0;
+          \pin_esp32_spi_0__en_esp32_spi_0__en__o$next  = \$39 ;
     endcase
   end
-  assign pin_uart_0__tx_uart_0__tx__o = pin_esp32_spi_0__rx_esp32_spi_0__rx__i;
-  assign pin_esp32_spi_0__tx_esp32_spi_0__tx__o = pin_uart_0__rx_uart_0__rx__i;
+  assign \pin_uart_0__tx_uart_0__tx__o$next  = pin_esp32_spi_0__rx_esp32_spi_0__rx__i;
+  assign \pin_esp32_spi_0__tx_esp32_spi_0__tx__o$next  = pin_uart_0__rx_uart_0__rx__i;
+  assign \i_button_ffsync_i_unsync_buttons__right$next  = pin_button_right_0_button_right_0__i;
+  assign \i_button_ffsync_i_unsync_buttons__left$next  = pin_button_left_0_button_left_0__i;
+  assign \i_button_ffsync_i_unsync_buttons__down$next  = pin_button_down_0_button_down_0__i;
+  assign \i_button_ffsync_i_unsync_buttons__up$next  = pin_button_up_0_button_up_0__i;
+  assign \i_button_ffsync_i_unsync_buttons__fireB$next  = pin_button_fire_1_button_fire_1__i;
+  assign \i_button_ffsync_i_unsync_buttons__fireA$next  = pin_button_fire_0_button_fire_0__i;
+  assign \i_button_ffsync_i_unsync_buttons__pwr$next  = pin_button_pwr_0_button_pwr_0__i;
   assign \$1  = pin_uart_0__dtr_uart_0__dtr__i;
   assign \$3  = pin_uart_0__rts_uart_0__rts__i;
   assign \$13  = pin_uart_0__dtr_uart_0__dtr__i;
@@ -3931,7 +4077,7 @@ endmodule
 (* \amaranth.hierarchy  = "top.dut.U$$0.unbuffered" *)
 (* generator = "Amaranth" *)
 module unbuffered(w_data, w_rdy, w_en, r_level, w_level, r_data, r_rdy, r_rst, r_en, clk);
-  reg \$auto$verilog_backend.cc:2083:dump_module$108  = 0;
+  reg \$auto$verilog_backend.cc:2083:dump_module$121  = 0;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/lib/fifo.py:341" *)
   wire [6:0] \$10 ;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/lib/fifo.py:377" *)
@@ -4172,7 +4318,7 @@ module unbuffered(w_data, w_rdy, w_en, r_level, w_level, r_data, r_rdy, r_rst, r
     .o(rst_dec_o)
   );
   always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$108 ) begin end
+    if (\$auto$verilog_backend.cc:2083:dump_module$121 ) begin end
     r_empty = \$22 ;
     (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/lib/fifo.py:426" *)
     casez (rst_cdc_r_rst)
@@ -4182,7 +4328,7 @@ module unbuffered(w_data, w_rdy, w_en, r_level, w_level, r_data, r_rdy, r_rst, r
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$108 ) begin end
+    if (\$auto$verilog_backend.cc:2083:dump_module$121 ) begin end
     (* full_case = 32'd1 *)
     (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/lib/fifo.py:426" *)
     casez (rst_cdc_r_rst)
@@ -4195,7 +4341,7 @@ module unbuffered(w_data, w_rdy, w_en, r_level, w_level, r_data, r_rdy, r_rst, r
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$108 ) begin end
+    if (\$auto$verilog_backend.cc:2083:dump_module$121 ) begin end
     \consume_r_bin$next  = consume_r_nxt;
     (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/lib/fifo.py:426" *)
     casez (rst_cdc_r_rst)
@@ -4205,7 +4351,7 @@ module unbuffered(w_data, w_rdy, w_en, r_level, w_level, r_data, r_rdy, r_rst, r
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$108 ) begin end
+    if (\$auto$verilog_backend.cc:2083:dump_module$121 ) begin end
     \consume_cdc_consume_r_gry$next  = consume_enc_o;
     (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/lib/fifo.py:426" *)
     casez (rst_cdc_r_rst)
@@ -4245,7 +4391,7 @@ endmodule
 (* \amaranth.hierarchy  = "top.dut.U$$1.ila.fifo.unbuffered" *)
 (* generator = "Amaranth" *)
 module \unbuffered$1 (w_data, w_rdy, w_en, r_level, w_level, r_data, r_rdy, r_rst, r_en, clk);
-  reg \$auto$verilog_backend.cc:2083:dump_module$109  = 0;
+  reg \$auto$verilog_backend.cc:2083:dump_module$122  = 0;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/lib/fifo.py:341" *)
   wire [8:0] \$10 ;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/lib/fifo.py:377" *)
@@ -4582,7 +4728,7 @@ module \unbuffered$1 (w_data, w_rdy, w_en, r_level, w_level, r_data, r_rdy, r_rs
     .o(rst_dec_o)
   );
   always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$109 ) begin end
+    if (\$auto$verilog_backend.cc:2083:dump_module$122 ) begin end
     r_empty = \$22 ;
     (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/lib/fifo.py:426" *)
     casez (rst_cdc_r_rst)
@@ -4592,7 +4738,7 @@ module \unbuffered$1 (w_data, w_rdy, w_en, r_level, w_level, r_data, r_rdy, r_rs
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$109 ) begin end
+    if (\$auto$verilog_backend.cc:2083:dump_module$122 ) begin end
     (* full_case = 32'd1 *)
     (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/lib/fifo.py:426" *)
     casez (rst_cdc_r_rst)
@@ -4605,7 +4751,7 @@ module \unbuffered$1 (w_data, w_rdy, w_en, r_level, w_level, r_data, r_rdy, r_rs
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$109 ) begin end
+    if (\$auto$verilog_backend.cc:2083:dump_module$122 ) begin end
     \consume_r_bin$next  = consume_r_nxt;
     (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/lib/fifo.py:426" *)
     casez (rst_cdc_r_rst)
@@ -4615,7 +4761,7 @@ module \unbuffered$1 (w_data, w_rdy, w_en, r_level, w_level, r_data, r_rdy, r_rs
     endcase
   end
   always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$109 ) begin end
+    if (\$auto$verilog_backend.cc:2083:dump_module$122 ) begin end
     \consume_cdc_consume_r_gry$next  = consume_enc_o;
     (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/lib/fifo.py:426" *)
     casez (rst_cdc_r_rst)
