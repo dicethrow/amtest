@@ -52,7 +52,7 @@ platform.add_resources(digital_discovery)
 class UploadBase(Elaboratable):
 	def elaborate(self, platform = None):
 		self.leds = Cat([platform.request("led", i) for i in range(8)])
-		esp32 = platform.request("esp32_spi")
+		self.esp32 = platform.request("esp32_spi")
 		io_uart = platform.request("uart")
 		# clk25 = platform.request("clk25")
 
@@ -90,32 +90,33 @@ class UploadBase(Elaboratable):
 		if False:
 			o_digital_discovery = platform.request("digital_discovery")
 			m.d.sync += [
-				o_digital_discovery.bus[0].eq(esp32.gpio5_cs), 	# cs
-				o_digital_discovery.bus[1].eq(esp32.gpio16_sclk),	# clk
-				o_digital_discovery.bus[2].eq(esp32.gpio4_copi),	# mosi
-				o_digital_discovery.bus[3].eq(esp32.gpio12_cipo)	# miso
+				o_digital_discovery.bus[0].eq(self.esp32.gpio5_cs), 	# cs
+				o_digital_discovery.bus[1].eq(self.esp32.gpio16_sclk),	# clk
+				o_digital_discovery.bus[2].eq(self.esp32.gpio4_copi),	# mosi
+				o_digital_discovery.bus[3].eq(self.esp32.gpio12_cipo)	# miso
 			]
 
 		######## setup esp32 interaction ######
 
 		# route the esp32's uart
 		m.d.sync += [
-			esp32.tx.eq(io_uart.rx),
-			io_uart.tx.eq(esp32.rx),
+			self.esp32.tx.eq(io_uart.rx),
+			io_uart.tx.eq(self.esp32.rx),
 		]
 
 		# implement the esp32's reset/boot requirements
 		with m.If((io_uart.dtr.i == 1) & (io_uart.rts.i == 1)):
-			m.d.sync += esp32.en.eq(1 & ~self.i_buttons.pwr) 
-			m.d.sync += esp32.gpio0.o.eq(1)
+			m.d.sync += self.esp32.en.eq(1 & ~self.i_buttons.pwr) 
+			m.d.sync += self.esp32.gpio0.o.eq(1)
 		with m.Elif((io_uart.dtr == 0) & (io_uart.rts == 0)):
-			m.d.sync += esp32.en.eq(1 & ~self.i_buttons.pwr)
-			m.d.sync += esp32.gpio0.o.eq(1)
+			m.d.sync += self.esp32.en.eq(1 & ~self.i_buttons.pwr)
+			m.d.sync += self.esp32.gpio0.o.eq(1)
 		with m.Elif((io_uart.dtr == 1) & (io_uart.rts == 0)):
-			m.d.sync += esp32.en.eq(0 & ~self.i_buttons.pwr)
-			m.d.sync += esp32.gpio0.o.eq(1)
+			m.d.sync += self.esp32.en.eq(0 & ~self.i_buttons.pwr)
+			m.d.sync += self.esp32.gpio0.o.eq(1)
 		with m.Elif((io_uart.dtr == 0) & (io_uart.rts == 1)):
-			m.d.sync += esp32.en.eq(1 & ~self.i_buttons.pwr)
-			m.d.sync += esp32.gpio0.o.eq(0)
+			m.d.sync += self.esp32.en.eq(1 & ~self.i_buttons.pwr)
+			m.d.sync += self.esp32.gpio0.o.eq(0)
 
 		return m
+		
