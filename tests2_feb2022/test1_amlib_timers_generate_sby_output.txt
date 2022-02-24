@@ -1,0 +1,47 @@
+SBY  0:59:40 [test1_amlib_timers_cover] Removing directory '/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/tests2_feb2022/test1_amlib_timers_cover'.
+SBY  0:59:40 [test1_amlib_timers_cover] Copy '/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/tests2_feb2022/test1_amlib_timers_toplevel.il' to '/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/tests2_feb2022/test1_amlib_timers_cover/src/test1_amlib_timers_toplevel.il'.
+SBY  0:59:40 [test1_amlib_timers_cover] engine_0: smtbmc boolector
+SBY  0:59:40 [test1_amlib_timers_cover] base: starting process "cd test1_amlib_timers_cover/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY  0:59:41 [test1_amlib_timers_cover] base: finished (returncode=0)
+SBY  0:59:41 [test1_amlib_timers_cover] smt2: starting process "cd test1_amlib_timers_cover/model; yosys -ql design_smt2.log design_smt2.ys"
+SBY  0:59:41 [test1_amlib_timers_cover] smt2: finished (returncode=0)
+SBY  0:59:41 [test1_amlib_timers_cover] engine_0: starting process "cd test1_amlib_timers_cover; yosys-smtbmc -s boolector --presat --unroll -c --noprogress -t 2  --append 0 --dump-vcd engine_0/trace%.vcd --dump-vlogtb engine_0/trace%_tb.v --dump-smtc engine_0/trace%.smtc model/design_smt2.smt2"
+SBY  0:59:41 [test1_amlib_timers_cover] engine_0: ##   0:00:00  Solver: boolector
+SBY  0:59:41 [test1_amlib_timers_cover] engine_0: ##   0:00:00  Checking cover reachability in step 0..
+SBY  0:59:41 [test1_amlib_timers_cover] engine_0: ##   0:00:00  Reached cover statement at test1_amlib_timers.py:188 in step 0.
+SBY  0:59:41 [test1_amlib_timers_cover] engine_0: ##   0:00:00  Assert failed in top: test1_amlib_timers.py:181 (step 0)
+SBY  0:59:41 [test1_amlib_timers_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace0.vcd
+SBY  0:59:41 [test1_amlib_timers_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace0_tb.v
+SBY  0:59:41 [test1_amlib_timers_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace0.smtc
+SBY  0:59:41 [test1_amlib_timers_cover] engine_0: ##   0:00:00  Status: failed
+SBY  0:59:41 [test1_amlib_timers_cover] engine_0: finished (returncode=1)
+SBY  0:59:41 [test1_amlib_timers_cover] engine_0: Status returned by engine: FAIL
+SBY  0:59:41 [test1_amlib_timers_cover] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY  0:59:41 [test1_amlib_timers_cover] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY  0:59:41 [test1_amlib_timers_cover] summary: engine_0 (smtbmc boolector) returned FAIL
+SBY  0:59:41 [test1_amlib_timers_cover] DONE (FAIL, rc=2)
+SBY  0:59:41 [test1_amlib_timers_bmc] Removing directory '/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/tests2_feb2022/test1_amlib_timers_bmc'.
+SBY  0:59:41 [test1_amlib_timers_bmc] Copy '/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/tests2_feb2022/test1_amlib_timers_toplevel.il' to '/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/tests2_feb2022/test1_amlib_timers_bmc/src/test1_amlib_timers_toplevel.il'.
+SBY  0:59:41 [test1_amlib_timers_bmc] engine_0: smtbmc boolector
+SBY  0:59:41 [test1_amlib_timers_bmc] base: starting process "cd test1_amlib_timers_bmc/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY  0:59:41 [test1_amlib_timers_bmc] base: finished (returncode=0)
+SBY  0:59:41 [test1_amlib_timers_bmc] smt2: starting process "cd test1_amlib_timers_bmc/model; yosys -ql design_smt2.log design_smt2.ys"
+SBY  0:59:41 [test1_amlib_timers_bmc] smt2: finished (returncode=0)
+SBY  0:59:41 [test1_amlib_timers_bmc] engine_0: starting process "cd test1_amlib_timers_bmc; yosys-smtbmc -s boolector --presat --unroll --noprogress -t 2  --append 0 --dump-vcd engine_0/trace.vcd --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2"
+SBY  0:59:41 [test1_amlib_timers_bmc] engine_0: ##   0:00:00  Solver: boolector
+SBY  0:59:41 [test1_amlib_timers_bmc] engine_0: ##   0:00:00  Checking assumptions in step 0..
+SBY  0:59:41 [test1_amlib_timers_bmc] engine_0: ##   0:00:00  Checking assertions in step 0..
+SBY  0:59:41 [test1_amlib_timers_bmc] engine_0: ##   0:00:00  BMC failed!
+SBY  0:59:41 [test1_amlib_timers_bmc] engine_0: ##   0:00:00  Assert failed in top: test1_amlib_timers.py:181
+SBY  0:59:41 [test1_amlib_timers_bmc] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace.vcd
+SBY  0:59:41 [test1_amlib_timers_bmc] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace_tb.v
+SBY  0:59:41 [test1_amlib_timers_bmc] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace.smtc
+SBY  0:59:41 [test1_amlib_timers_bmc] engine_0: ##   0:00:00  Status: failed
+SBY  0:59:41 [test1_amlib_timers_bmc] engine_0: finished (returncode=1)
+SBY  0:59:41 [test1_amlib_timers_bmc] engine_0: Status returned by engine: FAIL
+SBY  0:59:41 [test1_amlib_timers_bmc] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY  0:59:41 [test1_amlib_timers_bmc] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY  0:59:41 [test1_amlib_timers_bmc] summary: engine_0 (smtbmc boolector) returned FAIL
+SBY  0:59:41 [test1_amlib_timers_bmc] summary: counterexample trace: test1_amlib_timers_bmc/engine_0/trace.vcd
+SBY  0:59:41 [test1_amlib_timers_bmc] DONE (FAIL, rc=2)
+SBY  0:59:41 The following tasks failed: ['cover', 'bmc']

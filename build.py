@@ -88,7 +88,7 @@ class fpga_interface(lxdev.RemoteClient):
 			sby_success, local_sby_trace_file = gen_manager.inspect_symbyosis_results()
 			if local_sby_trace_file != None:
 				gen_manager.show_sby_vcd_file(local_sby_trace_file, on_host_pc=True)
-			gen_manager.remove_generate_results()
+			# gen_manager.remove_generate_results()
 		
 		elif task == "upload-current-file":
 			upl_manager = fpga_interface.upload_manager(
@@ -232,9 +232,9 @@ class fpga_interface(lxdev.RemoteClient):
 
 		def generate_file(self):			
 			cprint(f"Running 'generate' on {self.no_dir_filename}...", "yellow", flush=True)
-			
+			self.il_filename = self.no_dir_filename.replace('.py', '_toplevel.il')
 			cmd = f"cd {os.path.join(self.fpga_interface.remote_working_directory, self.rel_remote_dirname)} && "
-			cmd += f"python3 {self.no_dir_filename} generate -t il > toplevel.il"
+			cmd += f"python3 {self.no_dir_filename} generate -t il > {self.il_filename}"
 			result, error = self.fpga_interface.execute_commands(cmd, get_stderr=True)	
 			# print("Result and error are: ", result, error)
 			assert not any("Traceback" in line for line in error), f"Failed generate with error of {result},{error}"
@@ -257,23 +257,26 @@ class fpga_interface(lxdev.RemoteClient):
 			success = True
 			found_tracefiles = []
 			last_location = []
+			# last_check_type = None
 			for line in lines:
 				line = line.replace("\n", "")
 				line = line[13:] # get rid of unneeded time info
 
-				if not success:
-					break
+				# if not success:
+				# 	break
 
 				### look for errors firstly
 				if ("ERROR" in line) or ("FAIL" in line):
 					content_colour = "red"
 					success = False # so open gtkwave viewer now				
 
-				### for the 'it worked here's an example' thing
-				elif ("Reached" in line):
+				### for the 'it broke/worked here's an example/counterexample' thing
+				elif ("Reached" in line) or ("Assert failed in " in line):
 					for segment in line.split(" "):
 						if ".py" in segment:
 							last_location.append(segment)
+
+				###### for cover/assert
 				elif ("trace" in line) and (".vcd" in line) and ("summary" in line) and ("starting" not in line):
 					content_colour = "yellow"
 					found_tracefiles.append({
@@ -282,11 +285,7 @@ class fpga_interface(lxdev.RemoteClient):
 					})
 					last_location = last_location[1:]
 
-				### for the 'it broke here's a counterexample' one
-				elif ("Assert failed in " in line):
-					for segment in line.split(" "):
-						if ".py" in segment:
-							last_location.append(segment)
+				###### for BMC
 				elif ("counterexample trace" in line):
 					content_colour = "yellow"
 					found_tracefiles.append({
@@ -318,6 +317,7 @@ class fpga_interface(lxdev.RemoteClient):
 					chosen_file = None
 				else:
 					chosen_file = found_tracefiles[int(chosen_index)-1]["filename"]
+					# cho
 			else:
 				chosen_file = None
 

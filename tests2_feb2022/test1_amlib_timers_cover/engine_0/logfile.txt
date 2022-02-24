@@ -1,0 +1,8 @@
+##   0:00:00  Solver: boolector
+##   0:00:00  Checking cover reachability in step 0..
+##   0:00:00  Reached cover statement at test1_amlib_timers.py:188 in step 0.
+##   0:00:00  Assert failed in top: test1_amlib_timers.py:181 (step 0)
+##   0:00:00  Writing trace to VCD file: engine_0/trace0.vcd
+##   0:00:00  Writing trace to Verilog testbench: engine_0/trace0_tb.v
+##   0:00:00  Writing trace to constraints file: engine_0/trace0.smtc
+##   0:00:00  Status: failed

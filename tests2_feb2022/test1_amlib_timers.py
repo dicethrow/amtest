@@ -1,5 +1,7 @@
 import sys, os
 from termcolor import cprint
+from typing import List
+import textwrap
 
 from amaranth import Elaboratable, Module, Signal, Mux, ClockSignal, ClockDomain, ResetSignal, Cat, Const
 from amaranth.hdl.ast import Rose, Stable, Fell, Past
@@ -11,13 +13,15 @@ from amaranth.sim import Simulator, Delay, Tick, Passive, Active
 from amaranth.asserts import Assert, Assume, Cover, Past
 from amaranth.lib.fifo import AsyncFIFOBuffered
 #from amaranth.lib.cdc import AsyncFFSynchronizer
+from amaranth.lib.cdc import FFSynchronizer
+from amaranth.build import Platform
+
 
 from amlib.io import SPIRegisterInterface, SPIDeviceBus, SPIMultiplexer
 from amlib.debug.ila import SyncSerialILA
 # from amlib.utils.cdc import synchronize
 from amlib.utils import Timer
-from amaranth.lib.cdc import FFSynchronizer
-from amaranth.build import Platform
+
 
 from amtest.boards.ulx3s.common.upload import platform, UploadBase
 from amtest.boards.ulx3s.common.clks import add_clock
@@ -105,10 +109,7 @@ if __name__ == "__main__":
 
 			def init_clocks():	
 				# add slower clock for counters (i.e. so they don't limit speed)					
-				# m.d.sync += ClockDomain("sync").rst.eq(ui.reset)
-				# m.d.sync += ClockDomain("sync_1e6").rst.eq(ui.reset)
-
-				m.d.sync_1e6 += ResetSignal("sync").eq(ui.reset) # making this reset happen on a slower clock means sync works up to 392 MHz! nice
+				m.d.sync += ResetSignal("sync").eq(ui.reset)
 				m.d.sync_1e6 += ResetSignal("sync_1e6").eq(ui.reset)
 
 			
@@ -117,7 +118,82 @@ if __name__ == "__main__":
 			return m
 
 	if args.action == "generate":
-		pass
+		# This is called 'formal verification'
+		# where the simulator tests all conditions (within specified limits) that:
+		# 	- are universally true (asserts). If a fail occurs, then show an example waveform.
+		# 	- are valid for some condition (cover). Show a waveform that matches these.
+		#		Note that the use of m.If() focusses the states of the cover below uses.
+		# 	- match some assumptions.(Assume) This may be good to remove some illegal states.
+		#	  Reduces the input
+		# main_runner generates the output that will be run through yosys
+
+		with open(current_filename+".sby", "w") as sby_file:
+			file_content = f"""
+			[tasks]
+			cover
+			bmc
+
+			[options]
+			bmc: mode bmc
+			cover: mode cover
+			depth 2
+			multiclock off
+
+			[engines]
+			smtbmc boolector
+
+			[script]
+			read_ilang {__file__.replace(".py", "_toplevel.il")}
+			prep -top top
+
+			[files]
+			{__file__.replace(".py", "_toplevel.il")}
+			"""
+			# [1:] removes first newline
+			sby_file.write(textwrap.dedent(file_content[1:]))  
+
+		class Adder(Elaboratable):
+			def __init__(self):
+				self.x = Signal(8)
+				self.y = Signal(8)
+				self.out = Signal(8)
+
+			def elaborate(self, platform: Platform) -> Module:
+				m = Module()
+
+				# this is where the logic behavior is defined
+				m.d.comb += self.out.eq(self.x + self.y)	# comb
+				# m.d.sync += self.out.eq(self.x + self.y)	# sync
+
+				return m 
+
+			def ports(self) -> List[Signal]: # RobertBaruch recommends this
+				return [self.x, self.y, self.out] # the ports?
+		
+
+		
+		m = Module()
+		m.submodules.adder = adder = Adder()
+
+
+
+		# try formal verification
+		m.d.comb += Assert(adder.out == (2*adder.x + adder.y)[:8]) 
+
+		# # assume certain things, can be good to exclude illegal states
+		# # this will reduce the 'input set' that are tried by cover and assert?
+		m.d.comb += Assume(adder.x == (adder.y << 1)) 
+
+		with m.If(adder.x == (adder.y << 1)):
+			m.d.comb += Cover((adder.out > 0x00) & (adder.out < 0x40))
+		
+		# m.d.comb += Cover(adder.out == 0xFF) 	
+		# m.d.comb += Cover((adder.out == 0x00) & (adder.x == 0xFE))
+
+
+		main_runner(parser, args, m, ports=[] + adder.ports()) 
+
+
 
 	elif args.action == "simulate":
 
