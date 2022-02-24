@@ -88,7 +88,7 @@ class fpga_interface(lxdev.RemoteClient):
 			sby_success, local_sby_trace_file = gen_manager.inspect_symbyosis_results()
 			if local_sby_trace_file != None:
 				gen_manager.show_sby_vcd_file(local_sby_trace_file, on_host_pc=True)
-			# gen_manager.remove_generate_results()
+			gen_manager.remove_generate_results()
 		
 		elif task == "upload-current-file":
 			upl_manager = fpga_interface.upload_manager(
@@ -343,11 +343,14 @@ class fpga_interface(lxdev.RemoteClient):
 			# so remove everything that has the same start as the filename in question,
 			# plus the toplevel.il file.
 			files_and_dirs_to_delete = glob.glob(self.local_filename.replace(".py", "*"))
-			files_and_dirs_to_delete += [f"{os.path.dirname(self.local_filename)}/toplevel.il"]
 
-			# important - prevent the source file from being removed
-			files_and_dirs_to_delete.remove(self.local_filename)
-
+			for dont_delete in [
+				self.local_filename, 	# important - prevent the source file from being removed
+				self.local_filename.replace(".py", "_build") # and prevent build dirs from being removed
+			]:
+				if dont_delete in files_and_dirs_to_delete:
+					files_and_dirs_to_delete.remove(dont_delete)
+		
 			print(files_and_dirs_to_delete)
 			for file in files_and_dirs_to_delete:
 				if os.path.isdir(file):

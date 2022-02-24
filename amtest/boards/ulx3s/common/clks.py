@@ -25,7 +25,9 @@ def add_clock(m, name, *, reset = None, platform = None):
 		### add slower clock for counters (i.e. so they don't limit speed)
 		m.domains.sync_1e6 = cd_sync_1e6 = ClockDomain("sync_1e6")
 		divisor = 25
-		clk_counter = Signal(shape=range(int(divisor/2)+1)) # is this right?
+		 # resetless, so resetting sync domain won't break sync_1e6?
+		 # actually that doesn't work somehow. Instead - don't reset sync.
+		clk_counter = Signal(shape=range(int(divisor/2)+1))#, reset_less=True)
 		m.d.sync += [
 			clk_counter.eq(Mux(clk_counter == (int(divisor/2)-1), 0, clk_counter+1)), # not quite accurate but close enough
 			cd_sync_1e6.clk.eq(Mux(clk_counter==0,~cd_sync_1e6.clk,cd_sync_1e6.clk))

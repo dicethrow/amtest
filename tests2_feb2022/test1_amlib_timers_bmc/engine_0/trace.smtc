@@ -1,5 +1,0 @@
-initial
-
-state 0
-assume (= [x] #b11111110)
-assume (= [y] #b01111111)
