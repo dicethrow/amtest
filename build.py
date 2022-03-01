@@ -80,15 +80,19 @@ class fpga_interface(lxdev.RemoteClient):
 			gen_manager = fpga_interface.generate_manager(
 				fpga_interface=self, local_filename = local_filename)
 
+			try_new_technique = True
+
 			self.rsync_to_container()
 			self.check_python_venv()
 			gen_manager.generate_file()
-			gen_manager.run_through_symbyosis()
+			if not try_new_technique:
+				gen_manager.run_through_symbyosis()
 			self.rsync_from_container()
-			sby_success, local_sby_trace_file = gen_manager.inspect_symbyosis_results()
-			if local_sby_trace_file != None:
-				gen_manager.show_sby_vcd_file(local_sby_trace_file, on_host_pc=True)
-			gen_manager.remove_generate_results()
+			if not try_new_technique:
+				sby_success, local_sby_trace_file = gen_manager.inspect_symbyosis_results()
+				if local_sby_trace_file != None:
+					gen_manager.show_sby_vcd_file(local_sby_trace_file, on_host_pc=True)
+				gen_manager.remove_generate_results()
 		
 		elif task == "upload-current-file":
 			upl_manager = fpga_interface.upload_manager(
@@ -234,10 +238,16 @@ class fpga_interface(lxdev.RemoteClient):
 			cprint(f"Running 'generate' on {self.no_dir_filename}...", "yellow", flush=True)
 			self.il_filename = self.no_dir_filename.replace('.py', '_toplevel.il')
 			cmd = f"cd {os.path.join(self.fpga_interface.remote_working_directory, self.rel_remote_dirname)} && "
-			cmd += f"python3 {self.no_dir_filename} generate -t il > {self.il_filename}"
+			try_new_approach = True
+			if try_new_approach:
+				cmd += f"python3 {self.no_dir_filename} generate" # for testing unittest stuff
+			else:
+				cmd += f"python3 {self.no_dir_filename} generate -t il > {self.il_filename}"
+
 			result, error = self.fpga_interface.execute_commands(cmd, get_stderr=True)	
 			# print("Result and error are: ", result, error)
-			assert not any("Traceback" in line for line in error), f"Failed generate with error of {result},{error}"
+			if not try_new_approach:
+				assert not any("Traceback" in line for line in error), f"Failed generate with error of {result},{error}"
 			cprint(" OK", "green", flush=True)
 
 		def run_through_symbyosis(self):

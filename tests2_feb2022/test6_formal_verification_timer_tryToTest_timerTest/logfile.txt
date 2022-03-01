@@ -1,0 +1,30 @@
+SBY 10:13:22 [test6_formal_verification_timer_tryToTest_timerTest] Removing directory '/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/tests2_feb2022/test6_formal_verification_timer_tryToTest_timerTest'.
+SBY 10:13:22 [test6_formal_verification_timer_tryToTest_timerTest] Writing 'test6_formal_verification_timer_tryToTest_timerTest/src/top.il'.
+SBY 10:13:23 [test6_formal_verification_timer_tryToTest_timerTest] engine_0: smtbmc
+SBY 10:13:23 [test6_formal_verification_timer_tryToTest_timerTest] base: starting process "cd test6_formal_verification_timer_tryToTest_timerTest/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY 10:13:23 [test6_formal_verification_timer_tryToTest_timerTest] base: finished (returncode=0)
+SBY 10:13:23 [test6_formal_verification_timer_tryToTest_timerTest] smt2: starting process "cd test6_formal_verification_timer_tryToTest_timerTest/model; yosys -ql design_smt2.log design_smt2.ys"
+SBY 10:13:23 [test6_formal_verification_timer_tryToTest_timerTest] smt2: finished (returncode=0)
+SBY 10:13:23 [test6_formal_verification_timer_tryToTest_timerTest] engine_0: starting process "cd test6_formal_verification_timer_tryToTest_timerTest; yosys-smtbmc --presat --unroll --noprogress -t 6  --append 0 --dump-vcd engine_0/trace.vcd --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2"
+SBY 10:13:23 [test6_formal_verification_timer_tryToTest_timerTest] engine_0: ##   0:00:00  Solver: yices
+SBY 10:13:23 [test6_formal_verification_timer_tryToTest_timerTest] engine_0: ##   0:00:00  Checking assumptions in step 0..
+SBY 10:13:23 [test6_formal_verification_timer_tryToTest_timerTest] engine_0: ##   0:00:00  Checking assertions in step 0..
+SBY 10:13:23 [test6_formal_verification_timer_tryToTest_timerTest] engine_0: ##   0:00:00  Checking assumptions in step 1..
+SBY 10:13:23 [test6_formal_verification_timer_tryToTest_timerTest] engine_0: ##   0:00:00  Checking assertions in step 1..
+SBY 10:13:23 [test6_formal_verification_timer_tryToTest_timerTest] engine_0: ##   0:00:00  Checking assumptions in step 2..
+SBY 10:13:23 [test6_formal_verification_timer_tryToTest_timerTest] engine_0: ##   0:00:00  Checking assertions in step 2..
+SBY 10:13:23 [test6_formal_verification_timer_tryToTest_timerTest] engine_0: ##   0:00:00  Checking assumptions in step 3..
+SBY 10:13:23 [test6_formal_verification_timer_tryToTest_timerTest] engine_0: ##   0:00:00  Checking assertions in step 3..
+SBY 10:13:23 [test6_formal_verification_timer_tryToTest_timerTest] engine_0: ##   0:00:00  BMC failed!
+SBY 10:13:23 [test6_formal_verification_timer_tryToTest_timerTest] engine_0: ##   0:00:00  Assert failed in top: test6_formal_verification_timer.py:71
+SBY 10:13:23 [test6_formal_verification_timer_tryToTest_timerTest] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace.vcd
+SBY 10:13:23 [test6_formal_verification_timer_tryToTest_timerTest] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace_tb.v
+SBY 10:13:23 [test6_formal_verification_timer_tryToTest_timerTest] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace.smtc
+SBY 10:13:23 [test6_formal_verification_timer_tryToTest_timerTest] engine_0: ##   0:00:00  Status: failed
+SBY 10:13:23 [test6_formal_verification_timer_tryToTest_timerTest] engine_0: finished (returncode=1)
+SBY 10:13:23 [test6_formal_verification_timer_tryToTest_timerTest] engine_0: Status returned by engine: FAIL
+SBY 10:13:23 [test6_formal_verification_timer_tryToTest_timerTest] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 10:13:23 [test6_formal_verification_timer_tryToTest_timerTest] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 10:13:23 [test6_formal_verification_timer_tryToTest_timerTest] summary: engine_0 (smtbmc) returned FAIL
+SBY 10:13:23 [test6_formal_verification_timer_tryToTest_timerTest] summary: counterexample trace: test6_formal_verification_timer_tryToTest_timerTest/engine_0/trace.vcd
+SBY 10:13:23 [test6_formal_verification_timer_tryToTest_timerTest] DONE (FAIL, rc=2)

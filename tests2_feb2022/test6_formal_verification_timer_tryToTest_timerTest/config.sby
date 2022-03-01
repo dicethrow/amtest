@@ -1,0 +1,561 @@
+[options]
+mode bmc
+depth 6
+wait on
+
+[engines]
+smtbmc
+
+[script]
+read_ilang top.il
+prep
+
+
+[file top.il]
+attribute \generator "Amaranth"
+attribute \amaranth.hierarchy "top.delayer"
+module \delayer
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:12"
+  wire width 1 input 0 \start
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:13"
+  wire width 1 output 1 \done
+  attribute \init 32'00000000000000000000000000000000
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:11"
+  wire width 32 output 2 \counter_out
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:11"
+  wire width 32 \counter_out$next
+  attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/ir.py:527"
+  wire width 1 input 3 \rst
+  attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/ir.py:527"
+  wire width 1 input 4 \clk
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:10"
+  wire width 32 input 5 \reload
+  attribute \init 2'01
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:20"
+  wire width 2 \fsm_state
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:20"
+  wire width 2 \fsm_state$next
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:21"
+  wire width 1 $1
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:21"
+  cell $eq $2
+    parameter \A_SIGNED 0
+    parameter \A_WIDTH 2
+    parameter \B_SIGNED 0
+    parameter \B_WIDTH 1
+    parameter \Y_WIDTH 1
+    connect \A \fsm_state
+    connect \B 1'0
+    connect \Y $1
+  end
+  process $group_0
+    assign \done 1'0
+    assign \done $1
+  end
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:30"
+  wire width 1 $3
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:30"
+  cell $gt $4
+    parameter \A_SIGNED 0
+    parameter \A_WIDTH 32
+    parameter \B_SIGNED 0
+    parameter \B_WIDTH 1
+    parameter \Y_WIDTH 1
+    connect \A \counter_out
+    connect \B 1'0
+    connect \Y $3
+  end
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:30"
+  wire width 1 $5
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:30"
+  cell $and $6
+    parameter \A_SIGNED 0
+    parameter \A_WIDTH 1
+    parameter \B_SIGNED 0
+    parameter \B_WIDTH 1
+    parameter \Y_WIDTH 1
+    connect \A \start
+    connect \B $3
+    connect \Y $5
+  end
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:33"
+  wire width 33 $7
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:33"
+  wire width 33 $8
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:33"
+  cell $sub $9
+    parameter \A_SIGNED 0
+    parameter \A_WIDTH 32
+    parameter \B_SIGNED 0
+    parameter \B_WIDTH 1
+    parameter \Y_WIDTH 33
+    connect \A \counter_out
+    connect \B 1'1
+    connect \Y $8
+  end
+  connect $7 $8
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:37"
+  wire width 33 $10
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:37"
+  wire width 33 $11
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:37"
+  cell $sub $12
+    parameter \A_SIGNED 0
+    parameter \A_WIDTH 32
+    parameter \B_SIGNED 0
+    parameter \B_WIDTH 1
+    parameter \Y_WIDTH 33
+    connect \A \counter_out
+    connect \B 1'1
+    connect \Y $11
+  end
+  connect $10 $11
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:42"
+  wire width 1 $13
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:42"
+  cell $gt $14
+    parameter \A_SIGNED 0
+    parameter \A_WIDTH 32
+    parameter \B_SIGNED 0
+    parameter \B_WIDTH 1
+    parameter \Y_WIDTH 1
+    connect \A \reload
+    connect \B 1'0
+    connect \Y $13
+  end
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:45"
+  wire width 33 $15
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:45"
+  wire width 33 $16
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:45"
+  cell $sub $17
+    parameter \A_SIGNED 0
+    parameter \A_WIDTH 32
+    parameter \B_SIGNED 0
+    parameter \B_WIDTH 1
+    parameter \Y_WIDTH 33
+    connect \A \reload
+    connect \B 1'1
+    connect \Y $16
+  end
+  connect $15 $16
+  process $group_1
+    assign \counter_out$next \counter_out
+    attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:20"
+    switch \fsm_state
+      attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:23"
+      attribute \amaranth.decoding "IDLE/1"
+      case 2'01
+        attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:25"
+        switch { 1'1 }
+          attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:25"
+          case 1'1
+            assign \counter_out$next 32'00000000000000000000000000000101
+          attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:27"
+          case
+            assign \counter_out$next \reload
+        end
+        attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:30"
+        switch { $5 }
+          attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:30"
+          case 1'1
+            assign \counter_out$next $7 [31:0]
+        end
+      attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:36"
+      attribute \amaranth.decoding "RUNNING/2"
+      case 2'10
+        assign \counter_out$next $10 [31:0]
+      attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:41"
+      attribute \amaranth.decoding "DONE/0"
+      case 2'00
+        attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:42"
+        switch { $13 }
+          attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:42"
+          case 1'1
+            assign \counter_out$next $15 [31:0]
+          attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:48"
+          case
+        end
+    end
+    attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/xfrm.py:519"
+    switch \rst
+      case 1'1
+        assign \counter_out$next 32'00000000000000000000000000000000
+    end
+  end
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:30"
+  wire width 1 $18
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:30"
+  cell $gt $19
+    parameter \A_SIGNED 0
+    parameter \A_WIDTH 32
+    parameter \B_SIGNED 0
+    parameter \B_WIDTH 1
+    parameter \Y_WIDTH 1
+    connect \A \counter_out
+    connect \B 1'0
+    connect \Y $18
+  end
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:30"
+  wire width 1 $20
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:30"
+  cell $and $21
+    parameter \A_SIGNED 0
+    parameter \A_WIDTH 1
+    parameter \B_SIGNED 0
+    parameter \B_WIDTH 1
+    parameter \Y_WIDTH 1
+    connect \A \start
+    connect \B $18
+    connect \Y $20
+  end
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:38"
+  wire width 1 $22
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:38"
+  cell $eq $23
+    parameter \A_SIGNED 0
+    parameter \A_WIDTH 32
+    parameter \B_SIGNED 0
+    parameter \B_WIDTH 1
+    parameter \Y_WIDTH 1
+    connect \A \counter_out
+    connect \B 1'1
+    connect \Y $22
+  end
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:42"
+  wire width 1 $24
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:42"
+  cell $gt $25
+    parameter \A_SIGNED 0
+    parameter \A_WIDTH 32
+    parameter \B_SIGNED 0
+    parameter \B_WIDTH 1
+    parameter \Y_WIDTH 1
+    connect \A \reload
+    connect \B 1'0
+    connect \Y $24
+  end
+  process $group_2
+    assign \fsm_state$next \fsm_state
+    attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:20"
+    switch \fsm_state
+      attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:23"
+      attribute \amaranth.decoding "IDLE/1"
+      case 2'01
+        attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:30"
+        switch { $20 }
+          attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:30"
+          case 1'1
+            assign \fsm_state$next 2'10
+        end
+      attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:36"
+      attribute \amaranth.decoding "RUNNING/2"
+      case 2'10
+        attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:38"
+        switch { $22 }
+          attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:38"
+          case 1'1
+            assign \fsm_state$next 2'00
+        end
+      attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:41"
+      attribute \amaranth.decoding "DONE/0"
+      case 2'00
+        attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:42"
+        switch { $24 }
+          attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:42"
+          case 1'1
+            assign \fsm_state$next 2'10
+          attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:48"
+          case
+            assign \fsm_state$next 2'01
+        end
+    end
+    attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/xfrm.py:519"
+    switch \rst
+      case 1'1
+        assign \fsm_state$next 2'01
+    end
+  end
+  cell $dff $26
+    parameter \CLK_POLARITY 1
+    parameter \WIDTH 32
+    connect \CLK \clk
+    connect \D \counter_out$next
+    connect \Q \counter_out
+  end
+  cell $dff $27
+    parameter \CLK_POLARITY 1
+    parameter \WIDTH 2
+    connect \CLK \clk
+    connect \D \fsm_state$next
+    connect \Q \fsm_state
+  end
+end
+attribute \generator "Amaranth"
+attribute \top 1
+attribute \amaranth.hierarchy "top"
+module \top
+  attribute \src "test6_formal_verification_timer.py:43"
+  wire width 1 input 0 \ui__start
+  attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/ir.py:527"
+  wire width 1 input 1 \rst
+  attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/ir.py:527"
+  wire width 1 input 2 \clk
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:10"
+  wire width 32 input 3 \reload
+  attribute \init 1'0
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:12"
+  wire width 1 \delayer_start
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:12"
+  wire width 1 \delayer_start$next
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:13"
+  wire width 1 \delayer_done
+  attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/forks/gateware/examples/amlib/amlib/utils/timer.py:11"
+  wire width 32 \delayer_counter_out
+  cell \delayer \delayer
+    connect \start \delayer_start
+    connect \done \delayer_done
+    connect \counter_out \delayer_counter_out
+    connect \rst \rst
+    connect \clk \clk
+    connect \reload \reload
+  end
+  attribute \init 1'0
+  attribute \src "test6_formal_verification_timer.py:51"
+  wire width 1 \ui__start$1
+  attribute \src "test6_formal_verification_timer.py:51"
+  wire width 1 \ui__start$1$next
+  process $group_0
+    assign \ui__start$1$next \ui__start$1
+    assign \ui__start$1$next \ui__start
+    attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/xfrm.py:519"
+    switch \rst
+      case 1'1
+        assign \ui__start$1$next 1'0
+    end
+  end
+  attribute \init 1'0
+  attribute \src "test6_formal_verification_timer.py:43"
+  wire width 1 \ui__done
+  attribute \src "test6_formal_verification_timer.py:43"
+  wire width 1 \ui__done$next
+  attribute \init 1'0
+  attribute \src "test6_formal_verification_timer.py:51"
+  wire width 1 \ui__done$2
+  attribute \src "test6_formal_verification_timer.py:51"
+  wire width 1 \ui__done$2$next
+  process $group_1
+    assign \ui__done$next \ui__done
+    assign \ui__done$next \ui__done$2
+    attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/xfrm.py:519"
+    switch \rst
+      case 1'1
+        assign \ui__done$next 1'0
+    end
+  end
+  attribute \init 1'0
+  attribute \src "test6_formal_verification_timer.py:43"
+  wire width 1 \ui__active
+  attribute \src "test6_formal_verification_timer.py:43"
+  wire width 1 \ui__active$next
+  attribute \init 1'0
+  attribute \src "test6_formal_verification_timer.py:51"
+  wire width 1 \ui__active$3
+  attribute \src "test6_formal_verification_timer.py:51"
+  wire width 1 \ui__active$3$next
+  process $group_2
+    assign \ui__active$next \ui__active
+    assign \ui__active$next \ui__active$3
+    attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/xfrm.py:519"
+    switch \rst
+      case 1'1
+        assign \ui__active$next 1'0
+    end
+  end
+  attribute \init 32'00000000000000000000000000000000
+  attribute \src "test6_formal_verification_timer.py:44"
+  wire width 32 \debug__count
+  attribute \src "test6_formal_verification_timer.py:44"
+  wire width 32 \debug__count$next
+  attribute \init 32'00000000000000000000000000000000
+  attribute \src "test6_formal_verification_timer.py:52"
+  wire width 32 \debug__count$4
+  attribute \src "test6_formal_verification_timer.py:52"
+  wire width 32 \debug__count$4$next
+  process $group_3
+    assign \debug__count$next \debug__count
+    assign \debug__count$next \debug__count$4
+    attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/xfrm.py:519"
+    switch \rst
+      case 1'1
+        assign \debug__count$next 32'00000000000000000000000000000000
+    end
+  end
+  process $group_4
+    assign \delayer_start$next \delayer_start
+    assign \delayer_start$next \ui__start$1
+    attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/xfrm.py:519"
+    switch \rst
+      case 1'1
+        assign \delayer_start$next 1'0
+    end
+  end
+  process $group_5
+    assign \ui__done$2$next \ui__done$2
+    assign \ui__done$2$next \delayer_done
+    attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/xfrm.py:519"
+    switch \rst
+      case 1'1
+        assign \ui__done$2$next 1'0
+    end
+  end
+  process $group_6
+    assign \debug__count$4$next \debug__count$4
+    assign \debug__count$4$next \delayer_counter_out
+    attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/xfrm.py:519"
+    switch \rst
+      case 1'1
+        assign \debug__count$4$next 32'00000000000000000000000000000000
+    end
+  end
+  attribute \src "test6_formal_verification_timer.py:64"
+  wire width 1 $5
+  attribute \src "test6_formal_verification_timer.py:64"
+  cell $ne $6
+    parameter \A_SIGNED 0
+    parameter \A_WIDTH 32
+    parameter \B_SIGNED 0
+    parameter \B_WIDTH 3
+    parameter \Y_WIDTH 1
+    connect \A \delayer_counter_out
+    connect \B 3'101
+    connect \Y $5
+  end
+  process $group_7
+    assign \ui__active$3$next \ui__active$3
+    assign \ui__active$3$next $5
+    attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/xfrm.py:519"
+    switch \rst
+      case 1'1
+        assign \ui__active$3$next 1'0
+    end
+  end
+  attribute \init 1'0
+  attribute \src "test6_formal_verification_timer.py:71"
+  wire width 1 $assert$en
+  attribute \src "test6_formal_verification_timer.py:71"
+  wire width 1 $assert$en$next
+  attribute \init 1'0
+  attribute \src "test6_formal_verification_timer.py:71"
+  wire width 1 $assert$check
+  attribute \src "test6_formal_verification_timer.py:71"
+  wire width 1 $assert$check$next
+  attribute \src "test6_formal_verification_timer.py:71"
+  wire width 1 $7
+  attribute \src "test6_formal_verification_timer.py:71"
+  cell $eq $8
+    parameter \A_SIGNED 0
+    parameter \A_WIDTH 32
+    parameter \B_SIGNED 0
+    parameter \B_WIDTH 1
+    parameter \Y_WIDTH 1
+    connect \A \debug__count$4
+    connect \B 1'0
+    connect \Y $7
+  end
+  attribute \src "test6_formal_verification_timer.py:71"
+  wire width 1 $9
+  attribute \src "test6_formal_verification_timer.py:71"
+  cell $ne $10
+    parameter \A_SIGNED 0
+    parameter \A_WIDTH 1
+    parameter \B_SIGNED 0
+    parameter \B_WIDTH 1
+    parameter \Y_WIDTH 1
+    connect \A \ui__done$2
+    connect \B $7
+    connect \Y $9
+  end
+  attribute \src "test6_formal_verification_timer.py:71"
+  cell $assert $11
+    connect \A $assert$check
+    connect \EN $assert$en
+  end
+  process $group_8
+    assign $assert$en$next $assert$en
+    assign $assert$check$next $assert$check
+    assign $assert$check$next $9
+    assign $assert$en$next 1'1
+  end
+  cell $dff $12
+    parameter \CLK_POLARITY 1
+    parameter \WIDTH 1
+    connect \CLK \clk
+    connect \D \ui__start$1$next
+    connect \Q \ui__start$1
+  end
+  cell $dff $13
+    parameter \CLK_POLARITY 1
+    parameter \WIDTH 1
+    connect \CLK \clk
+    connect \D \ui__done$next
+    connect \Q \ui__done
+  end
+  cell $dff $14
+    parameter \CLK_POLARITY 1
+    parameter \WIDTH 1
+    connect \CLK \clk
+    connect \D \ui__active$next
+    connect \Q \ui__active
+  end
+  cell $dff $15
+    parameter \CLK_POLARITY 1
+    parameter \WIDTH 32
+    connect \CLK \clk
+    connect \D \debug__count$next
+    connect \Q \debug__count
+  end
+  cell $dff $16
+    parameter \CLK_POLARITY 1
+    parameter \WIDTH 1
+    connect \CLK \clk
+    connect \D \delayer_start$next
+    connect \Q \delayer_start
+  end
+  cell $dff $17
+    parameter \CLK_POLARITY 1
+    parameter \WIDTH 1
+    connect \CLK \clk
+    connect \D \ui__done$2$next
+    connect \Q \ui__done$2
+  end
+  cell $dff $18
+    parameter \CLK_POLARITY 1
+    parameter \WIDTH 32
+    connect \CLK \clk
+    connect \D \debug__count$4$next
+    connect \Q \debug__count$4
+  end
+  cell $dff $19
+    parameter \CLK_POLARITY 1
+    parameter \WIDTH 1
+    connect \CLK \clk
+    connect \D \ui__active$3$next
+    connect \Q \ui__active$3
+  end
+  cell $dff $20
+    parameter \CLK_POLARITY 1
+    parameter \WIDTH 1
+    connect \CLK \clk
+    connect \D $assert$en$next
+    connect \Q $assert$en
+  end
+  cell $dff $21
+    parameter \CLK_POLARITY 1
+    parameter \WIDTH 1
+    connect \CLK \clk
+    connect \D $assert$check$next
+    connect \Q $assert$check
+  end
+end
+

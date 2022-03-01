@@ -1,0 +1,4 @@
+Elapsed clock time [H:MM:SS (secs)]: 0:00:37 (37)
+Elapsed process time [H:MM:SS (secs)]: 0:00:38 (38)
+engine_0 (smtbmc) returned pass
+trace: test6_formal_verification_timer_tryToTest_Testbench/engine_0/trace0.vcd

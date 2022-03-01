@@ -1,0 +1,33 @@
+initial
+assume (= [$assert$check] false)
+assume (= [$assert$en] false)
+assume (= [debug__count$4] #b00000000000000000000000000000000)
+assume (= [delayer.counter_out] #b00000000000000000000000000000000)
+assume (= [delayer.fsm_state] #b01)
+assume (= [delayer_start] false)
+assume (= [ui__done$2] false)
+assume (= [ui__start$1] false)
+
+state 0
+assume (= [clk] false)
+assume (= [reload] #b10000000000000000000000000000000)
+assume (= [rst] false)
+assume (= [ui__start] false)
+
+state 1
+assume (= [clk] false)
+assume (= [reload] #b00000000000000000000000000000000)
+assume (= [rst] false)
+assume (= [ui__start] false)
+
+state 2
+assume (= [clk] false)
+assume (= [reload] #b00000000000000000000000000000000)
+assume (= [rst] false)
+assume (= [ui__start] false)
+
+state 3
+assume (= [clk] false)
+assume (= [reload] #b00000000000000000000000000000000)
+assume (= [rst] false)
+assume (= [ui__start] false)
