@@ -1,0 +1,4 @@
+Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+engine_0 (smtbmc) returned FAIL
+counterexample trace: test7_formal_verification_timer_restructured_formalTests_thatDelayWorks/engine_0/trace.vcd

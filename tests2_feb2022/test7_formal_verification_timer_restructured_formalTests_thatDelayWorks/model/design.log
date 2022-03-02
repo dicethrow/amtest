@@ -1,0 +1,477 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.13+3 (git sha1 61324cf55, clang 10.0.0-4ubuntu1 -fPIC -Os)
+
+
+-- Executing script file `../model/design.ys' --
+
+1. Executing RTLIL frontend.
+Input filename: top.il
+
+2. Executing PREP pass.
+
+2.1. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1.1. Analyzing design hierarchy..
+Top module:  \top
+Used module:     \delayer
+
+2.1.2. Analyzing design hierarchy..
+Top module:  \top
+Used module:     \delayer
+Removed 0 unused modules.
+Module top directly or indirectly contains formal properties -> setting "keep" attribute.
+
+2.2. Executing PROC pass (convert processes to netlists).
+
+2.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+2.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+2.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 41 redundant assignments.
+Promoted 26 assignments to connections.
+
+2.2.4. Executing PROC_INIT pass (extract init attributes).
+
+2.2.5. Executing PROC_ARST pass (detect async resets in processes).
+
+2.2.6. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\top.$group_37'.
+Creating decoders for process `\top.$group_36'.
+Creating decoders for process `\top.$group_35'.
+Creating decoders for process `\top.$group_34'.
+Creating decoders for process `\top.$group_33'.
+Creating decoders for process `\top.$group_32'.
+Creating decoders for process `\top.$group_31'.
+Creating decoders for process `\top.$group_30'.
+Creating decoders for process `\top.$group_29'.
+Creating decoders for process `\top.$group_28'.
+Creating decoders for process `\top.$group_27'.
+Creating decoders for process `\top.$group_26'.
+Creating decoders for process `\top.$group_25'.
+Creating decoders for process `\top.$group_24'.
+Creating decoders for process `\top.$group_23'.
+Creating decoders for process `\top.$group_22'.
+Creating decoders for process `\top.$group_21'.
+Creating decoders for process `\top.$group_20'.
+Creating decoders for process `\top.$group_19'.
+Creating decoders for process `\top.$group_18'.
+Creating decoders for process `\top.$group_17'.
+Creating decoders for process `\top.$group_16'.
+Creating decoders for process `\top.$group_15'.
+Creating decoders for process `\top.$group_14'.
+Creating decoders for process `\top.$group_12'.
+     1/2: $assert$check$next
+     2/2: $assert$en$next
+Creating decoders for process `\top.$group_11'.
+Creating decoders for process `\top.$group_10'.
+Creating decoders for process `\top.$group_9'.
+     1/1: \delay_fsm_state$next
+Creating decoders for process `\top.$group_8'.
+     1/1: \delayer_ui__load$next
+Creating decoders for process `\top.$group_7'.
+     1/1: \_ui__inactive$next
+Creating decoders for process `\top.$group_6'.
+     1/1: \_ui__done$next
+Creating decoders for process `\top.$group_5'.
+     1/1: \_ui__load$next
+Creating decoders for process `\top.$group_4'.
+     1/1: \ui__inactive$next
+Creating decoders for process `\top.$group_3'.
+     1/1: \ui__done$next
+Creating decoders for process `\top.$group_2'.
+     1/1: \_ui__tb_fanout_flags__trigger$next
+Creating decoders for process `\top.$group_1'.
+     1/1: \ui__tb_fanin_flags__in_done$next
+Creating decoders for process `\top.$group_0'.
+     1/1: \ui__tb_fanin_flags__in_start$next
+Creating decoders for process `\delayer.$group_5'.
+     1/1: \_ui__inactive$next
+Creating decoders for process `\delayer.$group_4'.
+     1/1: \_ui__done$next
+Creating decoders for process `\delayer.$group_3'.
+     1/1: \countdown$next
+Creating decoders for process `\delayer.$group_2'.
+     1/1: \_ui__load$next
+Creating decoders for process `\delayer.$group_1'.
+     1/1: \ui__inactive$next
+Creating decoders for process `\delayer.$group_0'.
+     1/1: \ui__done$next
+
+2.2.7. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+2.2.8. Executing PROC_DFF pass (convert process syncs to FFs).
+
+2.2.9. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+2.2.10. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `top.$group_37'.
+Removing empty process `top.$group_36'.
+Removing empty process `top.$group_35'.
+Removing empty process `top.$group_34'.
+Removing empty process `top.$group_33'.
+Removing empty process `top.$group_32'.
+Removing empty process `top.$group_31'.
+Removing empty process `top.$group_30'.
+Removing empty process `top.$group_29'.
+Removing empty process `top.$group_28'.
+Removing empty process `top.$group_27'.
+Removing empty process `top.$group_26'.
+Removing empty process `top.$group_25'.
+Removing empty process `top.$group_24'.
+Removing empty process `top.$group_23'.
+Removing empty process `top.$group_22'.
+Removing empty process `top.$group_21'.
+Removing empty process `top.$group_20'.
+Removing empty process `top.$group_19'.
+Removing empty process `top.$group_18'.
+Removing empty process `top.$group_17'.
+Removing empty process `top.$group_16'.
+Removing empty process `top.$group_15'.
+Removing empty process `top.$group_14'.
+Found and cleaned up 1 empty switch in `\top.$group_12'.
+Removing empty process `top.$group_12'.
+Removing empty process `top.$group_11'.
+Removing empty process `top.$group_10'.
+Found and cleaned up 2 empty switches in `\top.$group_9'.
+Removing empty process `top.$group_9'.
+Found and cleaned up 1 empty switch in `\top.$group_8'.
+Removing empty process `top.$group_8'.
+Found and cleaned up 1 empty switch in `\top.$group_7'.
+Removing empty process `top.$group_7'.
+Found and cleaned up 1 empty switch in `\top.$group_6'.
+Removing empty process `top.$group_6'.
+Found and cleaned up 2 empty switches in `\top.$group_5'.
+Removing empty process `top.$group_5'.
+Found and cleaned up 1 empty switch in `\top.$group_4'.
+Removing empty process `top.$group_4'.
+Found and cleaned up 1 empty switch in `\top.$group_3'.
+Removing empty process `top.$group_3'.
+Found and cleaned up 1 empty switch in `\top.$group_2'.
+Removing empty process `top.$group_2'.
+Found and cleaned up 1 empty switch in `\top.$group_1'.
+Removing empty process `top.$group_1'.
+Found and cleaned up 1 empty switch in `\top.$group_0'.
+Removing empty process `top.$group_0'.
+Found and cleaned up 1 empty switch in `\delayer.$group_5'.
+Removing empty process `delayer.$group_5'.
+Found and cleaned up 1 empty switch in `\delayer.$group_4'.
+Removing empty process `delayer.$group_4'.
+Found and cleaned up 2 empty switches in `\delayer.$group_3'.
+Removing empty process `delayer.$group_3'.
+Found and cleaned up 1 empty switch in `\delayer.$group_2'.
+Removing empty process `delayer.$group_2'.
+Found and cleaned up 1 empty switch in `\delayer.$group_1'.
+Removing empty process `delayer.$group_1'.
+Found and cleaned up 1 empty switch in `\delayer.$group_0'.
+Removing empty process `delayer.$group_0'.
+Cleaned up 20 empty switches.
+
+2.2.11. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+<suppressed ~4 debug messages>
+Optimizing module delayer.
+<suppressed ~2 debug messages>
+
+2.3. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+Optimizing module delayer.
+
+2.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+Finding unused cells or wires in module \delayer..
+Removed 13 unused cells and 77 unused wires.
+<suppressed ~28 debug messages>
+
+2.5. Executing CHECK pass (checking for obvious problems).
+Checking module delayer...
+Checking module top...
+Found and reported 0 problems.
+
+2.6. Executing OPT pass (performing simple optimizations).
+
+2.6.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module delayer.
+Optimizing module top.
+
+2.6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\delayer'.
+Finding identical cells in module `\top'.
+<suppressed ~6 debug messages>
+Removed a total of 2 cells.
+
+2.6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \delayer..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~12 debug messages>
+
+2.6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \delayer.
+  Optimizing cells in module \top.
+Performed a total of 0 changes.
+
+2.6.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\delayer'.
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+2.6.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \delayer..
+Finding unused cells or wires in module \top..
+Removed 0 unused cells and 2 unused wires.
+<suppressed ~1 debug messages>
+
+2.6.7. Executing OPT_EXPR pass (perform const folding).
+Optimizing module delayer.
+Optimizing module top.
+
+2.6.8. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.6.9. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \delayer..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~12 debug messages>
+
+2.6.10. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \delayer.
+  Optimizing cells in module \top.
+Performed a total of 0 changes.
+
+2.6.11. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\delayer'.
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+2.6.12. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \delayer..
+Finding unused cells or wires in module \top..
+
+2.6.13. Executing OPT_EXPR pass (perform const folding).
+Optimizing module delayer.
+Optimizing module top.
+
+2.6.14. Finished OPT passes. (There is nothing left to do.)
+
+2.7. Executing WREDUCE pass (reducing word size of cells).
+Removed top 1 bits (of 13) from mux cell delayer.$9 ($mux).
+Removed top 1 bits (of 13) from port Y of cell delayer.$3 ($sub).
+Removed top 1 bits (of 13) from wire delayer.$1.
+Removed top 1 bits (of 13) from wire delayer.$2.
+Removed top 1 bits (of 2) from port B of cell top.$procmux$17_CMP0 ($eq).
+
+2.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \delayer..
+Finding unused cells or wires in module \top..
+Removed 0 unused cells and 2 unused wires.
+<suppressed ~1 debug messages>
+
+2.9. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+2.10. Executing OPT pass (performing simple optimizations).
+
+2.10.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module delayer.
+Optimizing module top.
+
+2.10.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\delayer'.
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+2.10.3. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \delayer..
+Finding unused cells or wires in module \top..
+
+2.10.4. Finished fast OPT passes.
+
+2.11. Printing statistics.
+
+=== delayer ===
+
+   Number of wires:                 22
+   Number of wire bits:            110
+   Number of public wires:          15
+   Number of public wire bits:      70
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 19
+     $dff                            6
+     $eq                             1
+     $gt                             1
+     $logic_not                      1
+     $mux                            8
+     $reduce_bool                    1
+     $sub                            1
+
+=== top ===
+
+   Number of wires:                 51
+   Number of wire bits:            120
+   Number of public wires:          19
+   Number of public wire bits:      76
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 44
+     $assert                         1
+     $dff                           30
+     $eq                             2
+     $initstate                      1
+     $logic_not                      1
+     $mux                            6
+     $pmux                           2
+     delayer                         1
+
+=== design hierarchy ===
+
+   top                               1
+     delayer                         1
+
+   Number of wires:                 73
+   Number of wire bits:            230
+   Number of public wires:          34
+   Number of public wire bits:     146
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 62
+     $assert                         1
+     $dff                           36
+     $eq                             3
+     $gt                             1
+     $initstate                      1
+     $logic_not                      2
+     $mux                           14
+     $pmux                           2
+     $reduce_bool                    1
+     $sub                            1
+
+2.12. Executing CHECK pass (checking for obvious problems).
+Checking module delayer...
+Checking module top...
+Found and reported 0 problems.
+
+3. Executing MEMORY_NORDFF pass (extracting $dff cells from memories).
+
+4. Executing ASYNC2SYNC pass.
+
+5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \delayer..
+Finding unused cells or wires in module \top..
+
+6. Executing SETUNDEF pass (replace undef values with defined constants).
+
+7. Executing OPT pass (performing simple optimizations).
+
+7.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module delayer.
+Optimizing module top.
+
+7.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\delayer'.
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+7.3. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $21 ($dff) from module delayer (D = $14, Q = \_ui__inactive, rval = 1'0).
+Adding SRST signal on $20 ($dff) from module delayer (D = $12, Q = \_ui__done, rval = 1'0).
+Adding SRST signal on $19 ($dff) from module delayer (D = $procmux$35_Y, Q = \countdown, rval = 12'000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$49 ($sdff) from module delayer (D = $procmux$35_Y, Q = \countdown).
+Adding SRST signal on $18 ($dff) from module delayer (D = \ui__load, Q = \_ui__load, rval = 12'000000000000).
+Adding SRST signal on $17 ($dff) from module delayer (D = \_ui__inactive, Q = \ui__inactive, rval = 1'0).
+Adding SRST signal on $16 ($dff) from module delayer (D = \_ui__done, Q = \ui__done, rval = 1'0).
+Adding EN signal on $41 ($dff) from module top (D = $3, Q = $assert$check).
+Adding EN signal on $40 ($dff) from module top (D = 1'1, Q = $assert$en).
+Adding SRST signal on $39 ($dff) from module top (D = $procmux$5_Y, Q = \delay_fsm_state, rval = 2'00).
+Adding EN signal on $auto$ff.cc:262:slice$58 ($sdff) from module top (D = $procmux$5_Y, Q = \delay_fsm_state).
+Adding SRST signal on $38 ($dff) from module top (D = \_ui__load, Q = \delayer_ui__load, rval = 12'000000000000).
+Adding SRST signal on $36 ($dff) from module top (D = \delayer_ui__done, Q = \_ui__done, rval = 1'0).
+Adding SRST signal on $35 ($dff) from module top (D = $procmux$16_Y, Q = \_ui__load, rval = 12'000000000000).
+
+7.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \delayer..
+Finding unused cells or wires in module \top..
+Removed 12 unused cells and 12 unused wires.
+<suppressed ~23 debug messages>
+
+7.5. Rerunning OPT passes. (Removed registers in this run.)
+
+7.6. Executing OPT_EXPR pass (perform const folding).
+Optimizing module delayer.
+<suppressed ~1 debug messages>
+Optimizing module top.
+<suppressed ~1 debug messages>
+
+7.7. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\delayer'.
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+7.8. Executing OPT_DFF pass (perform DFF optimizations).
+
+7.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \delayer..
+Finding unused cells or wires in module \top..
+
+7.10. Finished fast OPT passes.
+
+8. Executing CHECK pass (checking for obvious problems).
+Checking module delayer...
+Checking module top...
+Found and reported 0 problems.
+
+9. Executing HIERARCHY pass (managing design hierarchy).
+
+9.1. Analyzing design hierarchy..
+Top module:  \top
+Used module:     \delayer
+
+9.2. Analyzing design hierarchy..
+Top module:  \top
+Used module:     \delayer
+Removed 0 unused modules.
+Module top directly or indirectly contains formal properties -> setting "keep" attribute.
+
+10. Executing RTLIL backend.
+Output filename: ../model/design.il
+
+End of script. Logfile hash: a5e558fc3b, CPU: user 0.07s system 0.01s, MEM: 7.39 MB peak
+Yosys 0.13+3 (git sha1 61324cf55, clang 10.0.0-4ubuntu1 -fPIC -Os)
+Time spent: 25% 8x opt_clean (0 sec), 22% 8x opt_expr (0 sec), ...

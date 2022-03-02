@@ -73,27 +73,24 @@ class fpga_interface(lxdev.RemoteClient):
 			self.check_python_venv()
 			sim_manager.simulate_file()
 			self.rsync_from_container()
-			sim_manager.view_simulation_results(on_host_pc=True)
-			sim_manager.remove_simulation_results()
+			# sim_manager.view_simulation_results(on_host_pc=True)
+			# sim_manager.remove_simulation_results()
 		
 		elif task == "generate-current-file":
 			gen_manager = fpga_interface.generate_manager(
 				fpga_interface=self, local_filename = local_filename)
 
-			try_new_technique = True
 
 			self.rsync_to_container()
 			self.check_python_venv()
 			gen_manager.generate_file()
-			if not try_new_technique:
-				gen_manager.run_through_symbyosis()
+			# gen_manager.run_through_symbyosis()
 			self.rsync_from_container()
-			if not try_new_technique:
-				sby_success, local_sby_trace_file = gen_manager.inspect_symbyosis_results()
-				if local_sby_trace_file != None:
-					gen_manager.show_sby_vcd_file(local_sby_trace_file, on_host_pc=True)
-				gen_manager.remove_generate_results()
-		
+			# sby_success, local_sby_trace_file = gen_manager.inspect_symbyosis_results()
+			# if local_sby_trace_file != None:
+			# 	gen_manager.show_sby_vcd_file(local_sby_trace_file, on_host_pc=True)
+			# gen_manager.remove_generate_results()
+	
 		elif task == "upload-current-file":
 			upl_manager = fpga_interface.upload_manager(
 				fpga_interface=self, local_filename=local_filename)
