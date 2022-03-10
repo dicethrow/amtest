@@ -5,57 +5,57 @@
 (* generator = "Amaranth" *)
 module delayer(rst, ui__done, ui__inactive, ui__load, clk);
   reg \$auto$verilog_backend.cc:2083:dump_module$1  = 0;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:146" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:149" *)
   wire [12:0] \$1 ;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:152" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:155" *)
   wire \$10 ;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:147" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:150" *)
   wire \$12 ;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:148" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:151" *)
   wire \$14 ;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:146" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:149" *)
   wire [12:0] \$2 ;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:142" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:145" *)
   wire [12:0] \$4 ;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:146" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:149" *)
   wire [12:0] \$6 ;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:146" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:149" *)
   wire \$7 ;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:135" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:138" *)
   reg _ui__done = 1'h0;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:135" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:138" *)
   reg \_ui__done$next ;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:135" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:138" *)
   reg _ui__inactive = 1'h0;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:135" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:138" *)
   reg \_ui__inactive$next ;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:135" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:138" *)
   reg [11:0] _ui__load = 12'h000;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:135" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:138" *)
   reg [11:0] \_ui__load$next ;
   (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:40" *)
   input clk;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:142" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:145" *)
   reg [11:0] countdown = 12'h000;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:142" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:145" *)
   reg [11:0] \countdown$next ;
   (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:40" *)
   input rst;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:77" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:80" *)
   output ui__done;
   reg ui__done = 1'h0;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:77" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:80" *)
   reg \ui__done$next ;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:77" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:80" *)
   output ui__inactive;
   reg ui__inactive = 1'h0;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:77" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:80" *)
   reg \ui__inactive$next ;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:77" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:80" *)
   input [11:0] ui__load;
-  assign \$10  = | (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:152" *) _ui__load;
-  assign \$12  = countdown == (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:147" *) 1'h1;
-  assign \$14  = ! (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:148" *) countdown;
+  assign \$10  = | (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:155" *) _ui__load;
+  assign \$12  = countdown == (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:150" *) 1'h1;
+  assign \$14  = ! (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:151" *) countdown;
   always @(posedge clk)
     ui__done <= \ui__done$next ;
   always @(posedge clk)
@@ -68,10 +68,10 @@ module delayer(rst, ui__done, ui__inactive, ui__load, clk);
     _ui__done <= \_ui__done$next ;
   always @(posedge clk)
     _ui__inactive <= \_ui__inactive$next ;
-  assign \$2  = countdown - (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:146" *) 1'h1;
-  assign \$4  = + (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:142" *) countdown;
-  assign \$7  = countdown > (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:146" *) 1'h0;
-  assign \$6  = \$7  ? (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:146" *) \$2  : \$4 ;
+  assign \$2  = countdown - (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:149" *) 1'h1;
+  assign \$4  = + (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:145" *) countdown;
+  assign \$7  = countdown > (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:149" *) 1'h0;
+  assign \$6  = \$7  ? (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:149" *) \$2  : \$4 ;
   always @* begin
     if (\$auto$verilog_backend.cc:2083:dump_module$1 ) begin end
     \ui__done$next  = _ui__done;
@@ -102,9 +102,9 @@ module delayer(rst, ui__done, ui__inactive, ui__load, clk);
   always @* begin
     if (\$auto$verilog_backend.cc:2083:dump_module$1 ) begin end
     \countdown$next  = \$6 [11:0];
-    (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:152" *)
+    (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:155" *)
     casez (\$10 )
-      /* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:152" */
+      /* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:155" */
       1'h1:
           \countdown$next  = _ui__load;
     endcase
@@ -578,77 +578,77 @@ endmodule
 (* generator = "Amaranth" *)
 module tb(ui__tb_fanin_flags__in_start, ui__tb_fanin_flags__in_done, ui__tb_fanout_flags__trigger, ui__done, ui__inactive, ui__load, rst, clk);
   reg \$auto$verilog_backend.cc:2083:dump_module$2  = 0;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:256" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:259" *)
   wire \$1 ;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:257" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:260" *)
   wire \$3 ;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:190" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:193" *)
   reg _ui__done = 1'h0;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:190" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:193" *)
   reg \_ui__done$next ;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:190" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:193" *)
   reg _ui__inactive = 1'h0;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:190" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:193" *)
   reg \_ui__inactive$next ;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:190" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:193" *)
   reg [11:0] _ui__load = 12'h000;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:190" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:193" *)
   reg [11:0] \_ui__load$next ;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:190" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:193" *)
   reg _ui__tb_fanin_flags__in_done = 1'h0;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:190" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:193" *)
   reg \_ui__tb_fanin_flags__in_done$next ;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:190" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:193" *)
   reg _ui__tb_fanin_flags__in_start = 1'h0;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:190" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:193" *)
   reg \_ui__tb_fanin_flags__in_start$next ;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:190" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:193" *)
   reg _ui__tb_fanout_flags__trigger = 1'h0;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:190" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:193" *)
   reg \_ui__tb_fanout_flags__trigger$next ;
   (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:40" *)
   input clk;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:106" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:109" *)
   reg [1:0] delay_fsm_state = 2'h0;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:106" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:109" *)
   reg [1:0] \delay_fsm_state$next ;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:77" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:80" *)
   wire delayer_ui__done;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:77" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:80" *)
   wire delayer_ui__inactive;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:77" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:80" *)
   reg [11:0] delayer_ui__load = 12'h000;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:77" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:80" *)
   reg [11:0] \delayer_ui__load$next ;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:253" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:256" *)
   reg [1:0] fsm_state = 2'h2;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:253" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:256" *)
   reg [1:0] \fsm_state$next ;
   (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:40" *)
   input rst;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:181" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:184" *)
   output ui__done;
   reg ui__done = 1'h0;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:181" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:184" *)
   reg \ui__done$next ;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:181" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:184" *)
   output ui__inactive;
   reg ui__inactive = 1'h0;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:181" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:184" *)
   reg \ui__inactive$next ;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:181" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:184" *)
   input [11:0] ui__load;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:181" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:184" *)
   output ui__tb_fanin_flags__in_done;
   reg ui__tb_fanin_flags__in_done = 1'h0;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:181" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:184" *)
   reg \ui__tb_fanin_flags__in_done$next ;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:181" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:184" *)
   output ui__tb_fanin_flags__in_start;
   reg ui__tb_fanin_flags__in_start = 1'h0;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:181" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:184" *)
   reg \ui__tb_fanin_flags__in_start$next ;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:181" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:184" *)
   input ui__tb_fanout_flags__trigger;
   always @(posedge clk)
     _ui__load <= \_ui__load$next ;
@@ -666,8 +666,8 @@ module tb(ui__tb_fanin_flags__in_start, ui__tb_fanin_flags__in_done, ui__tb_fano
     fsm_state <= \fsm_state$next ;
   always @(posedge clk)
     delay_fsm_state <= \delay_fsm_state$next ;
-  assign \$1  = ! (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:256" *) fsm_state;
-  assign \$3  = fsm_state == (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:257" *) 1'h1;
+  assign \$1  = ! (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:259" *) fsm_state;
+  assign \$3  = fsm_state == (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:260" *) 1'h1;
   always @(posedge clk)
     ui__tb_fanin_flags__in_start <= \ui__tb_fanin_flags__in_start$next ;
   always @(posedge clk)
@@ -715,23 +715,23 @@ module tb(ui__tb_fanin_flags__in_start, ui__tb_fanin_flags__in_done, ui__tb_fano
   always @* begin
     if (\$auto$verilog_backend.cc:2083:dump_module$2 ) begin end
     \fsm_state$next  = fsm_state;
-    (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:253" *)
+    (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:256" *)
     casez (fsm_state)
       /* \amaranth.decoding  = "INITIAL/2" */
-      /* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:260" */
+      /* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:263" */
       2'h2:
-          (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:261" *)
+          (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:264" *)
           casez (_ui__tb_fanout_flags__trigger)
-            /* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:261" */
+            /* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:264" */
             1'h1:
                 \fsm_state$next  = 2'h0;
           endcase
       /* \amaranth.decoding  = "START/0" */
-      /* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:264" */
+      /* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:267" */
       2'h0:
-          (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:265" *)
+          (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:268" *)
           casez (_ui__done)
-            /* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:265" */
+            /* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:268" */
             1'h1:
                 \fsm_state$next  = 2'h1;
           endcase
@@ -745,23 +745,23 @@ module tb(ui__tb_fanin_flags__in_start, ui__tb_fanin_flags__in_done, ui__tb_fano
   always @* begin
     if (\$auto$verilog_backend.cc:2083:dump_module$2 ) begin end
     \delay_fsm_state$next  = delay_fsm_state;
-    (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:253" *)
+    (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:256" *)
     casez (fsm_state)
       /* \amaranth.decoding  = "INITIAL/2" */
-      /* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:260" */
+      /* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:263" */
       2'h2:
           /* empty */;
       /* \amaranth.decoding  = "START/0" */
-      /* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:264" */
+      /* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:267" */
       2'h0:
-          (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:106" *)
+          (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:109" *)
           casez (delay_fsm_state)
             /* \amaranth.decoding  = "INIT/0" */
-            /* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:107" */
+            /* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:110" */
             2'h0:
                 \delay_fsm_state$next  = 2'h1;
             /* \amaranth.decoding  = "LOADED/1" */
-            /* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:110" */
+            /* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:113" */
             2'h1:
                 \delay_fsm_state$next  = 2'h2;
           endcase
@@ -802,23 +802,23 @@ module tb(ui__tb_fanin_flags__in_start, ui__tb_fanin_flags__in_done, ui__tb_fano
   always @* begin
     if (\$auto$verilog_backend.cc:2083:dump_module$2 ) begin end
     \_ui__load$next  = ui__load;
-    (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:253" *)
+    (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:256" *)
     casez (fsm_state)
       /* \amaranth.decoding  = "INITIAL/2" */
-      /* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:260" */
+      /* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:263" */
       2'h2:
           /* empty */;
       /* \amaranth.decoding  = "START/0" */
-      /* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:264" */
+      /* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:267" */
       2'h0:
-          (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:106" *)
+          (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:109" *)
           casez (delay_fsm_state)
             /* \amaranth.decoding  = "INIT/0" */
-            /* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:107" */
+            /* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:110" */
             2'h0:
                 \_ui__load$next  = 12'h958;
             /* \amaranth.decoding  = "LOADED/1" */
-            /* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:110" */
+            /* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:113" */
             2'h1:
                 \_ui__load$next  = 12'h000;
           endcase
@@ -955,12 +955,12 @@ module top(led_0__io, led_1__io, led_2__io, led_3__io, led_4__io, led_5__io, led
   wire \$8 ;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/ast.py:1369" *)
   wire \$80 ;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:395" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:398" *)
   wire [7:0] \$82 ;
   (* \amaranth.sample_reg  = 32'd1 *)
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:386" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:389" *)
   reg \$sample$s$start$sync$1  = 1'h0;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:386" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:389" *)
   wire \$sample$s$start$sync$1$next ;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:129" *)
   input button_down_0__io;
@@ -1110,9 +1110,9 @@ module top(led_0__io, led_1__io, led_2__io, led_3__io, led_4__io, led_5__io, led
   reg rst = 1'h0;
   (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:40" *)
   reg \rst$next ;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:386" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:389" *)
   reg start = 1'h0;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:386" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:389" *)
   reg \start$next ;
   (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:26" *)
   reg sync_1e6_clk = 1'h0;
@@ -1120,21 +1120,21 @@ module top(led_0__io, led_1__io, led_2__io, led_3__io, led_4__io, led_5__io, led
   reg \sync_1e6_clk$next ;
   (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:26" *)
   wire sync_1e6_rst;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:181" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:184" *)
   wire tb_ui__done;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:181" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:184" *)
   wire tb_ui__inactive;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:181" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:184" *)
   reg [11:0] tb_ui__load = 12'h000;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:181" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:184" *)
   reg [11:0] \tb_ui__load$next ;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:181" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:184" *)
   wire tb_ui__tb_fanin_flags__in_done;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:181" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:184" *)
   wire tb_ui__tb_fanin_flags__in_start;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:181" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:184" *)
   reg tb_ui__tb_fanout_flags__trigger = 1'h0;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:181" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:184" *)
   reg \tb_ui__tb_fanout_flags__trigger$next ;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:129" *)
   input uart_0__dtr__io;
@@ -1144,27 +1144,27 @@ module top(led_0__io, led_1__io, led_2__io, led_3__io, led_4__io, led_5__io, led
   input uart_0__rx__io;
   (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/build/res.py:129" *)
   output uart_0__tx__io;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:379" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:382" *)
   reg ui__done = 1'h0;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:379" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:382" *)
   reg \ui__done$next ;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:379" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:382" *)
   reg ui__inactive = 1'h0;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:379" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:382" *)
   reg \ui__inactive$next ;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:379" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:382" *)
   wire [11:0] ui__load;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:379" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:382" *)
   reg ui__tb_fanin_flags__in_done = 1'h0;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:379" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:382" *)
   reg \ui__tb_fanin_flags__in_done$next ;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:379" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:382" *)
   reg ui__tb_fanin_flags__in_start = 1'h0;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:379" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:382" *)
   reg \ui__tb_fanin_flags__in_start$next ;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:379" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:382" *)
   reg ui__tb_fanout_flags__trigger = 1'h0;
-  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:379" *)
+  (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:382" *)
   reg \ui__tb_fanout_flags__trigger$next ;
   always @(posedge sync_1e6_clk)
     i_button_ffsync_i_unsync_buttons__pwr <= \i_button_ffsync_i_unsync_buttons__pwr$next ;
@@ -1207,7 +1207,7 @@ module top(led_0__io, led_1__io, led_2__io, led_3__io, led_4__io, led_5__io, led
   assign \$76  = \$72  & (* src = "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/upload.py:122" *) \$74 ;
   assign \$78  = ~ (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/ast.py:1369" *) \$sample$s$start$sync$1 ;
   assign \$80  = \$78  & (* src = "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/ast.py:1369" *) start;
-  assign \$82  = + (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:395" *) { i_button_ffsync_i_buttons__left, i_button_ffsync_i_buttons__right, ui__tb_fanin_flags__in_done, ui__tb_fanin_flags__in_start };
+  assign \$82  = + (* src = "tests2_feb2022/test7_formal_verification_timer_restructured.py:398" *) { i_button_ffsync_i_buttons__left, i_button_ffsync_i_buttons__right, ui__tb_fanin_flags__in_done, ui__tb_fanin_flags__in_start };
   always @(posedge clk)
     \$sample$s$start$sync$1  <= \$sample$s$start$sync$1$next ;
   always @(posedge clk)

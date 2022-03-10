@@ -26,8 +26,15 @@ from amaranth._toolchain import require_tool
 #               DeprecationWarning, stacklevel=2)
 
 
-__all__ = ["FHDLTestCase"]
+__all__ = ["FHDLTestCase", "Params"]
 
+class Params(object):
+	""" 
+	This class exists so we can add attributes
+	to it that we can then pass together as an
+	attribute to an instance of a FHDLTestCase
+	"""
+	pass
 
 class FHDLTestCase(unittest.TestCase):
 	def assertRepr(self, obj, repr_str):

@@ -71,10 +71,10 @@ Info: Packing unpaired FFs into a SLICE...
 Info: Generating derived timing constraints...
 Info: Promoting globals...
 Info:     promoting clock net clk to global network
-Info: Checksum: 0x30622aa1
+Info: Checksum: 0xb600233c
 
 Info: Annotating ports with timing budgets for target frequency 12.00 MHz
-Info: Checksum: 0xfe07244c
+Info: Checksum: 0x94176379
 
 Info: Device utilisation:
 Info: 	       TRELLIS_SLICE:    67/41820     0%
@@ -115,21 +115,21 @@ Info:     at iteration #1, type TRELLIS_SLICE: wirelen solved = 542, spread = 73
 Info:     at iteration #2, type TRELLIS_SLICE: wirelen solved = 542, spread = 650, legal = 745; time = 0.00s
 Info:     at iteration #3, type TRELLIS_SLICE: wirelen solved = 545, spread = 698, legal = 769; time = 0.00s
 Info:     at iteration #4, type TRELLIS_SLICE: wirelen solved = 558, spread = 665, legal = 719; time = 0.00s
-Info:     at iteration #5, type TRELLIS_SLICE: wirelen solved = 569, spread = 650, legal = 742; time = 0.01s
+Info:     at iteration #5, type TRELLIS_SLICE: wirelen solved = 569, spread = 650, legal = 742; time = 0.00s
 Info:     at iteration #6, type TRELLIS_SLICE: wirelen solved = 570, spread = 644, legal = 733; time = 0.00s
 Info:     at iteration #7, type TRELLIS_SLICE: wirelen solved = 575, spread = 647, legal = 727; time = 0.00s
 Info:     at iteration #8, type TRELLIS_SLICE: wirelen solved = 585, spread = 706, legal = 781; time = 0.00s
-Info:     at iteration #9, type TRELLIS_SLICE: wirelen solved = 603, spread = 700, legal = 753; time = 0.01s
-Info: HeAP Placer Time: 0.08s
+Info:     at iteration #9, type TRELLIS_SLICE: wirelen solved = 603, spread = 700, legal = 753; time = 0.00s
+Info: HeAP Placer Time: 0.06s
 Info:   of which solving equations: 0.02s
-Info:   of which spreading cells: 0.02s
+Info:   of which spreading cells: 0.01s
 Info:   of which strict legalisation: 0.00s
 
 Info: Running simulated annealing placer for refinement.
 Info:   at iteration #1: temp = 0.000000, timing cost = 31, wirelen = 719
 Info:   at iteration #5: temp = 0.000000, timing cost = 35, wirelen = 660
 Info:   at iteration #6: temp = 0.000000, timing cost = 33, wirelen = 655 
-Info: SA placement time 0.03s
+Info: SA placement time 0.02s
 
 Info: Max frequency for clock '$glbnet$clk': 178.38 MHz (PASS at 25.00 MHz)
 Info: Clock 'sync_1e6_clk' has no interior paths
@@ -162,7 +162,7 @@ Info: [ 71860,  74301) |
 Info: [ 74301,  76742) |** 
 Info: [ 76742,  79183) |* 
 Info: [ 79183,  81624) |******** 
-Info: Checksum: 0xea0f4825
+Info: Checksum: 0xf4cdcee8
 Info: Routing globals...
 Info:     routing clock net $glbnet$clk using global 0
 
@@ -171,10 +171,10 @@ Info: Setting up routing queue.
 Info: Routing 250 arcs.
 Info:            |   (re-)routed arcs  |   delta    | remaining|       time spent     |
 Info:    IterCnt |  w/ripup   wo/ripup |  w/r  wo/r |      arcs| batch(sec) total(sec)|
-Info:        289 |       34        255 |   34   255 |         0|       0.06       0.06|
+Info:        289 |       34        255 |   34   255 |         0|       0.07       0.07|
 Info: Routing complete.
-Info: Router1 time 0.06s
-Info: Checksum: 0x92aa31fd
+Info: Router1 time 0.07s
+Info: Checksum: 0xcc0028e6
 
 Info: Critical path report for clock '$glbnet$clk' (posedge -> posedge):
 Info: curr total
@@ -182,36 +182,36 @@ Info:  0.5  0.5  Source tb.delayer.countdown_TRELLIS_FF_Q_10_DI_LUT4_Z_SLICE.Q0
 Info:  1.1  1.7    Net tb.delayer.countdown[1] budget 0.000000 ns (4,36) -> (3,35)
 Info:                Sink tb.delayer._ui__load_LUT4_C_D_CCU2C_COUT_S0_CCU2C_S0_4$CCU2_SLICE.B1
 Info:                Defined in:
-Info:                  tests2_feb2022/test7_formal_verification_timer_restructured.py:142
+Info:                  tests2_feb2022/test7_formal_verification_timer_restructured.py:145
 Info:  0.4  2.1  Source tb.delayer._ui__load_LUT4_C_D_CCU2C_COUT_S0_CCU2C_S0_4$CCU2_SLICE.FCO
 Info:  0.0  2.1    Net tb.delayer._ui__load_LUT4_C_D[1] budget 0.000000 ns (3,35) -> (3,35)
 Info:                Sink tb.delayer._ui__load_LUT4_C_D_CCU2C_COUT_S0_CCU2C_S0_3$CCU2_SLICE.FCI
 Info:                Defined in:
-Info:                  tests2_feb2022/test7_formal_verification_timer_restructured.py:146
+Info:                  tests2_feb2022/test7_formal_verification_timer_restructured.py:149
 Info:                  /home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/arith_map.v:63.22-63.23
 Info:  0.1  2.2  Source tb.delayer._ui__load_LUT4_C_D_CCU2C_COUT_S0_CCU2C_S0_3$CCU2_SLICE.FCO
 Info:  0.0  2.2    Net tb.delayer._ui__load_LUT4_C_D[3] budget 0.000000 ns (3,35) -> (3,35)
 Info:                Sink tb.delayer._ui__load_LUT4_C_D_CCU2C_COUT_S0_CCU2C_S0_2$CCU2_SLICE.FCI
 Info:                Defined in:
-Info:                  tests2_feb2022/test7_formal_verification_timer_restructured.py:146
+Info:                  tests2_feb2022/test7_formal_verification_timer_restructured.py:149
 Info:                  /home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/arith_map.v:63.22-63.23
 Info:  0.1  2.2  Source tb.delayer._ui__load_LUT4_C_D_CCU2C_COUT_S0_CCU2C_S0_2$CCU2_SLICE.FCO
 Info:  0.0  2.2    Net tb.delayer._ui__load_LUT4_C_D[5] budget 0.000000 ns (3,35) -> (4,35)
 Info:                Sink tb.delayer._ui__load_LUT4_C_D_CCU2C_COUT_S0_CCU2C_S0_1$CCU2_SLICE.FCI
 Info:                Defined in:
-Info:                  tests2_feb2022/test7_formal_verification_timer_restructured.py:146
+Info:                  tests2_feb2022/test7_formal_verification_timer_restructured.py:149
 Info:                  /home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/arith_map.v:63.22-63.23
 Info:  0.1  2.3  Source tb.delayer._ui__load_LUT4_C_D_CCU2C_COUT_S0_CCU2C_S0_1$CCU2_SLICE.FCO
 Info:  0.0  2.3    Net tb.delayer._ui__load_LUT4_C_D[7] budget 0.000000 ns (4,35) -> (4,35)
 Info:                Sink tb.delayer._ui__load_LUT4_C_D_CCU2C_COUT_S0_CCU2C_S0$CCU2_SLICE.FCI
 Info:                Defined in:
-Info:                  tests2_feb2022/test7_formal_verification_timer_restructured.py:146
+Info:                  tests2_feb2022/test7_formal_verification_timer_restructured.py:149
 Info:                  /home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/arith_map.v:63.22-63.23
 Info:  0.1  2.4  Source tb.delayer._ui__load_LUT4_C_D_CCU2C_COUT_S0_CCU2C_S0$CCU2_SLICE.FCO
 Info:  0.0  2.4    Net tb.delayer._ui__load_LUT4_C_D[9] budget 0.000000 ns (4,35) -> (4,35)
 Info:                Sink tb.delayer._ui__load_LUT4_C_D_CCU2C_COUT$CCU2_SLICE.FCI
 Info:                Defined in:
-Info:                  tests2_feb2022/test7_formal_verification_timer_restructured.py:146
+Info:                  tests2_feb2022/test7_formal_verification_timer_restructured.py:149
 Info:                  /home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/arith_map.v:63.22-63.23
 Info:  0.1  2.5  Source tb.delayer._ui__load_LUT4_C_D_CCU2C_COUT$CCU2_SLICE.FCO
 Info:  0.0  2.5    Net $nextpnr_CCU2C_3$CIN budget 0.000000 ns (4,35) -> (4,35)
@@ -220,7 +220,7 @@ Info:  0.4  2.9  Source $nextpnr_CCU2C_3$CCU2_SLICE.F0
 Info:  0.7  3.6    Net tb.delayer._ui__load_LUT4_C_D[11] budget 18.997000 ns (4,35) -> (5,35)
 Info:                Sink tb.delayer._ui__load_LUT4_C_SLICE.D1
 Info:                Defined in:
-Info:                  tests2_feb2022/test7_formal_verification_timer_restructured.py:146
+Info:                  tests2_feb2022/test7_formal_verification_timer_restructured.py:149
 Info:                  /home/ubuntu/Documents/oss-cad-suite/lib/../share/yosys/ecp5/arith_map.v:38.23-38.25
 Info:  0.2  3.8  Source tb.delayer._ui__load_LUT4_C_SLICE.F1
 Info:  0.9  4.7    Net tb.delayer.countdown_TRELLIS_FF_Q_CE budget 18.997000 ns (5,35) -> (3,36)

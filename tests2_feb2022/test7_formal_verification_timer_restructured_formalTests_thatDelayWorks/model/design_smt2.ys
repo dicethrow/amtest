@@ -1,5 +1,0 @@
-# running in test7_formal_verification_timer_restructured_formalTests_thatDelayWorks/model/
-read_ilang design.il
-dffunmap
-stat
-write_smt2 -wires design_smt2.smt2

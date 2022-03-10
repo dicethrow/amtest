@@ -20,6 +20,10 @@ from amlib.debug.ila import SyncSerialILA
 from amlib.utils import Timer
 from amaranth.lib.cdc import FFSynchronizer
 
+from .ECP5PLL import ECP5PLL
+
+# sync_made_yet = False
+
 def add_clock(m, name, *, reset = None, platform = None):
 	if name == "sync_1e6":
 		### add slower clock for counters (i.e. so they don't limit speed)
@@ -36,7 +40,31 @@ def add_clock(m, name, *, reset = None, platform = None):
 		if isinstance(reset, Signal):
 			m.d.sync += cd_sync_1e6.rst.eq(reset) # or should this be comb?
 	
+	elif name == "sync_and_143e6_sdram_from_pll":
+		# assert sync_made_yet == False, "sync clock already made, cannot remake. Check order of calls to this function"
+
+		sdram_freq = 143e6
+
+		# based on examples/blackicemx_nmigen_examples/retro/retro_test.py by emard
+		clk_in = platform.request(platform.default_clk, dir='-')[0]
+
+		# Clock generator.
+		m.domains.sync  = cd_sync  = ClockDomain("sync")
+		m.domains.sdram = cd_sdram = ClockDomain("sdram")
+
+		m.submodules.ecp5pll = pll = ECP5PLL()
+		pll.register_clkin(clk_in,  platform.default_clk_frequency)
+		pll.create_clkout(cd_sync,  platform.default_clk_frequency)
+		pll.create_clkout(cd_sdram, sdram_freq)
+
+		platform.add_clock_constraint(cd_sync.clk,  platform.default_clk_frequency)
+		platform.add_clock_constraint(cd_sdram.clk, sdram_freq)
+
+		# sync_made_yet = True
+	
 	elif name == "sync":
+		# assert sync_made_yet == False, "sync clock already made, cannot remake. Check order of calls to this function"
+		
 		m.domains.sync = cd_sync = ClockDomain("sync")
 
 		if isinstance(platform, Platform):
@@ -46,6 +74,7 @@ def add_clock(m, name, *, reset = None, platform = None):
 			... # in this case, assume that this clock is added manually to the simulator
 			# Could the simulator instead be passed and dealt with here?
 		
+		# sync_made_yet = True
 
 
 	else:

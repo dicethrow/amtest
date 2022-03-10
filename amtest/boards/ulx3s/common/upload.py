@@ -52,6 +52,10 @@ platform.add_resources(digital_discovery)
 
 
 class UploadBase(Elaboratable):
+	def __init__(self, sync_mode = "sync"):
+		super().__init__()
+		self.sync_mode = sync_mode
+
 	def elaborate(self, platform = None):
 		self.leds = Cat([platform.request("led", i) for i in range(8)])
 		self.esp32 = platform.request("esp32_spi")
@@ -70,7 +74,7 @@ class UploadBase(Elaboratable):
 
 		m = Module()
 
-		add_clock(m, "sync", platform=platform)
+		add_clock(m, self.sync_mode, platform=platform) # for pll capability 		# add_clock(m, "sync", platform=platform)
 		add_clock(m, "sync_1e6", platform=platform)
 
 		m.d.sync_1e6 += [
@@ -123,5 +127,5 @@ class UploadBase(Elaboratable):
 			m.d.sync += self.esp32.en.eq(1 & ~self.i_buttons.pwr)
 			m.d.sync += self.esp32.gpio0.o.eq(0)
 
-		return m
+		return m, platform # note returning platform here is not standard
 		

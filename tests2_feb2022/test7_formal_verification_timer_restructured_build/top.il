@@ -85,21 +85,21 @@ module \delayer
   attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:40"
   wire width 1 input 1 \rst
   attribute \init 1'0
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:77"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:80"
   wire width 1 output 2 \ui__done
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:77"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:80"
   wire width 1 \ui__done$next
   attribute \init 1'0
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:77"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:80"
   wire width 1 output 3 \ui__inactive
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:77"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:80"
   wire width 1 \ui__inactive$next
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:77"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:80"
   wire width 12 input 4 \ui__load
   attribute \init 1'0
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:135"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:138"
   wire width 1 \_ui__done
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:135"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:138"
   wire width 1 \_ui__done$next
   process $group_0
     assign \ui__done$next \ui__done
@@ -111,9 +111,9 @@ module \delayer
     end
   end
   attribute \init 1'0
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:135"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:138"
   wire width 1 \_ui__inactive
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:135"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:138"
   wire width 1 \_ui__inactive$next
   process $group_1
     assign \ui__inactive$next \ui__inactive
@@ -125,9 +125,9 @@ module \delayer
     end
   end
   attribute \init 12'000000000000
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:135"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:138"
   wire width 12 \_ui__load
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:135"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:138"
   wire width 12 \_ui__load$next
   process $group_2
     assign \_ui__load$next \_ui__load
@@ -139,15 +139,15 @@ module \delayer
     end
   end
   attribute \init 12'000000000000
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:142"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:145"
   wire width 12 \countdown
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:142"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:145"
   wire width 12 \countdown$next
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:146"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:149"
   wire width 13 $1
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:146"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:149"
   wire width 13 $2
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:146"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:149"
   cell $sub $3
     parameter \A_SIGNED 0
     parameter \A_WIDTH 12
@@ -158,9 +158,9 @@ module \delayer
     connect \B 1'1
     connect \Y $2
   end
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:142"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:145"
   wire width 13 $4
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:142"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:145"
   cell $pos $5
     parameter \A_SIGNED 0
     parameter \A_WIDTH 12
@@ -168,11 +168,11 @@ module \delayer
     connect \A \countdown
     connect \Y $4
   end
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:146"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:149"
   wire width 13 $6
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:146"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:149"
   wire width 1 $7
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:146"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:149"
   cell $gt $8
     parameter \A_SIGNED 0
     parameter \A_WIDTH 12
@@ -183,7 +183,7 @@ module \delayer
     connect \B 1'0
     connect \Y $7
   end
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:146"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:149"
   cell $mux $9
     parameter \WIDTH 13
     connect \A $4
@@ -192,9 +192,9 @@ module \delayer
     connect \Y $6
   end
   connect $1 $6
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:152"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:155"
   wire width 1 $10
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:152"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:155"
   cell $ne $11
     parameter \A_SIGNED 0
     parameter \A_WIDTH 12
@@ -208,9 +208,9 @@ module \delayer
   process $group_3
     assign \countdown$next \countdown
     assign \countdown$next $1 [11:0]
-    attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:152"
+    attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:155"
     switch { $10 }
-      attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:152"
+      attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:155"
       case 1'1
         assign \countdown$next \_ui__load
     end
@@ -220,9 +220,9 @@ module \delayer
         assign \countdown$next 12'000000000000
     end
   end
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:147"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:150"
   wire width 1 $12
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:147"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:150"
   cell $eq $13
     parameter \A_SIGNED 0
     parameter \A_WIDTH 12
@@ -242,9 +242,9 @@ module \delayer
         assign \_ui__done$next 1'0
     end
   end
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:148"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:151"
   wire width 1 $14
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:148"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:151"
   cell $eq $15
     parameter \A_SIGNED 0
     parameter \A_WIDTH 12
@@ -313,39 +313,39 @@ module \tb
   attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:40"
   wire width 1 input 0 \clk
   attribute \init 1'0
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:181"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:184"
   wire width 1 output 1 \ui__tb_fanin_flags__in_start
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:181"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:184"
   wire width 1 \ui__tb_fanin_flags__in_start$next
   attribute \init 1'0
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:181"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:184"
   wire width 1 output 2 \ui__tb_fanin_flags__in_done
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:181"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:184"
   wire width 1 \ui__tb_fanin_flags__in_done$next
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:181"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:184"
   wire width 1 input 3 \ui__tb_fanout_flags__trigger
   attribute \init 1'0
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:181"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:184"
   wire width 1 output 4 \ui__done
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:181"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:184"
   wire width 1 \ui__done$next
   attribute \init 1'0
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:181"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:184"
   wire width 1 output 5 \ui__inactive
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:181"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:184"
   wire width 1 \ui__inactive$next
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:181"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:184"
   wire width 12 input 6 \ui__load
   attribute \src "/home/ubuntu/from_host/x/Documents/git_repos/gateware/amtest/amtest/boards/ulx3s/common/clks.py:40"
   wire width 1 input 7 \rst
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:77"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:80"
   wire width 1 \delayer_ui__done
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:77"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:80"
   wire width 1 \delayer_ui__inactive
   attribute \init 12'000000000000
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:77"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:80"
   wire width 12 \delayer_ui__load
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:77"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:80"
   wire width 12 \delayer_ui__load$next
   cell \delayer \delayer
     connect \clk \clk
@@ -355,9 +355,9 @@ module \tb
     connect \ui__load \delayer_ui__load
   end
   attribute \init 1'0
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:190"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:193"
   wire width 1 \_ui__tb_fanin_flags__in_start
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:190"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:193"
   wire width 1 \_ui__tb_fanin_flags__in_start$next
   process $group_0
     assign \ui__tb_fanin_flags__in_start$next \ui__tb_fanin_flags__in_start
@@ -369,9 +369,9 @@ module \tb
     end
   end
   attribute \init 1'0
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:190"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:193"
   wire width 1 \_ui__tb_fanin_flags__in_done
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:190"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:193"
   wire width 1 \_ui__tb_fanin_flags__in_done$next
   process $group_1
     assign \ui__tb_fanin_flags__in_done$next \ui__tb_fanin_flags__in_done
@@ -383,9 +383,9 @@ module \tb
     end
   end
   attribute \init 1'0
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:190"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:193"
   wire width 1 \_ui__tb_fanout_flags__trigger
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:190"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:193"
   wire width 1 \_ui__tb_fanout_flags__trigger$next
   process $group_2
     assign \_ui__tb_fanout_flags__trigger$next \_ui__tb_fanout_flags__trigger
@@ -397,9 +397,9 @@ module \tb
     end
   end
   attribute \init 1'0
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:190"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:193"
   wire width 1 \_ui__done
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:190"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:193"
   wire width 1 \_ui__done$next
   process $group_3
     assign \ui__done$next \ui__done
@@ -411,9 +411,9 @@ module \tb
     end
   end
   attribute \init 1'0
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:190"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:193"
   wire width 1 \_ui__inactive
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:190"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:193"
   wire width 1 \_ui__inactive$next
   process $group_4
     assign \ui__inactive$next \ui__inactive
@@ -425,46 +425,46 @@ module \tb
     end
   end
   attribute \init 12'000000000000
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:190"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:193"
   wire width 12 \_ui__load
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:190"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:193"
   wire width 12 \_ui__load$next
   attribute \init 2'10
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:253"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:256"
   wire width 2 \fsm_state
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:253"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:256"
   wire width 2 \fsm_state$next
   attribute \init 2'00
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:106"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:109"
   wire width 2 \delay_fsm_state
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:106"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:109"
   wire width 2 \delay_fsm_state$next
   process $group_5
     assign \_ui__load$next \_ui__load
     assign \_ui__load$next \ui__load
-    attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:253"
+    attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:256"
     switch \fsm_state
-      attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:260"
+      attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:263"
       attribute \amaranth.decoding "INITIAL/2"
       case 2'10
-      attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:264"
+      attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:267"
       attribute \amaranth.decoding "START/0"
       case 2'00
-        attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:106"
+        attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:109"
         switch \delay_fsm_state
-          attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:107"
+          attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:110"
           attribute \amaranth.decoding "INIT/0"
           case 2'00
             assign \_ui__load$next 12'100101011000
-          attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:110"
+          attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:113"
           attribute \amaranth.decoding "LOADED/1"
           case 2'01
             assign \_ui__load$next 12'000000000000
-          attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:113"
+          attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:116"
           attribute \amaranth.decoding "DONE/2"
           case 2'10
         end
-      attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:268"
+      attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:271"
       attribute \amaranth.decoding "DONE/1"
       case 2'01
     end
@@ -501,9 +501,9 @@ module \tb
         assign \delayer_ui__load$next 12'000000000000
     end
   end
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:256"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:259"
   wire width 1 $1
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:256"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:259"
   cell $eq $2
     parameter \A_SIGNED 0
     parameter \A_WIDTH 2
@@ -523,9 +523,9 @@ module \tb
         assign \_ui__tb_fanin_flags__in_start$next 1'0
     end
   end
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:257"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:260"
   wire width 1 $3
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:257"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:260"
   cell $eq $4
     parameter \A_SIGNED 0
     parameter \A_WIDTH 2
@@ -547,27 +547,27 @@ module \tb
   end
   process $group_11
     assign \fsm_state$next \fsm_state
-    attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:253"
+    attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:256"
     switch \fsm_state
-      attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:260"
+      attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:263"
       attribute \amaranth.decoding "INITIAL/2"
       case 2'10
-        attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:261"
+        attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:264"
         switch { \_ui__tb_fanout_flags__trigger }
-          attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:261"
+          attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:264"
           case 1'1
             assign \fsm_state$next 2'00
         end
-      attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:264"
+      attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:267"
       attribute \amaranth.decoding "START/0"
       case 2'00
-        attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:265"
+        attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:268"
         switch { \_ui__done }
-          attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:265"
+          attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:268"
           case 1'1
             assign \fsm_state$next 2'01
         end
-      attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:268"
+      attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:271"
       attribute \amaranth.decoding "DONE/1"
       case 2'01
     end
@@ -579,29 +579,29 @@ module \tb
   end
   process $group_12
     assign \delay_fsm_state$next \delay_fsm_state
-    attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:253"
+    attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:256"
     switch \fsm_state
-      attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:260"
+      attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:263"
       attribute \amaranth.decoding "INITIAL/2"
       case 2'10
-      attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:264"
+      attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:267"
       attribute \amaranth.decoding "START/0"
       case 2'00
-        attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:106"
+        attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:109"
         switch \delay_fsm_state
-          attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:107"
+          attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:110"
           attribute \amaranth.decoding "INIT/0"
           case 2'00
             assign \delay_fsm_state$next 2'01
-          attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:110"
+          attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:113"
           attribute \amaranth.decoding "LOADED/1"
           case 2'01
             assign \delay_fsm_state$next 2'10
-          attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:113"
+          attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:116"
           attribute \amaranth.decoding "DONE/2"
           case 2'10
         end
-      attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:268"
+      attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:271"
       attribute \amaranth.decoding "DONE/1"
       case 2'01
     end
@@ -1218,23 +1218,23 @@ module \top
     connect \rst \rst
     connect \i_buttons__right \i_button_ffsync_i_buttons__right
   end
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:181"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:184"
   wire width 1 \tb_ui__tb_fanin_flags__in_start
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:181"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:184"
   wire width 1 \tb_ui__tb_fanin_flags__in_done
   attribute \init 1'0
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:181"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:184"
   wire width 1 \tb_ui__tb_fanout_flags__trigger
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:181"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:184"
   wire width 1 \tb_ui__tb_fanout_flags__trigger$next
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:181"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:184"
   wire width 1 \tb_ui__done
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:181"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:184"
   wire width 1 \tb_ui__inactive
   attribute \init 12'000000000000
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:181"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:184"
   wire width 12 \tb_ui__load
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:181"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:184"
   wire width 12 \tb_ui__load$next
   cell \tb \tb
     connect \clk \clk
@@ -2045,9 +2045,9 @@ module \top
     end
   end
   attribute \init 1'0
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:379"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:382"
   wire width 1 \ui__tb_fanin_flags__in_start
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:379"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:382"
   wire width 1 \ui__tb_fanin_flags__in_start$next
   process $group_14
     assign \ui__tb_fanin_flags__in_start$next \ui__tb_fanin_flags__in_start
@@ -2059,9 +2059,9 @@ module \top
     end
   end
   attribute \init 1'0
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:379"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:382"
   wire width 1 \ui__tb_fanin_flags__in_done
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:379"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:382"
   wire width 1 \ui__tb_fanin_flags__in_done$next
   process $group_15
     assign \ui__tb_fanin_flags__in_done$next \ui__tb_fanin_flags__in_done
@@ -2073,9 +2073,9 @@ module \top
     end
   end
   attribute \init 1'0
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:379"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:382"
   wire width 1 \ui__tb_fanout_flags__trigger
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:379"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:382"
   wire width 1 \ui__tb_fanout_flags__trigger$next
   process $group_16
     assign \tb_ui__tb_fanout_flags__trigger$next \tb_ui__tb_fanout_flags__trigger
@@ -2087,9 +2087,9 @@ module \top
     end
   end
   attribute \init 1'0
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:379"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:382"
   wire width 1 \ui__done
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:379"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:382"
   wire width 1 \ui__done$next
   process $group_17
     assign \ui__done$next \ui__done
@@ -2101,9 +2101,9 @@ module \top
     end
   end
   attribute \init 1'0
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:379"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:382"
   wire width 1 \ui__inactive
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:379"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:382"
   wire width 1 \ui__inactive$next
   process $group_18
     assign \ui__inactive$next \ui__inactive
@@ -2114,7 +2114,7 @@ module \top
         assign \ui__inactive$next 1'0
     end
   end
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:379"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:382"
   wire width 12 \ui__load
   process $group_19
     assign \tb_ui__load$next \tb_ui__load
@@ -2126,9 +2126,9 @@ module \top
     end
   end
   attribute \init 1'0
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:386"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:389"
   wire width 1 \start
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:386"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:389"
   wire width 1 \start$next
   process $group_20
     assign \start$next \start
@@ -2143,9 +2143,9 @@ module \top
   wire width 1 $78
   attribute \amaranth.sample_reg 1
   attribute \init 1'0
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:386"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:389"
   wire width 1 $sample$s$start$sync$1
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:386"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:389"
   wire width 1 $sample$s$start$sync$1$next
   attribute \src "/home/ubuntu/Documents/venv_fpga/lib/python3.8/site-packages/amaranth/hdl/ast.py:1369"
   cell $not $79
@@ -2186,9 +2186,9 @@ module \top
         assign \rst$next 1'0
     end
   end
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:395"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:398"
   wire width 8 $82
-  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:395"
+  attribute \src "tests2_feb2022/test7_formal_verification_timer_restructured.py:398"
   cell $pos $83
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
