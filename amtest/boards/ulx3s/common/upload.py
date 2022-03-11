@@ -23,6 +23,7 @@ from amaranth.build import Platform, Resource, Subsignal, Pins, PinsN, Attrs
 from amaranth_boards.ulx3s import ULX3S_85F_Platform
 
 from .clks import add_clock
+from ....utils import Params
 
 # ESP-32 connections
 esp32_spi = [
@@ -52,9 +53,10 @@ platform.add_resources(digital_discovery)
 
 
 class UploadBase(Elaboratable):
-	def __init__(self, sync_mode = "sync"):
+	def __init__(self):
 		super().__init__()
-		self.sync_mode = sync_mode
+		self.config_params = Params()
+		self.test_params = Params()
 
 	def elaborate(self, platform = None):
 		self.leds = Cat([platform.request("led", i) for i in range(8)])
@@ -74,7 +76,10 @@ class UploadBase(Elaboratable):
 
 		m = Module()
 
-		add_clock(m, self.sync_mode, platform=platform) # for pll capability 		# add_clock(m, "sync", platform=platform)
+		if hasattr(self.config_params, "sync_mode"):
+			add_clock(m, self.config_params.sync_mode, platform=platform) # for pll capability 		# add_clock(m, "sync", platform=platform)
+		else:
+			add_clock(m, "sync", platform=platform)
 		add_clock(m, "sync_1e6", platform=platform)
 
 		m.d.sync_1e6 += [
@@ -127,5 +132,5 @@ class UploadBase(Elaboratable):
 			m.d.sync += self.esp32.en.eq(1 & ~self.i_buttons.pwr)
 			m.d.sync += self.esp32.gpio0.o.eq(0)
 
-		return m, platform # note returning platform here is not standard
+		return m#, platform # note returning platform here is not standard
 		
